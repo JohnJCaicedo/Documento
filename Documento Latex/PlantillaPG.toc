@@ -1,0 +1,32 @@
+\babel@toc {spanish}{}
+\contentsline {chapter}{\numberline {1}Introducción}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Objetivos}{4}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Objetivo General}{4}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Objetivos Específicos}{4}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Alcances y Limitaciones}{4}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Alcances}{4}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Limitaciones}{4}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Justificación}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Descripción y formulación del problema}{5}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Estado del arte}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}MatLab.}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Artificial Neural Networks.}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Super Vector Machine.}{8}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Otros métodos.}{9}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Marco Conceptual}{11}{chapter.3}%
+\contentsline {subsection}{\numberline {3.0.1}\textbf {Agricultura de precisión:}}{11}{subsection.3.0.1}%
+\contentsline {subsection}{\numberline {3.0.2}\textbf {Artificial Neural Networks:}}{11}{subsection.3.0.2}%
+\contentsline {subsection}{\numberline {3.0.3}\textbf {Imagen Binaria:}}{11}{subsection.3.0.3}%
+\contentsline {subsection}{\numberline {3.0.4}\textbf {ISO 800:}}{12}{subsection.3.0.4}%
+\contentsline {subsection}{\numberline {3.0.5}\textbf {Procesamiento de imagenes:}}{12}{subsection.3.0.5}%
+\contentsline {subsection}{\numberline {3.0.6}\textbf {Reconstrucción morfológica:}}{12}{subsection.3.0.6}%
+\contentsline {subsection}{\numberline {3.0.7}\textbf {Tubérculos de papa:}}{12}{subsection.3.0.7}%
+\contentsline {subsection}{\numberline {3.0.8}\textbf {Visión artificial:}}{13}{subsection.3.0.8}%
+\contentsline {chapter}{\numberline {4}Dataset Tubérculos de papas}{14}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Creación del Dataset}{14}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Distribución del Dataset}{16}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Red Neuronal}{18}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Función de Perdida}{18}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Gradiente Descendiente}{18}{section.5.2}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{19}{equation.5.2.2}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
