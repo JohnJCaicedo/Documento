@@ -1,0 +1,112 @@
+\begin{thebibliography}{10}
+
+\bibitem{article3}
+J.~Porras, M.~De~la Cruz, and A.~Mor{\'a}n, ``Clasification system based on
+  computer vision,'' {\em Escuela Profesional de Ingenier{\'\i}a
+  Electr{\'o}nica-Universidad Ricardo Palma: http://www. urp. edu.
+  pe/pdf/ingenieria/electronica/CAP-1\_Taller\_de\_Electronica\_IV\_b. pdf},
+  2014.
+
+\bibitem{inproceedings}
+C.~Nandi, ``Machine vision based automatic fruit grading system using fuzzy
+  algorithm,'' 02 2014.
+
+\bibitem{article2}
+L.~Pencue-Fierro and J.~León~Téllez, ``Detección y clasificación de
+  defectos en frutas mediante el procesamiento digital de imágenes,'' {\em
+  REVISTA COLOMBIANA DE FISICA}, vol.~35, 01 2003.
+
+\bibitem{Shrivastava2017}
+``Soybean plant foliar disease detection using image retrieval approaches,''
+  {\em Multimedia Tools and Applications}, vol.~76, pp.~26647--26674, 12 2017.
+
+\bibitem{Singh2016}
+K.~R. Singh and S.~Chaudhury, ``Efficient technique for rice grain
+  classification using back‐propagation neural network and wavelet
+  decomposition,'' {\em IET Computer Vision}, vol.~10, pp.~780--787, 12 2016.
+
+\bibitem{Przybyl2019}
+K.~Przybyl, P.~Boniecki, K.~Koszela, L.~Gierz, and M.~Lukomski, ``Computer
+  vision and artificial neural network techniques for classification of damage
+  in potatoes during the storage process,'' {\em Czech Journal of Food
+  Sciences}, vol.~37, pp.~135--140, 5 2019.
+
+\bibitem{LIU201679}
+T.~Liu, W.~Wu, W.~Chen, C.~Sun, C.~Chen, R.~Wang, X.~Zhu, and W.~Guo, ``A
+  shadow-based method to calculate the percentage of filled rice grains,'' {\em
+  Biosystems Engineering}, vol.~150, pp.~79--88, 2016.
+
+\bibitem{CHUNG2016404}
+C.-L. Chung, K.-J. Huang, S.-Y. Chen, M.-H. Lai, Y.-C. Chen, and Y.-F. Kuo,
+  ``Detecting bakanae disease in rice seedlings by machine vision,'' {\em
+  Computers and Electronics in Agriculture}, vol.~121, pp.~404--411, 2016.
+
+\bibitem{PIRES201648}
+R.~D.~L. Pires, D.~N. Gonçalves, J.~P.~M. Oruê, W.~E.~S. Kanashiro, J.~F.
+  Rodrigues, B.~B. Machado, and W.~N. Gonçalves, ``Local descriptors for
+  soybean disease recognition,'' {\em Computers and Electronics in
+  Agriculture}, vol.~125, pp.~48--55, 2016.
+
+\bibitem{SUN2014426}
+C.~Sun, T.~Liu, C.~Ji, M.~Jiang, T.~Tian, D.~Guo, L.~Wang, Y.~Chen, and
+  X.~Liang, ``Evaluation and analysis the chalkiness of connected rice kernels
+  based on image processing technology and support vector machine,'' {\em
+  Journal of Cereal Science}, vol.~60, no.~2, pp.~426--432, 2014.
+
+\bibitem{LIU201682}
+T.~Liu, W.~Chen, W.~Wu, C.~Sun, W.~Guo, and X.~Zhu, ``Detection of aphids in
+  wheat fields using a computer vision technique,'' {\em Biosystems
+  Engineering}, vol.~141, pp.~82--93, 2016.
+
+\bibitem{sobolu2020automatic}
+R.~SOBOLU, M.~CORDEA, I.~POP, L.~ANDRONIE, D.~PUSTA, {\em et~al.}, ``Automatic
+  sorting of potatoes according to their defects.,'' {\em Scientific
+  Papers-Series B, Horticulture}, vol.~64, no.~1, pp.~462--468, 2020.
+
+\bibitem{article5}
+A.~M. RODRIGUEZ, ``Sistema automatizado de reconocimiento y manipulaci{\'o}n de
+  objetos usando visi{\'o}n por computadora y un brazo industrial,'' 2014.
+
+\bibitem{7237209}
+L.~{Han}, M.~S. {Haleem}, and M.~{Taylor}, ``A novel computer vision-based
+  approach to automatic detection and severity assessment of crop diseases,''
+  in {\em 2015 Science and Information Conference (SAI)}, pp.~638--644, 2015.
+
+\bibitem{Barnes2010}
+M.~Barnes, T.~Duckett, G.~Cielniak, G.~Stroud, and G.~Harper, ``Visual
+  detection of blemishes in potatoes using minimalist boosted classifiers,''
+  {\em Journal of Food Engineering}, vol.~98, pp.~339--346, 2010.
+
+\bibitem{referencia1}
+``El aporte de la papa a la economía colombiana • periódico el campesino
+  – la voz del campo colombiano.''
+
+\bibitem{referencia2}
+``Sector papero se prepara para aumentar el consumo de papa en colombia |
+  finagro.''
+
+\bibitem{Camara}
+``La camara fotografica cuerpo y controles basicos.''
+
+\bibitem{scikit-image}
+S.~van~der Walt, J.~L. {S}ch\"onberger, J.~{Nunez-Iglesias}, F.~{B}oulogne,
+  J.~D. {W}arner, N.~{Y}ager, E.~{G}ouillart, T.~{Y}u, and the scikit-image
+  contributors, ``scikit-image: image processing in {P}ython,'' {\em PeerJ},
+  vol.~2, p.~e453, 6 2014.
+
+\bibitem{FAQCOLOR}
+``Frequently asked questions about color | enhanced reader.''
+
+\bibitem{CS}
+``Point operations - contrast stretching.''
+
+\bibitem{Han2011}
+J.~H. Han, S.~Yang, and B.~U. Lee, ``A novel 3-d color histogram equalization
+  method with uniform 1-d gray scale histogram,'' {\em IEEE Transactions on
+  Image Processing}, vol.~20, pp.~506--512, 2 2011.
+
+\bibitem{GuiaDanosPapa}
+Q.~Afectan, A.~L. Papa, E.~N. La, Z.~Andina, W.~Pérez, and G.~Forbes, {\em
+  Guía de identificación de plagas que afectan a la papa en la zona andina}.
+
+\end{thebibliography}
