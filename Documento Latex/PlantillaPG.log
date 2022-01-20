@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.19)  19 JAN 2022 19:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.19)  19 JAN 2022 19:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1316,12 +1316,11 @@ LaTeX Info: Redefining \. on input line 194.
 LaTeX Info: Redefining \% on input line 194.
  [16 <./Figs/4.png>]
 chapter 5.
-) [17
+[17
 
-] [18
-
-
-
+]
+chapter 6.
+) [18
 
 ] (PlantillaPG.bbl
 Underfull \hbox (badness 1622) in paragraph at lines 4--9
@@ -1343,6 +1342,10 @@ tronica/CAP-
 
 [19
 
+
+
+
+
 ])
 LaTeX Info: Redefining \. on input line 37.
 LaTeX Info: Redefining \% on input line 37.
@@ -1354,10 +1357,10 @@ Package rerunfilecheck Info: File `PlantillaPG.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27749 strings out of 478659
- 553351 string characters out of 2845920
+ 27751 strings out of 478659
+ 553366 string characters out of 2845920
  970514 words of memory out of 3000000
- 45266 multiletter control sequences out of 15000+600000
+ 45267 multiletter control sequences out of 15000+600000
  410862 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,12n,109p,10636b,731s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1371,9 +1374,9 @@ MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/gohan/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/gohan/AppData/
 Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/goh
 an/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on PlantillaPG.pdf (23 pages, 552654 bytes).
+Output written on PlantillaPG.pdf (23 pages, 553109 bytes).
 PDF statistics:
- 436 PDF objects out of 1000 (max. 8388607)
- 89 named destinations out of 1000 (max. 500000)
- 300 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 440 PDF objects out of 1000 (max. 8388607)
+ 90 named destinations out of 1000 (max. 500000)
+ 308 words of extra memory for PDF output out of 10000 (max. 10000000)
 
