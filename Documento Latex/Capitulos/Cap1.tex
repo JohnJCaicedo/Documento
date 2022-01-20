@@ -54,50 +54,51 @@ El sector agricultor de Colombia ha implementado diferentes técnicas de visión
 \chapter{Estado del arte}
 
 \section{MatLab.}
-El objetivo de los antecedentes es analizar y realizar una revisión literaria sobre lo  que  se  ha hecho  a  nivel  teórico  y  práctico  en  cuanto a  la visión artificial en agricultura de precisión.  Además,  determinar  cuáles son los aportes que éstos le puedan dar a este trabajo de investigación.\\
-
-Comenzando por la literatura con temática en el procesamiento de imágenes se tiene el artículo \cite{article3}, en donde se menciona que la implementación de MATLAB\textsuperscript{\textregistered} como una herramienta de procesamiento de imágenes, radica en su facilidad para realizar cambios a las imágenes, es por esto qué diseñó un sistema para la clasificación de objetos en base a su forma y color usando métodos de visión artificial en MATLAB\textsuperscript{\textregistered} con el uso de la librería \textit{ufm.dll} para capturar y procesar imágenes. El artículo \cite{inproceedings} presenta una investigación en dónde se consiguió calcular el tamaño de diferentes mangos estimando el área cubierta en una imagen binaria (imagen digital que tiene únicamente dos valores posibles para cada píxel) con base al número de píxeles, luego de ser procesadas las imágenes, se clasificaron implementando un algoritmo basado en \textit{fuzzy logic} teniendo en cuenta 5 variedades diferentes de mangos y como referencias el color de la cascara, tamaño, defectos superficiales, forma, firmeza, peso y olor.\\
+	El objetivo de los antecedentes es analizar y realizar una revisión literaria sobre lo  que  se  ha hecho  a  nivel  teórico  y  práctico  en  cuanto a  la visión artificial en agricultura de precisión.  Además,  determinar  cuáles son los aportes que éstos le puedan dar a este trabajo de investigación.\\
+	
+	Comenzando por la literatura con temática en el procesamiento de imágenes se tiene el artículo \cite{article3}, en donde se menciona que la implementación de MATLAB\textsuperscript{\textregistered} como una herramienta de procesamiento de imágenes, radica en su facilidad para realizar cambios a las imágenes, es por esto qué diseñó un sistema para la clasificación de objetos en base a su forma y color usando métodos de visión artificial en MATLAB\textsuperscript{\textregistered} con el uso de la librería \textit{ufm.dll} para capturar y procesar imágenes. El artículo \cite{inproceedings} presenta una investigación en dónde se consiguió calcular el tamaño de diferentes mangos estimando el área cubierta en una imagen binaria (imagen digital que tiene únicamente dos valores posibles para cada píxel) con base al número de píxeles, luego de ser procesadas las imágenes, se clasificaron implementando un algoritmo basado en \textit{fuzzy logic} teniendo en cuenta 5 variedades diferentes de mangos y como referencias el color de la cascara, tamaño, defectos superficiales, forma, firmeza, peso y olor.\\
 
 \section{Artificial Neural Networks.}
-En cuanto a la clasificación, se deben usar técnicas de visión artificial y en primer lugar, se revisó literatura  acerca de ANN (\textit{Artificial Neural Networks}) como el articulo \cite{article2} en el Perú  aplicó visión artificial usando ANN como método de clasificación de las principales características extraídas de las frutas, que son derivadas del análisis de las superficies tanto en su contenido cromático como en la cantidad y distribución de defectos externos. De igual forma, en el trabajo \cite{Shrivastava2017}, presentaron un sistema de visión artificial que usa un enfoque de categorización simplificado con un elevado índice de exactitud. El propósito del sistema es clasificar los granos de trigo de las especies \textit{triticum aestivum} y \textit{triticum durum} según sus propiedades visuales usando una ANN del tipo MLP (\textit{Multilayer Perceptron}); las imágenes se obtienen por medio de una cámara que captura las propiedades de tamaño, color y textura de cada grano con el objeto de que sirvan de acceso al procedimiento de categorización. Otro trabajo es \cite{Singh2016}, quien propone el uso de redes neuronales BPNN (\textit{Back Propagation Artificial Neural Networks}) como método de clasificación y la descomposición mediante ondículas (Tipo especial de transformada matemática que representa una señal en términos de versiones trasladadas y dilatadas de una onda finita) para clasificar los granos de arroz. El modelo de clasificación implemento una red neuronal BPNN de cuatro capas la cual presento mejores resultados en comparación con otros métodos.\\
-
-Por último, usando el método de clasificación ANN, se tiene el artículo \cite{Przybyl2019} presenta un trabajo para garantizar la correcta clasificación de los productos y reducir las pérdidas durante su almacenamiento. La investigación abarca esfuerzos centrados en la evaluación sensorial de patatas con el análisis de imágenes por ordenador y la modelización neuronal ANN. El objetivo de este estudio fue desarrollar un método para asistir a la identificación de cualquiera de las variedades y la turgencia de los tubérculos de patata(Fenómeno que ocurre cuando una célula se dilata debido a la presión ejercida por los fluidos y por el contenido celular sobre las paredes de la célula) llevado a cabo sobre la base de los datos gráficos codificados en forma de imágenes digitales, obtenidos mediante algoritmos que interpretan los descriptores de imagen.\\
+	En cuanto a la clasificación, se deben usar técnicas de visión artificial y en primer lugar, se revisó literatura  acerca de ANN (\textit{Artificial Neural Networks}) como el articulo \cite{article2} en el Perú  aplicó visión artificial usando ANN como método de clasificación de las principales características extraídas de las frutas, que son derivadas del análisis de las superficies tanto en su contenido cromático como en la cantidad y distribución de defectos externos. De igual forma, en el trabajo \cite{Shrivastava2017}, presentaron un sistema de visión artificial que usa un enfoque de categorización simplificado con un elevado índice de exactitud. El propósito del sistema es clasificar los granos de trigo de las especies \textit{triticum aestivum} y \textit{triticum durum} según sus propiedades visuales usando una ANN del tipo MLP (\textit{Multilayer Perceptron}); las imágenes se obtienen por medio de una cámara que captura las propiedades de tamaño, color y textura de cada grano con el objeto de que sirvan de acceso al procedimiento de categorización. Otro trabajo es \cite{Singh2016}, quien propone el uso de redes neuronales BPNN (\textit{Back Propagation Artificial Neural Networks}) como método de clasificación y la descomposición mediante ondículas (Tipo especial de transformada matemática que representa una señal en términos de versiones trasladadas y dilatadas de una onda finita) para clasificar los granos de arroz. El modelo de clasificación implemento una red neuronal BPNN de cuatro capas la cual presento mejores resultados en comparación con otros métodos.\\
+	
+	Por último, usando el método de clasificación ANN, se tiene el artículo \cite{Przybyl2019} presenta un trabajo para garantizar la correcta clasificación de los productos y reducir las pérdidas durante su almacenamiento. La investigación abarca esfuerzos centrados en la evaluación sensorial de patatas con el análisis de imágenes por ordenador y la modelización neuronal ANN. El objetivo de este estudio fue desarrollar un método para asistir a la identificación de cualquiera de las variedades y la turgencia de los tubérculos de patata(Fenómeno que ocurre cuando una célula se dilata debido a la presión ejercida por los fluidos y por el contenido celular sobre las paredes de la célula) llevado a cabo sobre la base de los datos gráficos codificados en forma de imágenes digitales, obtenidos mediante algoritmos que interpretan los descriptores de imagen.\\
 
 \section{Super Vector Machine.}
-Otro método de clasificación revisado en la literatura es el de SVM \textit{Super Vector Machine}), como el usado en el trabajo \cite{LIU201679}, en donde realizaron un proceso para analizar granos de arroz. El procedimiento usa 4 fuentes de luz para crear la sombra del grano en 4 direcciones; la diferencia en medio de las siluetas de los granos llenos y no llenos se evalúan por medio del estudio de imágenes y un clasificador SVM. El análisis se hace mediante el uso de imágenes RGB (Red-Green-Blue) de los granos con las siluetas, luego se segmentan por  desde la imagen binaria, para sustraer información como el sector del grano y de la sombra. En el documento \cite{CHUNG2016404} se menciona un método para clasificar plántulas (Embrión ya desarrollado como consecuencia de la germinación de una semilla) sanas e infectadas. Consiste en el análisis de imágenes mediante un escáner y el proceso de clasificación utilizando SVM, en donde se hace uso de dos clasificadores, el primero distingue entre las plantas sanas y contaminadas, por otra parte, el segundo mide los niveles de contaminación. En el trabajo \cite{PIRES201648} se propuso un método de detección automática de enfermedad en cultivos de soja, el cual se basa en descripciones locales conocido como el método BOV (Bag of Values) luego de escanear la hoja. Se obtuvo a través de los vectores de entrada una clasificación en dos categorías, enfermo y sano, a partir de un clasificador SVM. Y por último, en este tipo de clasificador, el documento \cite{SUN2014426} propone un sistema para analizar el porcentaje de granos en el arroz que se encuentran en condiciones para ser distribuidos. El algoritmo se encarga de la división de los granos de manera automática. Tras la segmentación, es viable obtener el número de granos presentes en la imagen y la información específica, la exactitud del procedimiento puede verse afectada si el germen no se extrae del todo por esa razón el sistema detecta la viable región de germen y estima esta información usando SVM.\\
+	Otro método de clasificación revisado en la literatura es el de SVM \textit{Super Vector Machine}), como el usado en el trabajo \cite{LIU201679}, en donde realizaron un proceso para analizar granos de arroz. El procedimiento usa 4 fuentes de luz para crear la sombra del grano en 4 direcciones; la diferencia en medio de las siluetas de los granos llenos y no llenos se evalúan por medio del estudio de imágenes y un clasificador SVM. El análisis se hace mediante el uso de imágenes RGB (Red-Green-Blue) de los granos con las siluetas, luego se segmentan por  desde la imagen binaria, para sustraer información como el sector del grano y de la sombra. En el documento \cite{CHUNG2016404} se menciona un método para clasificar plántulas (Embrión ya desarrollado como consecuencia de la germinación de una semilla) sanas e infectadas. Consiste en el análisis de imágenes mediante un escáner y el proceso de clasificación utilizando SVM, en donde se hace uso de dos clasificadores, el primero distingue entre las plantas sanas y contaminadas, por otra parte, el segundo mide los niveles de contaminación. En el trabajo \cite{PIRES201648} se propuso un método de detección automática de enfermedad en cultivos de soja, el cual se basa en descripciones locales conocido como el método BOV (Bag of Values) luego de escanear la hoja. Se obtuvo a través de los vectores de entrada una clasificación en dos categorías, enfermo y sano, a partir de un clasificador SVM. Y por último, en este tipo de clasificador, el documento \cite{SUN2014426} propone un sistema para analizar el porcentaje de granos en el arroz que se encuentran en condiciones para ser distribuidos. El algoritmo se encarga de la división de los granos de manera automática. Tras la segmentación, es viable obtener el número de granos presentes en la imagen y la información específica, la exactitud del procedimiento puede verse afectada si el germen no se extrae del todo por esa razón el sistema detecta la viable región de germen y estima esta información usando SVM.\\
 
 \section{Otros métodos.}
-En la literatura se encontraron artículos que usaban más de un método de clasificación, un ejemplo es \cite{LIU201682} que puso en práctica un método para controlar la población de pulgones (Familia de insectos hemípteros) en el trigo, usando los métodos SVM, el algoritmo MSER (\textit{Maximally Stable Extremal Regions}), y el HOG (\textit{Histogram of Gradients}).El uso de estos 3 métodos se conoce como SMH (Unión entre SVM, MSER y HOG, que se basa en el análisis de imágenes, tratadas a partir de unos parámetros con la finalidad de detectar la presencia y/o ausencia de pulgones, se hizo uso de este método a partir del color y la densidad de población. Al comparar este método con otros cinco comúnmente utilizados, los resultados presentaron un rendimiento superior en la identificación de pulgones. \\
-
-De igual manera, el artículo \cite{sobolu2020automatic} propone un algoritmo de clasificación automática de patatas. Se Realizó dos tipos de clasificación: una en función del tamaño de las patatas y otra en función de su calidad. La segmentación de las zonas defectuosas se hizo mediante métodos como \textit{global thresholding} para extraer \textit{morphological and statistical features} de las zonas segmentadas. Estas características se eligieron como entradas para los algoritmos de clasificación, en donde se usaron los métodos SVM, \textit{Decision  Tree} y LDA (\textit{Linear Discriminant Analysis}) implementados en MATLAB\textsuperscript{\textregistered} Classification Toolbox.Se llegó a la conclusión de que la SVM ha clasificado las patatas según su tamaño con una mayor tasa de éxito. En el caso de la clasificación por calidad, se recomienda el método LDA.\\
-
-Los anteriores son los métodos más comunes que se encontraron en la literatura investigada, sin embargo, hay unos métodos poco comunes como por ejemplo los presentados en el artículo \cite{article5} en donde se identificó objetos en movimiento mediante la ayuda de la visión artificial y la transmisión de datos a un brazo robótico implementando \textit{C++} y \textit{Open CV} usando el código de cadena (Actualmente el grupo de reconocimiento de patrones e inteligencia artificial aplicada) para calcular las características de los objetos por color y forma. También, el artículo \cite{7237209} que se usa para la detección automática, fue necesario hacer uso inicialmente de separar el fondo de la hoja, para este proceso se usó el algoritmo MCW (\textit{Marker-Controlled Watershed}), el SLIC (\textit{Simple Linear Iterative Clustering}) se utilizó para obtener las características presentadas por la enfermedad sobre la planta y por ultimo para la clasificación y textura se obtienen a través de GLCM (\textit{Gray Level Co-occurrence Matrix}), el modelo de clasificación fue el SVM, este método propuesto presento un mayor rendimiento.\\
-
-Y el último artículo revisado es el \cite{Barnes2010}, cuyo objetivo de  investigación es introducir un método automático de detección de manchas en imágenes digitales de patatas. El sistema desarrollado es entrenable, de modo que pueda trabajar con diferentes variedades de patatas y variaciones en las estaciones, condiciones de iluminación, etc. Otro objetivo, pensando en su posible implantación en entornos industriales, es permitir el procesamiento de imágenes en tiempo real, posiblemente mediante la construcción de \textit{Minimalist Boosted Classifier} que extraigan un subconjunto mínimo de todas las características que optimicen el rendimiento de la detección con el menor coste computacional posible.
+	En la literatura se encontraron artículos que usaban más de un método de clasificación, un ejemplo es \cite{LIU201682} que puso en práctica un método para controlar la población de pulgones (Familia de insectos hemípteros) en el trigo, usando los métodos SVM, el algoritmo MSER (\textit{Maximally Stable Extremal Regions}), y el HOG (\textit{Histogram of Gradients}).El uso de estos 3 métodos se conoce como SMH (Unión entre SVM, MSER y HOG, que se basa en el análisis de imágenes, tratadas a partir de unos parámetros con la finalidad de detectar la presencia y/o ausencia de pulgones, se hizo uso de este método a partir del color y la densidad de población. Al comparar este método con otros cinco comúnmente utilizados, los resultados presentaron un rendimiento superior en la identificación de pulgones. \\
+	
+	De igual manera, el artículo \cite{sobolu2020automatic} propone un algoritmo de clasificación automática de patatas. Se Realizó dos tipos de clasificación: una en función del tamaño de las patatas y otra en función de su calidad. La segmentación de las zonas defectuosas se hizo mediante métodos como \textit{global thresholding} para extraer \textit{morphological and statistical features} de las zonas segmentadas. Estas características se eligieron como entradas para los algoritmos de clasificación, en donde se usaron los métodos SVM, \textit{Decision  Tree} y LDA (\textit{Linear Discriminant Analysis}) implementados en MATLAB\textsuperscript{\textregistered} Classification Toolbox.Se llegó a la conclusión de que la SVM ha clasificado las patatas según su tamaño con una mayor tasa de éxito. En el caso de la clasificación por calidad, se recomienda el método LDA.\\
+	
+	Los anteriores son los métodos más comunes que se encontraron en la literatura investigada, sin embargo, hay unos métodos poco comunes como por ejemplo los presentados en el artículo \cite{article5} en donde se identificó objetos en movimiento mediante la ayuda de la visión artificial y la transmisión de datos a un brazo robótico implementando \textit{C++} y \textit{Open CV} usando el código de cadena (Actualmente el grupo de reconocimiento de patrones e inteligencia artificial aplicada) para calcular las características de los objetos por color y forma. También, el artículo \cite{7237209} que se usa para la detección automática, fue necesario hacer uso inicialmente de separar el fondo de la hoja, para este proceso se usó el algoritmo MCW (\textit{Marker-Controlled Watershed}), el SLIC (\textit{Simple Linear Iterative Clustering}) se utilizó para obtener las características presentadas por la enfermedad sobre la planta y por ultimo para la clasificación y textura se obtienen a través de GLCM (\textit{Gray Level Co-occurrence Matrix}), el modelo de clasificación fue el SVM, este método propuesto presento un mayor rendimiento.\\
+	
+	Y el último artículo revisado es el \cite{Barnes2010}, cuyo objetivo de  investigación es introducir un método automático de detección de manchas en imágenes digitales de patatas. El sistema desarrollado es entrenable, de modo que pueda trabajar con diferentes variedades de patatas y variaciones en las estaciones, condiciones de iluminación, etc. Otro objetivo, pensando en su posible implantación en entornos industriales, es permitir el procesamiento de imágenes en tiempo real, posiblemente mediante la construcción de \textit{Minimalist Boosted Classifier} que extraigan un subconjunto mínimo de todas las características que optimicen el rendimiento de la detección con el menor coste computacional posible.
 
 
 \chapter{Marco Conceptual}
-\subsection{\textbf{Agricultura de precisión:}} El término sobre el que se inspira la agricultura de precisión es utilizar la porción adecuada de insumos, en el instante correcto y en el sitio preciso. La agricultura de precisión (AP) implica la utilización de sistemas de posicionamiento universal (GPS) y de otros medios electrónicos para obtener datos del cultivo. Las tecnologías de la agricultura de precisión permiten saciar una de las exigencias de la agricultura actualizada: el funcionamiento óptimo de enormes extensiones. Se muestra como primordial virtud que la exploración de resultados de los ensayos se puede hacer por sectores diferentes en un mismo lote, y tal cual ajustar el desempeño diferencial en los mismos. La utilización de las tecnologías de la agricultura de precisión puede contribuir a mejorar los márgenes, por medio de un incremento del costo del rendimiento (cantidad o calidad), de una reducción en la proporción de insumos, o de los dos paralelamente.
-\\
-\subsection{\textbf{Artificial Neural Networks:}} Las RNA son sistemas de procesamiento de la información cuya composición y manejo permanecen inspirados en las redes neuronales biológicas. Consisten en un enorme conjunto de recursos básicas de procesamiento denominados nodos o neuronas que permanecen organizados en capas. De esta forma, las RNA son sistemas adaptativos que aprenden de la vivencia, en otros términos, aprenden a realizar ciertas labores por medio de un entrenamiento con ejemplos ilustrativos.
-\\ 
 
-\subsection{\textbf{Imagen Binaria:}} La binarización de una imagen se apoya en un proceso de reducción de la información de la misma, en la que únicamente persisten 2 valores: verdadero y falso. En el proceso y estudio de imagen, la binarización se emplea para dividir las zonas u objetos de interés en una imagen del resto. En otras ocasiones, una imagen binaria es sencillamente el resultado de una selección interactiva de zonas de interés, las cuales se usarán como máscaras de comparación o alusión.
-\\ 
-
-\subsection{\textbf{ISO 800:}} ISO no es más que la sensibilidad del sensor en el momento de captar la luz. A más grande número de ISO, más grande capacidad para captar luz, a menor costo, menor capacidad para capturar esa luz. Una vez que duplicas el costo ISO, o sea, pasas de, ejemplificando, ISO 100 a ISO 200, necesitas la mitad de luz para poder hacer la misma exposición.
-\\ 
-
-\subsection{\textbf{Procesamiento de imagenes:}} El procesamiento de imágenes tiene como fin mejorar el aspecto de las imágenes y hacer más evidentes en ellas ciertos detalles que se quieren hacer percibir. La imagen puede haber sido generada de muchas posibilidades, ejemplificando, fotográficamente, o electrónicamente, mediante monitores de televisión. El procesamiento de las imágenes se puede generalmente hacer mediante procedimientos ópticos, o bien mediante procedimientos digitales, en una PC. En la siguiente parte describiremos bastante brevemente dichos 2 procedimientos, sin embargo, previamente se va a hacer una síntesis brevísima de los principios matemáticos implícitos en los dos procedimientos, donde el teorema de Fourier es el eje central.
-\\ 
-
-\subsection{\textbf{Reconstrucción morfológica:}} La recomposición morfológica se puede tener en cuenta conceptualmente como dilataciones reiteradas de una imagen, denominadas, hasta que el contorno de la imagen del marcador se adapta bajo una segunda imagen, llamada imagen de máscara En la recomposición morfológica, los picos de la imagen del marcador "se alargan" o se dilatan.
-\\ 
-
-\subsection{\textbf{Tubérculos de papa:}} La papa o patata es un tubérculo que se puede comer que se extrae de la planta herbácea americana Solanum tuberosum, de procedencia andino. Es una planta correspondiente a el núcleo familiar de las solanáceas procedente de Suramérica y cultivada por todo el planeta por sus tubérculos víveres. Ha sido domesticada en el altiplano andino por sus pobladores entre el 8500 y el 5000 a. n. e., y después ha sido llevada a Europa por los colonizadores españoles como una curiosidad botánica más que como una planta alimenticia. Su consumo ha sido creciendo y su cultivo se expandió a todo el planeta hasta transformarse actualmente en uno de los más importantes alimentos para la gente.
-\\ 
-
-\subsection{\textbf{Visión artificial:}} La perspectiva artificial ayuda a la industria a mejorar los procesos de producción por medio de imágenes digitales, con ellas se optimiza el control de calidad de aplicaciones industriales y de robots. Los sistemas de perspectiva examinan y se aseguran de conseguir los requisitos mínimos de calidad exigidos por cada fabricante. A lo largo del proceso de inspección los sistemas de perspectiva informan de los probables errores detectados, lo cual posibilita un mejor control del proceso de producción.
+	\subsection{\textbf{Agricultura de precisión:}} El término sobre el que se inspira la agricultura de precisión es utilizar la porción adecuada de insumos, en el instante correcto y en el sitio preciso. La agricultura de precisión (AP) implica la utilización de sistemas de posicionamiento universal (GPS) y de otros medios electrónicos para obtener datos del cultivo. Las tecnologías de la agricultura de precisión permiten saciar una de las exigencias de la agricultura actualizada: el funcionamiento óptimo de enormes extensiones. Se muestra como primordial virtud que la exploración de resultados de los ensayos se puede hacer por sectores diferentes en un mismo lote, y tal cual ajustar el desempeño diferencial en los mismos. La utilización de las tecnologías de la agricultura de precisión puede contribuir a mejorar los márgenes, por medio de un incremento del costo del rendimiento (cantidad o calidad), de una reducción en la proporción de insumos, o de los dos paralelamente.
+	\\
+	\subsection{\textbf{Artificial Neural Networks:}} Las RNA son sistemas de procesamiento de la información cuya composición y manejo permanecen inspirados en las redes neuronales biológicas. Consisten en un enorme conjunto de recursos básicas de procesamiento denominados nodos o neuronas que permanecen organizados en capas. De esta forma, las RNA son sistemas adaptativos que aprenden de la vivencia, en otros términos, aprenden a realizar ciertas labores por medio de un entrenamiento con ejemplos ilustrativos.
+	\\ 
+	
+	\subsection{\textbf{Imagen Binaria:}} La binarización de una imagen se apoya en un proceso de reducción de la información de la misma, en la que únicamente persisten 2 valores: verdadero y falso. En el proceso y estudio de imagen, la binarización se emplea para dividir las zonas u objetos de interés en una imagen del resto. En otras ocasiones, una imagen binaria es sencillamente el resultado de una selección interactiva de zonas de interés, las cuales se usarán como máscaras de comparación o alusión.
+	\\ 
+	
+	\subsection{\textbf{ISO 800:}} ISO no es más que la sensibilidad del sensor en el momento de captar la luz. A más grande número de ISO, más grande capacidad para captar luz, a menor costo, menor capacidad para capturar esa luz. Una vez que duplicas el costo ISO, o sea, pasas de, ejemplificando, ISO 100 a ISO 200, necesitas la mitad de luz para poder hacer la misma exposición.
+	\\ 
+	
+	\subsection{\textbf{Procesamiento de imagenes:}} El procesamiento de imágenes tiene como fin mejorar el aspecto de las imágenes y hacer más evidentes en ellas ciertos detalles que se quieren hacer percibir. La imagen puede haber sido generada de muchas posibilidades, ejemplificando, fotográficamente, o electrónicamente, mediante monitores de televisión. El procesamiento de las imágenes se puede generalmente hacer mediante procedimientos ópticos, o bien mediante procedimientos digitales, en una PC. En la siguiente parte describiremos bastante brevemente dichos 2 procedimientos, sin embargo, previamente se va a hacer una síntesis brevísima de los principios matemáticos implícitos en los dos procedimientos, donde el teorema de Fourier es el eje central.
+	\\ 
+	
+	\subsection{\textbf{Reconstrucción morfológica:}} La recomposición morfológica se puede tener en cuenta conceptualmente como dilataciones reiteradas de una imagen, denominadas, hasta que el contorno de la imagen del marcador se adapta bajo una segunda imagen, llamada imagen de máscara En la recomposición morfológica, los picos de la imagen del marcador "se alargan" o se dilatan.
+	\\ 
+	
+	\subsection{\textbf{Tubérculos de papa:}} La papa o patata es un tubérculo que se puede comer que se extrae de la planta herbácea americana Solanum tuberosum, de procedencia andino. Es una planta correspondiente a el núcleo familiar de las solanáceas procedente de Suramérica y cultivada por todo el planeta por sus tubérculos víveres. Ha sido domesticada en el altiplano andino por sus pobladores entre el 8500 y el 5000 a. n. e., y después ha sido llevada a Europa por los colonizadores españoles como una curiosidad botánica más que como una planta alimenticia. Su consumo ha sido creciendo y su cultivo se expandió a todo el planeta hasta transformarse actualmente en uno de los más importantes alimentos para la gente.
+	\\ 
+	
+	\subsection{\textbf{Visión artificial:}} La perspectiva artificial ayuda a la industria a mejorar los procesos de producción por medio de imágenes digitales, con ellas se optimiza el control de calidad de aplicaciones industriales y de robots. Los sistemas de perspectiva examinan y se aseguran de conseguir los requisitos mínimos de calidad exigidos por cada fabricante. A lo largo del proceso de inspección los sistemas de perspectiva informan de los probables errores detectados, lo cual posibilita un mejor control del proceso de producción.
 
 
 
@@ -108,91 +109,106 @@ Y el último artículo revisado es el \cite{Barnes2010}, cuyo objetivo de  inves
 
 
 \section{Creación del Dataset}
-Las fotos tomadas para la creacion del \textit{Dataset} poseen un tamaño de (3168, 4752) pixeles. Fueron tomadas con una cámara profesional \textit{Canon EOS 50D} que tiene 15.1 mega pixeles de resolución y se puede ajustar la sensibilidad ISO desde 100 a 3200. La cámara fue configurada con ISO-800 que corresponde al parámetro de sensibilidad del sensor de ruido de la cámara, una velocidad de obturación de $\frac{1}{640}$ segundos que corresponde al dispositivo que controla el tiempo en el que la luz incide sobre el sensor de la cámara y finalmente una apertura de diafragma de $F7.1$ que corresponde a la apertura del lente que deja pasar la luz \cite{Camara}, tener en cuenta que a mayor F, menor luz se deja pasar. Se construyó una caja con iluminación fija usando bombillos de luz blanca de 6500 Kelvin de temperatura de color para que la iluminación en todas las fotos tomadas fuera uniforme:
+	Las fotos tomadas para la creacion del \textit{Dataset} poseen un tamaño de (3168, 4752) pixeles. Fueron tomadas con una cámara profesional \textit{Canon EOS 50D} que tiene 15.1 mega pixeles de resolución y se puede ajustar la sensibilidad ISO desde 100 a 3200. La cámara fue configurada con ISO-800 que corresponde al parámetro de sensibilidad del sensor de ruido de la cámara, una velocidad de obturación de $\frac{1}{640}$ segundos que corresponde al dispositivo que controla el tiempo en el que la luz incide sobre el sensor de la cámara y finalmente una apertura de diafragma de $F7.1$ que corresponde a la apertura del lente que deja pasar la luz \cite{Camara}, tener en cuenta que a mayor F, menor luz se deja pasar. Se construyó una caja con iluminación fija usando bombillos de luz blanca de 6500 Kelvin de temperatura de color para que la iluminación en todas las fotos tomadas fuera uniforme:
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.2]{Figs/Chamber.JPEG}
-	\caption{Caja para tomar fotos}
-	\label{fig:chamber}
-\end{figure}
-
-\newpage
-Se creó un \textit{dataset} de 592 imágenes de papa tipo R12 y tipo pastusa las cuales se implementarán para train y para test además de 75 imágenes de tuberculos para la comprobación del algoritmo. Se realizará una clasificación en tres categorias que son, tipo, daño y tamaño. Las etiquetas de cada imagen se encuentran dentro del nombre de cada archivo, de la siguiente manera:
-
-\begin{itemize}
-	\item $[Tipo]$ es 0(Pastusa) y 1(R12).
-	\item $[Dano]$ es 0(Buena) y 1(Defectuosa).
-	\item $[Tamano]$ de 0 a 2 corresponde a muy grande, grande y mediana.
-	\item $[Numero \ de \ la \ imagen]$ etiqueta asignada por la cámara.
-\end{itemize}
-
-Ejemplo clasificación de imagenes:
-
-\begin{table}[ht]
-	\centering
-	\begin{tabular}{|c|c|c|c|}
-		\hline
-		TIPO & DAÑO & TAMAÑO & FILENAME \\
-		\hline
-		R12 & DEFECTUOSA & GRANDE & 1\_1\_1\_075.JPG \\
-		\hline
-		PASTUSA & BUENA & GRANDE & 0\_0\_1\_1973.JPG \\
-		\hline
-		R12 & BUENA & GRANDE & 1\_0\_1\_2054.JPG \\
-		\hline
-		PASTUSA & BUENA & MEDIANA & 0\_0\_2\_2042.JPG \\
-		\hline
-		PASTUSA & BUENA & GRANDE & 0\_0\_1\_1955.JPG \\
-		\hline
-	\end{tabular}	
-	\caption{MetaData}
-	\label{table:metadata}
-\end{table}
-
-En la tabla podemos apreciar la distribución del \textit{MetaData} de las imagenes almacendas en el \textit{Dataset}, donde se toman cinco imagenes al azar. A partir de esta tabla se crea un archivo \textit{.CSV} donde se encuentra la informacion de las 592 imagenes.
-
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.2]{Figs/Chamber.JPEG}
+		\caption{Caja para tomar fotos}
+		\label{fig:chamber}
+	\end{figure}
 
 \newpage
+	Se creó un \textit{dataset} de 592 imágenes de papa tipo R12 y tipo pastusa las cuales se implementarán para train y para test además de 75 imágenes de tuberculos para la comprobación del algoritmo. Se realizará una clasificación en tres categorias que son, tipo, daño y tamaño. Las etiquetas de cada imagen se encuentran dentro del nombre de cada archivo, de la siguiente manera:
+
+	\begin{itemize}
+		\item $[Tipo]$ es 0(Pastusa) y 1(R12).
+		\item $[Dano]$ es 0(Buena) y 1(Defectuosa).
+		\item $[Tamano]$ de 0 a 2 corresponde a muy grande, grande y mediana.
+		\item $[Numero \ de \ la \ imagen]$ etiqueta asignada por la cámara.
+	\end{itemize}
+
+	Ejemplo clasificación de imagenes:
+	
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			TIPO & DAÑO & TAMAÑO & FILENAME \\
+			\hline
+			R12 & DEFECTUOSA & GRANDE & 1\_1\_1\_075.JPG \\
+			\hline
+			PASTUSA & BUENA & GRANDE & 0\_0\_1\_1973.JPG \\
+			\hline
+			R12 & BUENA & GRANDE & 1\_0\_1\_2054.JPG \\
+			\hline
+			PASTUSA & BUENA & MEDIANA & 0\_0\_2\_2042.JPG \\
+			\hline
+			PASTUSA & BUENA & GRANDE & 0\_0\_1\_1955.JPG \\
+			\hline
+		\end{tabular}	
+		\caption{MetaData}
+		\label{table:metadata}
+	\end{table}
+
+	En la tabla podemos apreciar la distribución del \textit{MetaData} de las imagenes almacendas en el \textit{Dataset}, donde se toman cinco imagenes al azar. A partir de esta tabla se crea un archivo \textit{.CSV} donde se encuentra la informacion de las 592 imagenes.
+
+
+
+
+\newpage
+
 \section{Distribución del Dataset}
 
-Se presenta la distribución del dataset segun sus categorias.  
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.5]{Figs/1.png}
-	\caption{Distribución de la categoría Tipo}
-	\label{fig:Ctipo}
-\end{figure}
-
-La distribucón para la categoría \textit{Tipo}, cuenta con 342 imagenes de tuberculos \textit{R12} frente a 250 imagenes del tipo \textit{Pastusa}.
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.5]{Figs/2.png}
-	\caption{Distribución de la categoría daño}
-	\label{fig:Cdaño}
-\end{figure}
-
-La distribucón para la categoría \textit{Daño}, cuenta con 346 imagenes de tuberculos \textit{Defectuosos} y 246 imagenes de tuberculos \textit{Buenos}
-
-\newpage
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.5]{Figs/3.png}
-	\caption{Distribución de la categoría Tamaño}
-	\label{fig:Ctamaño}
-\end{figure}
-
-La distribucón para la categoría \textit{Tamaño}, cuenta con 113 imagenes de tuberculos \textit{Muy grande}, 213 imagenes de tuberculos \textit{Grande} y 266 imagenes de tuberculos \textit{Mediano}.
-\\  
-\\ 
-Los Datasets de \textit{Train} y \textit{Test} son creados para el entrenamiento y validacion de la red neuronal, programada para la clasificacion de imagenes, estos son separados en $80\%$ para \textit{Train} y $20\%$ para \textit{Test}. Se crearon archivos \textit{.CSV}, como se mostro en la tabla \ref{table:metadata}, los cuales contienen el metadata y la direccion de las imagenes por separado. 
+	Se presenta la distribución del dataset segun las categorias establecidas.  
+	
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			PASTUSA & R12 & BUENA & DEFECTUOSA & CLASE \\
+			\hline
+			X &  & X &  & CLASE 1 \\
+			\hline
+			X &  &  & X & CLASE 2 \\
+			\hline
+			  & X & X &  & CLASE 3 \\
+			\hline
+			  & X &  & X & CLASE 4 \\
+			\hline
+		\end{tabular}	
+		\caption{Clases}
+		\label{table:Clases}
+	\end{table}
+	  
+	Los Datasets de \textit{Train} y \textit{Test} son creados para el entrenamiento y validacion de la red neuronal, programada para la clasificacion de imagenes, estos son separados en $80\%$ para \textit{Train} y $20\%$ para \textit{Test}. Se crearon archivos \textit{.CSV}, como se mostro en la tabla \ref{table:metadata}, los cuales contienen el metadata y la direccion de las imagenes por separado. De esta manera obtenemos la clasificacion del dataset segun el metadata de sus imagenes.
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.6]{Figs/4.png}
+		\caption{Distribución del Dataset segun las categorias}
+		\label{fig:distribucion}
+	\end{figure}
 
 
 \newpage
-\chapter{Red Neuronal Artificial}
+\chapter{Algoritmo de clasificación}
+
+	\section{Red neuronal artificial}
+
+		\subsection{Data Augmentation}
+
+		\subsection{Datasets y DataLoaders}
+
+		\subsection{Arquitectura del modelo e hiperparámetros}
+		
+		\subsection{Comparación de arquitecturas}
+		
+	\section{Clasificación de tamaño}
+	
+
+	
+
 
 
 
