@@ -92,4 +92,7 @@ M.~Barnes, T.~Duckett, G.~Cielniak, G.~Stroud, and G.~Harper, ``Visual
 D.~A. Van~Dyk and X.-L. Meng, ``The art of data augmentation,'' {\em Journal of
   Computational and Graphical Statistics}, vol.~10, no.~1, pp.~1--50, 2001.
 
+\bibitem{Pytorch}
+``Pytorch documentation — pytorch 1.10.1 documentation.''
+
 \end{thebibliography}

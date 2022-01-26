@@ -181,7 +181,7 @@ El sector agricultor de Colombia ha implementado diferentes técnicas de visión
 		\label{table:Clases}
 	\end{table}
 	  
-	Los Datasets de \textit{Train} y \textit{Test} son creados para el entrenamiento y validacion de la red neuronal, programada para la clasificacion de imagenes, estos son separados en $80\%$ para \textit{Train} y $20\%$ para \textit{Test}. Se crearon archivos \textit{.CSV}, como se mostro en la tabla \ref{table:metadata}, los cuales contienen el metadata y la direccion de las imagenes por separado. De esta manera obtenemos la clasificacion del dataset segun el metadata de sus imagenes.
+	Los Datasets de \textit{Train} y \textit{Test} son creados para el entrenamiento y validacion de la red neuronal, programada para la clasificacion de imagenes, estos son separados en $80\%$ para \textit{Train} y $20\%$ para \textit{Test}. Se crearon archivos \textit{.CSV}, como se mostró en la tabla \ref{table:metadata}, los cuales contienen el metadata y la direccion de las imagenes por separado. De esta manera obtenemos la clasificacion del dataset segun el metadata de sus imagenes.
 	
 	\begin{figure}[ht]
 		\centering
@@ -199,17 +199,51 @@ El sector agricultor de Colombia ha implementado diferentes técnicas de visión
 		\subsection{Data Augmentation}
 			\subsubsection{\MakeUppercase{Definición}}
 
-			El Data augmentation es implementado para crear nuevos datos basados en modificaciones de los datos que ya posee el conjunto de entrenamiento. El objetivo de esta herramienta es crear nuevos datos que puedan ser añadidos al conjunto ya existente y así contar con más muestras para un mejor desempeño del algoritmo. Además de esto tambien es implementado para reducir el el overfitting ya que al añadir más información al conjunto de entrenamineto se evita que el modelo se sobreajuste. 
+			El Data augmentation es implementado para crear nuevos datos basados en modificaciones de los datos que ya posee el conjunto de entrenamiento. El objetivo de esta herramienta es crear nuevos datos que puedan ser añadidos al conjunto ya existente y así contar con más muestras para un mejor desempeño del algoritmo. Además de esto tambien es implementado para reducir el el overfitting ya que al añadir más información al conjunto de entrenamineto se evita que el modelo se sobreajuste. \\
 
 
-			El concepto Data Augmentation tiene relación con los procedimientos para edificar algoritmos iterativos de mejora o muestreo por medio de la introducción de datos no vigilados o cambiantes latentes. Para los algoritmos estocásticos, el procedimiento se popularizó en la literatura estadística por el algoritmo de incremento de datos de Tanner y Wong y en la literatura de física por el algoritmo de Swendsen y Wang para el muestreo de los modelos de Ising y Potts y sus generalizaciones; en la literatura de física, el Data Augmentation se conoce como el procedimiento de las cambiantes auxiliares. Generalmente, no obstante, la obra de esquemas de el Data augmentation es que den sitio a algoritmos básicos y rápidos, debido a que las tácticas famosas varían de una manera significativa con respecto a los modelos.\cite{van2001art}
+			El concepto Data Augmentation tiene relación con los procedimientos para edificar algoritmos iterativos de mejora o muestreo por medio de la introducción de datos no vigilados o cambiantes latentes. Para los algoritmos estocásticos, el procedimiento se popularizó en la literatura estadística por el algoritmo de incremento de datos de Tanner y Wong y en la literatura de física por el algoritmo de Swendsen y Wang para el muestreo de los modelos de Ising y Potts y sus generalizaciones; en la literatura de física, el Data Augmentation se conoce como el procedimiento de las cambiantes auxiliares. Generalmente, no obstante, la obra de esquemas de el Data augmentation es que den sitio a algoritmos básicos y rápidos, debido a que las tácticas famosas varían de una manera significativa con respecto a los modelos \cite{van2001art}.
 			
 			
 			 
 			
 			\subsubsection{\MakeUppercase{Preprocesamiento de imagenes}}
-			El Data Augmentation cuenta con diferentes tipos de filtros que pueden ser aplicados a los datos que posee el conjunto de entrenamiento, como los mostrados en la siguiente tabla.
-			funcion pytorch.compose
+			
+			Usando el módulo \textit{torchvision.tranforms.compose} de la librería \textit{Pytorch} se puede encadenar unas determinadas funciones que aplican diferentes tipos de filtros y transformaciones al \textit{Dataset}. De esta forma se puede crear la tarea de segmentación debido a que el las transformaciones aumentan en consideración el tamaño original del \textit{Dataset} \cite{Pytorch}. Las tranformaciones disponibles en éste módulo se presentan a continuación:
+
+			 \begin{table}[ht]
+			 	\centering
+			 	\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+			 		\hline
+			 		Image Transform       & \multicolumn{1}{c|}{Use}                                                               & Image Transform       & \multicolumn{1}{c|}{Use}                                                                        \\ \hline
+			 		Centercrop            & Recorta la imágen en el centro                                                         & RandomResizedCrop     & Recorta una porción aleatoria de la imágen y la redimensiona a un tamaño determinado            \\ \hline
+			 		ColorJitter           & Cambia aleatoriamente el brillo, el contraste, la saturación y el tono de una imágen   & RandomRotation        & Rota la imágen a un ángulo determinado                                                          \\ \hline
+			 		Fivercop              & Recorta la imágen en cuatro esquinas y el recorte central                              & RandomVerticalFlip    & Voltea verticalmente la imágen al azar con una probabilidad dada                                \\ \hline
+			 		Grayscale             & Convierte la imágen en escala de grises                                                & Resize                & Redimensiona la imágen al tamaño dado                                                           \\ \hline
+			 		Pad                   & Rellena la imágen en todos sus lados con el valor de "pad" dado                        & TenCrop               & Recorta la imagen dada en cuatro esquinas y el recorte central más la versión volteada de éstas \\ \hline
+			 		RandomAffine          & Transformación afín aleatoria de la imagen manteniendo el centro invariante            & GaussianBlur          & Desenfoca la imágen con un filtro gausseano                                                                                                                                                     \\ \hline
+			 	\end{tabular}
+		 		\caption{Funciones de transformación de imágenes del módulo de \textit{Pytorch}}
+			 \end{table}
+		 
+		 \newpage
+		 
+		 \begin{table}[ht]
+		 	\centering
+		 	\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+		 		\hline
+		 		Image Transform       & \multicolumn{1}{c|}{Use}                                                               & Image Transform       & \multicolumn{1}{c|}{Use}                                                \\ \hline
+		 		Randomcrop            & Recorta la imágen aleatoriamente                                                       & RandomInvert          & Invierte los colores de la imágen de forma aleatoria                    \\ \hline
+		 		RaandomGrayscale      & Convierte la imágen en escala de grises aleatoriamente                                 & RandomPosterize       & Reduce el número de bits de cada canal de laa imágen de forma aleatoria \\ \hline
+		 		RandomHorizontalFlip  & Voltea horizontalmente la imágen al azar con una probabilidad dada                     & RandomSolarize        & Invierte aleatoriamente el valor de los pixeles por encima de un umbral \\ \hline
+		 		RandomPerspective     & Realiza una transformación de perspectiva aleatoria de la imagén                       & RandomAutocontrast    & Autocontraste de los píxeles de la imagen dada aleatoriamente           \\ \hline
+		 		RandomAdjustSharpness & Ajusta la nitidez de la imágen de forma aleatoria                                      & RandomEqualize        & Equaliza el histograma de la imágen dada aleatoriamente                 \\ \hline
+		 		RandomApply           & Aplicar aleatoriamente una lista de transformaciones con una probabilidad determinada. & \multicolumn{1}{l|}{} &                                                                         \\ \hline
+		 	\end{tabular}
+	 		\caption{Funciones de transformación de imágenes del módulo de \textit{Pytorch}}
+		 \end{table}
+
+
 			
 			\subsubsection{\MakeUppercase{Filtro Gaussiano}}
 
