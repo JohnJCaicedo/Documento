@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.19)  25 JAN 2022 19:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.19)  25 JAN 2022 20:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1318,12 +1318,16 @@ LaTeX Info: Redefining \. on input line 194.
 LaTeX Info: Redefining \% on input line 194.
  [16 <./Figs/4.png>]
 chapter 5.
-[17
+
+Underfull \vbox (badness 5245) has occurred while \output is active []
+
+ [17
 
 ]
-LaTeX Info: Redefining \. on input line 242.
-LaTeX Info: Redefining \% on input line 242.
- [18]
+LaTeX Info: Redefining \. on input line 244.
+LaTeX Info: Redefining \% on input line 244.
+
+[18]
 chapter 6.
 ) [19
 
@@ -1380,7 +1384,7 @@ MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/gohan/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/gohan/AppData/
 Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/goh
 an/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on PlantillaPG.pdf (25 pages, 561603 bytes).
+Output written on PlantillaPG.pdf (25 pages, 561654 bytes).
 PDF statistics:
  488 PDF objects out of 1000 (max. 8388607)
  119 named destinations out of 1000 (max. 500000)
