@@ -1,5 +1,13 @@
 \begin{thebibliography}{10}
 
+\bibitem{referencia1}
+``El aporte de la papa a la economía colombiana • periódico el campesino
+  – la voz del campo colombiano.''
+
+\bibitem{referencia2}
+``Sector papero se prepara para aumentar el consumo de papa en colombia |
+  finagro.''
+
 \bibitem{article3}
 J.~Porras, M.~De~la Cruz, and A.~Mor{\'a}n, ``Clasification system based on
   computer vision,'' {\em Escuela Profesional de Ingenier{\'\i}a
@@ -77,36 +85,11 @@ M.~Barnes, T.~Duckett, G.~Cielniak, G.~Stroud, and G.~Harper, ``Visual
   detection of blemishes in potatoes using minimalist boosted classifiers,''
   {\em Journal of Food Engineering}, vol.~98, pp.~339--346, 2010.
 
-\bibitem{referencia1}
-``El aporte de la papa a la economía colombiana • periódico el campesino
-  – la voz del campo colombiano.''
-
-\bibitem{referencia2}
-``Sector papero se prepara para aumentar el consumo de papa en colombia |
-  finagro.''
-
 \bibitem{Camara}
 ``La camara fotografica cuerpo y controles basicos.''
 
-\bibitem{scikit-image}
-S.~van~der Walt, J.~L. {S}ch\"onberger, J.~{Nunez-Iglesias}, F.~{B}oulogne,
-  J.~D. {W}arner, N.~{Y}ager, E.~{G}ouillart, T.~{Y}u, and the scikit-image
-  contributors, ``scikit-image: image processing in {P}ython,'' {\em PeerJ},
-  vol.~2, p.~e453, 6 2014.
-
-\bibitem{FAQCOLOR}
-``Frequently asked questions about color | enhanced reader.''
-
-\bibitem{CS}
-``Point operations - contrast stretching.''
-
-\bibitem{Han2011}
-J.~H. Han, S.~Yang, and B.~U. Lee, ``A novel 3-d color histogram equalization
-  method with uniform 1-d gray scale histogram,'' {\em IEEE Transactions on
-  Image Processing}, vol.~20, pp.~506--512, 2 2011.
-
-\bibitem{GuiaDanosPapa}
-Q.~Afectan, A.~L. Papa, E.~N. La, Z.~Andina, W.~Pérez, and G.~Forbes, {\em
-  Guía de identificación de plagas que afectan a la papa en la zona andina}.
+\bibitem{van2001art}
+D.~A. Van~Dyk and X.-L. Meng, ``The art of data augmentation,'' {\em Journal of
+  Computational and Graphical Statistics}, vol.~10, no.~1, pp.~1--50, 2001.
 
 \end{thebibliography}
