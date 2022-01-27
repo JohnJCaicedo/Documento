@@ -217,9 +217,27 @@ El sector agricultor de Colombia ha implementado diferentes técnicas de visión
 			\subsubsection{\MakeUppercase{Función Dataset}}
 			explicar funcion atributos y transform
 			\subsubsection{\MakeUppercase{Función Dataloader}}
-			La función DataLoader de Pytorch es implementada para realizar la importación de datos a gran escala. Para el uso de esta función se debe tener en cuenta que el argumento más importante será el dataset en el cual se debe tener en cuenta de que tipo es ya que PyTorch soporta dos tipos diferentes que son MAP-STYLE DATASETS AND ITERABLE-STYLE DATASETS. 
-			Según como se explico en el apartado anterior el tipo de dataset implementando para este pryecto es del tipo ITERABLE-STYLE DATASETS 
-			batch size shuffle y num of workers
+			La función DataLoader de Pytorch es implementada para realizar la importación de datos a gran escala. Para el uso de esta función se debe tener en cuenta que el argumento más importante será el dataset en el cual se debe tener en cuenta de que tipo es, ya que PyTorch soporta dos tipos diferentes que son MAP-STYLE DATASETS AND ITERABLE-STYLE DATASETS. 
+			Según como se explico en el apartado anterior el tipo de dataset implementando para este pryecto es del tipo ITERABLE-STYLE DATASETS, Además se debe tener en cuenta que el Dataloader permite la agrupación automática de muestras de datos individuales obtenidas en los Batchs mediante argumentos. 
+			Los Dataloaders cuentan con una gran catidad de argumentos que ayudan para que la carga de datos sea más eficiente \cite{Pytorch}. Es por esta razón que para la ejecución de este dataloader se implementarón los siguientes parametros:
+			
+			\begin{table}[ht]
+				\centering
+				\begin{tabular}{|c|c|}
+					\hline
+					FUNCIÓN & DESCRIPCIÓN \\ 
+					\hline
+					Batch size & \\
+					\hline
+					Shuffle & \\
+					\hline
+					Num workers & \\
+					\hline
+				\end{tabular}	
+				\caption{Argumentos para el Dataloader}
+				\label{table:Argumentos}
+			\end{table}
+			
 		
 		\subsection{Hiperparámetros del modelo}
 			\subsubsection{\MakeUppercase{Stride and Padding and maxpooling and activation funtion}}
