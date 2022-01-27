@@ -34,21 +34,21 @@
 \contentsline {subsubsection}{\nonumberline \MakeUppercase {Filtro Gaussiano}}{18}{subsubsection*.9}%
 \contentsline {subsection}{\numberline {5.1.2}Datasets y DataLoaders}{18}{subsection.5.1.2}%
 \contentsline {subsubsection}{\nonumberline \MakeUppercase {Función Dataset}}{18}{subsubsection*.11}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Función Dataloader}}{18}{subsubsection*.13}%
-\contentsline {subsection}{\numberline {5.1.3}Hiperparámetros del modelo}{19}{subsection.5.1.3}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Stride and Padding and maxpooling and activation funtion}}{19}{subsubsection*.15}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Dropout}}{19}{subsubsection*.17}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Función de perdidas}}{19}{subsubsection*.19}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Función Dataloader}}{19}{subsubsection*.13}%
+\contentsline {subsection}{\numberline {5.1.3}Hiperparámetros del modelo}{20}{subsection.5.1.3}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Stride and Padding and maxpooling and activation funtion}}{20}{subsubsection*.15}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Dropout}}{20}{subsubsection*.17}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Función de perdidas}}{20}{subsubsection*.19}%
 \contentsline {subsubsection}{\nonumberline \MakeUppercase {Optimizador}}{20}{subsubsection*.21}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Backward pero otro nombre}}{20}{subsubsection*.23}%
-\contentsline {subsection}{\numberline {5.1.4}Optimización Bayesiana}{20}{subsection.5.1.4}%
-\contentsline {subsection}{\numberline {5.1.5}Arquitectura del modelo}{20}{subsection.5.1.5}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado ALEXNET}}{20}{subsubsection*.25}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado RESNET18}}{20}{subsubsection*.27}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG19}}{20}{subsubsection*.29}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG11}}{20}{subsubsection*.31}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Comparación de arquitecturas}}{20}{subsubsection*.33}%
-\contentsline {section}{\numberline {5.2}Clasificación de tamaño}{20}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Prototipo}{21}{chapter.6}%
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{22}{chapter.6}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Backward pero otro nombre}}{21}{subsubsection*.23}%
+\contentsline {subsection}{\numberline {5.1.4}Optimización Bayesiana}{21}{subsection.5.1.4}%
+\contentsline {subsection}{\numberline {5.1.5}Arquitectura del modelo}{21}{subsection.5.1.5}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado ALEXNET}}{21}{subsubsection*.25}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado RESNET18}}{21}{subsubsection*.27}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG19}}{21}{subsubsection*.29}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG11}}{21}{subsubsection*.31}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Comparación de arquitecturas}}{21}{subsubsection*.33}%
+\contentsline {section}{\numberline {5.2}Clasificación de tamaño}{21}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Prototipo}{22}{chapter.6}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{23}{chapter.6}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

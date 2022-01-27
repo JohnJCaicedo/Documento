@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.19)  26 JAN 2022 19:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.19)  26 JAN 2022 21:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1147,13 +1147,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-Package tocbasic Info: Using my definition of `\numberline' on input line 34.
-Package tocbasic Info: Using my definition of `\numberline' on input line 37.
-Package tocbasic Info: Using my definition of `\numberline' on input line 43.
+Package tocbasic Info: Using my definition of `\numberline' on input line 35.
+Package tocbasic Info: Using my definition of `\numberline' on input line 38.
 Package tocbasic Info: Using my definition of `\numberline' on input line 44.
-Package tocbasic Info: Using my definition of `\numberline' on input line 50.
+Package tocbasic Info: Using my definition of `\numberline' on input line 45.
 Package tocbasic Info: Using my definition of `\numberline' on input line 51.
 Package tocbasic Info: Using my definition of `\numberline' on input line 52.
+Package tocbasic Info: Using my definition of `\numberline' on input line 53.
 )
 \tf@toc=\write5
 \openout5 = `PlantillaPG.toc'.
@@ -1319,20 +1319,116 @@ LaTeX Info: Redefining \% on input line 194.
  [16 <./Figs/4.png>]
 chapter 5.
 
-Underfull \vbox (badness 5245) has occurred while \output is active []
+Underfull \hbox (badness 1163) in paragraph at lines 220--220
+[]|\OT1/cmr/m/n/12 Recorta una por-cion
+ []
 
- [17
+
+Underfull \hbox (badness 7851) in paragraph at lines 222--222
+[]|\OT1/cmr/m/n/12 Voltea ver-ti-cal-men-te
+ []
+
+
+Underfull \hbox (badness 2020) in paragraph at lines 223--223
+[]|\OT1/cmr/m/n/12 Convierte la imagen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--223
+[]|\OT1/cmr/m/n/12 Redimensiona la
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--223
+\OT1/cmr/m/n/12 imagen al ta-ma~no
+ []
+
+
+Underfull \hbox (badness 1831) in paragraph at lines 224--224
+\OT1/cmr/m/n/12 da en cua-tro es-qui-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+[]|\OT1/cmr/m/n/12 Transformacion afn
+ []
+
+
+Underfull \hbox (badness 1137) in paragraph at lines 225--225
+[]|\OT1/cmr/m/n/12 Desenfoca la imagen
+ []
+
+
+Underfull \hbox (badness 3792) in paragraph at lines 225--225
+\OT1/cmr/m/n/12 con un fil-tro gaus-
+ []
+
+
+Overfull \hbox (49.99997pt too wide) in paragraph at lines 217--227
+ [][] 
+ []
+
+[17
 
 ]
-LaTeX Info: Redefining \. on input line 264.
-LaTeX Info: Redefining \% on input line 264.
+Underfull \hbox (badness 10000) in paragraph at lines 237--237
+[]|\OT1/cmr/m/n/12 Recorta la imagen
+ []
 
+
+Underfull \hbox (badness 1635) in paragraph at lines 237--237
+\OT1/cmr/m/n/12 la imagen de for-ma
+ []
+
+
+Underfull \hbox (badness 2020) in paragraph at lines 238--238
+[]|\OT1/cmr/m/n/12 Convierte la imagen
+ []
+
+
+Underfull \hbox (badness 4096) in paragraph at lines 238--238
+\OT1/cmr/m/n/12 en es-ca-la de gri-ses
+ []
+
+
+Overfull \hbox (3.67944pt too wide) in paragraph at lines 239--239
+[]|\OT1/cmr/m/n/12 RandomHorizontalFlip| 
+ []
+
+
+Overfull \hbox (15.13765pt too wide) in paragraph at lines 241--241
+[]|\OT1/cmr/m/n/12 RandomAdjustSharpness| 
+ []
+
+
+Underfull \hbox (badness 1199) in paragraph at lines 242--242
+\OT1/cmr/m/n/12 for-ma-cio-nes con una
+ []
+
+
+Overfull \hbox (49.99997pt too wide) in paragraph at lines 234--244
+ [][] 
+ []
+
+LaTeX Info: Redefining \. on input line 254.
+LaTeX Info: Redefining \% on input line 254.
 [18]
-LaTeX Info: Redefining \. on input line 264.
-LaTeX Info: Redefining \% on input line 264.
+Underfull \vbox (badness 5652) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 282.
+LaTeX Info: Redefining \% on input line 282.
  [19]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 309.
+LaTeX Info: Redefining \% on input line 309.
+ [20]
+LaTeX Info: Redefining \. on input line 309.
+LaTeX Info: Redefining \% on input line 309.
+
+[21]
 chapter 6.
-) [20
+) [22
 
 ] (PlantillaPG.bbl
 Underfull \hbox (badness 1622) in paragraph at lines 12--17
@@ -1352,7 +1448,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--17
 tronica/CAP-
  []
 
-[21
+[23
 
 
 
@@ -1361,7 +1457,7 @@ tronica/CAP-
 ])
 LaTeX Info: Redefining \. on input line 37.
 LaTeX Info: Redefining \% on input line 37.
- [22] (PlantillaPG.aux (OtrosTex/HojaTitulo.aux)
+ [24] (PlantillaPG.aux (OtrosTex/HojaTitulo.aux)
 LaTeX Info: Redefining \. on input line 28.
 LaTeX Info: Redefining \% on input line 28.
  (Capitulos/Cap1.aux))
@@ -1369,10 +1465,10 @@ Package rerunfilecheck Info: File `PlantillaPG.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27779 strings out of 478659
- 553977 string characters out of 2845920
- 970514 words of memory out of 3000000
- 45264 multiletter control sequences out of 15000+600000
+ 27786 strings out of 478659
+ 554052 string characters out of 2845920
+ 974514 words of memory out of 3000000
+ 45265 multiletter control sequences out of 15000+600000
  410862 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,12n,109p,10636b,731s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1386,9 +1482,9 @@ MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/gohan/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/gohan/AppData/
 Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/goh
 an/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on PlantillaPG.pdf (25 pages, 563827 bytes).
+Output written on PlantillaPG.pdf (27 pages, 569876 bytes).
 PDF statistics:
- 492 PDF objects out of 1000 (max. 8388607)
- 121 named destinations out of 1000 (max. 500000)
+ 506 PDF objects out of 1000 (max. 8388607)
+ 127 named destinations out of 1000 (max. 500000)
  316 words of extra memory for PDF output out of 10000 (max. 10000000)
 
