@@ -192,25 +192,29 @@ El sector agricultor de Colombia ha implementado diferentes técnicas de visión
 
 
 \newpage
-\chapter{Algoritmo de clasificación}
+\chapter{Algoritmo de Clasificación}
 
-	\section{Red neuronal artificial}
+
+
+
+
+
+
+	\section{Red Neuronal Artificial}
 
 		\subsection{Data Augmentation}
-			\subsubsection{\MakeUppercase{Definición}}
+			\subsubsection{DEFINICIÓN}
 
-			El Data augmentation es implementado para crear nuevos datos basados en modificaciones de los datos que ya posee el conjunto de entrenamiento. El objetivo de esta herramienta es crear nuevos datos que puedan ser añadidos al conjunto ya existente y así contar con más muestras para un mejor desempeño del algoritmo. Además de esto tambien es implementado para reducir el el overfitting ya que al añadir más información al conjunto de entrenamineto se evita que el modelo se sobreajuste. 
+			El Data augmentation es implementado para crear nuevos datos basados en modificaciones de los datos que ya posee el conjunto de entrenamiento. El objetivo de esta herramienta es crear nuevos datos que puedan ser añadidos al conjunto ya existente y así contar con más muestras para un mejor desempeño del algoritmo. Además de esto tambien es implementado para reducir el el overfitting ya que al añadir más información al conjunto de entrenamineto se evita que el modelo se sobreajuste. \\
 
 
 			El concepto Data Augmentation tiene relación con los procedimientos para edificar algoritmos iterativos de mejora o muestreo por medio de la introducción de datos no vigilados o cambiantes latentes. Para los algoritmos estocásticos, el procedimiento se popularizó en la literatura estadística por el algoritmo de incremento de datos de Tanner y Wong y en la literatura de física por el algoritmo de Swendsen y Wang para el muestreo de los modelos de Ising y Potts y sus generalizaciones; en la literatura de física, el Data Augmentation se conoce como el procedimiento de las cambiantes auxiliares. Generalmente, no obstante, la obra de esquemas de el Data augmentation es que den sitio a algoritmos básicos y rápidos, debido a que las tácticas famosas varían de una manera significativa con respecto a los modelos.\cite{van2001art}
-			
-			
+					
 			 
 			
-			\subsubsection{Preprocesamiento de imagenes}
-			\subsubsection{\MakeUppercase{Preprocesamiento de imagenes}}
+			\subsubsection{PREPROCESAMIENTO DE IMÁGENES}
 
-			Usando el módulo \textit{torchvision.tranforms.compose} de la librería \textit{Pytorch} se puede encadenar unas determinadas funciones que aplican diferentes tipos de filtros y transformaciones al \textit{Dataset}. De esta forma se puede crear la tarea de segmentación debido a que el las transformaciones aumentan en consideración el tamaño original del \textit{Dataset} \cite{Pytorch}. Las tranformaciones disponibles en éste módulo se presentan a continuación:
+			Usando el módulo \textit{torchvision.tranforms.compose} de la librería \textit{Pytorch} se puede encadenar unas determinadas funciones que aplican diferentes tipos de filtros y transformaciones al \textit{Dataset}. De esta forma se puede crear la tarea de segmentación debido a que las transformaciones aumentan en consideración el tamaño original del \textit{Dataset}, facilitando así, la extracción de características de c ada imágen \cite{Pytorch}. Las tranformaciones disponibles en éste módulo se presentan a continuación:
 			
 			\begin{table}[ht]
 				\centering
@@ -225,15 +229,12 @@ El sector agricultor de Colombia ha implementado diferentes técnicas de visión
 					RandomAffine          & Transformación afín aleatoria de la imagen manteniendo el centro invariante            & GaussianBlur          & Desenfoca la imágen con un filtro gausseano                                                                                                                                                     \\ \hline
 				\end{tabular}
 				\caption{Funciones de transformación de imágenes del módulo de \textit{Pytorch}}
+				\label{table:Filters1}
 			\end{table}
 			
+			En la tabla \ref{table:Filters1} se observa una parte de las transformaciones de imágenes disponibles en el módulo \textit{torchvision.tranforms.compose} de la librería \textit{Pytorch}. En el caso del \textit{Dataset} de papas creado, se deben tener en cuenta únicamente las transformaciones cuyo resultado sea relevante para la extracción de caractéristicas de la imágen, por ejemplo, eomo se explicó anteriormente, se va a clasificar el tubérculo de papá en tipo y daño con la red neuronal, por este motivo, el color es una característica que define si la papa pertenece a la clase \textit{R12} o \textit{Pastusa} y, en algunos casos, si se encuentra con algún tipo de daño, por este motivo, los filtros que transforman la imágen en escala de grises no son relevantes y podrían afectar el rendimiento del algoritmo.
 			
-			
-			
-			
-			
-			
-			
+						
 			\newpage
 			
 			\begin{table}[ht]
