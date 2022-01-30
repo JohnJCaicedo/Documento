@@ -258,27 +258,38 @@ El sector agricultor de Colombia ha implementado diferentes técnicas de visión
 		\subsection{Datasets y DataLoaders}
 			\subsubsection{\MakeUppercase{Función Dataset}}
 			explicar funcion atributos y transform
+			
+			\newpage
 			\subsubsection{\MakeUppercase{Función Dataloader}}
-			La función DataLoader de Pytorch es implementada para realizar la importación de datos a gran escala. Para el uso de esta función se debe tener en cuenta que el argumento más importante será el dataset en el cual se debe tener en cuenta de que tipo es, ya que PyTorch soporta dos tipos diferentes que son MAP-STYLE DATASETS AND ITERABLE-STYLE DATASETS. 
-			Según como se explico en el apartado anterior el tipo de dataset implementando para este pryecto es del tipo ITERABLE-STYLE DATASETS, Además se debe tener en cuenta que el Dataloader permite la agrupación automática de muestras de datos individuales obtenidas en los Batchs mediante argumentos. 
+			La función DataLoader de Pytorch es implementada para realizar la importación de datos a gran escala. Para el uso de esta función se debe tener en cuenta que el argumento más importante será el dataset en el cual se debe tener en cuenta de que tipo es, ya que PyTorch soporta dos tipos diferentes que son \textit{map-style Datasets y iterable-style Datasets}. 
+			Según como se explico en el apartado anterior el tipo de dataset implementando para este pryecto es del tipo \textit{iterable-style Datsets}, Además se debe tener en cuenta que el Dataloader permite la agrupación automática de muestras de datos individuales obtenidas en los Batchs mediante argumentos. 
 			Los Dataloaders cuentan con una gran catidad de argumentos que ayudan para que la carga de datos sea más eficiente \cite{Pytorch}. Es por esta razón que para la ejecución de este dataloader se implementarón los siguientes parametros:
 			
 			\begin{table}[ht]
 				\centering
-				\begin{tabular}{|c|c|}
+				\begin{tabular}{|p{3cm}|p{8cm}|}
 					\hline
 					FUNCIÓN & DESCRIPCIÓN \\ 
 					\hline
-					Batch size & Cuantas muestras por Batch hay que cargar (Default: 1)\\
+					Batch size & Cuántas muestras por Batch hay que cargar (Default: 1)\\
 					\hline
-					Shuffle & \\
+					Shuffle & Se establece en TRUE para que los datos se reorganicen en cada época (Default: FALSE)  \\
 					\hline
-					Num workers & \\
+					Num workers & Cuántos subprocesos se utilizarán para la carga de datos. 0 significa que los datos se cargarán en el proceso principal. (Default: 0)\\
 					\hline
 				\end{tabular}	
 				\caption{Argumentos para el Dataloader}
 				\label{table:Argumentos}
 			\end{table}
+		
+		Los argumentos explicados en la tabla anterior fueron establecidos de la siguiente forma:
+		- Batch size= 40. \\
+		- Shuffle= True. \\
+		- Num workers= 0. \\
+		Esto con el obejtivo de que el Dataloader cargue 40 muestras por época y tome otras 40 diferentes para la siguiente época y asi sucesivamete hasta terminar todas las epocas estrablecidas.  
+		
+		
+		
 			
 		
 		\subsection{Hiperparámetros del modelo}
