@@ -217,15 +217,22 @@ El sector agricultor de Colombia ha implementado diferentes técnicas de visión
 				\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
 					\hline
 					Image Transform       & \multicolumn{1}{c|}{Use}                                                               & Image Transform       & \multicolumn{1}{c|}{Use}                                                                        \\ \hline
-					Centercrop            & Recorta la imágen en el centro                                                         & RandomResizedCrop     & Recorta una porción aleatoria de la imágen y la redimensiona a un tamaño determinado            \\ \hline
+					CenterCrop            & Recorta la imágen en el centro                                                         & RandomResizedCrop     & Recorta una porción aleatoria de la imágen y la redimensiona a un tamaño determinado            \\ \hline
 					ColorJitter           & Cambia aleatoriamente el brillo, el contraste, la saturación y el tono de una imágen   & RandomRotation        & Rota la imágen a un ángulo determinado                                                          \\ \hline
-					Fivercop              & Recorta la imágen en cuatro esquinas y el recorte central                              & RandomVerticalFlip    & Voltea verticalmente la imágen al azar con una probabilidad dada                                \\ \hline
+					FiverCrop              & Recorta la imágen en cuatro esquinas y el recorte central                              & RandomVerticalFlip    & Voltea verticalmente la imágen al azar con una probabilidad dada                                \\ \hline
 					Grayscale             & Convierte la imágen en escala de grises                                                & Resize                & Redimensiona la imágen al tamaño dado                                                           \\ \hline
 					Pad                   & Rellena la imágen en todos sus lados con el valor de "pad" dado                        & TenCrop               & Recorta la imagen dada en cuatro esquinas y el recorte central más la versión volteada de éstas \\ \hline
 					RandomAffine          & Transformación afín aleatoria de la imagen manteniendo el centro invariante            & GaussianBlur          & Desenfoca la imágen con un filtro gausseano                                                                                                                                                     \\ \hline
 				\end{tabular}
 				\caption{Funciones de transformación de imágenes del módulo de \textit{Pytorch}}
 			\end{table}
+			
+			
+			
+			
+			
+			
+			
 			
 			\newpage
 			
@@ -244,8 +251,9 @@ El sector agricultor de Colombia ha implementado diferentes técnicas de visión
 				\caption{Funciones de transformación de imágenes del módulo de \textit{Pytorch}}
 			\end{table}
 
-			
-			\subsubsection{\MakeUppercase{Filtro Gaussiano}}
+
+
+
 
 		\subsection{Datasets y DataLoaders}
 			\subsubsection{\MakeUppercase{Función Dataset}}
