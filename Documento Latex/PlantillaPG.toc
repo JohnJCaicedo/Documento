@@ -25,7 +25,7 @@
 \contentsline {chapter}{\numberline {4}Dataset Tubérculos de papas}{14}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Creación del Dataset}{14}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Distribución del Dataset}{16}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Algoritmo de clasificación}{17}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Algoritmo de Clasificación}{17}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Red Neuronal Artificial}{17}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}Data Augmentation}{17}{subsection.5.1.1}%
 \contentsline {subsubsection}{\nonumberline DEFINICIÓN}{17}{subsubsection*.3}%
