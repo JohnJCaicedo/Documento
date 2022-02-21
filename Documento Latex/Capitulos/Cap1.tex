@@ -14,12 +14,12 @@ Este proyecto busca implementar mediante un proceso mecatrónico las técnicas d
 
 \subsection{Objetivo General}
 
-Proponer un prototipo para la clasificación de características de calidad en los tubérculos de papa producidos en la región Andina de Colombia, mediante técnicas de visión por computadora.
+Implementar un prototipo para la clasificación de características de calidad en los tubérculos de papa producidos en la región Andina de Colombia, mediante técnicas de visión por computadora.
 
 \subsection{Objetivos Específicos}
 \begin{enumerate}
 	\item Identificar a través de técnicas de visión artificial los rasgos de calidad "y características físicas" que se encuentran en los tubérculos de papa. 
-	\item Evaluar el desempeño del prototipo propuesto para realizar la clasificación de los tubérculos de papa bajo la norma NTC341. 
+	\item Evaluar el desempeño del prototipo propuesto para realizar la clasificación de los tubérculos de papa bajo las categorias de tamaño grande mediana y pequeña establecidas por la norma NTC341. 
 	\item Comparar la precisión del modelo propuesto con modelos similares de clasificación
 \end{enumerate}
 
@@ -308,6 +308,39 @@ El sector agricultor de Colombia ha implementado diferentes técnicas de visión
 			
 		\subsection{Arquitectura del modelo}
 			\subsubsection{\MakeUppercase{Modelo preentrenado ALEXNET}}
+			El modelo AlexNet fue implementado en el año 2012 en el desafio de reconocimiento visual a gran escala Imaget. Este modelo tuvo un resultado tan satisfactorio que los modelos de aprendizaje profundo se convirtieron en la referencia para la investigación y desarrollo en los principales sectores de la industria. \cite{Pytorch}
+			\\
+			El modelo de AlexNet toma una imagen de entrada de tamaño 227*227(*3 canales de color) y aplica una convolución de tamaño 11*11 (con 96 núcleos/canales de salida) con un paso de 4. La salida de la convolución es una Imagen de 56*56*96 que luego pasa por otras capas hasta que llega a la capa softmax para su clasificación como se muestra en la siguiente imagen:
+			
+			\begin{figure}[ht]
+				\centering
+				\includegraphics[scale=0.4]{Figs/5.png}
+				\caption{Modelo AlexNet}
+				\label{fig:AlexNet}
+			\end{figure}
+		
+			Una vez conocida la estructura del modelo procedemos con la implementación, en la cual se siguieron una serie de pasos para la construcción del modelo clasificadorlos cuales son:
+			
+			\begin{enumerate}
+				\item \bfseries{CARGAR BIBILIOTECAS IMPORTANTES:} 
+				\\
+				Se llaman las bibliotecas importantes para la ejecución del modelo entre estas tenemos torch para pytorch...
+				\item \bfseries{PREPARACIÓN CONJUNTO DE DATOS:} 
+				\\
+				La preparación del conjunto de datos es una etapa de importación en la creación y ejecución del algoritmo de red neuronal o también conocida como preprocesamiento de imagenes.
+				\item\bfseries{CONSTRUCCIÓN DEL MODELO}
+				\\
+				En esta parte se convierte la arquitectura de AlexNet presentada en la imagen ... en código, para poder usarla más adelante en la clasificación.
+				Además en este paso se definen los valores de el maxpooling, el padding y el número de convoluciones que tendra la red neuronal.
+				\item\bfseries{FORMACIÓN DEL MODELO}
+				\\
+				Durante el entrenamiento de la red AlexNet (entrenamiento durante ... epochs) se obtuvo una precisión de validación promedio del ..., como se muestra en la siguiente imagen:
+				\item \bfseries{PRUEBA DEL MODELO}
+				\\
+				En este paso se comprueba la eficiencia del modelo usando el dataset de validación, donde encontramos que la red AlexNet pudo predecir correctamente ... de ... imagenes de papas tanto defectuosas como en buen estado y reconociendo tambien el tamaño al que pertenecen ya sea grande, mediana o pequeña 
+			\end{enumerate} 
+			
+			
 			\subsubsection{\MakeUppercase{Modelo preentrenado RESNET18}}
 			\subsubsection{\MakeUppercase{Modelo preentrenado VGG19}}
 			\subsubsection{\MakeUppercase{Modelo preentrenado VGG11}}
