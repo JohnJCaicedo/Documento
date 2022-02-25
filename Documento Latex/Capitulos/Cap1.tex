@@ -322,26 +322,37 @@ El sector agricultor de Colombia ha implementado diferentes técnicas de visión
 			Una vez conocida la estructura del modelo procedemos con la implementación, en la cual se siguieron una serie de pasos para la construcción del modelo clasificadorlos cuales son:
 			
 			\begin{enumerate}
-				\item \bfseries{CARGAR BIBILIOTECAS IMPORTANTES:} 
+				\item \textbf{CARGAR BIBILIOTECAS IMPORTANTES:} 
 				\\
 				Se llaman las bibliotecas importantes para la ejecución del modelo entre estas tenemos torch para pytorch...
-				\item \bfseries{PREPARACIÓN CONJUNTO DE DATOS:} 
+				\item \textbf{PREPARACIÓN CONJUNTO DE DATOS:} 
 				\\
 				La preparación del conjunto de datos es una etapa de importación en la creación y ejecución del algoritmo de red neuronal o también conocida como preprocesamiento de imagenes.
-				\item\bfseries{CONSTRUCCIÓN DEL MODELO}
+				\item\textbf{CONSTRUCCIÓN DEL MODELO}
 				\\
 				En esta parte se convierte la arquitectura de AlexNet presentada en la imagen ... en código, para poder usarla más adelante en la clasificación.
 				Además en este paso se definen los valores de el maxpooling, el padding y el número de convoluciones que tendra la red neuronal.
-				\item\bfseries{FORMACIÓN DEL MODELO}
+				\item\textbf{FORMACIÓN DEL MODELO}
 				\\
 				Durante el entrenamiento de la red AlexNet (entrenamiento durante ... epochs) se obtuvo una precisión de validación promedio del ..., como se muestra en la siguiente imagen:
-				\item \bfseries{PRUEBA DEL MODELO}
+				\item \textbf{PRUEBA DEL MODELO}
 				\\
 				En este paso se comprueba la eficiencia del modelo usando el dataset de validación, donde encontramos que la red AlexNet pudo predecir correctamente ... de ... imagenes de papas tanto defectuosas como en buen estado y reconociendo tambien el tamaño al que pertenecen ya sea grande, mediana o pequeña 
 			\end{enumerate} 
 			
-			
 			\subsubsection{\MakeUppercase{Modelo preentrenado RESNET18}}
+			Una red residual, o ResNet para abreviar, es una red neuronal artificial que ayuda a construir una red neuronal más profunda mediante la utilización de conexiones de salto o accesos directos para saltar sobre algunas capas. Verá cómo la omisión ayuda a crear capas de red más profundas sin caer en el problema de los gradientes que se desvanecen.
+		
+			Hay diferentes versiones de ResNet, incluidas ResNet-18, ResNet-34, ResNet-50, etc. Los números denotan capas, aunque la arquitectura es la misma.
+			
+			Los profesionales implementan modelos clásicos de redes neuronales residuales con saltos de 2 o 3 capas que tienen dentro normalización por lotes y no linealidad entre ellas. Los científicos de los datos además aprovechan una matriz de peso extra para aprender los pesos de los saltos en algunas ocasiones. El concepto usado para explicar este fenómeno es “Redes de autopistas”. Los modelos que consisten en diversos saltos paralelos son “Densenets”. Las redes no residuales además tienen la posibilidad de nombrar redes primordiales una vez que se habla de redes neuronales residuales.
+			
+			\begin{figure}[ht]
+				\centering
+				\includegraphics[scale=0.6]{Figs/6.jpg}
+				\caption{Modelo ResNet18}
+				\label{fig:ResNet18}
+			\end{figure}
 			\subsubsection{\MakeUppercase{Modelo preentrenado VGG19}}
 			\subsubsection{\MakeUppercase{Modelo preentrenado VGG11}}
 			\subsubsection{\MakeUppercase{Comparación de arquitecturas}}

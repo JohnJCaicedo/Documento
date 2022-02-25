@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.19)  20 FEB 2022 21:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.19)  25 FEB 2022 09:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1432,16 +1432,19 @@ Package pdftex.def Info: Figs/5.png  used on input line 317.
 LaTeX Info: Redefining \. on input line 328.
 LaTeX Info: Redefining \% on input line 328.
  [21 <./Figs/5.png (PNG copy)>]
-LaTeX Info: Redefining \. on input line 351.
-LaTeX Info: Redefining \% on input line 351.
+<Figs/6.jpg, id=308, 627.09282pt x 458.46281pt>
+File: Figs/6.jpg Graphic file (type jpg)
+<use Figs/6.jpg>
+Package pdftex.def Info: Figs/6.jpg  used on input line 352.
+(pdftex.def)             Requested size: 376.25859pt x 275.0798pt.
+LaTeX Info: Redefining \. on input line 362.
+LaTeX Info: Redefining \% on input line 362.
  [22]
+LaTeX Info: Redefining \. on input line 362.
+LaTeX Info: Redefining \% on input line 362.
+ [23 <./Figs/6.jpg>]
 chapter 6.
-) [23
-
-] [24
-
-
-
+) [24
 
 ] (PlantillaPG.bbl
 Underfull \hbox (badness 1622) in paragraph at lines 12--17
@@ -1463,6 +1466,10 @@ tronica/CAP-
 
 [25
 
+
+
+
+
 ])
 LaTeX Info: Redefining \. on input line 37.
 LaTeX Info: Redefining \% on input line 37.
@@ -1474,10 +1481,10 @@ Package rerunfilecheck Info: File `PlantillaPG.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27799 strings out of 478659
- 554175 string characters out of 2845920
+ 27809 strings out of 478659
+ 554299 string characters out of 2845920
  973514 words of memory out of 3000000
- 45273 multiletter control sequences out of 15000+600000
+ 45280 multiletter control sequences out of 15000+600000
  410862 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,12n,109p,10636b,731s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1491,9 +1498,9 @@ MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/gohan/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/gohan/AppData/
 Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/goh
 an/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on PlantillaPG.pdf (29 pages, 638039 bytes).
+Output written on PlantillaPG.pdf (29 pages, 686312 bytes).
 PDF statistics:
- 519 PDF objects out of 1000 (max. 8388607)
- 131 named destinations out of 1000 (max. 500000)
- 321 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 521 PDF objects out of 1000 (max. 8388607)
+ 132 named destinations out of 1000 (max. 500000)
+ 326 words of extra memory for PDF output out of 10000 (max. 10000000)
 
