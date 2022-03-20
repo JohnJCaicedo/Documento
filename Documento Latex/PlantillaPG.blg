@@ -20,45 +20,45 @@ Warning--entry type for "Pytorch" isn't style-file defined
 Warning--empty booktitle in inproceedings
 Warning--empty author in Shrivastava2017
 Warning--empty journal in article5
-You've used 20 entries,
+You've used 21 entries,
             1876 wiz_defined-function locations,
-            596 strings with 7432 characters,
-and the built_in function-call counts, 5182 in all, are:
-= -- 473
-> -- 231
+            601 strings with 7655 characters,
+and the built_in function-call counts, 5313 in all, are:
+= -- 484
+> -- 235
 < -- 0
-+ -- 86
-- -- 66
-* -- 381
-:= -- 725
-add.period$ -- 16
-call.type$ -- 20
-change.case$ -- 20
++ -- 88
+- -- 67
+* -- 388
+:= -- 747
+add.period$ -- 17
+call.type$ -- 21
+change.case$ -- 21
 chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 253
-empty$ -- 497
-format.name$ -- 66
-if$ -- 1272
+cite$ -- 24
+duplicate$ -- 262
+empty$ -- 514
+format.name$ -- 67
+if$ -- 1303
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 16
-newline$ -- 63
-num.names$ -- 15
-pop$ -- 69
+int.to.str$ -- 21
+missing$ -- 17
+newline$ -- 66
+num.names$ -- 16
+pop$ -- 73
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 202
+skip$ -- 203
 stack$ -- 0
 substring$ -- 323
-swap$ -- 104
+swap$ -- 105
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 41
-width$ -- 22
-write$ -- 174
+while$ -- 42
+width$ -- 23
+write$ -- 182
 (There were 7 warnings)

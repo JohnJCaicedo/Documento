@@ -101,100 +101,108 @@ El sector agricultor de Colombia ha implementado diferentes técnicas de visión
 	\subsection{\textbf{Visión artificial:}} La perspectiva artificial ayuda a la industria a mejorar los procesos de producción por medio de imágenes digitales, con ellas se optimiza el control de calidad de aplicaciones industriales y de robots. Los sistemas de perspectiva examinan y se aseguran de conseguir los requisitos mínimos de calidad exigidos por cada fabricante. A lo largo del proceso de inspección los sistemas de perspectiva informan de los probables errores detectados, lo cual posibilita un mejor control del proceso de producción.
 
 
+\chapter{Diseño Del Algoritmo de Clasificación}
 
 
+Se diseñó un algoritmo de clasificación utiliznado Redes Neuronales Convolucionales y técnicas de visión artifical con la librería \textit{Open CV} para clasificar las carasterísticas de tipo, daño y tamaño de tubérculos de papa. El Procedimiento que se llevó acabo se presenta en la \ref{fig:flujogeneral}, cada item será explicado en las siguientes secciones. 
 
 
-\chapter{Dataset Tubérculos de papas}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.3]{Figs/FGGeneral.jpg}
+	\caption{Arquitectura del Sistema de Clasificación}
+	\label{fig:flujogeneral}
+\end{figure}
+
+El sistema propuesto para realizar la clasificación de tubérculos de papa en este documento, consiste desde la adquisición de muestras y creación de un dataset de tubérculos de papa hasta el diseño de un algoritmo de clasificación con Redes Neuronales utilizando la librería \textit{Pytorch} y la librería \textit{Open CV} de \textit{Python}. Será implementado en un prototipo de banda transportadora que permita el movimiento de los tubérculos de papa para ser clasificados mediante un microcontrolador y una cámara. Los sistemas de Visión Artificial que se destinan a realizar inspecciones visuales permiten que el proceso sea más eficiente si requieren alta velocidad, gran aumento en cantidad de producción y en funcionamiento las 24 horas del día o la repetibilidad de las medidas \cite{artificial2012aplicacion}.
 
 
-\section{Creación del Dataset}
-	Las fotos tomadas para la creacion del \textit{Dataset} poseen un tamaño de (3168, 4752) pixeles. Fueron tomadas con una cámara profesional \textit{Canon EOS 50D} que tiene 15.1 mega pixeles de resolución y se puede ajustar la sensibilidad ISO desde 100 a 3200. La cámara fue configurada con ISO-800 que corresponde al parámetro de sensibilidad del sensor de ruido de la cámara, una velocidad de obturación de $\frac{1}{640}$ segundos que corresponde al dispositivo que controla el tiempo en el que la luz incide sobre el sensor de la cámara y finalmente una apertura de diafragma de $F7.1$ que corresponde a la apertura del lente que deja pasar la luz \cite{Camara}, tener en cuenta que a mayor F, menor luz se deja pasar. Se construyó una caja con iluminación fija usando bombillos de luz blanca de 6500 Kelvin de temperatura de color para que la iluminación en todas las fotos tomadas fuera uniforme:
+\section{Preparación y Adquisición De Las Imágenes}
+
+	Se preparó un total de 592 tubérculos de papá que manualamente fueron clasificados en tres categorías definidas. Las etiquetas de cada imagen se encuentran dentro del nombre de cada archivo, que corresponde al metadata de cada foto tomada. Definido de la siguiente manera:
+	
+	\begin{itemize}
+		\item \textit{Tipo:} Pastusa o R12 $[0,1]$
+		\item \textit{Daño:} Buena y Defectuosa $[0,1]$
+		\item \textit{Tamaño:} Muy grande, Grande y Mediana $[0,1,2]$
+		\item \textit{Numero de la Imágen} Etiqueta asignada por la cámara.
+	\end{itemize}	
+	
+	Las fotos tomadas para la creacion del \textit{Dataset} poseen un tamaño de (3168, 4752) pixeles. Fueron tomadas con una cámara profesional \textit{Canon EOS 50D} que tiene 15.1 mega pixeles de resolución y se puede ajustar la sensibilidad ISO desde 100 a 3200. La cámara fue configurada con ISO-800 que corresponde al parámetro de sensibilidad del sensor de ruido de la cámara, una velocidad de obturación de $\frac{1}{640}$ segundos que corresponde al dispositivo que controla el tiempo en el que la luz incide sobre el sensor de la cámara y finalmente una apertura de diafragma de $F7.1$ que corresponde a la apertura del lente que deja pasar la luz \cite{Camara}, tener en cuenta que a mayor apertura de diafragma, menor luz se deja pasar. Se construyó una caja con iluminación fija \ref{fig:chamber} usando bombillos de luz blanca de 6500 Kelvin de temperatura de color para que la iluminación en todas las fotos tomadas fuera uniforme y la cámara fue fijada a un trípode para que la distancia de la cámara a la muestra de papa fuera siempre la misma en las 592 fotos.
 
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[scale=0.2]{Figs/Chamber.JPEG}
-		\caption{Caja para tomar fotos}
+		\includegraphics[scale=0.15]{Figs/Chamber.JPEG}
+		\caption{Récamara Para la Toma de Fotos}
 		\label{fig:chamber}
 	\end{figure}
-
-\newpage
-	Se creó un \textit{dataset} de 592 imágenes de papa tipo R12 y tipo pastusa las cuales se implementarán para train y para test además de 75 imágenes de tuberculos para la comprobación del algoritmo. Se realizará una clasificación en tres categorias que son, tipo, daño y tamaño. Las etiquetas de cada imagen se encuentran dentro del nombre de cada archivo, de la siguiente manera:
-
-	\begin{itemize}
-		\item $[Tipo]$ es 0(Pastusa) y 1(R12).
-		\item $[Dano]$ es 0(Buena) y 1(Defectuosa).
-		\item $[Tamano]$ de 0 a 2 corresponde a muy grande, grande y mediana.
-		\item $[Numero \ de \ la \ imagen]$ etiqueta asignada por la cámara.
-	\end{itemize}
-
-	Ejemplo clasificación de imagenes:
+	
+	Utilizando la librería \textit{Pandas} de \textit{Python}, se creó un \textit{Dataframe} que contiene el metadata de cada imágen. En la tabla \ref{table:metadata} podemos apreciar la distribución del \textit{MetaData} de las imagenes almacendas en el \textit{Dataset}, donde se toman cinco imágenes al azar como muestra. A partir de esta tabla se crea un archivo \textit{.CSV} donde se encuentra la informacion de las 592 imagenes.
 	
 	\begin{table}[ht]
 		\centering
 		\begin{tabular}{|c|c|c|c|}
 			\hline
-			TIPO & DAÑO & TAMAÑO & FILENAME \\
+			Tipo & Daño & Tamaño & Filename \\
 			\hline
-			R12 & DEFECTUOSA & GRANDE & 1\_1\_1\_075.JPG \\
+			R12 & Defectuosa & Grande & 1\_1\_1\_075.JPG \\
 			\hline
-			PASTUSA & BUENA & GRANDE & 0\_0\_1\_1973.JPG \\
+			PASTUSA & Buena & Grande & 0\_0\_1\_1973.JPG \\
 			\hline
-			R12 & BUENA & GRANDE & 1\_0\_1\_2054.JPG \\
+			R12 & Buena & Grande & 1\_0\_1\_2054.JPG \\
 			\hline
-			PASTUSA & BUENA & MEDIANA & 0\_0\_2\_2042.JPG \\
+			PASTUSA & Buena & Mediana & 0\_0\_2\_2042.JPG \\
 			\hline
-			PASTUSA & BUENA & GRANDE & 0\_0\_1\_1955.JPG \\
+			PASTUSA & Buena & Grande & 0\_0\_1\_1955.JPG \\
 			\hline
 		\end{tabular}	
-		\caption{MetaData}
+		\caption{MetaData de 5 Imágenes de Muestra}
 		\label{table:metadata}
 	\end{table}
 
-	En la tabla podemos apreciar la distribución del \textit{MetaData} de las imagenes almacendas en el \textit{Dataset}, donde se toman cinco imagenes al azar. A partir de esta tabla se crea un archivo \textit{.CSV} donde se encuentra la informacion de las 592 imagenes.
 
-
-
-
-\newpage
-
-\section{Distribución del Dataset}
-
-	Se presenta la distribución del dataset segun las categorias establecidas.  
+	Una vez la información de cada imágen fue guardada en el archivo \textit{metadata.csv}, se agruparon las posibles combinaciones de las características de \textit{Tipo} y \textit{Daño} para definir las \textit{clases} dentro de la red neruonal. Para realizar este proceso se creó una condición dentro del \textit{Dataframe} que contiene el \textit{Metadata} para generar una columna adicional con la información de la tabla \ref{table:Clases}.	
 	
 	\begin{table}[ht]
 		\centering
 		\begin{tabular}{|c|c|c|c|c|}
 			\hline
-			PASTUSA & R12 & BUENA & DEFECTUOSA & CLASE \\
+			PASTUSA & R12 & Buena & Defectuosa & Clase \\
 			\hline
 			X &  & X &  & CLASE 1 \\
 			\hline
 			X &  &  & X & CLASE 2 \\
 			\hline
-			  & X & X &  & CLASE 3 \\
+			& X & X &  & CLASE 3 \\
 			\hline
-			  & X &  & X & CLASE 4 \\
+			& X &  & X & CLASE 4 \\
 			\hline
 		\end{tabular}	
-		\caption{Clases}
+		\caption{Clases Definidas}
 		\label{table:Clases}
-	\end{table}
+	\end{table}	
+
+De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neuronal para el posterior proceso de clasificación por visión artifical. 
+
+
+\newpage
+\section{Distribución del Dataset}
 	  
-	Los Datasets de \textit{Train} y \textit{Test} son creados para el entrenamiento y validacion de la red neuronal, programada para la clasificacion de imagenes, estos son separados en $80\%$ para \textit{Train} y $20\%$ para \textit{Test}. Se crearon archivos \textit{.CSV}, como se mostro en la tabla \ref{table:metadata}, los cuales contienen el metadata y la direccion de las imagenes por separado. De esta manera obtenemos la clasificacion del dataset segun el metadata de sus imagenes.
-	
+	Para determinar la distribución total del dataset, con el uso de la librería \textit{Plotly} se crearon gráficas para determinar el porcentaje de imágenes pertenecientes cada característica definida en el \textit{Dataset}. La figura \ref{fig:distribuciontipo}
+		
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[scale=0.6]{Figs/4.png}
-		\caption{Distribución del Dataset segun las categorias}
-		\label{fig:distribucion}
+		\includegraphics[scale=0.4]{Figs/Distribucion.jpg}
+		\caption{Distribución del Dataset Según Sus Características Y Clases Definidas}
+		\label{fig:distribuciontipo}
 	\end{figure}
+
+	Se definieron los \textit{Set's} de \textit{Train} y \textit{Test}, que fueron creados para el entrenamiento y validación de la red neuronal a partir del archivo \text{metadata.csv} de la tabla \ref{table:metadata}. Se utilizó $80\%$ para \textit{Train} y $20\%$ para \textit{Test}. Se crearon los archivos \textit{train.csv} y \textit{test.csv} que contienen el metadata y la dirección de las imágenes separadas en el respectivo $80\%$ y $20\%$.
+
 
 
 \newpage
 \chapter{Algoritmo de Clasificación}
-
-
 
 
 

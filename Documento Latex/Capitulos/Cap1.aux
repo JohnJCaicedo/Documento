@@ -46,62 +46,65 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.0.6}\textbf  {Reconstrucción morfológica:}}{12}{subsection.3.0.6}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.0.7}\textbf  {Tubérculos de papa:}}{12}{subsection.3.0.7}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.0.8}\textbf  {Visión artificial:}}{13}{subsection.3.0.8}\protected@file@percent }
-\citation{Camara}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Dataset Tubérculos de papas}{14}{chapter.4}\protected@file@percent }
+\citation{artificial2012aplicacion}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Diseño Del Algoritmo de Clasificación}{14}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Creación del Dataset}{14}{section.4.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {\textbf  {4-1}}{\ignorespaces Caja para tomar fotos}}{14}{figure.4.1}\protected@file@percent }
-\newlabel{fig:chamber}{{\textbf  {4-1}}{14}{Caja para tomar fotos}{figure.4.1}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {\textbf  {4-1}}{\ignorespaces MetaData}}{15}{table.4.1}\protected@file@percent }
-\newlabel{table:metadata}{{\textbf  {4-1}}{15}{MetaData}{table.4.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Distribución del Dataset}{16}{section.4.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {\textbf  {4-2}}{\ignorespaces Clases}}{16}{table.4.2}\protected@file@percent }
-\newlabel{table:Clases}{{\textbf  {4-2}}{16}{Clases}{table.4.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\textbf  {4-2}}{\ignorespaces Distribución del Dataset segun las categorias}}{16}{figure.4.2}\protected@file@percent }
-\newlabel{fig:distribucion}{{\textbf  {4-2}}{16}{Distribución del Dataset segun las categorias}{figure.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\textbf  {4-1}}{\ignorespaces Arquitectura del Sistema de Clasificación}}{14}{figure.4.1}\protected@file@percent }
+\newlabel{fig:flujogeneral}{{\textbf  {4-1}}{14}{Arquitectura del Sistema de Clasificación}{figure.4.1}{}}
+\citation{Camara}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Preparación y Adquisición De Las Imágenes}{15}{section.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {\textbf  {4-2}}{\ignorespaces Récamara Para la Toma de Fotos}}{15}{figure.4.2}\protected@file@percent }
+\newlabel{fig:chamber}{{\textbf  {4-2}}{15}{Récamara Para la Toma de Fotos}{figure.4.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {\textbf  {4-1}}{\ignorespaces MetaData de 5 Imágenes de Muestra}}{16}{table.4.1}\protected@file@percent }
+\newlabel{table:metadata}{{\textbf  {4-1}}{16}{MetaData de 5 Imágenes de Muestra}{table.4.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {\textbf  {4-2}}{\ignorespaces Clases Definidas}}{16}{table.4.2}\protected@file@percent }
+\newlabel{table:Clases}{{\textbf  {4-2}}{16}{Clases Definidas}{table.4.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Distribución del Dataset}{17}{section.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {\textbf  {4-3}}{\ignorespaces Distribución del Dataset Según Sus Características Y Clases Definidas}}{17}{figure.4.3}\protected@file@percent }
+\newlabel{fig:distribuciontipo}{{\textbf  {4-3}}{17}{Distribución del Dataset Según Sus Características Y Clases Definidas}{figure.4.3}{}}
 \citation{van2001art}
 \citation{Pytorch}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Algoritmo de Clasificación}{17}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Algoritmo de Clasificación}{18}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Red Neuronal Artificial}{17}{section.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Data Augmentation}{17}{subsection.5.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline DEFINICIÓN}{17}{subsubsection*.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline PREPROCESAMIENTO DE IMÁGENES}{17}{subsubsection*.5}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {\textbf  {5-1}}{\ignorespaces Funciones de transformación de imágenes del módulo de \textit  {Pytorch}}}{18}{table.5.1}\protected@file@percent }
-\newlabel{table:Filters1}{{\textbf  {5-1}}{18}{Funciones de transformación de imágenes del módulo de \textit {Pytorch}}{table.5.1}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {\textbf  {5-2}}{\ignorespaces Funciones de transformación de imágenes del módulo de \textit  {Pytorch}}}{19}{table.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Datasets y DataLoaders}{19}{subsection.5.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Función Dataset}}{19}{subsubsection*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Red Neuronal Artificial}{18}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Data Augmentation}{18}{subsection.5.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline DEFINICIÓN}{18}{subsubsection*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline PREPROCESAMIENTO DE IMÁGENES}{18}{subsubsection*.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {\textbf  {5-1}}{\ignorespaces Funciones de transformación de imágenes del módulo de \textit  {Pytorch}}}{19}{table.5.1}\protected@file@percent }
+\newlabel{table:Filters1}{{\textbf  {5-1}}{19}{Funciones de transformación de imágenes del módulo de \textit {Pytorch}}{table.5.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {\textbf  {5-2}}{\ignorespaces Funciones de transformación de imágenes del módulo de \textit  {Pytorch}}}{20}{table.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Datasets y DataLoaders}{20}{subsection.5.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Función Dataset}}{20}{subsubsection*.7}\protected@file@percent }
 \citation{Pytorch}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Función Dataloader}}{20}{subsubsection*.9}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {\textbf  {5-3}}{\ignorespaces Argumentos para el Dataloader}}{20}{table.5.3}\protected@file@percent }
-\newlabel{table:Argumentos}{{\textbf  {5-3}}{20}{Argumentos para el Dataloader}{table.5.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Hiperparámetros del modelo}{20}{subsection.5.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Stride and Padding and maxpooling and activation funtion}}{20}{subsubsection*.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Dropout}}{20}{subsubsection*.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Función de perdidas}}{20}{subsubsection*.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Función Dataloader}}{21}{subsubsection*.9}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {\textbf  {5-3}}{\ignorespaces Argumentos para el Dataloader}}{21}{table.5.3}\protected@file@percent }
+\newlabel{table:Argumentos}{{\textbf  {5-3}}{21}{Argumentos para el Dataloader}{table.5.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Hiperparámetros del modelo}{21}{subsection.5.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Stride and Padding and maxpooling and activation funtion}}{21}{subsubsection*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Dropout}}{21}{subsubsection*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Función de perdidas}}{21}{subsubsection*.15}\protected@file@percent }
 \citation{Pytorch}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Optimizador}}{21}{subsubsection*.17}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Backward pero otro nombre}}{21}{subsubsection*.19}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.4}Optimización Bayesiana}{21}{subsection.5.1.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.5}Arquitectura del modelo}{21}{subsection.5.1.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Modelo preentrenado ALEXNET}}{21}{subsubsection*.21}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {\textbf  {5-1}}{\ignorespaces Modelo AlexNet}}{21}{figure.5.1}\protected@file@percent }
-\newlabel{fig:AlexNet}{{\textbf  {5-1}}{21}{Modelo AlexNet}{figure.5.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Modelo preentrenado RESNET18}}{22}{subsubsection*.23}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {\textbf  {5-2}}{\ignorespaces Modelo ResNet18}}{23}{figure.5.2}\protected@file@percent }
-\newlabel{fig:ResNet18}{{\textbf  {5-2}}{23}{Modelo ResNet18}{figure.5.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Modelo preentrenado VGG19}}{23}{subsubsection*.25}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Modelo preentrenado VGG11}}{23}{subsubsection*.27}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Comparación de arquitecturas}}{23}{subsubsection*.29}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Clasificación de tamaño}{23}{section.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Prototipo}{24}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Optimizador}}{22}{subsubsection*.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Backward pero otro nombre}}{22}{subsubsection*.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.4}Optimización Bayesiana}{22}{subsection.5.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.5}Arquitectura del modelo}{22}{subsection.5.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Modelo preentrenado ALEXNET}}{22}{subsubsection*.21}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {\textbf  {5-1}}{\ignorespaces Modelo AlexNet}}{22}{figure.5.1}\protected@file@percent }
+\newlabel{fig:AlexNet}{{\textbf  {5-1}}{22}{Modelo AlexNet}{figure.5.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Modelo preentrenado RESNET18}}{23}{subsubsection*.23}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {\textbf  {5-2}}{\ignorespaces Modelo ResNet18}}{24}{figure.5.2}\protected@file@percent }
+\newlabel{fig:ResNet18}{{\textbf  {5-2}}{24}{Modelo ResNet18}{figure.5.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Modelo preentrenado VGG19}}{24}{subsubsection*.25}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Modelo preentrenado VGG11}}{24}{subsubsection*.27}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline \MakeUppercase  {Comparación de arquitecturas}}{24}{subsubsection*.29}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Clasificación de tamaño}{24}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Prototipo}{25}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@setckpt{Capitulos/Cap1}{
-\setcounter{page}{25}
+\setcounter{page}{26}
 \setcounter{equation}{0}
 \setcounter{enumi}{5}
 \setcounter{enumii}{0}
