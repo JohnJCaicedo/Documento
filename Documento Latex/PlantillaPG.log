@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.25)  20 MAR 2022 14:58
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.3.20)  20 MAR 2022 11:32
->>>>>>> Stashed changes
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.3.20)  20 MAR 2022 16:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1321,13 +1317,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 216--217
  []
 
 
-<<<<<<< Updated upstream
 Underfull \hbox (badness 1163) in paragraph at lines 232--232
-[]|\OT1/cmr/m/n/12 Recorta una por-cion
-=======
-Underfull \hbox (badness 1163) in paragraph at lines 224--224
 []|\OT1/cmr/m/n/12 Recorta una por-ci^^Son
->>>>>>> Stashed changes
  []
 
 
@@ -1336,13 +1327,8 @@ Underfull \hbox (badness 7851) in paragraph at lines 234--234
  []
 
 
-<<<<<<< Updated upstream
 Underfull \hbox (badness 2020) in paragraph at lines 235--235
-[]|\OT1/cmr/m/n/12 Convierte la imagen
-=======
-Underfull \hbox (badness 2020) in paragraph at lines 227--227
 []|\OT1/cmr/m/n/12 Convierte la im^^Sagen
->>>>>>> Stashed changes
  []
 
 
@@ -1351,13 +1337,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 235--235
  []
 
 
-<<<<<<< Updated upstream
 Underfull \hbox (badness 10000) in paragraph at lines 235--235
-\OT1/cmr/m/n/12 imagen al ta-ma~no
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 227--227
 \OT1/cmr/m/n/12 im^^Sagen al ta-ma~no
->>>>>>> Stashed changes
  []
 
 
@@ -1366,23 +1347,13 @@ Underfull \hbox (badness 1831) in paragraph at lines 236--236
  []
 
 
-<<<<<<< Updated upstream
 Underfull \hbox (badness 10000) in paragraph at lines 237--237
-[]|\OT1/cmr/m/n/12 Transformacion afn
- []
-
-
-Underfull \hbox (badness 1137) in paragraph at lines 237--237
-[]|\OT1/cmr/m/n/12 Desenfoca la imagen
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 229--229
 []|\OT1/cmr/m/n/12 Transformaci^^Son af^^S^^Pn
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 229--229
+Underfull \hbox (badness 1137) in paragraph at lines 237--237
 []|\OT1/cmr/m/n/12 Desenfoca la im^^Sagen
->>>>>>> Stashed changes
  []
 
 
@@ -1398,39 +1369,21 @@ Overfull \hbox (49.99997pt too wide) in paragraph at lines 229--239
 [18
 
 ]
-<<<<<<< Updated upstream
 LaTeX Info: Redefining \. on input line 246.
 LaTeX Info: Redefining \% on input line 246.
  [19]
 Underfull \hbox (badness 10000) in paragraph at lines 253--253
-[]|\OT1/cmr/m/n/12 Recorta la imagen
- []
-
-
-Underfull \hbox (badness 1635) in paragraph at lines 253--253
-\OT1/cmr/m/n/12 la imagen de for-ma
- []
-
-
-Underfull \hbox (badness 2020) in paragraph at lines 254--254
-[]|\OT1/cmr/m/n/12 Convierte la imagen
-=======
-LaTeX Info: Redefining \. on input line 238.
-LaTeX Info: Redefining \% on input line 238.
- [18]
-Underfull \hbox (badness 10000) in paragraph at lines 245--245
 []|\OT1/cmr/m/n/12 Recorta la im^^Sagen
  []
 
 
-Underfull \hbox (badness 1635) in paragraph at lines 245--245
+Underfull \hbox (badness 1635) in paragraph at lines 253--253
 \OT1/cmr/m/n/12 la im^^Sagen de for-ma
  []
 
 
-Underfull \hbox (badness 2020) in paragraph at lines 246--246
+Underfull \hbox (badness 2020) in paragraph at lines 254--254
 []|\OT1/cmr/m/n/12 Convierte la im^^Sagen
->>>>>>> Stashed changes
  []
 
 
@@ -1522,32 +1475,10 @@ Package rerunfilecheck Info: File `PlantillaPG.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< Updated upstream
- 27827 strings out of 478659
- 554731 string characters out of 2845920
- 973514 words of memory out of 3000000
- 45292 multiletter control sequences out of 15000+600000
- 411163 words of font info for 53 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 113i,12n,109p,10636b,731s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\Johnj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-1200.pk> <C:\Users\Johnj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\tcrm0800.pk><C:/Users/Johnj/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmbx12.pfb><C:/Users/Johnj/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Johnj/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Johnj/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Johnj/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Johnj/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/John
-j/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:
-/Users/Johnj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti1
-2.pfb>
-Output written on PlantillaPG.pdf (31 pages, 923593 bytes).
-=======
- 27775 strings out of 478582
- 552558 string characters out of 2845760
+ 27789 strings out of 478582
+ 552950 string characters out of 2845760
  966361 words of memory out of 3000000
- 45328 multiletter control sequences out of 15000+600000
+ 45337 multiletter control sequences out of 15000+600000
  476992 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,12n,109p,10636b,716s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1562,8 +1493,7 @@ s/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/PC/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/PC/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/PC/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on PlantillaPG.pdf (29 pages, 694717 bytes).
->>>>>>> Stashed changes
+Output written on PlantillaPG.pdf (31 pages, 923596 bytes).
 PDF statistics:
  545 PDF objects out of 1000 (max. 8388607)
  136 named destinations out of 1000 (max. 500000)
