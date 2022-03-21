@@ -12,41 +12,39 @@
 \contentsline {section}{\numberline {2.1}MatLab.}{7}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Artificial Neural Networks.}{7}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Super Vector Machine.}{8}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Otros métodos.}{9}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Otros métodos}{9}{section.2.4}%
 \contentsline {chapter}{\numberline {3}Marco Conceptual}{11}{chapter.3}%
-\contentsline {subsection}{\numberline {3.0.1}\textbf {Agricultura de precisión:}}{11}{subsection.3.0.1}%
-\contentsline {subsection}{\numberline {3.0.2}\textbf {Artificial Neural Networks:}}{11}{subsection.3.0.2}%
-\contentsline {subsection}{\numberline {3.0.3}\textbf {Imagen Binaria:}}{11}{subsection.3.0.3}%
-\contentsline {subsection}{\numberline {3.0.4}\textbf {ISO 800:}}{12}{subsection.3.0.4}%
-\contentsline {subsection}{\numberline {3.0.5}\textbf {Procesamiento de imagenes:}}{12}{subsection.3.0.5}%
-\contentsline {subsection}{\numberline {3.0.6}\textbf {Reconstrucción morfológica:}}{12}{subsection.3.0.6}%
-\contentsline {subsection}{\numberline {3.0.7}\textbf {Tubérculos de papa:}}{12}{subsection.3.0.7}%
-\contentsline {subsection}{\numberline {3.0.8}\textbf {Visión artificial:}}{13}{subsection.3.0.8}%
+\contentsline {section}{\numberline {3.1}Agricultura de precisión}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Artificial Neural Networks}{11}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Imagen Binaria}{11}{section.3.3}%
+\contentsline {section}{\numberline {3.4}ISO 800}{12}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Procesamiento de imagenes}{12}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Reconstrucción morfológica}{12}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Tubérculos de papa}{13}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Visión artificial}{13}{section.3.8}%
 \contentsline {chapter}{\numberline {4}Diseño Del Algoritmo de Clasificación}{14}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Preparación y Adquisición De Las Imágenes}{15}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Distribución del Dataset}{17}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Algoritmo de Clasificación}{18}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Red Neuronal Artificial}{18}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Data Augmentation}{18}{subsection.5.1.1}%
-\contentsline {subsubsection}{\nonumberline DEFINICIÓN}{18}{subsubsection*.3}%
-\contentsline {subsubsection}{\nonumberline PREPROCESAMIENTO DE IMÁGENES}{18}{subsubsection*.5}%
-\contentsline {subsection}{\numberline {5.1.2}Datasets y DataLoaders}{20}{subsection.5.1.2}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Función Dataset}}{20}{subsubsection*.7}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Función Dataloader}}{21}{subsubsection*.9}%
-\contentsline {subsection}{\numberline {5.1.3}Hiperparámetros del modelo}{21}{subsection.5.1.3}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Stride and Padding and maxpooling and activation funtion}}{21}{subsubsection*.11}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Dropout}}{21}{subsubsection*.13}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Función de perdidas}}{21}{subsubsection*.15}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Optimizador}}{22}{subsubsection*.17}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Backward pero otro nombre}}{22}{subsubsection*.19}%
-\contentsline {subsection}{\numberline {5.1.4}Optimización Bayesiana}{22}{subsection.5.1.4}%
-\contentsline {subsection}{\numberline {5.1.5}Arquitectura del modelo}{22}{subsection.5.1.5}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado ALEXNET}}{22}{subsubsection*.21}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado RESNET18}}{23}{subsubsection*.23}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG19}}{24}{subsubsection*.25}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG11}}{24}{subsubsection*.27}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Comparación de arquitecturas}}{24}{subsubsection*.29}%
-\contentsline {section}{\numberline {5.2}Clasificación de tamaño}{24}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Prototipo}{25}{chapter.6}%
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{26}{chapter.6}%
+\contentsline {section}{\numberline {5.1}Red Neuronal Artificial Convolucional}{18}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Preparación Del \textit {Dataset}}{19}{subsection.5.1.1}%
+\contentsline {subsubsection}{\nonumberline DATA AUGMENTATION}{19}{subsubsection*.3}%
+\contentsline {subsubsection}{\nonumberline PREPROCESAMIENTO DE IMÁGENES}{20}{subsubsection*.5}%
+\contentsline {subsection}{\numberline {5.1.2}Funciones PotatoDataset y DataLoader}{23}{subsection.5.1.2}%
+\contentsline {subsubsection}{\nonumberline FUNCIÓN POTATODATASET}{23}{subsubsection*.7}%
+\contentsline {subsubsection}{\nonumberline FUNCIÓN DATALOADER}{24}{subsubsection*.9}%
+\contentsline {subsection}{\numberline {5.1.3}Hiperparámetros Del Modelo}{25}{subsection.5.1.3}%
+\contentsline {subsubsection}{\nonumberline FUNCIÓN DE PÉRDIDAS}{25}{subsubsection*.11}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Optimizador}}{25}{subsubsection*.13}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Backward pero otro nombre}}{25}{subsubsection*.15}%
+\contentsline {subsection}{\numberline {5.1.4}Optimización Bayesiana}{25}{subsection.5.1.4}%
+\contentsline {subsection}{\numberline {5.1.5}Arquitectura del modelo}{25}{subsection.5.1.5}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado ALEXNET}}{25}{subsubsection*.17}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado RESNET18}}{26}{subsubsection*.19}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG19}}{27}{subsubsection*.21}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG11}}{27}{subsubsection*.23}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Comparación de arquitecturas}}{27}{subsubsection*.25}%
+\contentsline {section}{\numberline {5.2}Clasificación de tamaño}{27}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Prototipo}{28}{chapter.6}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{29}{chapter.6}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

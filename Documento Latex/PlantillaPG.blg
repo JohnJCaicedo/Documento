@@ -17,39 +17,41 @@ Warning--entry type for "Referencia2" isn't style-file defined
 --line 469 of file Bib/biblio.bib
 Warning--entry type for "Pytorch" isn't style-file defined
 --line 505 of file Bib/biblio.bib
+Warning--entry type for "cnnarchitecture" isn't style-file defined
+--line 531 of file Bib/biblio.bib
 Warning--empty booktitle in inproceedings
 Warning--empty author in Shrivastava2017
 Warning--empty journal in article5
-You've used 21 entries,
+You've used 22 entries,
             1876 wiz_defined-function locations,
-            601 strings with 7655 characters,
-and the built_in function-call counts, 5313 in all, are:
-= -- 484
-> -- 235
+            605 strings with 7810 characters,
+and the built_in function-call counts, 5480 in all, are:
+= -- 495
+> -- 249
 < -- 0
-+ -- 88
-- -- 67
-* -- 388
-:= -- 747
-add.period$ -- 17
-call.type$ -- 21
-change.case$ -- 21
++ -- 93
+- -- 71
+* -- 401
+:= -- 773
+add.period$ -- 18
+call.type$ -- 22
+change.case$ -- 22
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 262
-empty$ -- 514
-format.name$ -- 67
-if$ -- 1303
+cite$ -- 25
+duplicate$ -- 266
+empty$ -- 532
+format.name$ -- 71
+if$ -- 1342
 int.to.chr$ -- 0
-int.to.str$ -- 21
+int.to.str$ -- 22
 missing$ -- 17
-newline$ -- 66
-num.names$ -- 16
-pop$ -- 73
+newline$ -- 69
+num.names$ -- 17
+pop$ -- 80
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 203
+skip$ -- 207
 stack$ -- 0
 substring$ -- 323
 swap$ -- 105
@@ -58,7 +60,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 42
-width$ -- 23
-write$ -- 182
-(There were 7 warnings)
+while$ -- 43
+width$ -- 24
+write$ -- 189
+(There were 8 warnings)

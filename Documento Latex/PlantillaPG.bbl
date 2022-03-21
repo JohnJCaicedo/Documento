@@ -93,6 +93,10 @@ V.~Artificial, ``Aplicaci{\'o}n pr{\'a}ctica de la visi{\'o}n artificial en el
 \bibitem{Camara}
 ``La camara fotografica cuerpo y controles basicos.''
 
+\bibitem{cnnarchitecture}
+T.~Afridi, A.~Alam, M.~N. Khan, and J.~Khan, ``A multimodal memes
+  classification: A survey and open research issues,'' 09 2020.
+
 \bibitem{van2001art}
 D.~A. Van~Dyk and X.-L. Meng, ``The art of data augmentation,'' {\em Journal of
   Computational and Graphical Statistics}, vol.~10, no.~1, pp.~1--50, 2001.
