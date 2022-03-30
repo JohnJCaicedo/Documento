@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.25)  21 MAR 2022 13:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.25)  30 MAR 2022 13:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1149,11 +1149,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 Package tocbasic Info: Using my definition of `\numberline' on input line 33.
 Package tocbasic Info: Using my definition of `\numberline' on input line 36.
-Package tocbasic Info: Using my definition of `\numberline' on input line 42.
-Package tocbasic Info: Using my definition of `\numberline' on input line 43.
+Package tocbasic Info: Using my definition of `\numberline' on input line 40.
+Package tocbasic Info: Using my definition of `\numberline' on input line 41.
+Package tocbasic Info: Using my definition of `\numberline' on input line 48.
 Package tocbasic Info: Using my definition of `\numberline' on input line 49.
 Package tocbasic Info: Using my definition of `\numberline' on input line 50.
-Package tocbasic Info: Using my definition of `\numberline' on input line 51.
 )
 \tf@toc=\write5
 \openout5 = `PlantillaPG.toc'.
@@ -1185,133 +1185,132 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              a package that still implements the
 (scrbook)              deprecated \float@addtolist interface.
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
 [3
 
 ]
-LaTeX Info: Redefining \. on input line 42.
-LaTeX Info: Redefining \% on input line 42.
+LaTeX Info: Redefining \. on input line 39.
+LaTeX Info: Redefining \% on input line 39.
  [4]
-Underfull \hbox (badness 10000) in paragraph at lines 45--48
+Underfull \hbox (badness 10000) in paragraph at lines 42--45
 
  []
 
-LaTeX Info: Redefining \. on input line 48.
-LaTeX Info: Redefining \% on input line 48.
+LaTeX Info: Redefining \. on input line 45.
+LaTeX Info: Redefining \% on input line 45.
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
-LaTeX Info: Redefining \. on input line 54.
-LaTeX Info: Redefining \% on input line 54.
+LaTeX Info: Redefining \. on input line 51.
+LaTeX Info: Redefining \% on input line 51.
 [6]
 chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--58
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
 [7
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
-LaTeX Info: Redefining \. on input line 68.
-LaTeX Info: Redefining \% on input line 68.
+LaTeX Info: Redefining \. on input line 67.
+LaTeX Info: Redefining \% on input line 67.
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-
- []
-
-LaTeX Info: Redefining \. on input line 75.
-LaTeX Info: Redefining \% on input line 75.
+LaTeX Info: Redefining \. on input line 72.
+LaTeX Info: Redefining \% on input line 72.
 [9]
-LaTeX Info: Redefining \. on input line 79.
-LaTeX Info: Redefining \% on input line 79.
- [10]
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
+
+ []
+
+LaTeX Info: Redefining \. on input line 78.
+LaTeX Info: Redefining \% on input line 78.
+[10]
 chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--83
+Underfull \hbox (badness 10000) in paragraph at lines 80--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--85
+Underfull \hbox (badness 10000) in paragraph at lines 82--84
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--88
+Underfull \hbox (badness 10000) in paragraph at lines 85--87
 
  []
 
 [11
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 89--91
+Underfull \hbox (badness 10000) in paragraph at lines 88--90
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--94
+Underfull \hbox (badness 10000) in paragraph at lines 91--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--97
+Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--100
+Underfull \hbox (badness 10000) in paragraph at lines 97--99
 
  []
 
 
 Underfull \vbox (badness 2334) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 100.
-LaTeX Info: Redefining \% on input line 100.
+LaTeX Info: Redefining \. on input line 99.
+LaTeX Info: Redefining \% on input line 99.
  [12]
-LaTeX Info: Redefining \. on input line 104.
-LaTeX Info: Redefining \% on input line 104.
+LaTeX Info: Redefining \. on input line 103.
+LaTeX Info: Redefining \% on input line 103.
 
 [13]
 chapter 4.
 <Figs/FGGeneral.jpg, id=234, 1628.0825pt x 618.31pt>
 File: Figs/FGGeneral.jpg Graphic file (type jpg)
 <use Figs/FGGeneral.jpg>
-Package pdftex.def Info: Figs/FGGeneral.jpg  used on input line 112.
+Package pdftex.def Info: Figs/FGGeneral.jpg  used on input line 111.
 (pdftex.def)             Requested size: 488.42853pt x 185.49443pt.
 
-Overfull \hbox (33.18445pt too wide) in paragraph at lines 112--113
+Overfull \hbox (33.18445pt too wide) in paragraph at lines 111--112
  [][] 
  []
 
@@ -1324,206 +1323,242 @@ Underfull \vbox (badness 7963) has occurred while \output is active []
 <Figs/Chamber.JPEG, id=244, 1284.8pt x 961.5925pt>
 File: Figs/Chamber.JPEG Graphic file (type jpg)
 <use Figs/Chamber.JPEG>
-Package pdftex.def Info: Figs/Chamber.JPEG  used on input line 135.
+Package pdftex.def Info: Figs/Chamber.JPEG  used on input line 134.
 (pdftex.def)             Requested size: 192.71169pt x 144.23265pt.
-LaTeX Info: Redefining \. on input line 141.
-LaTeX Info: Redefining \% on input line 141.
+LaTeX Info: Redefining \. on input line 140.
+LaTeX Info: Redefining \% on input line 140.
  [15 <./Figs/Chamber.JPEG>]
-LaTeX Info: Redefining \. on input line 188.
-LaTeX Info: Redefining \% on input line 188.
+LaTeX Info: Redefining \. on input line 187.
+LaTeX Info: Redefining \% on input line 187.
  [16]
 <Figs/Distribucion.jpg, id=262, 769.3258pt x 704.04968pt>
 File: Figs/Distribucion.jpg Graphic file (type jpg)
 <use Figs/Distribucion.jpg>
-Package pdftex.def Info: Figs/Distribucion.jpg  used on input line 195.
+Package pdftex.def Info: Figs/Distribucion.jpg  used on input line 194.
 (pdftex.def)             Requested size: 307.72487pt x 281.61488pt.
-LaTeX Info: Redefining \. on input line 204.
-LaTeX Info: Redefining \% on input line 204.
+LaTeX Info: Redefining \. on input line 203.
+LaTeX Info: Redefining \% on input line 203.
  [17 <./Figs/Distribucion.jpg>]
 chapter 5.
 <Figs/A-generic-CNN-Architecture.png, id=272, 853.1875pt x 416.55624pt>
 File: Figs/A-generic-CNN-Architecture.png Graphic file (type png)
 <use Figs/A-generic-CNN-Architecture.png>
 Package pdftex.def Info: Figs/A-generic-CNN-Architecture.png  used on input lin
-e 213.
+e 212.
 (pdftex.def)             Requested size: 213.29636pt x 104.1388pt.
 <Figs/procedimiento.jpg, id=274, 2157.05875pt x 466.74374pt>
 File: Figs/procedimiento.jpg Graphic file (type jpg)
 <use Figs/procedimiento.jpg>
-Package pdftex.def Info: Figs/procedimiento.jpg  used on input line 223.
+Package pdftex.def Info: Figs/procedimiento.jpg  used on input line 222.
 (pdftex.def)             Requested size: 431.40411pt x 93.34709pt.
 [18
 
  <./Figs/A-generic-CNN-Architecture.png> <./Figs/procedimiento.jpg>]
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 230.
+(Font)              using `OT1/cmss/bx/n' instead on input line 229.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--234
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
 
  []
 
-LaTeX Info: Redefining \. on input line 239.
-LaTeX Info: Redefining \% on input line 239.
+LaTeX Info: Redefining \. on input line 238.
+LaTeX Info: Redefining \% on input line 238.
 [19]
-Underfull \hbox (badness 1163) in paragraph at lines 249--249
+Underfull \hbox (badness 1163) in paragraph at lines 248--248
 []|\OT1/cmr/m/n/12 Recorta una por-cion
  []
 
 
-Underfull \hbox (badness 7851) in paragraph at lines 251--251
+Underfull \hbox (badness 7851) in paragraph at lines 250--250
 []|\OT1/cmr/m/n/12 Voltea ver-ti-cal-men-te
  []
 
 
-Underfull \hbox (badness 2020) in paragraph at lines 252--252
+Underfull \hbox (badness 2020) in paragraph at lines 251--251
 []|\OT1/cmr/m/n/12 Convierte la imagen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--252
+Underfull \hbox (badness 10000) in paragraph at lines 251--251
 []|\OT1/cmr/m/n/12 Redimensiona la
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--252
+Underfull \hbox (badness 10000) in paragraph at lines 251--251
 \OT1/cmr/m/n/12 imagen al ta-ma~no
  []
 
 
-Underfull \hbox (badness 1831) in paragraph at lines 253--253
+Underfull \hbox (badness 1831) in paragraph at lines 252--252
 \OT1/cmr/m/n/12 da en cua-tro es-qui-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--254
+Underfull \hbox (badness 10000) in paragraph at lines 253--253
 []|\OT1/cmr/m/n/12 Transformacion afn
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 254--254
+Underfull \hbox (badness 1137) in paragraph at lines 253--253
 []|\OT1/cmr/m/n/12 Desenfoca la imagen
  []
 
 
-Underfull \hbox (badness 3792) in paragraph at lines 254--254
+Underfull \hbox (badness 3792) in paragraph at lines 253--253
 \OT1/cmr/m/n/12 con un fil-tro gaus-
  []
 
 
-Overfull \hbox (49.99997pt too wide) in paragraph at lines 246--256
+Overfull \hbox (49.99997pt too wide) in paragraph at lines 245--255
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 261.
-LaTeX Info: Redefining \% on input line 261.
+LaTeX Info: Redefining \. on input line 260.
+LaTeX Info: Redefining \% on input line 260.
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 268--268
+Underfull \hbox (badness 10000) in paragraph at lines 267--267
 []|\OT1/cmr/m/n/12 Convierte la
  []
 
 
-Underfull \hbox (badness 3954) in paragraph at lines 268--268
+Underfull \hbox (badness 3954) in paragraph at lines 267--267
 \OT1/cmr/m/n/12 imagen en es-ca-la
  []
 
 
-Underfull \hbox (badness 6493) in paragraph at lines 269--269
+Underfull \hbox (badness 6493) in paragraph at lines 268--268
 []|\OT1/cmr/m/n/12 Voltea ho-ri-zon-tal-
  []
 
 
-Underfull \hbox (badness 6493) in paragraph at lines 269--269
+Underfull \hbox (badness 6493) in paragraph at lines 268--268
 []|\OT1/cmr/m/n/12 Invierte alea-to-ria-
  []
 
 
-Overfull \hbox (2.74637pt too wide) in paragraph at lines 270--270
+Overfull \hbox (2.74637pt too wide) in paragraph at lines 269--269
 []|\OT1/cmr/m/n/12 RandomAutocontrast| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--270
+Underfull \hbox (badness 10000) in paragraph at lines 269--269
 []|\OT1/cmr/m/n/12 Autocontraste de
  []
 
 
-Underfull \hbox (badness 3291) in paragraph at lines 270--270
+Underfull \hbox (badness 3291) in paragraph at lines 269--269
 \OT1/cmr/m/n/12 los pxe-les de la
  []
 
 
-Overfull \hbox (0.91127pt too wide) in paragraph at lines 271--271
+Overfull \hbox (0.91127pt too wide) in paragraph at lines 270--270
 []|\OT1/cmr/m/n/12 RandomAdjustSharpness| 
  []
 
 
-Underfull \hbox (badness 1789) in paragraph at lines 271--271
+Underfull \hbox (badness 1789) in paragraph at lines 270--270
 []|\OT1/cmr/m/n/12 Equaliza el his-to-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--272
+Underfull \hbox (badness 10000) in paragraph at lines 271--271
 []|\OT1/cmr/m/n/12 Aplicar alea-to-ria-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--272
+Underfull \hbox (badness 10000) in paragraph at lines 271--271
 \OT1/cmr/m/n/12 trans-for-ma-cio-nes
  []
 
 
-Overfull \hbox (30.08311pt too wide) in paragraph at lines 264--275
+Overfull \hbox (30.08311pt too wide) in paragraph at lines 263--274
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 282.
-LaTeX Info: Redefining \% on input line 282.
+LaTeX Info: Redefining \. on input line 281.
+LaTeX Info: Redefining \% on input line 281.
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 294--295
+Underfull \hbox (badness 10000) in paragraph at lines 293--294
 
  []
 
-LaTeX Info: Redefining \. on input line 318.
-LaTeX Info: Redefining \% on input line 318.
+LaTeX Info: Redefining \. on input line 317.
+LaTeX Info: Redefining \% on input line 317.
 [22]
 <Figs/augmentation.png, id=323, 1137.24875pt x 512.91624pt>
 File: Figs/augmentation.png Graphic file (type png)
 <use Figs/augmentation.png>
-Package pdftex.def Info: Figs/augmentation.png  used on input line 321.
+Package pdftex.def Info: Figs/augmentation.png  used on input line 320.
 (pdftex.def)             Requested size: 454.89145pt x 205.16286pt.
-LaTeX Info: Redefining \. on input line 340.
-LaTeX Info: Redefining \% on input line 340.
+LaTeX Info: Redefining \. on input line 339.
+LaTeX Info: Redefining \% on input line 339.
  [23 <./Figs/augmentation.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 344--345
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
 
  []
 
-LaTeX Info: Redefining \. on input line 374.
-LaTeX Info: Redefining \% on input line 374.
+LaTeX Info: Redefining \. on input line 373.
+LaTeX Info: Redefining \% on input line 373.
 [24]
+Underfull \hbox (badness 10000) in paragraph at lines 401--402
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--405
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--409
+
+ []
+
 <Figs/5.png, id=345, 963.6pt x 542.025pt>
 File: Figs/5.png Graphic file (type png)
 <use Figs/5.png>
-Package pdftex.def Info: Figs/5.png  used on input line 402.
+Package pdftex.def Info: Figs/5.png  used on input line 412.
 (pdftex.def)             Requested size: 385.43317pt x 216.80615pt.
-LaTeX Info: Redefining \. on input line 420.
-LaTeX Info: Redefining \% on input line 420.
- [25]
-LaTeX Info: Redefining \. on input line 432.
-LaTeX Info: Redefining \% on input line 432.
- [26 <./Figs/5.png (PNG copy)>]
-<Figs/6.jpg, id=370, 627.09282pt x 458.46281pt>
-File: Figs/6.jpg Graphic file (type jpg)
-<use Figs/6.jpg>
-Package pdftex.def Info: Figs/6.jpg  used on input line 437.
-(pdftex.def)             Requested size: 376.25859pt x 275.0798pt.
-LaTeX Info: Redefining \. on input line 447.
-LaTeX Info: Redefining \% on input line 447.
- [27 <./Figs/6.jpg>]
+LaTeX Info: Redefining \. on input line 416.
+LaTeX Info: Redefining \% on input line 416.
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 417--418
+
+ []
+
+LaTeX Info: Redefining \. on input line 433.
+LaTeX Info: Redefining \% on input line 433.
+[26 <./Figs/5.png (PNG copy)>]
+<Figs/22.jpeg, id=366, 810.02625pt x 463.7325pt>
+File: Figs/22.jpeg Graphic file (type jpg)
+<use Figs/22.jpeg>
+Package pdftex.def Info: Figs/22.jpeg  used on input line 448.
+(pdftex.def)             Requested size: 405.01213pt x 231.86568pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--455
+
+ []
+
+LaTeX Info: Redefining \. on input line 455.
+LaTeX Info: Redefining \% on input line 455.
+[27 <./Figs/22.jpeg>]
+<Figs/21.jpeg, id=376, 352.31625pt x 527.9725pt>
+File: Figs/21.jpeg Graphic file (type jpg)
+<use Figs/21.jpeg>
+Package pdftex.def Info: Figs/21.jpeg  used on input line 460.
+(pdftex.def)             Requested size: 140.924pt x 211.18526pt.
+LaTeX Info: Redefining \. on input line 479.
+LaTeX Info: Redefining \% on input line 479.
+ [28 <./Figs/21.jpeg>]
 chapter 6.
-) [28
+) [29
+
+] [30
+
+
+
 
 ] (PlantillaPG.bbl
 Underfull \hbox (badness 1622) in paragraph at lines 12--17
@@ -1543,16 +1578,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--17
 tronica/CAP-
  []
 
-[29
-
-
-
-
+[31
 
 ])
 LaTeX Info: Redefining \. on input line 37.
 LaTeX Info: Redefining \% on input line 37.
- [30] (PlantillaPG.aux (OtrosTex/HojaTitulo.aux)
+ [32] (PlantillaPG.aux (OtrosTex/HojaTitulo.aux)
 LaTeX Info: Redefining \. on input line 28.
 LaTeX Info: Redefining \% on input line 28.
  (Capitulos/Cap1.aux))
@@ -1563,10 +1594,10 @@ Package rerunfilecheck Info: File `PlantillaPG.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27861 strings out of 478659
- 555537 string characters out of 2845920
+ 27875 strings out of 478659
+ 555730 string characters out of 2845920
  971514 words of memory out of 3000000
- 45319 multiletter control sequences out of 15000+600000
+ 45326 multiletter control sequences out of 15000+600000
  410862 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,12n,109p,10636b,731s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1583,9 +1614,9 @@ nj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/
 Users/Johnj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.
 pfb><C:/Users/Johnj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
 m/cmti12.pfb>
-Output written on PlantillaPG.pdf (33 pages, 1414196 bytes).
+Output written on PlantillaPG.pdf (35 pages, 1489825 bytes).
 PDF statistics:
- 582 PDF objects out of 1000 (max. 8388607)
- 141 named destinations out of 1000 (max. 500000)
- 346 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 596 PDF objects out of 1000 (max. 8388607)
+ 146 named destinations out of 1000 (max. 500000)
+ 351 words of extra memory for PDF output out of 10000 (max. 10000000)
 
