@@ -104,4 +104,9 @@ D.~A. Van~Dyk and X.-L. Meng, ``The art of data augmentation,'' {\em Journal of
 \bibitem{Pytorch}
 ``Pytorch documentation — pytorch 1.10.1 documentation.''
 
+\bibitem{mathivet2018inteligencia}
+V.~Mathivet, {\em Inteligencia artificial para desarrolladores: conceptos e
+  implementaci{\'o}n en C}.
+\newblock Ediciones ENI., 2018.
+
 \end{thebibliography}
