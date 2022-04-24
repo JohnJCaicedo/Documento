@@ -45,5 +45,6 @@
 \contentsline {subsubsection}{\nonumberline \MakeUppercase {Comparación de arquitecturas}}{29}{subsubsection*.23}%
 \contentsline {section}{\numberline {5.2}Clasificación de tamaño}{29}{section.5.2}%
 \contentsline {chapter}{\numberline {6}Prototipo}{30}{chapter.6}%
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{31}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Especificaciones principales}{30}{section.6.1}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{31}{Item.16}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
