@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.23)  24 APR 2022 02:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.23)  24 APR 2022 09:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1591,7 +1591,7 @@ Package rerunfilecheck Info: File `PlantillaPG.out' has not changed.
 Here is how much of TeX's memory you used:
  27849 strings out of 478582
  554112 string characters out of 2845760
- 965360 words of memory out of 3000000
+ 965361 words of memory out of 3000000
  45376 multiletter control sequences out of 15000+600000
  476691 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
