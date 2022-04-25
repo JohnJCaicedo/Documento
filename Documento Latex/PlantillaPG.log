@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.23)  24 APR 2022 09:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.23)  25 APR 2022 13:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1133,6 +1133,12 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 46.
 Package tocbasic Info: Using my definition of `\numberline' on input line 47.
 Package tocbasic Info: Using my definition of `\numberline' on input line 48.
 Package tocbasic Info: Using my definition of `\numberline' on input line 49.
+Package tocbasic Info: Using my definition of `\numberline' on input line 50.
+Package tocbasic Info: Using my definition of `\numberline' on input line 51.
+Package tocbasic Info: Using my definition of `\numberline' on input line 52.
+Package tocbasic Info: Using my definition of `\numberline' on input line 53.
+Package tocbasic Info: Using my definition of `\numberline' on input line 54.
+Package tocbasic Info: Using my definition of `\numberline' on input line 55.
 )
 \tf@toc=\write5
 \openout5 = `PlantillaPG.toc'.
@@ -1283,7 +1289,7 @@ LaTeX Info: Redefining \% on input line 103.
 
 [13]
 chapter 4.
-<Figs/FGGeneral.jpg, id=237, 1628.0825pt x 618.31pt>
+<Figs/FGGeneral.jpg, id=248, 1628.0825pt x 618.31pt>
 File: Figs/FGGeneral.jpg Graphic file (type jpg)
 <use Figs/FGGeneral.jpg>
 Package pdftex.def Info: Figs/FGGeneral.jpg  used on input line 111.
@@ -1299,7 +1305,7 @@ Underfull \vbox (badness 7963) has occurred while \output is active []
  [14
 
  <./Figs/FGGeneral.jpg>]
-<Figs/Chamber.JPEG, id=247, 1284.8pt x 961.5925pt>
+<Figs/Chamber.JPEG, id=258, 1284.8pt x 961.5925pt>
 File: Figs/Chamber.JPEG Graphic file (type jpg)
 <use Figs/Chamber.JPEG>
 Package pdftex.def Info: Figs/Chamber.JPEG  used on input line 134.
@@ -1310,7 +1316,7 @@ LaTeX Info: Redefining \% on input line 140.
 LaTeX Info: Redefining \. on input line 187.
 LaTeX Info: Redefining \% on input line 187.
  [16]
-<Figs/Distribucion.jpg, id=265, 769.3258pt x 704.04968pt>
+<Figs/Distribucion.jpg, id=276, 769.3258pt x 704.04968pt>
 File: Figs/Distribucion.jpg Graphic file (type jpg)
 <use Figs/Distribucion.jpg>
 Package pdftex.def Info: Figs/Distribucion.jpg  used on input line 194.
@@ -1319,13 +1325,13 @@ LaTeX Info: Redefining \. on input line 203.
 LaTeX Info: Redefining \% on input line 203.
  [17 <./Figs/Distribucion.jpg>]
 chapter 5.
-<Figs/A-generic-CNN-Architecture.png, id=275, 853.1875pt x 416.55624pt>
+<Figs/A-generic-CNN-Architecture.png, id=286, 853.1875pt x 416.55624pt>
 File: Figs/A-generic-CNN-Architecture.png Graphic file (type png)
 <use Figs/A-generic-CNN-Architecture.png>
 Package pdftex.def Info: Figs/A-generic-CNN-Architecture.png  used on input lin
 e 212.
 (pdftex.def)             Requested size: 213.29636pt x 104.1388pt.
-<Figs/procedimiento.jpg, id=277, 2157.05875pt x 466.74374pt>
+<Figs/procedimiento.jpg, id=288, 2157.05875pt x 466.74374pt>
 File: Figs/procedimiento.jpg Graphic file (type jpg)
 <use Figs/procedimiento.jpg>
 Package pdftex.def Info: Figs/procedimiento.jpg  used on input line 222.
@@ -1466,7 +1472,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 293--294
 LaTeX Info: Redefining \. on input line 317.
 LaTeX Info: Redefining \% on input line 317.
 [22]
-<Figs/augmentation.png, id=326, 1137.24875pt x 512.91624pt>
+<Figs/augmentation.png, id=337, 1137.24875pt x 512.91624pt>
 File: Figs/augmentation.png Graphic file (type png)
 <use Figs/augmentation.png>
 Package pdftex.def Info: Figs/augmentation.png  used on input line 320.
@@ -1512,7 +1518,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 428--430
 
  []
 
-<Figs/5.png, id=362, 963.6pt x 542.025pt>
+<Figs/5.png, id=373, 963.6pt x 542.025pt>
 File: Figs/5.png Graphic file (type png)
 <use Figs/5.png>
 Package pdftex.def Info: Figs/5.png  used on input line 433.
@@ -1527,7 +1533,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 438--439
 LaTeX Info: Redefining \. on input line 454.
 LaTeX Info: Redefining \% on input line 454.
 [27 <./Figs/5.png (PNG copy)>]
-<Figs/22.jpeg, id=379, 810.02625pt x 463.7325pt>
+<Figs/22.jpeg, id=390, 810.02625pt x 463.7325pt>
 File: Figs/22.jpeg Graphic file (type jpg)
 <use Figs/22.jpeg>
 Package pdftex.def Info: Figs/22.jpeg  used on input line 470.
@@ -1540,7 +1546,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 476--477
 LaTeX Info: Redefining \. on input line 477.
 LaTeX Info: Redefining \% on input line 477.
 [28 <./Figs/22.jpeg>]
-<Figs/21.jpeg, id=390, 352.31625pt x 527.9725pt>
+<Figs/21.jpeg, id=401, 352.31625pt x 527.9725pt>
 File: Figs/21.jpeg Graphic file (type jpg)
 <use Figs/21.jpeg>
 Package pdftex.def Info: Figs/21.jpeg  used on input line 482.
@@ -1549,7 +1555,19 @@ LaTeX Info: Redefining \. on input line 502.
 LaTeX Info: Redefining \% on input line 502.
  [29 <./Figs/21.jpeg>]
 chapter 6.
-) [30
+
+Underfull \vbox (badness 1024) has occurred while \output is active []
+
+ [30
+
+])
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+
+[31] [32
+
+
+
 
 ] (PlantillaPG.bbl
 Underfull \hbox (badness 1622) in paragraph at lines 12--17
@@ -1569,16 +1587,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--17
 tronica/CAP-
  []
 
-[31
-
-
-
-
+[33
 
 ])
 LaTeX Info: Redefining \. on input line 37.
 LaTeX Info: Redefining \% on input line 37.
- [32] (PlantillaPG.aux (OtrosTex/HojaTitulo.aux)
+ [34] (PlantillaPG.aux (OtrosTex/HojaTitulo.aux)
 LaTeX Info: Redefining \. on input line 28.
 LaTeX Info: Redefining \% on input line 28.
  (Capitulos/Cap1.aux))
@@ -1589,10 +1603,10 @@ Package rerunfilecheck Info: File `PlantillaPG.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27849 strings out of 478582
- 554112 string characters out of 2845760
- 965361 words of memory out of 3000000
- 45376 multiletter control sequences out of 15000+600000
+ 27867 strings out of 478582
+ 554271 string characters out of 2845760
+ 964361 words of memory out of 3000000
+ 45382 multiletter control sequences out of 15000+600000
  476691 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,12n,109p,10636b,716s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1610,9 +1624,9 @@ s/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/PC/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/PC/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/PC/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on PlantillaPG.pdf (35 pages, 1514188 bytes).
+Output written on PlantillaPG.pdf (37 pages, 1520800 bytes).
 PDF statistics:
- 622 PDF objects out of 1000 (max. 8388607)
- 153 named destinations out of 1000 (max. 500000)
- 359 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 669 PDF objects out of 1000 (max. 8388607)
+ 165 named destinations out of 1000 (max. 500000)
+ 407 words of extra memory for PDF output out of 10000 (max. 10000000)
 
