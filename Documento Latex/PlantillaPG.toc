@@ -47,10 +47,10 @@
 \contentsline {chapter}{\numberline {6}Prototipo}{30}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Especificaciones principales}{30}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Descripción de la maquina}{31}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Esquema electrico}{31}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Estructura}{31}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Bombillos}{31}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Sensor Optico}{31}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}Camara Web}{31}{subsection.6.4.3}%
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{32}{subsection.6.4.3}%
+\contentsline {section}{\numberline {6.3}Esquema electrico}{32}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Estructura}{32}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Bombillos}{32}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Sensor Optico}{32}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Camara Web}{32}{subsection.6.4.3}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{33}{subsection.6.4.3}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
