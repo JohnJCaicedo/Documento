@@ -419,70 +419,70 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 		\subsection{Arquitectura del modelo}
 			\subsubsection{\MakeUppercase{Modelo preentrenado ALEXNET}}
 			
-			El modelo AlexNet fue implementado en el año 2012 en el desafio de reconocimiento visual a gran escala Imaget. Este modelo tuvo un resultado tan satisfactorio que los modelos de aprendizaje profundo se convirtieron en la referencia para la investigación y desarrollo en los principales sectores de la industria. \cite{Pytorch}\\
-			
-			
-			El modelo se compone de cinco capas convolucionales y tres capas densas, donde las capas 	convolucionales estan normalizadas por lotes. El kernel tiene dimensiones diferentes que se distribuyen en 11x11 en la primera capa, 5x5 en la segunda y 3x3 en el resto.La primera, cuarta y quinta capa convolucional estan sguidas por una capa Max-pooling con dimensiones de 3x3 que posee un stride de dos.\\
-			
-			
-			Las capas convolusionales y de Max-pooling son seguidas por tres capas densas en donde las dos primeras poseen 4096 neuronas cada una y la ultima capa es la de salida la cual se compone de 1000 neuronas que poseen una función de activación softmax. estas neuronas son las encargadas de realizar la clasificación de la imagen. Como es habitual en estos sistemas de clasificación, la función de perdidas implementada es la entropia cruzada.(REFERENCIA)
-			\\
-			
-			\begin{figure}[ht]
-				\centering
-				\includegraphics[scale=0.4]{Figs/5.png}
-				\caption{Modelo AlexNet}
-				\label{fig:AlexNet}
-			\end{figure}
-			\newpage	
-			El modelo de AlexNet toma una imagen de entrada con una resolución de 227x227pixeles y 3 canales de color, la información recibida pasa por cinco capas convolucionales (en negro) de neuronas ReLu y tres capas de Max-pooling (en azul). La quinta capa de convolución posee 256 mapas diferentes con dimensiones de 13x13. Seguidamente se aplican las dos capas densas de 4096 neuronas las cuales son seguidas por una capa de salida de 1000 neuronas, dotadas con una función softmax. Cada neurona de la capa de salida representa un conjunto semantico diferente. Y su valor de activacion indica la probabilidad de que la imagen de entrada pertenezca a dicho conjunto semantico.\\
-	
-			
-			Una vez conocida la estructura del modelo procedemos con la implementación, en la cual se siguieron una serie de pasos para la construcción del modelo clasificadorlos cuales son:
-			
-			\begin{enumerate}
-				\item \textbf{CARGAR BIBILIOTECAS IMPORTANTES:} 
+				El modelo AlexNet fue implementado en el año 2012 en el desafio de reconocimiento visual a gran escala Imaget. Este modelo tuvo un resultado tan satisfactorio que los modelos de aprendizaje profundo se convirtieron en la referencia para la investigación y desarrollo en los principales sectores de la industria. \cite{Pytorch}\\
+				
+				
+				El modelo se compone de cinco capas convolucionales y tres capas densas, donde las capas 	convolucionales estan normalizadas por lotes. El kernel tiene dimensiones diferentes que se distribuyen en 11x11 en la primera capa, 5x5 en la segunda y 3x3 en el resto.La primera, cuarta y quinta capa convolucional estan sguidas por una capa Max-pooling con dimensiones de 3x3 que posee un stride de dos.\\
+				
+				
+				Las capas convolusionales y de Max-pooling son seguidas por tres capas densas en donde las dos primeras poseen 4096 neuronas cada una y la ultima capa es la de salida la cual se compone de 1000 neuronas que poseen una función de activación softmax. estas neuronas son las encargadas de realizar la clasificación de la imagen. Como es habitual en estos sistemas de clasificación, la función de perdidas implementada es la entropia cruzada.(REFERENCIA)
 				\\
-				Se llaman las bibliotecas importantes para la ejecución del modelo entre estas tenemos torch para pytorch...
-				\item \textbf{PREPARACIÓN CONJUNTO DE DATOS:} 
-				\\
-				La preparación del conjunto de datos es una etapa de importación en la creación y ejecución del algoritmo de red neuronal o también conocida como preprocesamiento de imagenes.
-				\item\textbf{CONSTRUCCIÓN DEL MODELO}
-				\\
-				En esta parte se convierte la arquitectura de AlexNet presentada en la imagen ... en código, para poder usarla más adelante en la clasificación.
-				Además en este paso se definen los valores de el maxpooling, el padding y el número de convoluciones que tendra la red neuronal.
-				\item\textbf{FORMACIÓN DEL MODELO}
-				\\
-				Durante el entrenamiento de la red AlexNet (entrenamiento durante ... epochs) se obtuvo una precisión de validación promedio del ..., como se muestra en la siguiente imagen:
-				\item \textbf{PRUEBA DEL MODELO}
-				\\
-				En este paso se comprueba la eficiencia del modelo usando el dataset de validación, donde encontramos que la red AlexNet pudo predecir correctamente ... de ... imagenes de papas tanto defectuosas como en buen estado y reconociendo tambien el tamaño al que pertenecen ya sea grande, mediana o pequeña 
-			\end{enumerate} 
+				
+				\begin{figure}[ht]
+					\centering
+					\includegraphics[scale=0.4]{Figs/5.png}
+					\caption{Modelo AlexNet}
+					\label{fig:AlexNet}
+				\end{figure}
+				\newpage	
+				El modelo de AlexNet toma una imagen de entrada con una resolución de 227x227pixeles y 3 canales de color, la información recibida pasa por cinco capas convolucionales (en negro) de neuronas ReLu y tres capas de Max-pooling (en azul). La quinta capa de convolución posee 256 mapas diferentes con dimensiones de 13x13. Seguidamente se aplican las dos capas densas de 4096 neuronas las cuales son seguidas por una capa de salida de 1000 neuronas, dotadas con una función softmax. Cada neurona de la capa de salida representa un conjunto semantico diferente. Y su valor de activacion indica la probabilidad de que la imagen de entrada pertenezca a dicho conjunto semantico.\\
+		
+				
+				Una vez conocida la estructura del modelo procedemos con la implementación, en la cual se siguieron una serie de pasos para la construcción del modelo clasificadorlos cuales son:
+				
+				\begin{enumerate}
+					\item \textbf{CARGAR BIBILIOTECAS IMPORTANTES:} 
+					\\
+					Se llaman las bibliotecas importantes para la ejecución del modelo entre estas tenemos torch para pytorch...
+					\item \textbf{PREPARACIÓN CONJUNTO DE DATOS:} 
+					\\
+					La preparación del conjunto de datos es una etapa de importación en la creación y ejecución del algoritmo de red neuronal o también conocida como preprocesamiento de imagenes.
+					\item\textbf{CONSTRUCCIÓN DEL MODELO}
+					\\
+					En esta parte se convierte la arquitectura de AlexNet presentada en la imagen ... en código, para poder usarla más adelante en la clasificación.
+					Además en este paso se definen los valores de el maxpooling, el padding y el número de convoluciones que tendra la red neuronal.
+					\item\textbf{FORMACIÓN DEL MODELO}
+					\\
+					Durante el entrenamiento de la red AlexNet (entrenamiento durante ... epochs) se obtuvo una precisión de validación promedio del ..., como se muestra en la siguiente imagen:
+					\item \textbf{PRUEBA DEL MODELO}
+					\\
+					En este paso se comprueba la eficiencia del modelo usando el dataset de validación, donde encontramos que la red AlexNet pudo predecir correctamente ... de ... imagenes de papas tanto defectuosas como en buen estado y reconociendo tambien el tamaño al que pertenecen ya sea grande, mediana o pequeña 
+				\end{enumerate} 
 
 
 			\subsubsection{\MakeUppercase{Modelo preentrenado VGG19}}
 			
-			La arquitectura VGG fue planteada por Simonyan y Zisserman, la cual consiste en stacks lineales de bloques que se encuentran formados por una cantidad determinada de capas convolucionales, una función de activación no lineal y una capa Max Pooling, seguidos de tres capas fully-conected y finalmente una capa softmax (referencia pdf). Esta ariquitectura cuenta con cinco bloques los cuales estan distribuidos de la siguiente manera:
-			
-			
-			\begin{figure}[ht]
-				\centering
-				\includegraphics[scale=0.5]{Figs/22.jpeg}
-				\caption{Modelo VGG19}
-				\label{fig:VGG19}
-			\end{figure}			
-			
-			
-			Como se puede observar en la imagen la arquitectura cuenta con dos capas convolucionales de 64 y 128 filtros respectivamente en sus dos primeros bloques, el bloque intermedio se compone de tres capas convolucionales de 256 filtros y los ultimos dos bloques estan compuestos por tres capas concolucionales de 512 filtros cada uno. El numero 19 representa la cantidad de capas entrenables que posee la arquitectura donde hay 16 capas convolucionales y 3 capas fully-conected.\\
-			
-			Las capas convolucionales de esta arquitectura cuentan con un campo receptivo de 3x3, stride de 1x1 y pading de 1 pixel. Para la operaciones del Max Pooling se implementa un kernel de 2x2 y un stride de 2x2 y por ultimo cada capa oculta de la red cuenta con la funcion de activacion ReLu. La arquitectura VGG19 se resume en la siguiente tabla:
-			
-			\begin{figure}[ht]
-				\centering
-				\includegraphics[scale=0.4]{Figs/21.jpeg}
-				\caption{Composición Modelo VGG19}
-				\label{fig:VGG19_tabla}
-			\end{figure}
+				La arquitectura VGG fue planteada por Simonyan y Zisserman, la cual consiste en stacks lineales de bloques que se encuentran formados por una cantidad determinada de capas convolucionales, una función de activación no lineal y una capa Max Pooling, seguidos de tres capas fully-conected y finalmente una capa softmax (referencia pdf). Esta ariquitectura cuenta con cinco bloques los cuales estan distribuidos de la siguiente manera:
+				
+				
+				\begin{figure}[ht]
+					\centering
+					\includegraphics[scale=0.5]{Figs/22.jpeg}
+					\caption{Modelo VGG19}
+					\label{fig:VGG19}
+				\end{figure}			
+				
+				
+				Como se puede observar en la imagen la arquitectura cuenta con dos capas convolucionales de 64 y 128 filtros respectivamente en sus dos primeros bloques, el bloque intermedio se compone de tres capas convolucionales de 256 filtros y los ultimos dos bloques estan compuestos por tres capas concolucionales de 512 filtros cada uno. El numero 19 representa la cantidad de capas entrenables que posee la arquitectura donde hay 16 capas convolucionales y 3 capas fully-conected.\\
+				
+				Las capas convolucionales de esta arquitectura cuentan con un campo receptivo de 3x3, stride de 1x1 y pading de 1 pixel. Para la operaciones del Max Pooling se implementa un kernel de 2x2 y un stride de 2x2 y por ultimo cada capa oculta de la red cuenta con la funcion de activacion ReLu. La arquitectura VGG19 se resume en la siguiente tabla:
+				
+				\begin{figure}[ht]
+					\centering
+					\includegraphics[scale=0.4]{Figs/21.jpeg}
+					\caption{Composición Modelo VGG19}
+					\label{fig:VGG19_tabla}
+				\end{figure}
 
 
 			\subsubsection{\MakeUppercase{Modelo preentrenado VGG11}}
@@ -490,39 +490,39 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 			
 \newpage
 			\subsubsection{\MakeUppercase{Modelo preentrenado RESNET18}}
-			La arquitectura Resnet (Residual Net) fue propuesta por un equipo de Microsoft Research el cual fue liderado por Kaiming He, en donde se propone que si a una red neuronal de 20 capas se le intercalan 36 capas que calculan la simple función de identidad, la red resultante (56 capas) deberia tener exactamente la misma eficacia y no ser inferior que la primera. Debemos recordar que la función identidad es la encargada de devolver exactamente el mismo valor que su argumento. (REFERENCIA)
-			\\
-			Conociendo esto para permitir que una red pueda variar su cantidad efectiva de capas se introduce el concepto de bloque residual:
-
-			\begin{figure}[ht]
-				\centering
-				\includegraphics[scale=0.6]{Figs/67.png}
-				\caption{Bloque Residual}
-				\label{fig:Bloque Residual}
-			\end{figure}
-		
-			Como se aprecia en la imagen, el bloque residual se compone de una ruta residual (izquierda) y una conexión atajo (derecha) que la soslaya. La ruta residual F(x) esta compuesta de dos capas de pesos sinapticos (pueden ser densas o convolucionales) que se intercalan por una función rectificadora. El resultado se suma con la información que atraviesa la conexión atajo X "identidad". Y por ultimo se aplica nuevamente la función rectificadora. La información puede atravesar con ello dos caminos diferentes que son: el de la función de identidad X o el de la ruta residual F(x).(referencia)
-		
-			En la arquitectura Resnet18 Las 18 capas de esta arquitectura representan las 18 capas con pesos en donde se incluye la capa de convolución y la capa totalmente conectada, excluyendo la capa de agrupación y la capa BN.
+				La arquitectura Resnet (Residual Net) fue propuesta por un equipo de Microsoft Research el cual fue liderado por Kaiming He, en donde se propone que si a una red neuronal de 20 capas se le intercalan 36 capas que calculan la simple función de identidad, la red resultante (56 capas) deberia tener exactamente la misma eficacia y no ser inferior que la primera. Debemos recordar que la función identidad es la encargada de devolver exactamente el mismo valor que su argumento. (REFERENCIA)
+				\\
+				Conociendo esto para permitir que una red pueda variar su cantidad efectiva de capas se introduce el concepto de bloque residual:
+	
+				\begin{figure}[ht]
+					\centering
+					\includegraphics[scale=0.6]{Figs/67.png}
+					\caption{Bloque Residual}
+					\label{fig:Bloque Residual}
+				\end{figure}
 			
+				Como se aprecia en la imagen, el bloque residual se compone de una ruta residual (izquierda) y una conexión atajo (derecha) que la soslaya. La ruta residual F(x) esta compuesta de dos capas de pesos sinapticos (pueden ser densas o convolucionales) que se intercalan por una función rectificadora. El resultado se suma con la información que atraviesa la conexión atajo X "identidad". Y por ultimo se aplica nuevamente la función rectificadora. La información puede atravesar con ello dos caminos diferentes que son: el de la función de identidad X o el de la ruta residual F(x).(referencia)
+			
+				En la arquitectura Resnet18 Las 18 capas de esta arquitectura representan las 18 capas con pesos en donde se incluye la capa de convolución y la capa totalmente conectada, excluyendo la capa de agrupación y la capa BN.
+				
 \newpage
-			\begin{figure}[ht]
-				\centering
-				\includegraphics[scale=0.65]{Figs/68.png}
-				\caption{Bloque Residual}
-				\label{fig:Bloque Residual}
-			\end{figure}
-			
-			Como se puede observar la primera capa de convolución implementa una plantilla de 7x77x7 con un tamaño de paso de 2 y un relleno de 3, Seguido a eso, se realiza BN, ReLu y Maxpooling. Estos constituyen la primera parte del modulo de convolucion conv1.
-			\\
-			Luego hay cuatro etapas, cada etapa tiene multiples modulos, cada modulo se llama un bloque de construcción por ende se tiene que ResNet=[2,2,2,2] se evidencia que hay 8 bloques de construcción. (REFERENCIA).
-			
-			\begin{figure}[ht]
-				\centering
-				\includegraphics[scale=0.35]{Figs/69.png}
-				\caption{Arquitectura Resnet18}
-				\label{fig:RESNET18}
-			\end{figure}
+				\begin{figure}[ht]
+					\centering
+					\includegraphics[scale=0.65]{Figs/68.png}
+					\caption{Bloque Residual}
+					\label{fig:Bloque Residual}
+				\end{figure}
+				
+				Como se puede observar la primera capa de convolución implementa una plantilla de 7x77x7 con un tamaño de paso de 2 y un relleno de 3, Seguido a eso, se realiza BN, ReLu y Maxpooling. Estos constituyen la primera parte del modulo de convolucion conv1.
+				\\
+				Luego hay cuatro etapas, cada etapa tiene multiples modulos, cada modulo se llama un bloque de construcción por ende se tiene que ResNet=[2,2,2,2] se evidencia que hay 8 bloques de construcción. (REFERENCIA).
+				
+				\begin{figure}[ht]
+					\centering
+					\includegraphics[scale=0.35]{Figs/69.png}
+					\caption{Arquitectura Resnet18}
+					\label{fig:RESNET18}
+				\end{figure}
 			
 			
 			\subsubsection{\MakeUppercase{Comparación de arquitecturas}}
@@ -530,7 +530,7 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 	\section{Clasificación de tamaño}
 	
 \chapter{Prototipo}
-Para el desplazamiento de los tuberculos de papa se implementa una banda transportadora tomada de una maquina selladora de banda continua horizontal FR-900 la cual es impulsada por un motor DC a 220V.
+	Para el desplazamiento de los tuberculos de papa se implementa una banda transportadora tomada de una maquina selladora de banda continua horizontal FR-900 la cual es impulsada por un motor DC a 220V.
 	
 	\section{Especificaciones principales}
 	Las especificaciones tecnicas de la selladora de banda continua horzontal RF-900 son:
