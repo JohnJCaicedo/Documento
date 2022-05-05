@@ -485,16 +485,26 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 			\end{figure}
 
 
-
-
-
-
-			
-
-
-
 			\subsubsection{\MakeUppercase{Modelo preentrenado VGG11}}
+			
+			
+			
 			\subsubsection{\MakeUppercase{Modelo preentrenado RESNET18}}
+			La arquitectura Resnet (Residual Net) fue propuesta por un equipo de Microsoft Research el cual fue liderado por Kaiming He, en donde se propone que si a una red neuronal de 20 capas se le intercalan 36 capas que calculan la simple función de identidad, la red resultante (56 capas) deberia tener exactamente la misma eficacia y no ser inferior que la primera. Debemos recordar que la función identidad es la encargada de devolver exactamente el mismo valor que su argumento. (REFERENCIA)
+			\\
+			Conociendo esto para permitir que una red pueda variar su cantidad efectiva de capas se introduce el concepto de bloque residual:
+			
+			\begin{figure}[ht]
+				\centering
+				\includegraphics[scale=0.4]{Figs/67.png}
+				\caption{Bloque Residual}
+				\label{fig:Bloque Residual}
+			\end{figure}
+		
+			Como se aprecia en la imagen, el bloque residual se compone de una ruta residual (izquierda) y una conexión atajo (derecha) que la soslaya. La ruta residual F(x) esta compuesta de dos capas de pesos sinapticos (pueden ser densas o convolucionales) que se intercalan por una función rectificadora. El resultado se suma con la información que atraviesa la conexión atajo X "identidad". Y por ultimo se aplica nuevamente la función rectificadora. La información puede atravesar con ello dos caminos diferentes que son: el de la función de identidad X o el de la ruta residual F(x).
+			
+			
+			
 			\subsubsection{\MakeUppercase{Comparación de arquitecturas}}
 		
 	\section{Clasificación de tamaño}
