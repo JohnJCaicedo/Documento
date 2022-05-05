@@ -41,16 +41,16 @@
 \contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado ALEXNET}}{26}{subsubsection*.15}%
 \contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG19}}{28}{subsubsection*.17}%
 \contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG11}}{29}{subsubsection*.19}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado RESNET18}}{29}{subsubsection*.21}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Comparación de arquitecturas}}{30}{subsubsection*.23}%
-\contentsline {section}{\numberline {5.2}Clasificación de tamaño}{30}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Prototipo}{31}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Especificaciones principales}{31}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Descripción de la maquina}{32}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Esquema electrico}{33}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Estructura}{34}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Bombillos}{34}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Sensor Fotoeléctrico}{34}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}Camara Web}{34}{subsection.6.4.3}%
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{35}{subsection.6.4.3}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado RESNET18}}{30}{subsubsection*.21}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Comparación de arquitecturas}}{31}{subsubsection*.23}%
+\contentsline {section}{\numberline {5.2}Clasificación de tamaño}{31}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Prototipo}{33}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Especificaciones principales}{33}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Descripción de la maquina}{34}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Esquema electrico}{35}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Estructura}{36}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Bombillos}{36}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Sensor Fotoeléctrico}{36}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Camara Web}{36}{subsection.6.4.3}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{37}{subsection.6.4.3}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
