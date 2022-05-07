@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.23)  5 MAY 2022 04:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.23)  7 MAY 2022 03:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1557,66 +1557,85 @@ LaTeX Info: Redefining \% on input line 477.
 File: Figs/21.jpeg Graphic file (type jpg)
 <use Figs/21.jpeg>
 Package pdftex.def Info: Figs/21.jpeg  used on input line 482.
-(pdftex.def)             Requested size: 140.924pt x 211.18526pt.
-LaTeX Info: Redefining \. on input line 491.
-LaTeX Info: Redefining \% on input line 491.
+(pdftex.def)             Requested size: 193.77454pt x 290.38577pt.
+LaTeX Info: Redefining \. on input line 487.
+LaTeX Info: Redefining \% on input line 487.
  [29 <./Figs/21.jpeg>]
-<Figs/67.png, id=409, 307.90031pt x 401.24907pt>
+<Figs/70.png, id=407, 451.6875pt x 456.95718pt>
+File: Figs/70.png Graphic file (type png)
+<use Figs/70.png>
+Package pdftex.def Info: Figs/70.png  used on input line 495.
+(pdftex.def)             Requested size: 361.35048pt x 365.56622pt.
+LaTeX Info: Redefining \. on input line 499.
+LaTeX Info: Redefining \% on input line 499.
+ [30 <./Figs/70.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 515--519
+
+ []
+
+LaTeX Info: Redefining \. on input line 524.
+LaTeX Info: Redefining \% on input line 524.
+[31]
+<Figs/67.png, id=420, 307.90031pt x 401.24907pt>
 File: Figs/67.png Graphic file (type png)
 <use Figs/67.png>
-Package pdftex.def Info: Figs/67.png  used on input line 499.
+Package pdftex.def Info: Figs/67.png  used on input line 532.
 (pdftex.def)             Requested size: 184.74161pt x 240.75128pt.
-LaTeX Info: Redefining \. on input line 508.
-LaTeX Info: Redefining \% on input line 508.
- [30 <./Figs/67.png>]
-<Figs/68.png, id=418, 682.04813pt x 295.1025pt>
+LaTeX Info: Redefining \. on input line 539.
+LaTeX Info: Redefining \% on input line 539.
+ [32 <./Figs/67.png>]
+<Figs/68.png, id=429, 682.04813pt x 295.1025pt>
 File: Figs/68.png Graphic file (type png)
 <use Figs/68.png>
-Package pdftex.def Info: Figs/68.png  used on input line 511.
+Package pdftex.def Info: Figs/68.png  used on input line 545.
 (pdftex.def)             Requested size: 443.32603pt x 191.81433pt.
-<Figs/69.png, id=419, 908.39375pt x 1740.5025pt>
+LaTeX Info: Redefining \. on input line 553.
+LaTeX Info: Redefining \% on input line 553.
+ [33 <./Figs/68.png>]
+<Figs/69.png, id=436, 908.39375pt x 1740.5025pt>
 File: Figs/69.png Graphic file (type png)
 <use Figs/69.png>
-Package pdftex.def Info: Figs/69.png  used on input line 522.
-(pdftex.def)             Requested size: 317.94258pt x 609.18501pt.
-
-
-LaTeX Warning: Float too large for page by 28.18593pt on input line 525.
-
-LaTeX Info: Redefining \. on input line 532.
-LaTeX Info: Redefining \% on input line 532.
-[31 <./Figs/68.png>]
-LaTeX Info: Redefining \. on input line 532.
-LaTeX Info: Redefining \% on input line 532.
- [32 <./Figs/69.png>]
+Package pdftex.def Info: Figs/69.png  used on input line 556.
+(pdftex.def)             Requested size: 272.52023pt x 522.15479pt.
+LaTeX Info: Redefining \. on input line 566.
+LaTeX Info: Redefining \% on input line 566.
+ [34]
+LaTeX Info: Redefining \. on input line 566.
+LaTeX Info: Redefining \% on input line 566.
+ [35 <./Figs/69.png>]
 chapter 6.
-[33
+[36
 
 ]
-<Figs/65.png, id=449, 342.5297pt x 232.61906pt>
+<Figs/65.png, id=465, 342.5297pt x 232.61906pt>
 File: Figs/65.png Graphic file (type png)
 <use Figs/65.png>
-Package pdftex.def Info: Figs/65.png  used on input line 560.
+Package pdftex.def Info: Figs/65.png  used on input line 594.
 (pdftex.def)             Requested size: 325.40135pt x 220.98685pt.
-LaTeX Info: Redefining \. on input line 588.
-LaTeX Info: Redefining \% on input line 588.
- [34 <./Figs/65.png>]
-<Figs/66.jpg, id=458, 614.295pt x 546.04pt>
+LaTeX Info: Redefining \. on input line 622.
+LaTeX Info: Redefining \% on input line 622.
+ [37 <./Figs/65.png>]
+<Figs/66.jpg, id=473, 614.295pt x 546.04pt>
 File: Figs/66.jpg Graphic file (type jpg)
 <use Figs/66.jpg>
-Package pdftex.def Info: Figs/66.jpg  used on input line 592.
+Package pdftex.def Info: Figs/66.jpg  used on input line 626.
 (pdftex.def)             Requested size: 307.14674pt x 273.01933pt.
-LaTeX Info: Redefining \. on input line 620.
-LaTeX Info: Redefining \% on input line 620.
- [35 <./Figs/66.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 628--632
+LaTeX Info: Redefining \. on input line 654.
+LaTeX Info: Redefining \% on input line 654.
+ [38 <./Figs/66.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 662--666
 
  []
 
 )
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
- [36] (PlantillaPG.bbl
+ [39] [40
+
+
+
+
+] (PlantillaPG.bbl
 Underfull \hbox (badness 1622) in paragraph at lines 12--17
 []\OT1/cmr/m/n/12 J. Po-rras, M. De la Cruz, and A. Mor^^San, ``Cla-si-fi-ca-ti
 on sys-tem ba-sed on
@@ -1634,16 +1653,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--17
 tronica/CAP-
  []
 
-[37
-
-
-
-
+[41
 
 ])
 LaTeX Info: Redefining \. on input line 37.
 LaTeX Info: Redefining \% on input line 37.
- [38] (PlantillaPG.aux (OtrosTex/HojaTitulo.aux)
+ [42] (PlantillaPG.aux (OtrosTex/HojaTitulo.aux)
 LaTeX Info: Redefining \. on input line 28.
 LaTeX Info: Redefining \% on input line 28.
  (Capitulos/Cap1.aux))
@@ -1657,10 +1672,10 @@ Package rerunfilecheck Info: File `PlantillaPG.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27920 strings out of 478582
- 554983 string characters out of 2845760
+ 27933 strings out of 478582
+ 555136 string characters out of 2845760
  964360 words of memory out of 3000000
- 45419 multiletter control sequences out of 15000+600000
+ 45426 multiletter control sequences out of 15000+600000
  476691 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,12n,109p,10636b,716s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1678,9 +1693,9 @@ s/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/PC/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/PC/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/PC/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on PlantillaPG.pdf (41 pages, 1932272 bytes).
+Output written on PlantillaPG.pdf (45 pages, 2286494 bytes).
 PDF statistics:
- 703 PDF objects out of 1000 (max. 8388607)
- 176 named destinations out of 1000 (max. 500000)
- 432 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 725 PDF objects out of 1000 (max. 8388607)
+ 181 named destinations out of 1000 (max. 500000)
+ 437 words of extra memory for PDF output out of 10000 (max. 10000000)
 

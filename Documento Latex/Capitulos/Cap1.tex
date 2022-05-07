@@ -479,13 +479,46 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 				
 				\begin{figure}[ht]
 					\centering
-					\includegraphics[scale=0.4]{Figs/21.jpeg}
+					\includegraphics[scale=0.55]{Figs/21.jpeg}
 					\caption{Composición Modelo VGG19}
 					\label{fig:VGG19_tabla}
 				\end{figure}
 
-
+\newpage
 			\subsubsection{\MakeUppercase{Modelo preentrenado VGG11}}
+			VGG es un modelo preentrenado en un conjunto de datos que contiene el peso que representan las caracteristicas del conjunto de datos entrenados. Los modelos VGG toman una imagen de entrada de domensiones 224x224 pixeles en formato RGB que son tratadas con un tamaño de imagen constante.
+			\\
+			 El modelo de aprendizaje profundo VGG11. Es configuración mas sencilla. Tiene 11 capas de peso en total, de ahí el nombre VGG11. 8 de ellas son capas convolucionales y 3 son capas completamente conectadas.(referencia)
+			
+			\begin{figure}[ht]
+				\centering
+				\includegraphics[scale=0.8]{Figs/70.png}
+				\caption{Composición Modelo VGG11}
+				\label{fig:VGG11}
+			\end{figure}
+\newpage			
+			Las 11 capas del modelo VGG11 son:
+				\begin{itemize}
+					\item Convolución usando 64 filtros + Max Pooling
+					\item Convolución usando 128 filtros + Max Pooling
+					\item Convolución usando 256 filtros
+					\item Convolución usando 256 filtros + Max Pooling
+					\item Convolución usando filtros 512
+					\item Convolución usando 512 filtros + Max Pooling
+					\item Convolución usando filtros 512
+					\item Convolución usando 512 filtros + Max Pooling
+					\item Totalmente conectado con 4096 nodos
+					\item Totalmente conectado con 4096 nodos
+					\item Capa de salida con activación Softmax con 1000 nodos.
+				\end{itemize}
+			
+			El modelo cuenta con 11 capas ponderadas, sus pesos representan la fuerza de las conexiones entre unidades de capas de red adyacentes, son implementadas con el fin de conectar cada neurona de una capa con todas las neuronas de la siguiente capa, se debe tener en cuenta que la capa MAX-POOLING no se considera como una capa ponderada, debido a que es un mapa de caracteristicas que contiene las caracteristicas más destacadas. El Max-Pooling es una operación de pooling que calcula el valor maximo que contiene cada parche en cada mapa de caracteristicas, como resultado se obtiene mapas de caracteristicas muestreados que destacan la caracteristica más relevante en el parche, en la practica se ha comprobado que este metodo es más eficiente que la agrupación media en tareas de visión por ordenador como la clasificación de imagenes.
+			\\
+			\\
+			Se puede concluir que el modelo VGG-11 prospera con un numero apreciable de capas al poseer un tamaño pequeño en el filtro de concolución, dando como resultado una buena precisión del modelo y buenos resultados de rendimiento.
+			 
+			
+			
 			
 			
 \newpage
@@ -502,10 +535,11 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 				\end{figure}
 			
 				Como se aprecia en la imagen, el bloque residual se compone de una ruta residual (izquierda) y una conexión atajo (derecha) que la soslaya. La ruta residual F(x) esta compuesta de dos capas de pesos sinapticos (pueden ser densas o convolucionales) que se intercalan por una función rectificadora. El resultado se suma con la información que atraviesa la conexión atajo X "identidad". Y por ultimo se aplica nuevamente la función rectificadora. La información puede atravesar con ello dos caminos diferentes que son: el de la función de identidad X o el de la ruta residual F(x).(referencia)
-			
+
+\newpage
+
 				En la arquitectura Resnet18 Las 18 capas de esta arquitectura representan las 18 capas con pesos en donde se incluye la capa de convolución y la capa totalmente conectada, excluyendo la capa de agrupación y la capa BN.
 				
-\newpage
 				\begin{figure}[ht]
 					\centering
 					\includegraphics[scale=0.65]{Figs/68.png}
@@ -516,10 +550,10 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 				Como se puede observar la primera capa de convolución implementa una plantilla de 7x77x7 con un tamaño de paso de 2 y un relleno de 3, Seguido a eso, se realiza BN, ReLu y Maxpooling. Estos constituyen la primera parte del modulo de convolucion conv1.
 				\\
 				Luego hay cuatro etapas, cada etapa tiene multiples modulos, cada modulo se llama un bloque de construcción por ende se tiene que ResNet=[2,2,2,2] se evidencia que hay 8 bloques de construcción. (REFERENCIA).
-				
+\newpage				
 				\begin{figure}[ht]
 					\centering
-					\includegraphics[scale=0.35]{Figs/69.png}
+					\includegraphics[scale=0.30]{Figs/69.png}
 					\caption{Arquitectura Resnet18}
 					\label{fig:RESNET18}
 				\end{figure}
