@@ -51,6 +51,6 @@
 \contentsline {section}{\numberline {6.4}Estructura}{39}{section.6.4}%
 \contentsline {subsection}{\numberline {6.4.1}Bombillos}{39}{subsection.6.4.1}%
 \contentsline {subsection}{\numberline {6.4.2}Sensor Fotoeléctrico}{39}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}Camara Web}{39}{subsection.6.4.3}%
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{40}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.4.3}Camara Web}{40}{subsection.6.4.3}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{41}{subsection.6.4.3}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
