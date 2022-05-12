@@ -43,7 +43,7 @@
 \contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG11}}{30}{subsubsection*.19}%
 \contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado RESNET18}}{32}{subsubsection*.21}%
 \contentsline {subsubsection}{\nonumberline \MakeUppercase {Comparación de arquitecturas}}{34}{subsubsection*.23}%
-\contentsline {section}{\numberline {5.2}Clasificación de tamaño}{34}{section.5.2}%
+\contentsline {section}{\numberline {5.2}Clasificación de tamaño}{35}{section.5.2}%
 \contentsline {chapter}{\numberline {6}Prototipo}{36}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Especificaciones principales}{36}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Descripción de la maquina}{37}{section.6.2}%
@@ -52,5 +52,6 @@
 \contentsline {subsection}{\numberline {6.4.1}Bombillos}{39}{subsection.6.4.1}%
 \contentsline {subsection}{\numberline {6.4.2}Sensor Fotoeléctrico}{39}{subsection.6.4.2}%
 \contentsline {subsection}{\numberline {6.4.3}Camara Web}{40}{subsection.6.4.3}%
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{41}{subsection.6.4.3}%
+\contentsline {section}{\numberline {6.5}Funcionamiento}{40}{section.6.5}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{41}{section.6.5}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.23)  12 MAY 2022 03:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.23)  12 MAY 2022 03:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1596,41 +1596,41 @@ LaTeX Info: Redefining \% on input line 553.
 File: Figs/69.png Graphic file (type png)
 <use Figs/69.png>
 Package pdftex.def Info: Figs/69.png  used on input line 556.
-(pdftex.def)             Requested size: 272.52023pt x 522.15479pt.
-LaTeX Info: Redefining \. on input line 566.
-LaTeX Info: Redefining \% on input line 566.
- [34]
-LaTeX Info: Redefining \. on input line 566.
-LaTeX Info: Redefining \% on input line 566.
- [35 <./Figs/69.png>]
+(pdftex.def)             Requested size: 227.09789pt x 435.12456pt.
+LaTeX Info: Redefining \. on input line 563.
+LaTeX Info: Redefining \% on input line 563.
+ [34 <./Figs/69.png>]
+LaTeX Info: Redefining \. on input line 589.
+LaTeX Info: Redefining \% on input line 589.
+ [35]
 chapter 6.
 [36
 
 ]
-<Figs/65.png, id=465, 342.5297pt x 232.61906pt>
+<Figs/65.png, id=466, 342.5297pt x 232.61906pt>
 File: Figs/65.png Graphic file (type png)
 <use Figs/65.png>
-Package pdftex.def Info: Figs/65.png  used on input line 594.
+Package pdftex.def Info: Figs/65.png  used on input line 617.
 (pdftex.def)             Requested size: 325.40135pt x 220.98685pt.
-LaTeX Info: Redefining \. on input line 622.
-LaTeX Info: Redefining \% on input line 622.
+LaTeX Info: Redefining \. on input line 645.
+LaTeX Info: Redefining \% on input line 645.
  [37 <./Figs/65.png>]
-<Figs/66.jpg, id=473, 614.295pt x 546.04pt>
+<Figs/66.jpg, id=474, 614.295pt x 546.04pt>
 File: Figs/66.jpg Graphic file (type jpg)
 <use Figs/66.jpg>
-Package pdftex.def Info: Figs/66.jpg  used on input line 626.
+Package pdftex.def Info: Figs/66.jpg  used on input line 649.
 (pdftex.def)             Requested size: 307.14674pt x 273.01933pt.
-LaTeX Info: Redefining \. on input line 654.
-LaTeX Info: Redefining \% on input line 654.
+LaTeX Info: Redefining \. on input line 677.
+LaTeX Info: Redefining \% on input line 677.
  [38 <./Figs/66.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 662--666
+Underfull \hbox (badness 10000) in paragraph at lines 685--689
 
  []
 
-LaTeX Info: Redefining \. on input line 674.
-LaTeX Info: Redefining \% on input line 674.
+LaTeX Info: Redefining \. on input line 697.
+LaTeX Info: Redefining \% on input line 697.
 [39]
-Underfull \hbox (badness 10000) in paragraph at lines 676--680
+Underfull \hbox (badness 10000) in paragraph at lines 699--703
 
  []
 
@@ -1678,10 +1678,10 @@ Package rerunfilecheck Info: File `PlantillaPG.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27935 strings out of 478582
- 555166 string characters out of 2845760
+ 27940 strings out of 478582
+ 555215 string characters out of 2845760
  964360 words of memory out of 3000000
- 45428 multiletter control sequences out of 15000+600000
+ 45431 multiletter control sequences out of 15000+600000
  476691 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,12n,109p,10636b,716s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1699,9 +1699,9 @@ s/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/PC/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/PC/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/PC/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on PlantillaPG.pdf (45 pages, 2287554 bytes).
+Output written on PlantillaPG.pdf (45 pages, 2288922 bytes).
 PDF statistics:
- 725 PDF objects out of 1000 (max. 8388607)
- 181 named destinations out of 1000 (max. 500000)
- 437 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 730 PDF objects out of 1000 (max. 8388607)
+ 183 named destinations out of 1000 (max. 500000)
+ 445 words of extra memory for PDF output out of 10000 (max. 10000000)
 

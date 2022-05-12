@@ -553,15 +553,38 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 \newpage				
 				\begin{figure}[ht]
 					\centering
-					\includegraphics[scale=0.30]{Figs/69.png}
+					\includegraphics[scale=0.25]{Figs/69.png}
 					\caption{Arquitectura Resnet18}
 					\label{fig:RESNET18}
 				\end{figure}
 			
 			
 			\subsubsection{\MakeUppercase{Comparación de arquitecturas}}
-		
+\newpage		
 	\section{Clasificación de tamaño}
+		La clasificación de los tuberculos de papa mediante su tamaño (diametro) se realiza para categorizar el producto bajo la norma tecnica colombiana NTC 341 establecida por la industria alimentaria, con el fin de garantizar la calidad de los tuberculos de consumo.
+		\\
+		La norma establece cuatro categorias para la clasificacón de los tuberculos mediante la medición de su tamaños, estas categorias son:
+		
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|c|c|}
+			\hline
+			DENOMINACIÓN & DIAMETRO (mm) \\
+			\hline
+			MUY GRANDE & MAYOR DE 90 \\
+			\hline
+			GRANDE & 65-90 \\
+			\hline
+			MEDIANA	& 45-64 \\
+			\hline
+			PEQUEÑA & 30-44 \\
+			\hline
+		\end{tabular}	
+		\caption{Clases Limites tamaño de tuberculos de consumo}
+		\label{table:limites}
+	\end{table}	
+	
 	
 \chapter{Prototipo}
 	Para el desplazamiento de los tuberculos de papa se implementa una banda transportadora tomada de una maquina selladora de banda continua horizontal FR-900 la cual es impulsada por un motor DC a 220V.
@@ -688,8 +711,8 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 				\item Longitud del Cable: aproximadamente 138cm
 			\end{itemize}
 			
-
-
+	\section{Funcionamiento}
+		
 
 
 
