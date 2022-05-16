@@ -52,6 +52,30 @@ El sector agricultor de Colombia ha implementado diferentes técnicas de visión
 ¿Qué tipo de proceso de clasificación permitirá agrupar los tubérculos de papa según sus características físicas y "patologías" mediante técnicas de visión artificial?	
 
 
+\chapter{Marco Conceptual}
+En este capitulo se van abordar algunos terminos basicos necesarios, que ayuden al entendimiento y desarrollo del proyecto. 
+\section{Agricultura de precisión} El término sobre el que se inspira la agricultura de precisión, es utilizar la porción adecuada de insumos, en el instante correcto y en el sitio preciso. La agricultura de precisión, (AP), implica la utilización de sistemas de posicionamiento universal, (GPS), y de otros medios electrónicos, para obtener datos del cultivo. Las tecnologías de la agricultura de precisión, permiten saciar una de las exigencias de la agricultura actualizada: el funcionamiento óptimo de enormes extensiones. Se muestra como primordial virtud, que la exploración de resultados de los ensayos se puede hacer por sectores diferentes en un mismo lote, y tal cual ajustar el desempeño diferencial en los mismos. La utilización de las tecnologías de la agricultura de precisión puede contribuir a mejorar los márgenes, por medio de un incremento del costo del rendimiento (cantidad o calidad), de una reducción en la proporción de insumos, o de los dos paralelamente.
+\\
+\section{Artificial Neural Networks} Las RNA son sistemas de procesamiento de la información, cuya composición y manejo permanecen inspirados en las redes neuronales biológicas. Consisten en un enorme conjunto de recursos básicos de procesamiento, denominados nodos o neuronas, que permanecen organizados en capas. De esta forma, las RNA son sistemas adaptativos que aprenden de la vivencia, en otros términos, aprenden a realizar ciertas labores por medio de un entrenamiento con ejemplos ilustrativos.
+\\ 
+
+\section{Imagen Binaria} La binarización de una imagen se apoya en un proceso de reducción de la información de la misma, en la que únicamente persisten 2 valores: verdadero y falso. En el proceso y estudio de imagen, la binarización se emplea para dividir las zonas u objetos de interés en una imagen del resto. En otras ocasiones, una imagen binaria es sencillamente el resultado de una selección interactiva de zonas de interés, las cuales se usarán como máscaras de comparación o alusión.
+\\ 
+
+\section{ISO 800} ISO no es más que la sensibilidad del sensor en el momento de captar la luz. Mayor número de ISO, más grande capacidad para captar luz y menor costo, menor capacidad para capturar esa luz. Una vez se duplica el costo ISO, o sea, se pasa de, ejemplificando, ISO 100 a ISO 200, se necesita la mitad de luz para poder hacer la misma exposición.
+\\ 
+
+\section{Procesamiento de imagenes} El procesamiento de imágenes, tiene como fin mejorar el aspecto de las imágenes y hacer más evidentes en ellas, ciertos detalles que se quieren hacer percibir. La imagen puede haber sido generada de muchas posibilidades, ejemplificando, fotográficamente, o electrónicamente, mediante monitores de televisión. El procesamiento de las imágenes se puede hacer mediante procedimientos ópticos, o bien mediante procedimientos digitales, en una PC. En la siguiente parte describiremos bastante brevemente dichos 2 procedimientos, sin embargo, previamente se va a hacer una síntesis simple de los principios matemáticos implícitos en los dos procedimientos, donde el teorema de Fourier es el eje central.
+\\ 
+
+\section{Reconstrucción morfológica} La recomposición morfológica, se puede tener en cuenta conceptualmente como dilataciones reiteradas de una imagen, denominadas, hasta que el contorno de la imagen del marcador se adapta bajo una segunda imagen, llamada imagen de máscara. En la recomposición morfológica, los picos de la imagen del marcador "se alargan"  o se dilatan.
+\\ 
+
+\section{Tubérculos de papa} La papa o patata es un tubérculo que se puede comer, se extrae de la planta herbácea americana Solanum Tuberosum, de procedencia andino. Es una planta correspondiente a el núcleo familiar de las solanáceas, procedente de Suramérica y cultivada por todo el planeta por sus tubérculos víveres. Ha sido domesticada en el altiplano andino por sus pobladores entre el 8500 y el 5000 a. n. e., y después ha sido llevada a Europa por los colonizadores españoles como una curiosidad botánica más que como una planta alimenticia. Su consumo ha ido creciendo y su cultivo se expandió a todo el planeta, hasta transformarse actualmente en uno de los más importantes alimentos para la gente.
+\\ 
+
+\section{Visión artificial} La perspectiva artificial ayuda a la industria a mejorar los procesos de producción por medio de imágenes digitales, con ellas se optimiza el control de calidad de aplicaciones industriales y de robots. Los sistemas de perspectiva examinan y se aseguran de conseguir los requisitos mínimos de calidad exigidos por cada fabricante. A lo largo del proceso de inspección, los sistemas de perspectiva informan de los probables errores detectados, lo cual posibilita un mejor control del proceso de producción.
+
 \chapter{Estado del arte}
 
 	El objetivo de los antecedentes, es analizar y realizar una revisión literaria sobre lo  que  se  ha hecho  a  nivel  teórico  y  práctico  en  cuanto a  la visión artificial en agricultura de precisión.  Además,  determinar  cuáles son los aportes que éstos le puedan dar a este trabajo de investigación.
@@ -79,29 +103,7 @@ El sector agricultor de Colombia ha implementado diferentes técnicas de visión
 	El último artículo revisado es presentado por \textit{Michael Barnes y Tom Duckett} el \cite{Barnes2010}, cuyo objetivo de  investigación es introducir un método automático de detección de manchas en imágenes digitales de patatas. El sistema desarrollado es entrenable, de modo que pueda trabajar con diferentes variedades de patatas y variaciones en las estaciones, condiciones de iluminación, etc. Otro objetivo, pensando en su posible implantación en entornos industriales, es permitir el procesamiento de imágenes en tiempo real, posiblemente mediante la construcción de \textit{Minimalist Boosted Classifier}, que extraigan un subconjunto mínimo de todas las características que optimicen el rendimiento de la detección con el menor coste computacional posible.
 
 
-\chapter{Marco Conceptual}
-	En este capitulo se van abordar algunos terminos basicos necesarios, que ayuden al entendimiento y desarrollo del proyecto. 
-	\section{Agricultura de precisión} El término sobre el que se inspira la agricultura de precisión, es utilizar la porción adecuada de insumos, en el instante correcto y en el sitio preciso. La agricultura de precisión, (AP), implica la utilización de sistemas de posicionamiento universal, (GPS), y de otros medios electrónicos, para obtener datos del cultivo. Las tecnologías de la agricultura de precisión, permiten saciar una de las exigencias de la agricultura actualizada: el funcionamiento óptimo de enormes extensiones. Se muestra como primordial virtud, que la exploración de resultados de los ensayos se puede hacer por sectores diferentes en un mismo lote, y tal cual ajustar el desempeño diferencial en los mismos. La utilización de las tecnologías de la agricultura de precisión puede contribuir a mejorar los márgenes, por medio de un incremento del costo del rendimiento (cantidad o calidad), de una reducción en la proporción de insumos, o de los dos paralelamente.
-	\\
-	\section{Artificial Neural Networks} Las RNA son sistemas de procesamiento de la información, cuya composición y manejo permanecen inspirados en las redes neuronales biológicas. Consisten en un enorme conjunto de recursos básicos de procesamiento, denominados nodos o neuronas, que permanecen organizados en capas. De esta forma, las RNA son sistemas adaptativos que aprenden de la vivencia, en otros términos, aprenden a realizar ciertas labores por medio de un entrenamiento con ejemplos ilustrativos.
-	\\ 
-	
-	\section{Imagen Binaria} La binarización de una imagen se apoya en un proceso de reducción de la información de la misma, en la que únicamente persisten 2 valores: verdadero y falso. En el proceso y estudio de imagen, la binarización se emplea para dividir las zonas u objetos de interés en una imagen del resto. En otras ocasiones, una imagen binaria es sencillamente el resultado de una selección interactiva de zonas de interés, las cuales se usarán como máscaras de comparación o alusión.
-	\\ 
-	
-	\section{ISO 800} ISO no es más que la sensibilidad del sensor en el momento de captar la luz. Mayor número de ISO, más grande capacidad para captar luz y menor costo, menor capacidad para capturar esa luz. Una vez se duplica el costo ISO, o sea, se pasa de, ejemplificando, ISO 100 a ISO 200, se necesita la mitad de luz para poder hacer la misma exposición.
-	\\ 
-	
-	\section{Procesamiento de imagenes} El procesamiento de imágenes, tiene como fin mejorar el aspecto de las imágenes y hacer más evidentes en ellas, ciertos detalles que se quieren hacer percibir. La imagen puede haber sido generada de muchas posibilidades, ejemplificando, fotográficamente, o electrónicamente, mediante monitores de televisión. El procesamiento de las imágenes se puede hacer mediante procedimientos ópticos, o bien mediante procedimientos digitales, en una PC. En la siguiente parte describiremos bastante brevemente dichos 2 procedimientos, sin embargo, previamente se va a hacer una síntesis simple de los principios matemáticos implícitos en los dos procedimientos, donde el teorema de Fourier es el eje central.
-	\\ 
-	
-	\section{Reconstrucción morfológica} La recomposición morfológica, se puede tener en cuenta conceptualmente como dilataciones reiteradas de una imagen, denominadas, hasta que el contorno de la imagen del marcador se adapta bajo una segunda imagen, llamada imagen de máscara. En la recomposición morfológica, los picos de la imagen del marcador "se alargan"  o se dilatan.
-	\\ 
-	
-	\section{Tubérculos de papa} La papa o patata es un tubérculo que se puede comer, se extrae de la planta herbácea americana Solanum Tuberosum, de procedencia andino. Es una planta correspondiente a el núcleo familiar de las solanáceas, procedente de Suramérica y cultivada por todo el planeta por sus tubérculos víveres. Ha sido domesticada en el altiplano andino por sus pobladores entre el 8500 y el 5000 a. n. e., y después ha sido llevada a Europa por los colonizadores españoles como una curiosidad botánica más que como una planta alimenticia. Su consumo ha ido creciendo y su cultivo se expandió a todo el planeta, hasta transformarse actualmente en uno de los más importantes alimentos para la gente.
-	\\ 
-	
-	\section{Visión artificial} La perspectiva artificial ayuda a la industria a mejorar los procesos de producción por medio de imágenes digitales, con ellas se optimiza el control de calidad de aplicaciones industriales y de robots. Los sistemas de perspectiva examinan y se aseguran de conseguir los requisitos mínimos de calidad exigidos por cada fabricante. A lo largo del proceso de inspección, los sistemas de perspectiva informan de los probables errores detectados, lo cual posibilita un mejor control del proceso de producción.
+
 
 
 \chapter{Diseño Del Algoritmo de Clasificación}
