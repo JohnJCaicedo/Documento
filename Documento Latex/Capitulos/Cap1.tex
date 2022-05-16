@@ -234,16 +234,16 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 			
 			\subsubsection{DATA AUGMENTATION}
 
-			El Data augmentation consiste en la transformación de los datos existentes para crear un \textit{dataset} con mayor cantidad de datos diferentes. El objetivo de esta herramienta es crear nuevos datos que puedan ser añadidos al conjunto ya existente y así contar con más muestras para un mejor desempeño del algoritmo. Además de esto tambien es implementado para reducir el \textit{overfitting} ya que al añadir más información al conjunto de entrenamineto se evita que el modelo se sobreajuste. \\
+			El Data augmentation consiste en la transformación de los datos existentes, para crear un \textit{dataset} con mayor cantidad de datos diferentes. El objetivo de esta herramienta es crear nuevos datos que puedan ser añadidos al conjunto ya existente, y así contar con más muestras para un mejor desempeño del algoritmo. Además de esto, tambien es implementado para reducir el \textit{overfitting}, ya que al añadir más información al conjunto de entrenamineto se evita que el modelo se sobreajuste. \\
 
 
-			El concepto Data Augmentation tiene relación con los procedimientos para edificar algoritmos iterativos de mejora o muestreo por medio de la introducción de datos no vigilados o cambiantes latentes. Para los algoritmos estocásticos, el procedimiento se popularizó en la literatura estadística por el algoritmo de incremento de datos de Tanner y Wong y en la literatura de física por el algoritmo de Swendsen y Wang para el muestreo de los modelos de Ising y Potts y sus generalizaciones; en la literatura de física, el Data Augmentation se conoce como el procedimiento de las cambiantes auxiliares. Generalmente, no obstante, la obra de esquemas de el Data augmentation es que den sitio a algoritmos básicos y rápidos, debido a que las tácticas famosas varían de una manera significativa con respecto a los modelos.\cite{van2001art}
+			El concepto Data Augmentation tiene relación con los procedimientos para edificar algoritmos iterativos de mejora o muestreo, por medio de la introducción de datos no vigilados o cambiantes latentes. Para los algoritmos estocásticos, el procedimiento se popularizó en la literatura estadística por el algoritmo de incremento de datos de Tanner y Wong y en la literatura de física por el algoritmo de Swendsen y Wang, para el muestreo de los modelos de Ising y Potts y sus generalizaciones; en la literatura de física, el Data Augmentation, se conoce como el procedimiento de las cambiantes auxiliares. Generalmente, no obstante, la obra de esquemas de el Data augmentation es que den sitio a algoritmos básicos y rápidos, debido a que las tácticas famosas varían de una manera significativa con respecto a los modelos.\cite{van2001art}
 					
 			 
 			\newpage
 			\subsubsection{PREPROCESAMIENTO DE IMÁGENES}
 
-			Usando el módulo \textit{torchvision.tranforms.compose()} de la librería \textit{Pytorch} se puede encadenar unas determinadas funciones que aplican diferentes tipos de filtros y transformaciones al \textit{Dataset}. De esta forma se puede crear la tarea de segmentación debido a que las transformaciones aumentan en consideración el tamaño original del \textit{Dataset}, facilitando así, la extracción de características de c ada imágen \cite{Pytorch}. Las tranformaciones disponibles en éste módulo se presentan a continuación:
+			Usando el módulo \textit{torchvision.tranforms.compose()}, de la librería \textit{Pytorch}, se puede encadenar unas determinadas funciones que aplican diferentes tipos de filtros y transformaciones al \textit{Dataset}. De esta forma, se puede crear la tarea de segmentación debido a que las transformaciones aumentan en consideración el tamaño original del \textit{Dataset}, facilitando así, la extracción de características de cada imágen \cite{Pytorch}. Las tranformaciones disponibles en éste módulo se presentan en la Tabla \ref{table:Filters1}.
 			
 			\begin{table}[ht]
 				\centering
@@ -261,7 +261,7 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 				\label{table:Filters1}
 			\end{table}
 			
-			En la tabla \ref{table:Filters1} se observa una parte de las transformaciones de imágenes disponibles en el módulo \textit{torchvision.tranforms.compose} de la librería \textit{Pytorch}. En el caso del \textit{Dataset} de papas creado, se deben tener en cuenta únicamente las transformaciones cuyo resultado sea relevante para la extracción de caractéristicas de la imágen, por ejemplo, eomo se explicó anteriormente, se va a clasificar el tubérculo de papá en tipo y daño con la red neuronal, por este motivo, el color es una característica que define si la papa pertenece a la clase \textit{R12} o \textit{Pastusa} y, en algunos casos, si se encuentra con algún tipo de daño, por este motivo, los filtros que transforman la imágen en escala de grises no son relevantes y podrían afectar el rendimiento del algoritmo.
+			En la Tabla \ref{table:Filters1} se observa una parte de las transformaciones de imágenes disponibles en el módulo \textit{torchvision.tranforms.compose} de la librería \textit{Pytorch}. En el caso del \textit{Dataset} de papas creado, se deben tener en cuenta únicamente las transformaciones cuyo resultado sea relevante para la extracción de caractéristicas de la imágen, por ejemplo, como se explicó anteriormente, se va a clasificar el tubérculo de papá en tipo y daño, con la red neuronal, por este motivo, el color es una característica que define si la papa pertenece a la clase \textit{R12} o \textit{Pastusa} y, en algunos casos, si se encuentra con algún tipo de daño, por este motivo, los filtros que transforman la imágen en escala de grises no son relevantes y podrían afectar el rendimiento del algoritmo.
 		
 			\begin{table}[ht]
 				\centering
@@ -279,12 +279,12 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 				\caption{Funciones de transformación de imágenes del módulo de \textit{Pytorch}}
 			\end{table}
 
-			De igual forma, en la tabla \ref{table:filters2}, se observan algunos filtros como recortes en la imágen, rotaciones, cambios de perspectiva, cambios en la nitidez y contraste de la imágen. Se escogieron los filtros considerados mejores para el caso del \textit{Dataset} de tubérculos de papa creado en este documento. 
+			De igual forma, en la Tabla \ref{table:filters2}, se observan algunos filtros como recortes en la imágen, rotaciones, cambios de perspectiva, cambios en la nitidez y contraste de la imágen. Se escogieron los filtros considerados mejores para el caso del \textit{Dataset} de tubérculos de papa creado en este documento. 
 			
 			
 			
 			\newpage
-			Los filtros que se utilizaron en el desarrollo del algoritmo de clasificación, teniendo en cuando aquellas transformaciones que podrían afectar el rendimiento del algoritmo fueron:
+			Los filtros que se utilizaron en el desarrollo del algoritmo de clasificación, teniendo en cuenta aquellas transformaciones que podrían afectar el rendimiento del algoritmo fueron:
 			
 			\begin{itemize}
 				\item Resize
@@ -295,16 +295,16 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 				\item RandomAdjustSharpness
 			\end{itemize}
 
-			Como se está utilizando la librería \textit{Pytorch}, las imágenes deben ingresar en formato \textit{Tensor}, que convierte los valores de los píxeles de una imágen \textit{PIL} estándar con un rango de $[0, 255]$  a un tensor decimal de \textit{Pythorch} con valores en un rango de con valores $[0.0, 1.0]$ de la forma  $(C, H, W)$, siendo C el número de canales de la imágen (1 si es en escala de grises, 3 si es \textit{RGB}), $H$ y $W$ el tamaño de la imágen. \\
+			Como se está utilizando la librería \textit{Pytorch}, las imágenes deben ingresar en formato \textit{Tensor}, que convierte los valores de los píxeles de una imágen \textit{PIL} estándar, con un rango de $[0, 255]$,  a un tensor decimal de \textit{Pythorch}, con valores en un rango con valores $[0.0, 1.0]$ de la forma  $(C, H, W)$, siendo C el número de canales de la imágen (1 si es en escala de grises, 3 si es \textit{RGB}), $H$ y $W$ el tamaño de la imágen. \\
 			
-			Una vez la imágen está en formato \textit{PyTorch FloatTensor}, se decidió utilizar la función \textit{torchvision.tranforms.normalize()} para normalizar las imágenes. La normalización de una imágen consiste en modificar los valores del tensor, que se encuentran entre $[0.0, 1.0]$ para que el promedio y la desviación estándar sean $0$ y $1$ respectivamente. Para hacer esto se utiliza la ecuación \ref{eq:normalize} \cite{Pytorch}
+			Una vez la imágen está en formato \textit{PyTorch FloatTensor}, se decidió utilizar la función \textit{torchvision.tranforms.normalize()} para normalizar las imágenes. La normalización de una imágen consiste en modificar los valores del tensor, que se encuentran entre $[0.0, 1.0]$, para que el promedio y la desviación estándar sean $0$ y $1$ respectivamente. Para hacer esto se utiliza la Ecuación \ref{eq:normalize} \cite{Pytorch}
 			
 			\begin{equation}
 				{output[Channel]=\frac{Input[Channel]-Mean[Channel]}{std[Channel]}}
 				\label{eq:normalize}
 			\end{equation}
 
-			La normalización se utiliza debido a que ayuda a los datos a estar definidos dentro de un rango y reducir la asimetría entre ellos, lo que permite un aprendizaje más rápido. Se diseñó una función en \textit{Python} que calcula el promedio y al desviación estándar para \textit{Trainset} y para el \textit{Testset}. De esta forma se garantiza que la normalización sea correcta en el total del \textit{Dataset}. Los valores obtenidos para el \textit{Trainset} \ref{eq:meanstd1} y el \textit{Testset} \ref{eq:meanstd2} respectivamente.
+			La normalización se utiliza debido a que ayuda a los datos a estar definidos dentro de un rango y reducir la asimetría entre ellos, lo que permite un aprendizaje más rápido. Se diseñó una función en \textit{Python} que calcula el promedio y la desviación estándar, para \textit{Trainset} y para el \textit{Testset}. De esta forma se garantiza que la normalización sea correcta en el total del \textit{Dataset}. Los valores obtenidos para el \textit{Trainset} Ecuación \ref{eq:meanstd1} y el \textit{Testset} Ecuación \ref{eq:meanstd2} respectivamente.
 			
 			\begin{equation}				{mean = [0.7467, 0.7389, 0.7432] \hspace*{1cm}  std  = [0.1288, 0.1633, 0.2045]}
 				\label{eq:meanstd1}
@@ -317,7 +317,7 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 			\end{equation}
 
 
-			La figura \ref{fig:agumentation} enseña una matriz de imágenes como parte del \textit{Trainset}, que muestra las transformaciones hechas al $80\%$ de las imágenes del \textit{Dataset} y la clase a la que pertenece \ref{table:Clases}, verificando así que las funciones creadas están enlanzando correcta la imágen con su respectiva clase y aplicando de forma correcta las transformaciones.
+			La Figura \ref{fig:agumentation} enseña una matriz de imágenes como parte del \textit{Trainset}, que muestra las transformaciones hechas al $80\%$ de las imágenes del \textit{Dataset} y la clase a la que pertenece la Tabla \ref{table:Clases}, verificando así que las funciones creadas están enlanzando correctamente la imágen con su respectiva clase y aplicando de forma correcta las transformaciones.
 
 			\newpage
 			\begin{figure}[ht]
@@ -332,7 +332,7 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 		
 			\subsubsection{FUNCIÓN POTATODATASET}
 			
-			Se creó una clase (\textit{Python Class Object Constructor}) con el nombre de \textit{AttributesDataset()} que se encarga de leer el \textit{Metadata}  de cada imágen y convertirlo en \textit{labelID} en la tabla \ref{table:metadata} se muestra como son ingresadas las imágenes en el algoritmo, sin embargo, las características deben ser ingresadas como \textit{labelID}, es decir, el label Pastusa corresponde al ID 0 en la categoría de Tipo. Este diccionario se presenta a continuación:			
+			Se creó una clase, (\textit{Python Class Object Constructor}), con el nombre de \textit{AttributesDataset()}, que se encarga de leer el \textit{Metadata}  de cada imágen y convertirlo en \textit{labelID}, en la Tabla \ref{table:metadata} se muestra como son ingresadas las imágenes en el algoritmo, sin embargo, las características deben ser ingresadas como \textit{labelID}, es decir, el label Pastusa corresponde al ID 0 en la categoría de Tipo. Este diccionario se presenta a continuación:			
 	
 			\begin{itemize}
 				\item Tipo: ${'Pastusa': 0, 'R12': 1}$
@@ -340,14 +340,14 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 				\item Tamaño: ${'Muy Grande': 0, 'Grande': 1, 'Mediana': 2}$
 			\end{itemize}
 
-			En la red neuronal únicamente se utilizaron \textit{labels} y \textit{labelID} de tipo y daño para definir las clases \ref{table:Clases}. La función \textit{Dataset} de \textit{Python} realiza el proceso cargar y relacionar relacionar cada imágen con su respectivo \textit{label} para \textit{Dataset's} que se encuentran organizados dentro de carpetas jerarquicamente. El \textit{Dataset} creado en éste documento no se encuentra organizado de esta manera, sino que la organización jerarquica que define las clases se encuentra dentro del \textit{metadata} en el nombre de cada imágen \ref{table:metadata}, debido esto es que se desarrolló una función que cargara y relacionara de la misma manera que lo hace la función integrada de \textit{Pythorch}. Esta función fue llamada \textit{PotatoDataset()} que utiliza los \textit{labelID} generados por la función \textit{AttributesDataset()} y carga cada imágen relacionada con sus \textit{labelID}. Como se desarrolló la función, de igual forma debe ser capas de aplicar las transformaciones a cada imágen. El objeto regresa las 592 imágenes cargadas en \textit{Python} cada una relacionada con su respectivo \textit{labelID} y \textit{label} y con una transformación o múltiples aplicadas. Esta función desarrollada cuenta con los mismos atributos iterables que poseen los \textit{dataset's} creados a partir de la función integrada en \textit{Pytorch}.			
+			En la red neuronal, únicamente se utilizaron \textit{labels} y \textit{labelID} de tipo y daño para definir las clases de la Tabla \ref{table:Clases}. La función \textit{Dataset} de \textit{Python} realiza el proceso de cargar y relacionar cada imágen con su respectivo \textit{label}, para \textit{Dataset's} que se encuentran organizados dentro de carpetas jerarquicamente. El \textit{Dataset} creado en éste documento no se encuentra organizado de esta manera, sino que la organización jerarquica que define las clases se encuentra dentro del \textit{metadata}, en el nombre de cada imágen, Tabla \ref{table:metadata}, debido esto es que se desarrolló una función que cargara y relacionara de la misma manera que lo hace la función integrada de \textit{Pythorch}. Esta función fue llamada \textit{PotatoDataset()}, que utiliza los \textit{labelID} generados por la función \textit{AttributesDataset()}, y carga cada imágen relacionada con sus \textit{labelID}. Como se desarrolló la función, de igual forma debe ser capaz de aplicar las transformaciones a cada imágen. El objeto regresa las 592 imágenes cargadas en \textit{Python}, cada una relacionada con su respectivo \textit{labelID} y \textit{label}, y con una transformación o múltiples aplicadas. Esta función desarrollada, cuenta con los mismos atributos iterables que poseen los \textit{dataset's} creados a partir de la función integrada en \textit{Pytorch}.			
 			
 		
 			\subsubsection{FUNCIÓN DATALOADER}			
 						
-			Generalmente una vez se finaliza el proceso de cargar las imágenes utilizando la función \textit{DataSet} de \textit{Pytorch}, se procede a utilizar la función \textit{DataLoader} para generar múltiples lotes de imágenes a partir de las transformaciones utilizadas. La función \textit{DataLoader()} de \textit{Pytorch} es implementada para realizar la importación de datos a gran escala. Para el uso de esta función se debe tener en cuenta que el argumento más importante será el \textit{dataset} que fue generado por el objeto \textit{PotatoDataset()}. \\
+			Generalmente, una vez se finaliza el proceso de cargar las imágenes utilizando la función \textit{DataSet} de \textit{Pytorch}, se procede a utilizar la función \textit{DataLoader} para generar múltiples lotes de imágenes, a partir de las transformaciones utilizadas. La función \textit{DataLoader()}, de \textit{Pytorch}, es implementada para realizar la importación de datos a gran escala. Para el uso de esta función se debe tener en cuenta que el argumento más importante será el \textit{dataset}, que fue generado por el objeto \textit{PotatoDataset()}. \\
 			
-			Según como se explico en el apartado anterior, se generó un \textit{dataset} del tipo \textit{iterable-style Datsets}, lo que permite utilizar la función integrada \textit{DataLoader()} de \textit{Pytorch}. El \textit{DataLoader} permite la agrupación automática de muestras de datos individuales obtenidas en los \textit{Batch's} mediante argumentos. Los \textit{DataLoader's} cuentan con una gran catidad de argumentos que ayudan para que la carga de datos sea más eficiente \cite{Pytorch}. Es por esta razón que para la ejecución de este dataloader se implementarón los siguientes parametros:
+			Según como se explico en el apartado anterior, se generó un \textit{dataset} del tipo \textit{iterable-style Datsets}, lo que permite utilizar la función integrada \textit{DataLoader()} de \textit{Pytorch}. El \textit{DataLoader} permite la agrupación automática de muestras de datos individuales obtenidas en los \textit{Batch's} mediante argumentos. Los \textit{DataLoader's} cuentan con una gran catidad de argumentos que ayudan a que la carga de datos sea más eficiente \cite{Pytorch}. Es por esta razón, que para la ejecución de este dataloader se implementarón los parametros de la Tabla \ref{table:Argumentos}.
 			
 			\begin{table}[ht]
 				\centering
@@ -374,7 +374,7 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 			\item $Num \ workers = 0$
 		\end{itemize}
 
-		Esto con el obejtivo de que el \textit{Dataloader} cargue 40 muestras por época y tome otras 40 diferentes para la siguiente época y asi sucesivamete hasta terminar todas las epocas estrablecidas.  
+		Esto con el obejtivo de que el \textit{Dataloader} cargue 40 muestras por época, y tome otras 40 diferentes para la siguiente época, y asi sucesivamete hasta terminar todas las epocas estrablecidas.  
 		
 		
 		
@@ -384,15 +384,15 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 		
 			\subsubsection{FUNCIÓN DE PÉRDIDAS}		
 			
-			\textit{Pytorch} posee una cantidad interesante de funciones de pérdidas para su uso la clasificación de clases en redes neruonales. Una función de pérdidas evalúa la desviación entre las predicciones realizadas por la red neuronal y los valores reales de las muestras utilizadas durante el entrenamiento de la red. Cuanto menor sea el valor de la función, es más eficiente la red neuoral \cite{mathivet2018inteligencia}. 	
-			Para el desarrollo de nuestra red neuronal, se utilizó la pérdida de entropía cruzada entre la entrada y el objetivo o \textit{Cross Entroppy Loss} \cite{Pytorch}. Es útil cuando se entrena un problema de clasificación con más de una clase.  El objetivo que espera este criterio debe contener:
+			\textit{Pytorch} posee una cantidad interesante de funciones de pérdidas, para su uso la clasificación de clases en redes neruonales. Una función de pérdidas, evalúa la desviación entre las predicciones realizadas por la red neuronal y los valores reales de las muestras utilizadas durante el entrenamiento de la red. Cuanto menor sea el valor de la función, es más eficiente la red neuoral \cite{mathivet2018inteligencia}. 	
+			Para el desarrollo de la red neuronal, se utilizó la pérdida de entropía cruzada entre la entrada y el objetivo \cite{Pytorch}. Es útil cuando se entrena un problema de clasificación con más de una clase.  El objetivo que espera este criterio debe contener:
 			
 			\begin{itemize}
 				\item Índices de clase en el rango $[0,C)$ donde $C$ es el número de clases.
 				\item Probabilidades de clase se requieren más allá de una sola clase cuando se encuentran etiquetas combinadas.				 
 			\end{itemize}
 			
-			En cada \textit{Batch} usado en el entrenamiento de la red neuronal se encuentran etiquetas combinadas en el \textit{Metadata} de las imágenes como se describió en la tabla \ref{table:Clases}, por lo tanto, una función de pérdida no reducida \cite{Pytorch} descrita como:\\
+			En cada \textit{lote} usado en el entrenamiento de la red neuronal, se encuentran etiquetas combinadas en el \textit{Metadata} de las imágenes, como se describió en la Tabla \ref{table:Clases}, por lo tanto, una función de pérdida no reducida \cite{Pytorch} se describe en la Ecuación 5-4.\\
 			
 			\begin{equation}
 				{l_n=-\sum_{c=1}^{C}w_c log\left(\frac{exp(x_n,c)}{\sum_{i=1}^{C}exp(x_n,i)}y_n,c\right)}
@@ -401,7 +401,7 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 			Donde $x$ es la entrada, $y$ el objetivo de predicción, $w$ es el peso, $C$ el número de clases y $N$ es la dimensión del \textit{Batch}. Usando la función \textit{nn.CrossEntropyLoss()}, se calculan las pérdidas entre entrada y salida del modelo entrenado, para posteriormente utilizar estas pérdidas como métricas en porcentajes de \textit{Accuracy} y \textit{Losses}.\\
 			
 			
-			El rendimiento de esta función de pérdidas es mejor cuando el objetivo contiene índices de clase y no las etiquetas, ya que esto permite optimizar el cálculo, por esta razón, se agruparon las etiquetas de las imágenes en $4 \ Clases$ definidas.
+			El rendimiento de esta función de pérdidas, es mejor cuando el objetivo contiene índices de clase y no las etiquetas, ya que esto permite optimizar el cálculo, por esta razón, se agruparon las etiquetas de las imágenes en $4 \ Clases$ definidas.
 			
 			
 			
@@ -409,7 +409,7 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 			\newpage
 			\subsubsection{OPTIMIZADOR}
 			
-			\textit{Pytorch} posee \textit{torch.optim} que es un paquete que implementa varios algoritmos de optimización. 
+			\textit{Pytorch} posee \textit{torch.optim}, que es un paquete que implementa varios algoritmos de optimización. 
 			
 			
 			
@@ -427,10 +427,10 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 				El modelo AlexNet fue implementado en el año 2012 en el desafio de reconocimiento visual a gran escala Imaget. Este modelo tuvo un resultado tan satisfactorio que los modelos de aprendizaje profundo se convirtieron en la referencia para la investigación y desarrollo en los principales sectores de la industria. \cite{Pytorch}\\
 				
 				
-				El modelo se compone de cinco capas convolucionales y tres capas densas, donde las capas 	convolucionales estan normalizadas por lotes. El kernel tiene dimensiones diferentes que se distribuyen en 11x11 en la primera capa, 5x5 en la segunda y 3x3 en el resto.La primera, cuarta y quinta capa convolucional estan sguidas por una capa Max-pooling con dimensiones de 3x3 que posee un stride de dos.\\
+				El modelo se compone de cinco capas convolucionales y tres capas densas, donde las capas 	convolucionales estan normalizadas por lotes. El kernel tiene dimensiones diferentes que se distribuyen en \textit{11 x 11} en la primera capa, \textit{5 x 5} en la segunda y \textit{3 x 3} en las demas. La primera, cuarta y quinta capa convolucional estan sguidas por una capa Max-pooling con dimensiones de \textit{3x3}, que posee un stride de dos.\\
 				
 				
-				Las capas convolusionales y de Max-pooling son seguidas por tres capas densas en donde las dos primeras poseen 4096 neuronas cada una y la ultima capa es la de salida la cual se compone de 1000 neuronas que poseen una función de activación softmax. estas neuronas son las encargadas de realizar la clasificación de la imagen. Como es habitual en estos sistemas de clasificación, la función de perdidas implementada es la entropia cruzada.(REFERENCIA)
+				Las capas convolusionales y de Max-pooling son seguidas por tres capas densas, en donde las dos primeras poseen 4096 neuronas cada una y la ultima capa es la de salida, la cual se compone de 1000 neuronas que poseen una función de activación softmax. Estas neuronas son las encargadas de realizar la clasificación de la imagen. Como es habitual en estos sistemas de clasificación, la función de perdidas implementada es la entropia cruzada.(REFERENCIA)
 				\\
 				
 				\begin{figure}[ht]
@@ -440,10 +440,10 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 					\label{fig:AlexNet}
 				\end{figure}
 				\newpage	
-				El modelo de AlexNet toma una imagen de entrada con una resolución de 227x227pixeles y 3 canales de color, la información recibida pasa por cinco capas convolucionales (en negro) de neuronas ReLu y tres capas de Max-pooling (en azul). La quinta capa de convolución posee 256 mapas diferentes con dimensiones de 13x13. Seguidamente se aplican las dos capas densas de 4096 neuronas las cuales son seguidas por una capa de salida de 1000 neuronas, dotadas con una función softmax. Cada neurona de la capa de salida representa un conjunto semantico diferente. Y su valor de activacion indica la probabilidad de que la imagen de entrada pertenezca a dicho conjunto semantico.\\
+				Como se aprecia en la Figura \ref{fig:AlexNet}, el modelo de AlexNet, toma una imagen de entrada con una resolución de \textit{227 x 227} pixeles y 3 canales de color, la información recibida pasa por cinco capas convolucionales (en negro) de neuronas ReLu y tres capas de Max-pooling (en azul). La quinta capa de convolución posee 256 mapas diferentes con dimensiones de \textit{13 x 13}. Seguidamente se aplican las dos capas densas de 4096 neuronas, las cuales son seguidas por una capa de salida de 1000 neuronas, dotadas con una función softmax. Cada neurona de la capa de salida representa un conjunto semantico diferente. Y su valor de activacion indica la probabilidad de que la imagen de entrada pertenezca a dicho conjunto semantico.\\
 		
 				
-				Una vez conocida la estructura del modelo procedemos con la implementación, en la cual se siguieron una serie de pasos para la construcción del modelo clasificadorlos cuales son:
+				Una vez conocida la estructura del modelo, se procede con la implementación, en la cual se siguieron una serie de pasos para la construcción del modelo clasificadorlos cuales son:
 				
 				\begin{enumerate}
 					\item \textbf{CARGAR BIBILIOTECAS IMPORTANTES:} 
@@ -451,36 +451,36 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 					Se llaman las bibliotecas importantes para la ejecución del modelo entre estas tenemos torch para pytorch...
 					\item \textbf{PREPARACIÓN CONJUNTO DE DATOS:} 
 					\\
-					La preparación del conjunto de datos es una etapa de importación en la creación y ejecución del algoritmo de red neuronal o también conocida como preprocesamiento de imagenes.
+					La preparación del conjunto de datos, es una etapa de importación en la creación y ejecución del algoritmo de red neuronal, o también conocida como preprocesamiento de imagenes.
 					\item\textbf{CONSTRUCCIÓN DEL MODELO}
 					\\
-					En esta parte se convierte la arquitectura de AlexNet presentada en la imagen ... en código, para poder usarla más adelante en la clasificación.
-					Además en este paso se definen los valores de el maxpooling, el padding y el número de convoluciones que tendra la red neuronal.
+					Aqui se convierte la arquitectura de AlexNet presentada en la Figura \ref{fig:AlexNet} en código, para poder usarla más adelante en la clasificación.
+					Además en este paso se definen los valores del maxpooling, el padding y el número de convoluciones que tendra la red neuronal.
 					\item\textbf{FORMACIÓN DEL MODELO}
 					\\
 					Durante el entrenamiento de la red AlexNet (entrenamiento durante ... epochs) se obtuvo una precisión de validación promedio del ..., como se muestra en la siguiente imagen:
 					\item \textbf{PRUEBA DEL MODELO}
 					\\
-					En este paso se comprueba la eficiencia del modelo usando el dataset de validación, donde encontramos que la red AlexNet pudo predecir correctamente ... de ... imagenes de papas tanto defectuosas como en buen estado y reconociendo tambien el tamaño al que pertenecen ya sea grande, mediana o pequeña 
+					En este paso se comprueba la eficiencia del modelo usando el dataset de validación, donde se encuentra que la red AlexNet pudo predecir correctamente ... de ... imagenes de papas tanto defectuosas como en buen estado y reconociendo tambien el tamaño al que pertenecen ya sea grande, mediana o pequeña 
 				\end{enumerate} 
 
 
 			\subsubsection{\MakeUppercase{Modelo preentrenado VGG19}}
 			
-				La arquitectura VGG fue planteada por Simonyan y Zisserman, la cual consiste en stacks lineales de bloques que se encuentran formados por una cantidad determinada de capas convolucionales, una función de activación no lineal y una capa Max Pooling, seguidos de tres capas fully-conected y finalmente una capa softmax (referencia pdf). Esta ariquitectura cuenta con cinco bloques los cuales estan distribuidos de la siguiente manera:
+				La arquitectura VGG fue planteada por Simonyan y Zisserman, la cual consiste en stacks lineales de bloques que se encuentran formados por una cantidad determinada de capas convolucionales, una función de activación no lineal y una capa Max Pooling, seguidos de tres capas fully-conected y finalmente una capa softmax (referencia pdf). Esta ariquitectura cuenta con cinco bloques los cuales estan distribuidos como se muestra en la Figura \ref{fig:VGG19}.
 				
 				
 				\begin{figure}[ht]
 					\centering
-					\includegraphics[scale=0.5]{Figs/22.jpeg}
+					\includegraphics[scale=0.45]{Figs/22.jpeg}
 					\caption{Modelo VGG19}
 					\label{fig:VGG19}
 				\end{figure}			
 				
 				
-				Como se puede observar en la imagen la arquitectura cuenta con dos capas convolucionales de 64 y 128 filtros respectivamente en sus dos primeros bloques, el bloque intermedio se compone de tres capas convolucionales de 256 filtros y los ultimos dos bloques estan compuestos por tres capas concolucionales de 512 filtros cada uno. El numero 19 representa la cantidad de capas entrenables que posee la arquitectura donde hay 16 capas convolucionales y 3 capas fully-conected.\\
+				Como se puede observar, la arquitectura cuenta con dos capas convolucionales de 64 y 128 filtros respectivamente, en sus dos primeros bloques, el bloque intermedio se compone de tres capas convolucionales de 256 filtros y los ultimos dos bloques estan compuestos por tres capas concolucionales de 512 filtros cada uno. El numero 19 representa la cantidad de capas entrenables que posee la arquitectura donde hay 16 capas convolucionales y 3 capas fully-conected.\\
 				
-				Las capas convolucionales de esta arquitectura cuentan con un campo receptivo de 3x3, stride de 1x1 y pading de 1 pixel. Para la operaciones del Max Pooling se implementa un kernel de 2x2 y un stride de 2x2 y por ultimo cada capa oculta de la red cuenta con la funcion de activacion ReLu. La arquitectura VGG19 se resume en la siguiente tabla:
+				Las capas convolucionales de esta arquitectura cuentan con un campo receptivo de \textit{3 x 3}, stride de \textit{1 x 1} y pading de 1 pixel. Para la operaciones del Max Pooling se implementa un kernel de \textit{2 x 2} y un stride de \textit{2 x 2}, y por ultimo cada capa oculta de la red cuenta con la funcion de activacion ReLu. La arquitectura VGG19 se resume en la Figura \ref{fig:VGG19_tabla}.
 				
 				\begin{figure}[ht]
 					\centering
@@ -491,9 +491,9 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 
 \newpage
 			\subsubsection{\MakeUppercase{Modelo preentrenado VGG11}}
-			VGG es un modelo preentrenado en un conjunto de datos que contiene el peso que representan las caracteristicas del conjunto de datos entrenados. Los modelos VGG toman una imagen de entrada de domensiones 224x224 pixeles en formato RGB que son tratadas con un tamaño de imagen constante.
+			VGG es un modelo preentrenado, en un conjunto de datos que contiene el peso que representan las caracteristicas del conjunto de datos entrenados. Los modelos VGG toman una imagen de entrada de domensiones \textit{224 x 224} pixeles en formato RGB, que son tratadas con un tamaño de imagen constante.
 			\\
-			 El modelo de aprendizaje profundo VGG11. Es configuración mas sencilla. Tiene 11 capas de peso en total, de ahí el nombre VGG11. 8 de ellas son capas convolucionales y 3 son capas completamente conectadas.(referencia)
+			 El modelo de aprendizaje profundo VGG11. Es la configuración mas sencilla. Tiene 11 capas de peso en total, de ahí el nombre VGG11. 8 de ellas son capas convolucionales y 3 son capas completamente conectadas, como se aprecia en la Figura \ref{fig:VGG11}.(referencia)
 			
 			\begin{figure}[ht]
 				\centering
@@ -536,25 +536,25 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 					\centering
 					\includegraphics[scale=0.6]{Figs/67.png}
 					\caption{Bloque Residual}
-					\label{fig:Bloque Residual}
+					\label{fig:Bloque}
 				\end{figure}
 			
-				Como se aprecia en la imagen, el bloque residual se compone de una ruta residual (izquierda) y una conexión atajo (derecha) que la soslaya. La ruta residual F(x) esta compuesta de dos capas de pesos sinapticos (pueden ser densas o convolucionales) que se intercalan por una función rectificadora. El resultado se suma con la información que atraviesa la conexión atajo X "identidad". Y por ultimo se aplica nuevamente la función rectificadora. La información puede atravesar con ello dos caminos diferentes que son: el de la función de identidad X o el de la ruta residual F(x).(referencia)
+				Como se aprecia en la Figura \ref{fig:Bloque}, el bloque residual se compone de una ruta residual, (izquierda), y una conexión atajo, (derecha), que la soslaya. La ruta residual F(x), esta compuesta de dos capas de pesos sinapticos, (pueden ser densas o convolucionales), que se intercalan por una función rectificadora. El resultado se suma con la información que atraviesa la conexión atajo \textit{X "identidad"}. Y por ultimo se aplica nuevamente la función rectificadora. La información puede atravesar con ello dos caminos diferentes que son: el de la función de identidad X o el de la ruta residual \textit{F(x)}.(referencia)
 
 \newpage
 
-				En la arquitectura Resnet18 Las 18 capas de esta arquitectura representan las 18 capas con pesos en donde se incluye la capa de convolución y la capa totalmente conectada, excluyendo la capa de agrupación y la capa BN.
+				En la arquitectura Resnet18, Las 18 capas de esta arquitectura representan las 18 capas con pesos, en donde se incluye la capa de convolución y la capa totalmente conectada, excluyendo la capa de agrupación y la capa BN.
 				
 				\begin{figure}[ht]
 					\centering
 					\includegraphics[scale=0.65]{Figs/68.png}
-					\caption{Bloque Residual}
-					\label{fig:Bloque Residual}
+					\caption{Arquitectura ResNet18}
+					\label{fig:ArqRes18}
 				\end{figure}
 				
-				Como se puede observar la primera capa de convolución implementa una plantilla de 7x77x7 con un tamaño de paso de 2 y un relleno de 3, Seguido a eso, se realiza BN, ReLu y Maxpooling. Estos constituyen la primera parte del modulo de convolucion conv1.
+				Como se puede observaren la Figura \ref{fig:ArqRes18}, la primera capa de convolución implementa una plantilla de \textit{7 x 77 x 7}, con un tamaño de paso de 2 y un relleno de 3, Seguido a eso, se realiza BN, ReLu y Maxpooling. Estos constituyen la primera parte del modulo de convolucion conv1.
 				\\
-				Luego hay cuatro etapas, cada etapa tiene multiples modulos, cada modulo se llama un bloque de construcción por ende se tiene que ResNet=[2,2,2,2] se evidencia que hay 8 bloques de construcción. (REFERENCIA).
+				Luego hay cuatro etapas, cada etapa tiene multiples modulos, cada modulo se llama un bloque de construcción, por ende se tiene que ResNet=[2,2,2,2] se evidencia que hay 8 bloques de construcción, como se presenta en la Figura \ref{fig:RESNET18}. (REFERENCIA).
 \newpage				
 				\begin{figure}[ht]
 					\centering
@@ -569,7 +569,7 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 	\section{Clasificación de tamaño}
 		La clasificación de los tuberculos de papa mediante su tamaño (diametro) se realiza para categorizar el producto bajo la norma tecnica colombiana NTC 341 establecida por la industria alimentaria, con el fin de garantizar la calidad de los tuberculos de consumo.
 		\\
-		La norma establece cuatro categorias para la clasificacón de los tuberculos mediante la medición de su tamaños, estas categorias son:
+		La norma establece cuatro categorias para la clasificacón de los tuberculos mediante la medición de su tamaños, estas categorias se presentan en la Tabla \ref{table:limites}:
 		
 	\begin{table}[ht]
 		\centering
@@ -592,63 +592,66 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 	
 	
 \chapter{Prototipo}
-	Para el desplazamiento de los tuberculos de papa se implementa una banda transportadora tomada de una maquina selladora de banda continua horizontal FR-900 la cual es impulsada por un motor DC a 220V.
+	En este capitulo se presentan diferentes numerales para detallar y explicar el prototipo implementado para la clasificación de tuberculos de papa. En el numeral \textit{6.1} se dan a conocer las especificaciones de la maquina implementada. seguido en el numeral \textit{6.2} se realiza la descripcion de la maquina. En el numeral \textit{6.3} se tiene la descripcion del sistema electrico y sus componentes y por ultimo se termina con los numerales \textit{6.4 y 6.5} donde se explica la estructura construida para la clasificación de los tuberculos y se finaliza con el funcionamiento de la maquina. implementa una banda transportadora tomada de una maquina selladora de banda continua horizontal FR-900 la cual es impulsada por un motor DC a 220V.
 	
 	\section{Especificaciones principales}
-	Las especificaciones tecnicas de la selladora de banda continua horzontal RF-900 son:
-	\begin{enumerate}
-		\item\textbf{ALIMENTACIÓN:} 220+-10V, 50HZ
-		\item\textbf{MATERIAL:} Estructura en acero inoxidable y aleación de aluminio/acero
-		\item \textbf{MOTOR:}
-			\begin{enumerate}
-				\item{REFERENCIA:} ZYT90-01
-				\item{CORRIENTE:} 0.32A
-				\item{VOLTAJE:} 220VDC
-				\item{VELOCIDAD:} 2000r/min
-				\item{POTENCIA:} 50W				
-			\end{enumerate}
-		\item \textbf{DIMENSIONES:}
-			\begin{enumerate}
-				\item Horizontal: 850x420x320(mm)
-				\item Vertical: 850x320x550(mm)
-				\item Consola: 850x320x1000(mm)
-			\end{enumerate}
-	\end{enumerate}
+		Se implementa una banda transportadora tomada de una maquina selladora de banda continua horizontal FR-900 la cual es impulsada por un motor DC a 220V.
+		Las especificaciones tecnicas de la selladora de banda continua horzontal RF-900 se presentan en la Tabla...
+		\begin{enumerate}
+			\item\textbf{ALIMENTACIÓN:} 220+-10V, 50HZ
+			\item\textbf{MATERIAL:} Estructura en acero inoxidable y aleación de aluminio/acero
+			\item \textbf{MOTOR:}
+				\begin{enumerate}
+					\item{REFERENCIA:} ZYT90-01
+					\item{CORRIENTE:} 0.32A
+					\item{VOLTAJE:} 220VDC
+					\item{VELOCIDAD:} 2000r/min
+					\item{POTENCIA:} 50W				
+				\end{enumerate}
+			\item \textbf{DIMENSIONES:}
+				\begin{enumerate}
+					\item Horizontal: 850x420x320(mm)
+					\item Vertical: 850x320x550(mm)
+					\item Consola: 850x320x1000(mm)
+				\end{enumerate}
+		\end{enumerate}
 	
 \newpage
 	\section{Descripción de la maquina}
-		\begin{figure}[ht]
-		\centering
-		\includegraphics[scale=0.95]{Figs/65.png}
-		\caption{Maquina Banda Transportadora}
-		\label{fig:Banda}
-	\end{figure}
-
-	\begin{table}[ht]
-		\centering
-		\begin{tabular}{|p{5cm}|p{8cm}|}
-			\hline
-			1- Cinta transportadora & 8- Enchufe de corriente y protección \\ 
-			\hline
-			2- Rueda de goma& 9- Mesa de trabajo fija\\
-			\hline
-			3- Rodillo de goma& 10- Tornillo de regulación de la elasticidad de las cintas transportadoras\\
-			\hline
-			4- Asiento rueda de tintoreria& 11- Perilla de regulación de la entrada y salida de la estación de transporte\\
-			\hline
-			5- Rueda reguladora de presión& 12- Perilla de regulación de la altura de la estación transportadora\\
-			\hline
-			6- Rueda motriz& 13- Placa de identificación\\
-			\hline
-			7- Caja de Control& 14- Estación de transporte\\
-			\hline
-		\end{tabular}	
-		\caption{Descripción Maquina Transportadora}
-		\label{table:Banda}
-	\end{table}
+		En la Figura \ref{fig:Banda}, se presenta un esquema general de la maquina selladora de banda continua horizontal FR-900 y en la Tabla \ref{table:Banda} se describen las partes presentadas en la Figura \ref{fig:Banda}.
+			\begin{figure}[ht]
+			\centering
+			\includegraphics[scale=0.95]{Figs/65.png}
+			\caption{Maquina Banda Transportadora}
+			\label{fig:Banda}
+		\end{figure}
+	
+		\begin{table}[ht]
+			\centering
+			\begin{tabular}{|p{5cm}|p{8cm}|}
+				\hline
+				1- Cinta transportadora & 8- Enchufe de corriente y protección \\ 
+				\hline
+				2- Rueda de goma& 9- Mesa de trabajo fija\\
+				\hline
+				3- Rodillo de goma& 10- Tornillo de regulación de la elasticidad de las cintas transportadoras\\
+				\hline
+				4- Asiento rueda de tintoreria& 11- Perilla de regulación de la entrada y salida de la estación de transporte\\
+				\hline
+				5- Rueda reguladora de presión& 12- Perilla de regulación de la altura de la estación transportadora\\
+				\hline
+				6- Rueda motriz& 13- Placa de identificación\\
+				\hline
+				7- Caja de Control& 14- Estación de transporte\\
+				\hline
+			\end{tabular}	
+			\caption{Descripción Maquina Transportadora}
+			\label{table:Banda}
+		\end{table}
 
 \newpage
 	\section{Esquema electrico}
+		En la Figura \ref{fig:Esquema} se presenta las conexiones electicas realizadas para el funcionamiento del prototipo, ademas de esto se anexa en la Tabla \ref{table:esquema} el listado de elementos implementados.  
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.5]{Figs/66.jpg}
@@ -676,7 +679,7 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 			\hline
 		\end{tabular}	
 		\caption{Descripción Maquina Transportadora}
-		\label{table:Banda}
+		\label{table:esquema}
 		\end{table}	
 		
 \newpage	
