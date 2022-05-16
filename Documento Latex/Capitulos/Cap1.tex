@@ -443,26 +443,8 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 				Como se aprecia en la Figura \ref{fig:AlexNet}, el modelo de AlexNet, toma una imagen de entrada con una resolución de \textit{227 x 227} pixeles y 3 canales de color, la información recibida pasa por cinco capas convolucionales (en negro) de neuronas ReLu y tres capas de Max-pooling (en azul). La quinta capa de convolución posee 256 mapas diferentes con dimensiones de \textit{13 x 13}. Seguidamente se aplican las dos capas densas de 4096 neuronas, las cuales son seguidas por una capa de salida de 1000 neuronas, dotadas con una función softmax. Cada neurona de la capa de salida representa un conjunto semantico diferente. Y su valor de activacion indica la probabilidad de que la imagen de entrada pertenezca a dicho conjunto semantico.\\
 		
 				
-				Una vez conocida la estructura del modelo, se procede con la implementación, en la cual se siguieron una serie de pasos para la construcción del modelo clasificadorlos cuales son:
 				
-				\begin{enumerate}
-					\item \textbf{CARGAR BIBILIOTECAS IMPORTANTES:} 
-					\\
-					Se llaman las bibliotecas importantes para la ejecución del modelo entre estas tenemos torch para pytorch...
-					\item \textbf{PREPARACIÓN CONJUNTO DE DATOS:} 
-					\\
-					La preparación del conjunto de datos, es una etapa de importación en la creación y ejecución del algoritmo de red neuronal, o también conocida como preprocesamiento de imagenes.
-					\item\textbf{CONSTRUCCIÓN DEL MODELO}
-					\\
-					Aqui se convierte la arquitectura de AlexNet presentada en la Figura \ref{fig:AlexNet} en código, para poder usarla más adelante en la clasificación.
-					Además en este paso se definen los valores del maxpooling, el padding y el número de convoluciones que tendra la red neuronal.
-					\item\textbf{FORMACIÓN DEL MODELO}
-					\\
-					Durante el entrenamiento de la red AlexNet (entrenamiento durante ... epochs) se obtuvo una precisión de validación promedio del ..., como se muestra en la siguiente imagen:
-					\item \textbf{PRUEBA DEL MODELO}
-					\\
-					En este paso se comprueba la eficiencia del modelo usando el dataset de validación, donde se encuentra que la red AlexNet pudo predecir correctamente ... de ... imagenes de papas tanto defectuosas como en buen estado y reconociendo tambien el tamaño al que pertenecen ya sea grande, mediana o pequeña 
-				\end{enumerate} 
+				
 
 
 			\subsubsection{\MakeUppercase{Modelo preentrenado VGG19}}
@@ -488,7 +470,27 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 					\caption{Composición Modelo VGG19}
 					\label{fig:VGG19_tabla}
 				\end{figure}
-
+			
+				Ya que se conoce la forma en que esta estructurado el modelo, se procede a mostrar la precision del algoritmo antes de ser aplicada la optimizacion bayesiana.
+				
+				\begin{figure}[ht]
+					\centering
+					\includegraphics[scale=0.55]{Figs/101.png}
+					\caption{Accuracy Modelo VGG19}
+					\label{fig:VGG19_accuracy}
+				\end{figure}  
+				
+				Como se puede observar en la Figura \ref{fig:VGG19_accuracy}, la precisión del modelo al completar 50 epocas es inferior al 60.
+				
+				En la Figura \ref{fig:VGG19_losses}, se puede apreciar que el modelo cuenta con \textit{16} aproximadamente de desviación entre las predicciones y los valores reales, implementados durante el entrenamiento del modelo.
+				
+				\begin{figure}[ht]
+					\centering
+					\includegraphics[scale=0.55]{Figs/102.png}
+					\caption{Losses Modelo VGG19}
+					\label{fig:VGG19_losses}
+				\end{figure}
+				
 \newpage
 			\subsubsection{\MakeUppercase{Modelo preentrenado VGG11}}
 			VGG es un modelo preentrenado, en un conjunto de datos que contiene el peso que representan las caracteristicas del conjunto de datos entrenados. Los modelos VGG toman una imagen de entrada de domensiones \textit{224 x 224} pixeles en formato RGB, que son tratadas con un tamaño de imagen constante.
@@ -678,19 +680,19 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 			 H1 & Bombillos & 2 \\
 			\hline
 		\end{tabular}	
-		\caption{Descripción Maquina Transportadora}
+		\caption{Elementos Esquema Electrico}
 		\label{table:esquema}
 		\end{table}	
 		
 \newpage	
 	\section{Estructura}
-		La caja elaborada para el analisis de los tuberculos de papas fue construida en acetato con medidas de 35x25(cm) las laminas frontal y trasera, 16x25(cm) lamina superior, 20x16(cm) laminas laterales como se muestra en las siguientes imagenes:
+		La caja elaborada para el analisis de los tuberculos de papas fue construida en acetato con medidas de \textit{35 x 25(cm)} las laminas frontal y trasera, \textit{16 x 25(cm)} lamina superior, \textit{20 x 16(cm)} laminas laterales como se muestra en las Figuras.
 	
-		Como se muestra en las imagenes anteriores las laminas cuentan con agujeros para la posicion de dos bombillos, un sensor optico y una camara web.
+		Como se muestra en las Figuras , las laminas fueron diseñadas con las medidas necesarias que permitan posicionar algunos elementos necesarios para realizar la clasificacion de los tuberculos, como lo son bombillos, un sensor optico y una camara web, los cuales seran definidos en los numerales \textit{6.4.1, 6.4.2 y 6.4.3}.
 		\subsection{Bombillos}
 			La estructura cuenta con dos agujeros donde se ubican dos bombillos de luz blanca de 6500 Kelvin de temperatura de color para mantener la iluminación fija a una dsitancia de 30cm de todas las fotos al igual que se tomaron durante la construcción del Dataset.
 		\subsection{Sensor Fotoeléctrico}
-			Se implementa un sensor fotoeléctrico de referencia MAGEWAY el cual tiene como objetivo detener la banda transportadora una vez el tuberculo de papa se encuentre posisicionado bajo la camara para realizar su respectiva inspección.
+			Se implementa un sensor fotoeléctrico, de referencia MAGEWAY, el cual tiene como objetivo detener la banda transportadora una vez el tuberculo de papa se encuentre posisicionado bajo la camara, para realizar su respectiva inspección, el sensro cuenta con las siguientes especifiaciones.
 			\\
 			\\
 			\textbf{ESPECIFICACIONES TÉCNICAS:}
@@ -704,7 +706,7 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 				\end{itemize}
 \newpage			
 		\subsection{Camara Web}
-			Para la detección de los tuberculos de papa se implementa una camara "Web Camera America Store" la cual será la encargada de la toma de fotos de los tuberculos mientras son transportados en la banda transportadora para su analisis.
+			Para la detección de los tuberculos de papa, se implementa una camara \textit{Web Camera America Store}, la cual será la encargada de la toma de fotos de los tuberculos, mientras son transportados en la banda transportadora para su analisis.
 			\\
 			\\
 			\textbf{ESPECIFICACIONES TÉCNICAS:}

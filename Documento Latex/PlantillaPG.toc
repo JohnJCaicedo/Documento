@@ -39,19 +39,19 @@
 \contentsline {subsection}{\numberline {5.1.4}Optimización Bayesiana}{27}{subsection.5.1.4}%
 \contentsline {subsection}{\numberline {5.1.5}Arquitectura del modelo}{27}{subsection.5.1.5}%
 \contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado ALEXNET}}{27}{subsubsection*.15}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG19}}{29}{subsubsection*.17}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG11}}{31}{subsubsection*.19}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado RESNET18}}{33}{subsubsection*.21}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Comparación de arquitecturas}}{35}{subsubsection*.23}%
-\contentsline {section}{\numberline {5.2}Clasificación de tamaño}{36}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Prototipo}{37}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Especificaciones principales}{37}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Descripción de la maquina}{39}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Esquema electrico}{40}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Estructura}{41}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Bombillos}{41}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Sensor Fotoeléctrico}{41}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}Camara Web}{42}{subsection.6.4.3}%
-\contentsline {section}{\numberline {6.5}Funcionamiento}{42}{section.6.5}%
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{43}{section.6.5}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG19}}{28}{subsubsection*.17}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG11}}{30}{subsubsection*.19}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado RESNET18}}{34}{subsubsection*.21}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Comparación de arquitecturas}}{36}{subsubsection*.23}%
+\contentsline {section}{\numberline {5.2}Clasificación de tamaño}{37}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Prototipo}{38}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Especificaciones principales}{38}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Descripción de la maquina}{40}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Esquema electrico}{41}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Estructura}{42}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Bombillos}{42}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Sensor Fotoeléctrico}{42}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Camara Web}{43}{subsection.6.4.3}%
+\contentsline {section}{\numberline {6.5}Funcionamiento}{43}{section.6.5}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{44}{section.6.5}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
