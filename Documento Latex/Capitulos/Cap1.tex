@@ -452,7 +452,7 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 				El modelo se compone de cinco capas convolucionales y tres capas densas, donde las capas convolucionales están normalizadas por lotes. El kernel tiene dimensiones diferentes que se distribuyen en \textit{11 x 11} en la primera capa, \textit{5 x 5} en la segunda y \textit{3 x 3} en las demás. La primera, cuarta y quinta capa convolucional están seguidas por una capa Max-pooling con dimensiones de \textit{3 x 3}, que posee un stride de dos.\\
 				
 				
-				Las capas convolusionales y de Max-pooling son seguidas por tres capas densas, en donde las dos primeras poseen 4096 neuronas cada una y la ultima capa es la de salida, la cual se compone de 1000 neuronas que poseen una función de activación softmax. Estas neuronas son las encargadas de realizar la clasificación de la imagen. Como es habitual en estos sistemas de clasificación, la función de perdidas implementada es la entropía cruzada.(REFERENCIA)
+				Las capas convolusionales y de Max-pooling son seguidas por tres capas densas, en donde las dos primeras poseen 4096 neuronas cada una y la ultima capa es la de salida, la cual se compone de 1000 neuronas que poseen una función de activación softmax. Estas neuronas son las encargadas de realizar la clasificación de la imagen. Como es habitual en estos sistemas de clasificación, la función de perdidas implementada es la entropía cruzada \cite{ref_1}.
 				\\
 				
 				\begin{figure}[ht]
@@ -471,7 +471,7 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 
 			\subsubsection{\MakeUppercase{Modelo preentrenado VGG19}}
 			
-				La arquitectura VGG fue planteada por Simonyan y Zisserman, la cual consiste en stacks lineales de bloques, que se encuentran formados por una cantidad determinada de capas convolucionales, una función de activación no lineal y una capa Max Pooling, seguidos de tres capas fully-conected y finalmente una capa softmax (referencia pdf). Esta arquitectura cuenta con cinco bloques los cuales están distribuidos como se muestra en la Figura \ref{fig:VGG19}.
+				La arquitectura VGG fue planteada por Simonyan y Zisserman, la cual consiste en stacks lineales de bloques, que se encuentran formados por una cantidad determinada de capas convolucionales, una función de activación no lineal y una capa Max Pooling, seguidos de tres capas fully-conected y finalmente una capa softmax \cite{ref_2}. Esta arquitectura cuenta con cinco bloques los cuales están distribuidos como se muestra en la Figura \ref{fig:VGG19}.
 				
 				
 				\begin{figure}[ht]
@@ -544,7 +544,7 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 			\subsubsection{\MakeUppercase{Modelo preentrenado VGG11}}
 			VGG es un modelo preentrenado, en un conjunto de datos que contiene el peso que representan las características del conjunto de datos entrenados. Los modelos VGG toman una imagen de entrada de dimensiones \textit{224 x 224} pixeles en formato RGB, que son tratadas con un tamaño de imagen constante.
 			\\
-			 El modelo de aprendizaje profundo VGG11. Es la configuración mas sencilla. Tiene 11 capas de peso en total, de ahí el nombre VGG11. 8 de ellas son capas convolucionales y 3 son capas completamente conectadas, como se aprecia en la Figura \ref{fig:VGG11}.(referencia)
+			 El modelo de aprendizaje profundo VGG11. Es la configuración mas sencilla. Tiene 11 capas de peso en total, de ahí el nombre VGG11. 8 de ellas son capas convolucionales y 3 son capas completamente conectadas, como se aprecia en la Figura \ref{fig:VGG11} \cite{ref_3}.
 			
 			\begin{figure}[ht]
 				\centering
@@ -623,7 +623,7 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 			\end{figure}
 \newpage
 			\subsubsection{\MakeUppercase{Modelo preentrenado RESNET18}}
-				La arquitectura Resnet, (Residual Net), fue propuesta por un equipo de Microsoft Research el cual fue liderado por Kaiming He, en donde se propone que si a una red neuronal de 20 capas se le intercalan 36 capas que calculan la simple función de identidad, la red resultante, (56 capas), debería tener exactamente la misma eficacia y no ser inferior que la primera. Debemos recordar que la función identidad es la encargada de devolver exactamente el mismo valor que su argumento. (REFERENCIA)
+				La arquitectura Resnet, (Residual Net), fue propuesta por un equipo de Microsoft Research el cual fue liderado por Kaiming He, en donde se propone que si a una red neuronal de 20 capas se le intercalan 36 capas que calculan la simple función de identidad, la red resultante, (56 capas), debería tener exactamente la misma eficacia y no ser inferior que la primera. Debemos recordar que la función identidad es la encargada de devolver exactamente el mismo valor que su argumento \cite{ref_4}.
 				\\
 				Conociendo esto para permitir que una red pueda variar su cantidad efectiva de capas, se introduce el concepto de bloque residual:
 	
@@ -634,7 +634,7 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 					\label{fig:Bloque}
 				\end{figure}
 			
-				Como se aprecia en la Figura \ref{fig:Bloque}, el bloque residual se compone de una ruta residual, (izquierda), y una conexión atajo, (derecha), que la soslaya. La ruta residual F(x), esta compuesta de dos capas de pesos sinapticos, (pueden ser densas o convolucionales), que se intercalan por una función rectificadora. El resultado se suma con la información que atraviesa la conexión atajo \textit{X "identidad"}. Y por ultimo se aplica nuevamente la función rectificadora. La información puede atravesar con ello dos caminos diferentes que son: el de la función de identidad X o el de la ruta residual \textit{F(x)}.(referencia)
+				Como se aprecia en la Figura \ref{fig:Bloque}, el bloque residual se compone de una ruta residual, (izquierda), y una conexión atajo, (derecha), que la soslaya. La ruta residual F(x), esta compuesta de dos capas de pesos sinapticos, (pueden ser densas o convolucionales), que se intercalan por una función rectificadora. El resultado se suma con la información que atraviesa la conexión atajo \textit{X "identidad"}. Y por ultimo se aplica nuevamente la función rectificadora. La información puede atravesar con ello dos caminos diferentes que son: el de la función de identidad X o el de la ruta residual \textit{F(x)} \cite{ref_5}
 
 \newpage
 
@@ -649,7 +649,7 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 				
 				Como se puede observaren la Figura \ref{fig:ArqRes18}, la primera capa de convolución implementa una plantilla de \textit{7 x 77 x 7}, con un tamaño de paso de 2 y un relleno de 3, Seguido a eso, se realiza BN, ReLu y Maxpooling. Estos constituyen la primera parte del modulo de convolucion conv1.
 				\\
-				Luego hay cuatro etapas, cada etapa tiene múltiples módulos, cada módulo se llama un bloque de construcción, por ende se tiene que ResNet=[2,2,2,2] se evidencia que hay 8 bloques de construcción, como se presenta en la Figura \ref{fig:RESNET18}. (REFERENCIA).
+				Luego hay cuatro etapas, cada etapa tiene múltiples módulos, cada módulo se llama un bloque de construcción, por ende se tiene que ResNet=[2,2,2,2] se evidencia que hay 8 bloques de construcción, como se presenta en la Figura \ref{fig:RESNET18} \cite{ref_5}.
 \newpage				
 				\begin{figure}[ht]
 					\centering

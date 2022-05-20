@@ -8,6 +8,10 @@
 ``Sector papero se prepara para aumentar el consumo de papa en colombia |
   finagro.''
 
+\bibitem{van2001art}
+D.~A. Van~Dyk and X.-L. Meng, ``The art of data augmentation,'' {\em Journal of
+  Computational and Graphical Statistics}, vol.~10, no.~1, pp.~1--50, 2001.
+
 \bibitem{article3}
 J.~Porras, M.~De~la Cruz, and A.~Mor{\'a}n, ``Clasification system based on
   computer vision,'' {\em Escuela Profesional de Ingenier{\'\i}a
@@ -97,10 +101,6 @@ V.~Artificial, ``Aplicaci{\'o}n pr{\'a}ctica de la visi{\'o}n artificial en el
 T.~Afridi, A.~Alam, M.~N. Khan, and J.~Khan, ``A multimodal memes
   classification: A survey and open research issues,'' 09 2020.
 
-\bibitem{van2001art}
-D.~A. Van~Dyk and X.-L. Meng, ``The art of data augmentation,'' {\em Journal of
-  Computational and Graphical Statistics}, vol.~10, no.~1, pp.~1--50, 2001.
-
 \bibitem{Pytorch}
 ``Pytorch documentation — pytorch 1.10.1 documentation.''
 
@@ -108,5 +108,29 @@ D.~A. Van~Dyk and X.-L. Meng, ``The art of data augmentation,'' {\em Journal of
 V.~Mathivet, {\em Inteligencia artificial para desarrolladores: conceptos e
   implementaci{\'o}n en C}.
 \newblock Ediciones ENI., 2018.
+
+\bibitem{ref_1}
+A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton, ``Imagenet classification with
+  deep convolutional neural networks,'' {\em Advances in neural information
+  processing systems}, vol.~25, 2012.
+
+\bibitem{ref_2}
+L.~Moreno-D{\'\i}az-Alejo, ``An{\'a}lisis comparativo de arquitecturas de redes
+  neuronales para la clasificaci{\'o}n de im{\'a}genes,'' Master's thesis,
+  2020.
+
+\bibitem{ref_3}
+K.~Simonyan and A.~Zisserman, ``Very deep convolutional networks for
+  large-scale image recognition,'' {\em arXiv preprint arXiv:1409.1556}, 2014.
+
+\bibitem{ref_4}
+A.~Atienza~Arroyo {\em et~al.}, ``Detecci{\'o}n e identificaci{\'o}n
+  autom{\'a}tica de actrices y actores mediante el uso de algoritmos de deep
+  learning,'' 2019.
+
+\bibitem{ref_5}
+K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image
+  recognition,'' in {\em Proceedings of the IEEE conference on computer vision
+  and pattern recognition}, pp.~770--778, 2016.
 
 \end{thebibliography}
