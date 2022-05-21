@@ -58,12 +58,12 @@ El sector agricultor de Colombia ha implementado diferentes técnicas de visión
 
 \chapter{Marco Conceptual}
 En este capitulo se van abordar algunos términos básicos necesarios, que ayuden al entendimiento y desarrollo del proyecto. 
-\section{Agricultura de precisión} El término sobre el que se inspira la agricultura de precisión, es utilizar la porción adecuada de insumos, en el instante correcto y en el sitio preciso. La agricultura de precisión, (AP), implica la utilización de sistemas de posicionamiento universal, (GPS), y de otros medios electrónicos, para obtener datos del cultivo. Las tecnologías de la agricultura de precisión, permiten saciar una de las exigencias de la agricultura actualizada: el funcionamiento óptimo de enormes extensiones. Se muestra como primordial virtud, que la exploración de resultados de los ensayos se puede hacer por sectores diferentes en un mismo lote, y tal cual ajustar el desempeño diferencial en los mismos. La utilización de las tecnologías de la agricultura de precisión puede contribuir a mejorar los márgenes, por medio de un incremento del costo del rendimiento, (cantidad o calidad), de una reducción en la proporción de insumos, o de los dos paralelamente.
-\\
-\section{Artificial Neural Networks} Las RNA son sistemas de procesamiento de la información, cuya composición y manejo permanecen inspirados en las redes neuronales biológicas. Consisten en un enorme conjunto de recursos básicos de procesamiento, denominados nodos o neuronas, que permanecen organizados en capas. De esta forma, las RNA son sistemas adaptativos que aprenden de la vivencia, en otros términos, aprenden a realizar ciertas labores por medio de un entrenamiento con ejemplos ilustrativos.
+
+\section{Agricultura de precisión} El término sobre el que se inspira la agricultura de precisión, es utilizar la porción adecuada de insumos, en el instante correcto y en el sitio preciso. La agricultura de precisión, (AP), implica la utilización de sistemas de posicionamiento universal, (GPS), y de otros medios electrónicos, para obtener datos del cultivo. Las tecnologías de la agricultura de precisión, permiten saciar una de las exigencias de la agricultura actualizada: el funcionamiento óptimo de enormes extensiones. Se muestra como primordial virtud, que la exploración de resultados de los ensayos se puede hacer por sectores diferentes en un mismo lote, y tal cual ajustar el desempeño diferencial en los mismos. La utilización de las tecnologías de la agricultura de precisión puede contribuir a mejorar los márgenes, por medio de un incremento del costo del rendimiento, (cantidad o calidad), de una reducción en la proporción de insumos, o de los dos paralelamente \cite{ref_10}.
+
+\section{Artificial Neural Networks} Las RNA son sistemas de procesamiento de la información, cuya composición y manejo permanecen inspirados en las redes neuronales biológicas. Consisten en un enorme conjunto de recursos básicos de procesamiento, denominados nodos o neuronas, que permanecen organizados en capas. De esta forma, las RNA son sistemas adaptativos que aprenden de la vivencia, en otros términos, aprenden a realizar ciertas labores por medio de un entrenamiento con ejemplos ilustrativos \cite{ref_11}.
 \\ 
 \section{DATA AUGMENTATION}
-
 El Data augmentation consiste en la transformación de los datos existentes, para crear un \textit{dataset} con mayor cantidad de datos diferentes. El objetivo de esta herramienta es crear nuevos datos que puedan ser añadidos al conjunto ya existente, y así contar con más muestras para un mejor desempeño del algoritmo. Además de esto, también es implementado para reducir el \textit{overfitting}, ya que al añadir más información al conjunto de entrenamiento se evita que el modelo se sobre ajuste. \\
 
 
@@ -73,22 +73,23 @@ El concepto Data Augmentation tiene relación con los procedimientos para edific
 \section{Imagen Binaria} Se define una imagen binaria como una función de dos variables discretas
 a[m,n] las cuales puede tomar dos valores, ‘0’ o ‘1’, dependiendo del nivel de gris de la
 imagen (una imagen binaria tiene dos niveles: blanco y negro). Existe una definición alternativa si consideramos que una imagen consiste en un conjunto de
-coordenadas discretas (también pueden ser reales pero no es el objetivo de este estudio). En este sentido, el conjunto corresponde a todos aquellos puntos o píxeles que pertenecen a la imagen. Por lo tanto, se puede decir que en morfología matemática los conjuntos representan objetos en una imagen.
-\\ 
+coordenadas discretas (también pueden ser reales pero no es el objetivo de este estudio). En este sentido, el conjunto corresponde a todos aquellos puntos o píxeles que pertenecen a la imagen. Por lo tanto, se puede decir que en morfología matemática los conjuntos representan objetos en una imagen \cite{ref_12}.
 
-\section{ISO 800} ISO no es más que la sensibilidad del sensor en el momento de captar la luz. Mayor número de ISO, más grande capacidad para captar luz y menor costo, menor capacidad para capturar esa luz. Una vez se duplica el costo ISO, o sea, se pasa de, ejemplificando, ISO 100 a ISO 200, se necesita la mitad de luz para poder hacer la misma exposición.
-\\ 
 
-\section{Procesamiento de imagenes} El procesamiento de imágenes, tiene como fin mejorar el aspecto de las imágenes y hacer más evidentes en ellas, ciertos detalles que se quieren hacer percibir. La imagen puede haber sido generada de muchas posibilidades, ejemplificando, fotográficamente, o electrónicamente, mediante monitores de televisión. El procesamiento de las imágenes se puede hacer mediante procedimientos ópticos, o bien mediante procedimientos digitales, en una PC. En la siguiente parte describiremos bastante brevemente dichos 2 procedimientos, sin embargo, previamente se va a hacer una síntesis simple de los principios matemáticos implícitos en los dos procedimientos, donde el teorema de Fourier es el eje central.
-\\ 
 
-\section{Reconstrucción morfológica} La re-composición morfológica, se puede tener en cuenta conceptualmente como dilataciones reiteradas de una imagen, denominadas, hasta que el contorno de la imagen del marcador se adapta bajo una segunda imagen, llamada imagen de máscara. En la re-composición morfológica, los picos de la imagen del marcador "se alargan"  o se dilatan.
+\section{Procesamiento de imágenes} El procesamiento digital de imágenes es el conjunto de prácticas que modifican imágenes digitales para mejorar la visibilidad de ciertas características de los objetos presentes en la imagen, para su posterior análisis o simplemente para mejorar la visualización de la
+imagen.
+El objetivo del procesamiento de imágenes no es aumentar la información que se puede extraer de las imágenes, solo se busca realzar ciertas características de la imagen. Para procesar la imagen efectivamente se debe considerar el proceso de formación y las características de interés de la imagen \cite{ref_13}.
 \\ 
+ 
+\section{Transfer Learning}
+El aprendizaje por transferencia se define como la mejora del aprendizaje en una nueva tarea a través de la transferencia de conocimientos de una tarea relacionada que ya se ha aprendido. Aunque la mayoría de los algoritmos de aprendizaje automático están diseñados para abordar tareas individuales, el desarrollo de algoritmos que faciliten el aprendizaje por transferencia es un tema de interés permanente en la comunidad de aprendizaje automático. El aprendizaje por transferencia se utiliza para mejorar a un alumno de un dominio mediante la transferencia de información de un dominio relacionado. Podemos basarnos en experiencias no técnicas del mundo real para entender por qué es posible el aprendizaje por transferencia.
 
-\section{Tubérculos de papa} La papa o patata es un tubérculo que se puede comer, se extrae de la planta herbácea americana Solanum Tuberosum, de procedencia andino. Es una planta correspondiente a el núcleo familiar de las solanáceas, procedente de Suramérica y cultivada por todo el planeta por sus tubérculos víveres. Ha sido domesticada en el altiplano andino por sus pobladores entre el 8500 y el 5000 a. n. e., y después ha sido llevada a Europa por los colonizadores españoles como una curiosidad botánica más que como una planta alimenticia. Su consumo ha ido creciendo y su cultivo se expandió a todo el planeta, hasta transformarse actualmente en uno de los más importantes alimentos para la gente.
-\\ 
+Como en el caso del aprendizaje semisupervisado, los métodos de aprendizaje por transferencia se utilizan cuando hay una escasez directa de los datos de entrenamiento subyacentes. Sin embargo, la diferencia con el aprendizaje semisupervisado es que, en lugar de utilizar datos sin etiquetar, se utilizan datos etiquetados de un dominio diferente para mejorar \cite{ref_14}.
 
-\section{Visión artificial} La perspectiva artificial ayuda a la industria a mejorar los procesos de producción por medio de imágenes digitales, con ellas se optimiza el control de calidad de aplicaciones industriales y de robots. Los sistemas de perspectiva examinan y se aseguran de conseguir los requisitos mínimos de calidad exigidos por cada fabricante. A lo largo del proceso de inspección, los sistemas de perspectiva informan de los probables errores detectados, lo cual posibilita un mejor control del proceso de producción.
+
+
+\section{Visión artificial} La visión artificial o visión por computador intenta replicar la capacidad que tienen algunos seres vivos para visualizar una imagen, entenderla y actuar en base a lo observado. Existe un crecimiento en los diferentes tipos de aplicaciones industriales que requieren el uso de técnicas de visión artificial. El  continuo  desarrollo  de  nuevos  algoritmos  y  aplicaciones  hacen  de  esta  disciplina  una tecnología en constante evolución la cual ha experimentado un rápido avance en las últimas décadas, así lo demuestran las numerosas investigaciones y publicaciones existentes en la comunidad científica.  Esto podría deberse a la gran cantidad de contenido visual como imágenes y video que se genera en  la  actualidad,  así  como  la  capacidad  de  procesamiento  y  almacenamiento  que  tienen  los dispositivos electrónicos y la disponibilidad de herramientas, librerías y lenguajes de programación para dicho fin \cite{ref_15}
 
 \chapter{Estado del arte}
 
@@ -854,7 +855,11 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 			\end{itemize}
 			
 	\section{Funcionamiento}
-		
+	Aquí se describe el funcionamiento mecánico de la maquina y el funcionamiento de la red neuronal, la cual fue programada en la tarjeta Jetson Nano para realizar la clasificación de los tubérculos de papa.
+	
+	\subsection{Funcionamiento Mecánico}
+	
+	\subsection{Funcionamiento de la red neuronal}		
 
 
 
