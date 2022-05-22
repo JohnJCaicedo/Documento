@@ -135,6 +135,14 @@ V.~Mathivet, {\em Inteligencia artificial para desarrolladores: conceptos e
   implementaci{\'o}n en C}.
 \newblock Ediciones ENI., 2018.
 
+\bibitem{rumelhart1986learning}
+D.~E. Rumelhart, G.~E. Hinton, and R.~J. Williams, ``Learning internal
+  representations by error propagation, parallel distributed processing, vol.
+  1,'' {\em Foundations. MIT Press, Cambridge}, 1986.
+
+\bibitem{bottou2012stochastic}
+L.~Bottou, ``Stochastic gradient descent tricks,'' pp.~421--436, 2012.
+
 \bibitem{ref_1}
 A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton, ``Imagenet classification with
   deep convolutional neural networks,'' {\em Advances in neural information
@@ -158,5 +166,20 @@ A.~Atienza~Arroyo {\em et~al.}, ``Detecci{\'o}n e identificaci{\'o}n
 K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image
   recognition,'' in {\em Proceedings of the IEEE conference on computer vision
   and pattern recognition}, pp.~770--778, 2016.
+
+\bibitem{liashchynskyi2019grid}
+P.~Liashchynskyi and P.~Liashchynskyi, ``Grid search, random search, genetic
+  algorithm: A big comparison for nas,'' {\em arXiv preprint arXiv:1912.06059},
+  2019.
+
+\bibitem{frazier2018tutorial}
+P.~I. Frazier, ``A tutorial on bayesian optimization,'' {\em arXiv preprint
+  arXiv:1807.02811}, 2018.
+
+\bibitem{balandat2020botorch}
+M.~Balandat, B.~Karrer, D.~Jiang, S.~Daulton, B.~Letham, A.~G. Wilson, and
+  E.~Bakshy, ``Botorch: a framework for efficient monte-carlo bayesian
+  optimization,'' {\em Advances in neural information processing systems},
+  vol.~33, pp.~21524--21538, 2020.
 
 \end{thebibliography}

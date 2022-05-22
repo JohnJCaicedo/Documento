@@ -83,7 +83,7 @@ El objetivo del procesamiento de imágenes no es aumentar la información que se
 \\ 
  
 \section{Transfer Learning}
-El aprendizaje por transferencia se define como la mejora del aprendizaje en una nueva tarea a través de la transferencia de conocimientos de una tarea relacionada que ya se ha aprendido. Aunque la mayoría de los algoritmos de aprendizaje automático están diseñados para abordar tareas individuales, el desarrollo de algoritmos que faciliten el aprendizaje por transferencia es un tema de interés permanente en la comunidad de aprendizaje automático. El aprendizaje por transferencia se utiliza para mejorar a un alumno de un dominio mediante la transferencia de información de un dominio relacionado. Podemos basarnos en experiencias no técnicas del mundo real para entender por qué es posible el aprendizaje por transferencia.
+El aprendizaje por transferencia se define como la mejora del aprendizaje en una nueva tarea a través de la transferencia de conocimientos de una tarea relacionada que ya se ha aprendido. Aunque la mayoría de los algoritmos de aprendizaje automático están diseñados para abordar tareas individuales, el desarrollo de algoritmos que faciliten el aprendizaje por transferencia es un tema de interés permanente en la comunidad de aprendizaje automático. El aprendizaje por transferencia se utiliza para mejorar a un alumno de un dominio mediante la transferencia de información de un dominio relacionado. Podemos basarnos en experiencias no técnicas del mundo real para entender por qué es posible el aprendizaje por transferencia.\\
 
 Como en el caso del aprendizaje semisupervisado, los métodos de aprendizaje por transferencia se utilizan cuando hay una escasez directa de los datos de entrenamiento subyacentes. Sin embargo, la diferencia con el aprendizaje semisupervisado es que, en lugar de utilizar datos sin etiquetar, se utilizan datos etiquetados de un dominio diferente para mejorar \cite{ref_14}.
 
@@ -222,11 +222,12 @@ De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neu
 
 
 \chapter{Algoritmo de Clasificación}
-En este capitulo se presenta la definicion y estructura de una red neuronal artificial convolucional, la preparación del dataset implementado durante el entrenamiento de la red neuronal y los diferentes modelos implementados en el desarrollo del proyecto.
+
+Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las características de tipo y daño, de los tubérculos de papas descritos en el \textit{Metadata} Tabla \ref{table:metadata}. En este capitulo se presenta la definicion y estructura de una red neuronal artificial convolucional, la preparación del dataset implementado durante el entrenamiento de la red neuronal y los diferentes modelos implementados en el desarrollo del proyecto.
 
 	\section{Red Neuronal Artificial Convolucional}
 
-	Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las características de tipo y daño, de los tubérculos de papas descritos en el \textit{Metadata} Tabla \ref{table:metadata}. La arquitectura general de una red artificial convolucional, (\textit{CNN}), se muestra en la Figura \ref{fig:cnnarchitecture} \cite{cnnarchitecture}. Se realizaron pruebas con las arquitecturas \textit{Alexnet}, \textit{Resnet18}, \textit{VGG11} y \textit{VGG19} y se implementó la optimización bayesiana en ciertos hiperparámetros de las arquitecturas existentes, para mejorar los resultados. 
+	 La arquitectura general de una red artificial convolucional, (\textit{CNN}), se muestra en la Figura \ref{fig:cnnarchitecture} \cite{cnnarchitecture}. Se realizaron pruebas con las arquitecturas \textit{Alexnet}, \textit{Resnet18}, \textit{VGG11} y \textit{VGG19} y se implementó la optimización bayesiana en ciertos hiperparámetros de las arquitecturas existentes, para mejorar los resultados. 
 	
 	\begin{figure}[ht]
 		\centering
@@ -248,21 +249,23 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 
 		\newpage
 		\subsection{Preparación Del \textit{Dataset}}
-		En este apartado se explica como se lleva acabo el preprocesamiento de imágenes y los diferentes filtros aplicados para la creación del Data Augmentation.
+		
+		Para realizar un correcto entrenamiento de un modelo de red neuronal, es necesario aplicar un preprocesamiento a las imágenes para que el modelo extraiga características pertinentees a las clases definidas. En este apartado se explica como se lleva acabo el preprocesamiento de imágenes y los diferentes filtros aplicados para realizar el Data Augmentation.
+		
 			\subsubsection{PREPROCESAMIENTO DE IMÁGENES}
 
-			Usando el módulo \textit{torchvision.tranforms.compose()}, de la librería \textit{Pytorch}, se pueden encadenar unas determinadas funciones, que aplican diferentes tipos de filtros y transformaciones al \textit{Dataset}. De esta forma, se puede crear la tarea de segmentación debido a que las transformaciones aumentan en consideración el tamaño original del \textit{Dataset}, facilitando así, la extracción de características de cada imagen \cite{Pytorch}. Las transformaciones disponibles en éste módulo se presentan en la Tabla \ref{table:Filters1}.
+			Usando el módulo \textit{tranforms.compose()}, de la librería \textit{Pytorch}, se pueden encadenar unas determinadas funciones, que aplican diferentes tipos de filtros y transformaciones al \textit{Dataset}. De esta forma, se crea la tarea de segmentación debido a que las transformaciones aumentan en consideración el tamaño original del \textit{Dataset}, facilitando así, la extracción de características. Las transformaciones disponibles se presentan en la Tabla \ref{table:Filters1}.
 			
 			\begin{table}[ht]
 				\centering
-				\begin{tabular}{|p{4cm}|p{4cm}|p{4cm}|p{4cm}|}
+				\begin{tabular}{|p{3cm}|p{4cm}|p{3.8cm}|p{4cm}|}
 					\hline
 					Image Transform       & \multicolumn{1}{c|}{Use}                                                               & Image Transform       & \multicolumn{1}{c|}{Use}                                                                        \\ \hline
 					CenterCrop            & Recorta la imagen en el centro                                                         & RandomResizedCrop     & Recorta una porción aleatoria de la imágen y la redimensiona a un tamaño determinado            \\ \hline
 					ColorJitter           & Cambia aleatoriamente el brillo, el contraste, la saturación y el tono de una imagen   & RandomRotation        & Rota la imagen a un ángulo determinado                                                          \\ \hline
 					FiverCrop              & Recorta la imagen en cuatro esquinas y el recorte central                              & RandomVerticalFlip    & Voltea verticalmente la imagen al azar con una probabilidad dada                                \\ \hline
 					Grayscale             & Convierte la imágen en escala de grises                                                & Resize                & Redimensiona la imagen al tamaño dado                                                           \\ \hline
-					Pad                   & Rellena la imágen en todos sus lados con el valor de "pad" dado                        & TenCrop               & Recorta la imagen dada en cuatro esquinas y el recorte central más la versión volteada de éstas \\ \hline
+					Pad                   & Rellena la imágen en todos sus lados con el valor de "pad" dado                        & TenCrop               & Recorta la imagen dada en cuatro esquinas y el recorte central \\ \hline
 					RandomAffine          & Transformación afín aleatoria de la imagen manteniendo el centro invariante            & GaussianBlur          & Desenfoca la imágen con un filtro gausseano                                                                                                                     \\ \hline
 				\end{tabular}
 				\caption{Funciones de transformación de imágenes del módulo de \textit{Pytorch}}
@@ -273,14 +276,14 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 		
 			\begin{table}[ht]
 				\centering
-				\begin{tabular}{|p{4.5cm}|p{3.5cm}|p{3.8cm}|p{3.5cm}|}
+				\begin{tabular}{|p{3.5cm}|p{3.5cm}|p{3.8cm}|p{3.5cm}|}
 					\hline
 					Image Transform       & \multicolumn{1}{c|}{Use}                                                               & Image Transform       & \multicolumn{1}{c|}{Use}                                                \\ \hline
 					Randomcrop            & Recorta la imágen aleatoriamente                                                       & RandomInvert          & Invierte los colores de la imágen de forma aleatoria                    \\ \hline
 					RaandomGrayscale      & Convierte la imágen en escala de grises aleatoriamente                                 & RandomPosterize       & Reduce el número de bits de cada canal de laa imágen de forma aleatoria \\ \hline
-					RandomHorizontalFlip  & Voltea horizontalmente la imágen al azar con una probabilidad dada                     & RandomSolarize        & Invierte aleatoriamente el valor de los pixeles por encima de un umbral \\ \hline
+					HorizontalFlip  & Voltea horizontalmente la imágen al azar con una probabilidad dada                     & RandomSolarize        & Invierte aleatoriamente el valor de los pixeles por encima de un umbral \\ \hline
 					RandomPerspective     & Realiza una transformación de perspectiva aleatoria de la imagén                       & RandomAutocontrast    & Autocontraste de los píxeles de la imagen dada aleatoriamente           \\ \hline
-					RandomAdjustSharpness & Ajusta la nitidez de la imágen de forma aleatoria                                      & RandomEqualize        & Equaliza el histograma de la imágen dada aleatoriamente                 \\ \hline
+					AdjustSharpness & Ajusta la nitidez de la imágen de forma aleatoria                                      & RandomEqualize        & Equaliza el histograma de la imágen dada aleatoriamente                 \\ \hline
 					RandomApply           & Aplicar aleatoriamente una lista de transformaciones con una probabilidad determinada. & \multicolumn{1}{l|}{} &                                                                         \\ \hline
 				\end{tabular}				
 				\caption{Funciones de transformación de imágenes del módulo de \textit{Pytorch}}
@@ -331,7 +334,8 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 			\end{figure}	
 
 		\subsection{Funciones PotatoDataset y DataLoader}
-		Aquí se presenta la creación de la función \textit{PotatoDataset()}, y la implementación de la función \textit{Dataloader}, ademas de la explicación de cada función.
+		
+		Una vez se realiza el proceso de \textit{Data Augmentation}, se deben cargar las imágenes en \textit{Pytorch} para que puedan ser procesadas por el modelo de red neuronal. En este capítulo se presenta la creación de la función \textit{PotatoDataset()}, y la implementación de la función \textit{Dataloader}, ademas de la explicación de cada función, para cargar el conjunto de datos en \textit{Pytorch}.
 		
 		
 			\subsubsection{FUNCIÓN POTATODATASET}
@@ -386,7 +390,7 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 		
 		\subsection{Hiperparámetros Del Modelo}
 		
-		Los hiperparámetros de un modelo son los valores de las configuraciones utilizadas durante el proceso de entrenamiento.
+		La mayor parte de modelos implementados en machine learning poseen una serie de parámetros que no pueden ser aprendidos de los datos, es por esto que deben ser establecidos antes del entrenamiento. Estos parámetros son conocidos como hiperparámetros. En este capítulo se abordan los hiperparámetros utilizados en el desarrollo de este proyecto.
 		
 			\subsubsection{FUNCIÓN DE PÉRDIDAS}		
 			
@@ -410,52 +414,49 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 			
 			\subsubsection{OPTIMIZADOR}
 			
-			\textit{Pytorch} posee \textit{torch.optim}, que es un paquete que implementa varios algoritmos de optimización. 
+			\textit{Pytorch} posee el paquete \textit{torch.optim}, que implementa varios algoritmos de optimización basados en el gradiente descendiente. A menudo se ha propuesto, por ejemplo Rumhart \cite{rumelhart1986learning}, minimizar el riesgo empírico $E_n(fw)$ utilizando el gradiente descendiente. Consiste en cada iteración actualizar los pesos $w$.
+			
+						
+			\begin{equation}
+				{w_{i+1}=w_i-\gamma\frac{1}{n}\sum_{i=1}^{n}\nabla Q(z_i,w_t)}
+				\label{GD}
+			\end{equation}\\
+			
+			Donde $\gamma$ es la taza de aprendizaje elegida adecuadamente (\textit{learning rate}). Cuando la estimación inicial $w_0$ está lo suficientemente cerca del óptimo y cuando la tasa de aprendizaje es suficientemente pequeña, este algoritmo alcanza una convergencia lineal.\\
 			
 			
+			En el algoritmo desarrollado en este documento, se utilizó el optimizador de descenso estocástico del gradiente $SGD$, que es una simplificación drástica del algoritmo del gradiente descendiente. En lugar de calcular exáctamente el gradiente de $E_n(fw)$, cada iteración estima este gradiente sobre la base de un único ejemplo $z_t$ elegido al azar \cite{bottou2012stochastic}.
 			
+			\begin{equation}
+				{w_{i+1}=w_i-\gamma_t\nabla_w Q(z_t,w_t)}
+				\label{SGD}
+			\end{equation}
 			
-			
-
-			
-			
-		\subsection{Optimización Bayesiana}
-		La mayor parte de modelos implementados en machine learning poseen una serie de parámetros que no pueden ser aprendidos de los datos, es por esto que deben ser establecidos antes del entrenamiento. Estos parámetros son conocidos como hiperparámetros.\\
-		
-		Dos de las estrategias más empleadas para probar diferentes combinaciones y evaluarlas mediante métodos de validación, son \textit{grid search y random search}. En la primera estrategia, los valores estudiados de cada hiperparámetro son distribuidos de forma uniforme dentro de un rango delimitado por el analista. En la segunda estrategia, los datos son aleatorios dentro de ese rango como se muestra en la Figura \ref{fig:Hiperparámetros grid search y random search}	(REFERENCIA).
-		
-		\begin{figure}[ht]
-			\centering
-			\includegraphics[scale=0.4]{Figs/121.png}
-			\caption{Hiperparámetros grid search y random search}
-			\label{fig:Hiperparámetros grid search y random search}
-		\end{figure}
-		
-		A pesar de que las dos estrategias son válidas y se obtienen buenos resultados, sobretodo cuando se tiene criterio para acotar el rango de búsqueda, poseen una carencia similar: ninguna de las dos tiene en cuenta los resultados obtenidos hasta el momento, lo cual impide que se focalicen en la búsqueda de las regiones de mayor interés y evitando las regiones innecesarias.()\\
-		
-		Teniendo en cuenta lo descrito anteriormente, se procede a implementar la optimización bayesiana, la cual consiste en crear un modelo probabilístico en el que el valor de la función objetivo es la métrica de validación del modelo, (rmse, auc, precisión, etc). Con este método, se logra que la búsqueda se vaya redirigiendo en cada iteración hacia las regiones de mayor interés. Esto con el fin de reducir el número de combinaciones de los hiperparámetros con los que el modelo es evaluado, seleccionando únicamente los mejores candidatos. Esto significa que, la ventaja frente a las estrategias descritas anteriormente, se maximiza cuando el espacio de búsqueda es muy amplio o la evaluación del modelo es muy lenta.()
+			Se espera que la Ecuación \ref{GD} se comporte como la Ecuación \ref{SGD} a pesar del ruido introducido por este procedimiento simplificado. El algoritmo estocástico no necesita recordar qué ejemplos de datos fueron usados durante las iteraciones anteriores, por lo tanto, puede procesar ejemplos sobre la marcha en un sistema implementado. En esta situación, el descenso estocástico del gradiente optimiza directamente el riesgo esperado.	
 			
 		\subsection{Arquitectura del modelo}
-		Aquí se presenta la estructura y los resultados obtenidos de los modelos preentrenados AlexNet, VGG-19, VGG-11 y ResNet-18 sin optimizar.
+		
+		Se utilzaron modelos pre definidos para realizar el entrenamiento del \textit{Dataset}, utilzando la teoría de \textit{Transfer Learning} que permite entrenar los modelos, con pesos establecidos entrenadas para otro tipo de datos, para obtener resultados a partir de ellos sin empezar desde cero la creación de una red neuronal y sus pesos. En este capítulo se presenta la estructura y los resultados obtenidos de los modelos pre entrenados AlexNet, VGG-19, VGG-11 y ResNet-18, sin el uso de un método de optimización de hiperparámetros.
+		
 			\subsubsection{\MakeUppercase{Modelo preentrenado ALEXNET}}
+		
+			El modelo AlexNet fue implementado en el año 2012 en el desafió de reconocimiento visual a gran escala Imaget. Este modelo tuvo un resultado tan satisfactorio que los modelos de aprendizaje profundo se convirtieron en la referencia para la investigación y desarrollo en los principales sectores de la industria. \cite{Pytorch}\\
 			
-				El modelo AlexNet fue implementado en el año 2012 en el desafió de reconocimiento visual a gran escala Imaget. Este modelo tuvo un resultado tan satisfactorio que los modelos de aprendizaje profundo se convirtieron en la referencia para la investigación y desarrollo en los principales sectores de la industria. \cite{Pytorch}\\
-				
-				
-				El modelo se compone de cinco capas convolucionales y tres capas densas, donde las capas convolucionales están normalizadas por lotes. El kernel tiene dimensiones diferentes que se distribuyen en \textit{11 x 11} en la primera capa, \textit{5 x 5} en la segunda y \textit{3 x 3} en las demás. La primera, cuarta y quinta capa convolucional, están seguidas por una capa Max-pooling con dimensiones de \textit{3 x 3}, que posee un stride de dos.\\
-				
-				
-				Las capas convolusionales y de Max-pooling son seguidas por tres capas densas, en donde las dos primeras poseen 4096 neuronas cada una y la ultima capa es la de salida, la cual se compone de 1000 neuronas que poseen una función de activación softmax. Estas neuronas son las encargadas de realizar la clasificación de la imagen. Como es habitual en estos sistemas de clasificación, la función de perdidas implementada es la entropía cruzada \cite{ref_1}.
-				\\
-				
-				\begin{figure}[ht]
-					\centering
-					\includegraphics[scale=0.4]{Figs/5.png}
-					\caption{Modelo AlexNet}
-					\label{fig:AlexNet}
-				\end{figure}
-				
-				Como se aprecia en la Figura \ref{fig:AlexNet}, el modelo de AlexNet, toma una imagen de entrada con una resolución de \textit{227 x 227} pixeles y 3 canales de color, la información recibida pasa por cinco capas convolucionales, (en negro), de neuronas ReLu y tres capas de Max-pooling, (en azul). La quinta capa de convolución posee 256 mapas diferentes con dimensiones de \textit{13 x 13}. Seguidamente se aplican las dos capas densas de 4096 neuronas, las cuales son seguidas por una capa de salida de 1000 neuronas, dotadas con una función softmax. Cada neurona de la capa de salida representa un conjunto semántico diferente. Y su valor de activación indica la probabilidad de que la imagen de entrada pertenezca a dicho conjunto semántico.\\
+			
+			El modelo se compone de cinco capas convolucionales y tres capas densas, donde las capas convolucionales están normalizadas por lotes. El kernel tiene dimensiones diferentes que se distribuyen en \textit{11 x 11} en la primera capa, \textit{5 x 5} en la segunda y \textit{3 x 3} en las demás. La primera, cuarta y quinta capa convolucional, están seguidas por una capa Max-pooling con dimensiones de \textit{3 x 3}, que posee un stride de dos.\\
+			
+			
+			Las capas convolusionales y de Max-pooling son seguidas por tres capas densas, en donde las dos primeras poseen 4096 neuronas cada una y la ultima capa es la de salida, la cual se compone de 1000 neuronas que poseen una función de activación softmax. Estas neuronas son las encargadas de realizar la clasificación de la imagen. Como es habitual en estos sistemas de clasificación, la función de perdidas implementada es la entropía cruzada \cite{ref_1}.
+			\\
+			
+			\begin{figure}[ht]
+				\centering
+				\includegraphics[scale=0.4]{Figs/5.png}
+				\caption{Modelo AlexNet}
+				\label{fig:AlexNet}
+			\end{figure}
+			
+			Como se aprecia en la Figura \ref{fig:AlexNet}, el modelo de AlexNet, toma una imagen de entrada con una resolución de \textit{227 x 227} pixeles y 3 canales de color, la información recibida pasa por cinco capas convolucionales, (en negro), de neuronas ReLu y tres capas de Max-pooling, (en azul). La quinta capa de convolución posee 256 mapas diferentes con dimensiones de \textit{13 x 13}. Seguidamente se aplican las dos capas densas de 4096 neuronas, las cuales son seguidas por una capa de salida de 1000 neuronas, dotadas con una función softmax. Cada neurona de la capa de salida representa un conjunto semántico diferente. Y su valor de activación indica la probabilidad de que la imagen de entrada pertenezca a dicho conjunto semántico.\\
 
 
 			\subsubsection{\MakeUppercase{Modelo preentrenado VGG19}}
@@ -476,7 +477,7 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 				
 				\begin{figure}[ht]
 					\centering
-					\includegraphics[scale=0.2]{Figs/21.jpeg}
+					\includegraphics[scale=0.3]{Figs/21.jpeg}
 					\caption{Composición Modelo VGG19}
 					\label{fig:VGG19_tabla}
 				\end{figure}
@@ -486,7 +487,7 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 				
 				\begin{figure}[ht]
 					\centering
-					\includegraphics[scale=0.4]{Figs/101.png}
+					\includegraphics[scale=0.55]{Figs/101.png}
 					\caption{Accuracy Modelo VGG19}
 					\label{fig:VGG19_accuracy}
 				\end{figure}  
@@ -496,7 +497,7 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 				
 				\begin{figure}[ht]
 					\centering
-					\includegraphics[scale=0.4]{Figs/102.png}
+					\includegraphics[scale=0.55]{Figs/102.png}
 					\caption{Losses Modelo VGG19}
 					\label{fig:VGG19_losses}
 				\end{figure}
@@ -530,8 +531,8 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 		
 			\newpage
 			\subsubsection{\MakeUppercase{Modelo preentrenado VGG11}}
-			VGG es un modelo preentrenado, en un conjunto de datos que contiene el peso que representan las características del conjunto de datos entrenados. Los modelos VGG toman una imagen de entrada de dimensiones \textit{224 x 224} pixeles en formato RGB, que son tratadas con un tamaño de imagen constante.
-			\\
+			VGG es un modelo preentrenado, en un conjunto de datos que contiene el peso que representan las características del conjunto de datos entrenados. Los modelos VGG toman una imagen de entrada de dimensiones \textit{224 x 224} pixeles en formato RGB, que son tratadas con un tamaño de imagen constante.\\
+			
 			 El modelo de aprendizaje profundo VGG11. Es la configuración mas sencilla. Tiene 11 capas de peso en total, de ahí el nombre VGG11. 8 de ellas son capas convolucionales y 3 son capas completamente conectadas, como se aprecia en la Figura \ref{fig:VGG11} \cite{ref_3}.
 			
 			\begin{figure}[ht]
@@ -694,12 +695,55 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 	\end{figure}
 	
 			\subsubsection{\MakeUppercase{Comparación de arquitecturas}}
+	
+	\newpage
+	\subsection{Optimización Bayesiana}
+	
+	Dos de las estrategias más empleadas para probar diferentes combinaciones de hipérparámetros y evaluarlas mediante métodos de validación, son \textit{grid search y random search} \cite{liashchynskyi2019grid}. En la primera estrategia, los valores estudiados de cada hiperparámetro son distribuidos de forma uniforme dentro de un rango delimitado por el analista. En la segunda estrategia, los datos son aleatorios dentro de ese rango como se muestra en la Figura \ref{fig:Hiperparámetros grid search y random search}.
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.6]{Figs/121.png}
+		\caption{Métodos de Optimización De Hiperparámetros}
+		\label{fig:Hiperparámetros grid search y random search}
+	\end{figure}
+	
+	A pesar de que las dos estrategias son válidas y se obtienen buenos resultados, sobretodo cuando se tiene criterio para acotar el rango de búsqueda, poseen una carencia similar: ninguna de las dos tiene en cuenta los resultados obtenidos hasta el momento, lo cual impide que se focalicen en la búsqueda de las regiones de mayor interés y evitando las regiones innecesarias.\\
+	
+
+	Otro método utilizado para la búsqueda de los hiperparámetros de un modelo es la optimización bayesiana, la cual consiste en crear un modelo probabilístico en el que el valor de la función objetivo es la métrica de validación del modelo, en este caso, la presición. Con este método, se logra que la búsqueda se vaya redirigiendo en cada iteración hacia las regiones de mayor interés \cite{frazier2018tutorial}. Esto con el fin de reducir el número de combinaciones de los hiperparámetros con los que el modelo es evaluado, seleccionando únicamente los mejores candidatos. Esto significa que, la ventaja frente a las estrategias descritas anteriormente, se maximiza cuando el espacio de búsqueda es muy amplio o la evaluación del modelo es muy lenta.\\
+	
+	Para realizar la optimización bayesiana, se utilizó el módulo para \textit{Python} \textit{Botorch}  \cite{balandat2020botorch}. Es el motor de optimización de \textit{Ax-Services} compatible con \textit{Pytorch} que admite algunas funciones de minimización y maximización, como la mejora esperada (\textit{EI}), la probabilidad de mejora y el límite superior de confianza. La mejora esperada es una función de adquisición recompensa la evaluación del objetivo $f$ basándose en la mejora esperada en relación con el mejor momento. En la Ecuación \ref{EI} se define  \textit{EI} .
+	
+	\begin{equation}
+		{EI(x)=\in[max(f(x)-f*),0]}
+		\label{EI}
+	\end{equation}
+	
+	El resultado de la parametrización, con la mejora esperada, más alto se selecciona y se evalúa en el siguiente paso. Una vez que se ha explorado adecuadamente el espacio de los parámetros, la mejora esperada se estrecha naturalmente en las ubicaciones donde hay una alta probabilidad de un buen valor objetivo. Este proceso se realiza por 20 etapas de acuerdo a los parámetros de optimización elegidos. La Tabla \ref{paraopt} muestra los parámetros escogidos para optimizar.
+	
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|c|c|c|ll}
+			\cline{1-3}
+			Parámetro & Limite inferior              & Limite Superior &  &  \\ \cline{1-3}
+			lr         & $1*10^{-6}$ & 0.4             &  &  \\ \cline{1-3}
+			Momentum   & 0                            & 1               &  &  \\ \cline{1-3}
+			Stepsize   & 20                           & 40              &  &  \\ \cline{1-3}
+		\end{tabular}
+		\caption{Hiperparámetros Optimizados}
+		\label{paraopt}
+	\end{table}
+
+	\textit{Botorch} realiza $20$ pruebas con parámetros distintos en los rangos definidos y encuentra la combinación de parámetros que den el mejor resultado de precisión final del algoritmo. Estos resultados fueron utilizados para entrenar nuevamente los modelos descritos anteriormente. 
+
+
+	
+			
 	\newpage		
 	\section{Clasificación Por Tamaño}
 	
-		La clasificación de los tubérculos de papa mediante su tamaño, (diámetro), se realiza para categorizar el producto bajo la norma técnica colombiana NTC 341 establecida por la industria alimentaria, con el fin de garantizar la calidad de los tubérculos de consumo.\\
-		
-		La norma establece cuatro categorías para la clasificación de los tubérculos mediante la medición de su tamaños, estas categorías se presentan en la Tabla \ref{table:limites}:
+	La clasificación de los tubérculos de papa de acuerdo a su diámetro, se realiza para categorizar el producto bajo la norma técnica colombiana \textit{NTC 341} establecida por la industria alimentaria, con el fin de garantizar la calidad de los tubérculos de consumo. 	La norma establece cuatro categorías para la clasificación de los tubérculos mediante la medición de su tamaños, estas categorías se presentan en la Tabla \ref{table:limites}.
 		
 	\begin{table}[ht]
 		\centering
@@ -716,9 +760,66 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 			PEQUEÑA & 30-44 \\
 			\hline
 		\end{tabular}	
-		\caption{Clases Limites tamaño de tubérculos de consumo}
+		\caption{Tamaño De tubérculos de Consumo}
 		\label{table:limites}
 	\end{table}	
+	
+	De acuerdo a la creación del \textit{Dataset} de este dopcumento, las categorias utilizados fueron \textit{Muy Grande, Grande y Mediana}. Para realizar la clasificación por tamaño se utilizó el módulo de visión artifical para \textit{Python} \textit{Open CV}. Primero se realizó un estudio a un grupo de $5$ imágenes por cada uno de los tamaños retirando el fondo, la imagén \ref{fig:matlabcv}, utilizando la herramienta de MATLAB\textsuperscript{\textregistered} \textit{Color Thresholder}.
+	
+				
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.3]{Figs/matlabcv.png}
+		\caption{Matlab Color Thresholder}
+		\label{fig:matlabcv}
+	\end{figure}
+	
+	La herramienta permite, de forma interactiva, crear una función que permita quitar ciertos colores en el espacio \textit{RGB} de la imagén de muestra, en este caso, se realizó el proceso para retirar el fondo de la imagén de la papa, A este proceso se le conoce como umbralización. \\
+	
+	Se pretende encontrar el perímetro aproximado de la papa utilizando la función \textit{FindContour} de\textit{OpenCV}, debido a esto, es necesario realizar una serie de transformaciónes que conviertan la imágen de muestra en una imágen binaria (blanco y negro). Se utilizaron los filtros de dilatación y mediana para realziar este proceso como se muestra en la Figura \ref{fig:dilmed}.	
+					
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.05]{Figs/dilmed.png}
+		\caption{Imágen de Muestra Binarizada}
+		\label{fig:dilmed}
+	\end{figure}
+
+	Con la imágen aislada de la mayoría de caractectrísticas que puedan interferir en el cálculo del perimetro, utilizando la función de \textit{FindContour}, se puede encontrar y dibujar un perímetro aproximado como se muestra en la Figura \ref{fig:contour}.
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.05]{Figs/contour.png}
+		\caption{Perímetro Aproximado De Las Papas}
+		\label{fig:contour}
+	\end{figure}
+	
+	En este punto, utilizando la función \textit{ArcLenght} de\textit{OpenCV} se puede calcular el perímetro del contorno encontrado en cantidad de píxeles. Debido a que las imágenes tomadas para crear el \textit{Dataset} fueron hechas desde una distancia fija desde el lente de la cámara, el tamaño relativo se puede asumuir correcto. Para clasificar estos tamaños, se realizo un estudio en $5$ imágenes de cada tamaño, en donde se calcularon los perímetros, se calculó un promedio y una desviación estádandar para definir los límites en el tamaño de píxeles por cada tamaño de papa definido. En la Tabla \ref{table:perimetro} se muestran los resultados de estudio realizado.
+	
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{cccccc}
+			\hline
+			\multicolumn{2}{|c|}{Muy Grande}                                                    & \multicolumn{2}{c|}{Grande}                                                        & \multicolumn{2}{c|}{Mediana}                                                       \\ \hline
+			\multicolumn{1}{|c|}{Imagen}            & \multicolumn{1}{|p{2cm}|}{Tama¤o del Perimetro} & \multicolumn{1}{c|}{Imagen}            & \multicolumn{1}{|p{2cm}|}{Tama¤o del Perimetro} & \multicolumn{1}{c|}{Imagen}            & \multicolumn{1}{|p{2cm}|}{Tama¤o del Perimetro} \\ \hline
+			\multicolumn{1}{|c|}{0\_0\_0\_1963.jpg} & \multicolumn{1}{c|}{8580,08}              & \multicolumn{1}{c|}{0\_0\_1\_1239.jpg} & \multicolumn{1}{c|}{6524,936741}          & \multicolumn{1}{c|}{0\_0\_2\_2011.jpg} & \multicolumn{1}{c|}{6074,978377}          \\ \hline
+			\multicolumn{1}{|c|}{0\_1\_0\_1806.jpg} & \multicolumn{1}{c|}{9523,78}              & \multicolumn{1}{c|}{0\_1\_1\_1828.jpg} & \multicolumn{1}{c|}{6802,549007}          & \multicolumn{1}{c|}{0\_1\_2\_1506.jpg} & \multicolumn{1}{c|}{5.018}                \\ \hline
+			\multicolumn{1}{|c|}{1\_0\_0\_0777.jpg} & \multicolumn{1}{c|}{13.275}               & \multicolumn{1}{c|}{1\_0\_1\_0796.jpg} & \multicolumn{1}{c|}{10602,79825}          & \multicolumn{1}{c|}{1\_0\_2\_1995.jpg} & \multicolumn{1}{c|}{5090,177294}          \\ \hline
+			\multicolumn{1}{|c|}{1\_1\_0\_0825.jpg} & \multicolumn{1}{c|}{27.830}               & \multicolumn{1}{c|}{1\_1\_1\_0770.jpg} & \multicolumn{1}{c|}{10285,33525}          & \multicolumn{1}{c|}{1\_1\_2\_0857.jpg} & \multicolumn{1}{c|}{5500,756232}          \\ \hline
+			\multicolumn{1}{|c|}{0\_0\_0\_1964.jpg} & \multicolumn{1}{c|}{21.607}               & \multicolumn{1}{c|}{0\_0\_1\_1240.jpg} & \multicolumn{1}{c|}{6.726}                & \multicolumn{1}{c|}{0\_0\_2\_2013.jpg} & \multicolumn{1}{c|}{6046,628085}          \\ \hline
+			\multicolumn{1}{|c|}{Promedio}          & \multicolumn{1}{c|}{16163,19}             & \multicolumn{1}{c|}{Promedio}          & \multicolumn{1}{c|}{8188,33}              & \multicolumn{1}{c|}{Promedio}          & \multicolumn{1}{c|}{5546,12}              \\ \hline
+			\multicolumn{1}{|c|}{Variacion STD}     & \multicolumn{1}{c|}{7425,235484}          & \multicolumn{1}{c|}{Variacion STD}     & \multicolumn{1}{c|}{1846,765787}          & \multicolumn{1}{c|}{Variacion STD}     & \multicolumn{1}{c|}{451,4373313}          \\ \hline
+			\multicolumn{1}{|c|}{Limite inferior}   & \multicolumn{1}{c|}{9000,00}              & \multicolumn{1}{c|}{Limite inferior}   & \multicolumn{1}{c|}{6341,56}              & \multicolumn{1}{c|}{Limite inferior}   & \multicolumn{1}{c|}{5094,68}              \\ \hline
+			\multicolumn{1}{|c|}{Limite superior}   & \multicolumn{1}{c|}{23588,42}             & \multicolumn{1}{c|}{Limite superior}   & \multicolumn{1}{c|}{9000,00}              & \multicolumn{1}{c|}{Limite superior}   & \multicolumn{1}{c|}{5997,56}              \\ \hline
+			\multicolumn{1}{l}{}                    & \multicolumn{1}{l}{}                      & \multicolumn{1}{l}{}                   & \multicolumn{1}{l}{}                      & \multicolumn{1}{l}{}                   & \multicolumn{1}{l}{}                      \\
+			\multicolumn{1}{l}{}                    & \multicolumn{1}{l}{}                      & \multicolumn{1}{l}{}                   & \multicolumn{1}{l}{}                      & \multicolumn{1}{l}{}                   & \multicolumn{1}{l}{}                     
+		\end{tabular}
+	\caption{Perimetro en Tamaño de Píxeles}
+	\label{table:perimetro}
+	\end{table}
+	
+	De esta forma, se realiza la clasificación por tamaño en nuevas imágenes de papas, si el valor del perímetro de encuentra dentro de los límites inferior y superior calculados para cada tamaño, la imagen será clasificada de acuerdo a los rangos.
+	
 	
 \newpage
 \chapter{Prototipo}
@@ -736,7 +837,7 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 		\end{figure}
 		
 	
-\newpage
+	\newpage
 	\section{Descripción de la maquina}
 		En la Figura \ref{fig:Banda}, se presenta un esquema general de la maquina selladora de banda continua horizontal FR-900, y en la Tabla \ref{table:Banda} se describen las partes presentadas en la Figura \ref{fig:Banda}.
 		\begin{figure}[ht]
@@ -872,8 +973,12 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 			\end{figure}
 	
 \newpage
-	\subsection{Funcionamiento de la red neuronal}		
-
+	\subsection{Implementación en Sistema Embebido}
+	
+	Para el funcionamiento del algoritmo en tiempo real en el prototipo construido, se utilizó una tarjeta de desarrollo Nvidia Jetson Nano $2 \ GB$, debido a que cuenta con una tarjeta gráfica y está diseñada para ejecutar modelos de redes neuronales. La implementación del algoritmo, debido a que la red fue entrenada con imágenes de tubérculos de papa estáticas, se realizó de igual forma.\\
+	
+		
+	
 
 
 
