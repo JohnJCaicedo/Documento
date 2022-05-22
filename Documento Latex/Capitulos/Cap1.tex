@@ -230,11 +230,8 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 	
 	\begin{figure}[ht]
 		\centering
-<<<<<<< HEAD
 		\includegraphics[scale=0.15]{Figs/A-generic-CNN-Architecture.png}
-=======
 		\includegraphics[scale=0.18]{Figs/A-generic-CNN-Architecture.png}
->>>>>>> 3882cbf97b40caa890a25706ebf29e459efa8288
 		\caption{Arquitectura General De Una CNN}
 		\label{fig:cnnarchitecture}
 	\end{figure}	
@@ -266,7 +263,7 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 					FiverCrop              & Recorta la imagen en cuatro esquinas y el recorte central                              & RandomVerticalFlip    & Voltea verticalmente la imagen al azar con una probabilidad dada                                \\ \hline
 					Grayscale             & Convierte la imágen en escala de grises                                                & Resize                & Redimensiona la imagen al tamaño dado                                                           \\ \hline
 					Pad                   & Rellena la imágen en todos sus lados con el valor de "pad" dado                        & TenCrop               & Recorta la imagen dada en cuatro esquinas y el recorte central más la versión volteada de éstas \\ \hline
-					RandomAffine          & Transformación afín aleatoria de la imagen manteniendo el centro invariante            & GaussianBlur          & Desenfoca la imágen con un filtro gausseano                                                                                                                                                     \\ \hline
+					RandomAffine          & Transformación afín aleatoria de la imagen manteniendo el centro invariante            & GaussianBlur          & Desenfoca la imágen con un filtro gausseano                                                                                                                     \\ \hline
 				\end{tabular}
 				\caption{Funciones de transformación de imágenes del módulo de \textit{Pytorch}}
 				\label{table:Filters1}
@@ -289,15 +286,9 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 				\caption{Funciones de transformación de imágenes del módulo de \textit{Pytorch}}
 				\label{table:filters2}
 			\end{table}
-<<<<<<< HEAD
-\newpage
-			De igual forma, en la Tabla \ref{table:filters2}, se observan algunos filtros como recortes en la imágen, rotaciones, cambios de perspectiva, cambios en la nitidez y contraste de la imágen. Se escogieron los filtros considerados mejores, (NO cambian la morfología del color), para el caso del \textit{Dataset} de tubérculos de papa creado en este documento. 
-			
-			Los filtros que se utilizaron en el desarrollo del algoritmo de clasificación, teniendo en cuenta aquellas transformaciones que podrían afectar el rendimiento del algoritmo son:
-=======
 
-			De igual forma, en la TABLA \ref{table:filters2}, se observan algunos filtros como recortes en la imágen, rotaciones, cambios de perspectiva, cambios en la nitidez y contraste de la imágen. Se escogieron los filtros considerados mejores, (No cambian la morfología del color), para el caso del \textit{Dataset} de tubérculos de papa creado en este documento. Los filtros que se utilizaron en el desarrollo del algoritmo de clasificación, teniendo en cuenta aquellas transformaciones que podrían afectar el rendimiento del algoritmo son:
->>>>>>> 3882cbf97b40caa890a25706ebf29e459efa8288
+			\newpage
+			De igual forma, en la Tabla \ref{table:filters2}, se observan algunos filtros como recortes en la imágen, rotaciones, cambios de perspectiva, cambios en la nitidez y contraste de la imágen. Se escogieron los filtros considerados mejores, (No cambian la morfología del color), para el caso del \textit{Dataset} de tubérculos de papa creado en este documento. Los filtros que se utilizaron en el desarrollo del algoritmo de clasificación, teniendo en cuenta aquellas transformaciones que podrían afectar el rendimiento del algoritmo son:
 			
 			\begin{itemize}
 				\item Resize
@@ -329,12 +320,8 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 				\label{eq:meanstd2}
 			\end{equation}
 
-<<<<<<< HEAD
-
 			La Figura \ref{fig:agumentation} enseña una matriz de imágenes como parte del \textit{Trainset}, que muestra las transformaciones hechas al $80\%$ de las imágenes del \textit{Dataset}, y la clase a la que pertenece la Tabla \ref{table:Clases}, verificando así que las funciones creadas están enlazando correctamente la imágen con su respectiva clase y aplicando de forma correcta las transformaciones.
-=======
-			La FIGURA \ref{fig:agumentation} enseña una matriz de imágenes como parte del \textit{Trainset}, que muestra las transformaciones hechas al $80\%$ de las imágenes del \textit{Dataset}, y la clase a la que pertenece la TABLA \ref{table:Clases}, verificando así que las funciones creadas están enlazando correctamente la imágen con su respectiva clase y aplicando de forma correcta las transformaciones.
->>>>>>> 3882cbf97b40caa890a25706ebf29e459efa8288
+
 			
 			\begin{figure}[ht]
 				\centering
@@ -417,18 +404,10 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 				{l_n=-\sum_{c=1}^{C}w_c log\left(\frac{exp(x_n,c)}{\sum_{i=1}^{C}exp(x_n,i)}y_n,c\right)}
 			\end{equation}\\
 			
-			Donde $x$ es la entrada, $y$ el objetivo de predicción, $w$ es el peso, $C$ el número de clases y $N$ es la dimensión del \textit{Batch}. Usando la función \textit{nn.CrossEntropyLoss()}, se calculan las pérdidas entre entrada y salida del modelo entrenado, para posteriormente utilizar estas pérdidas como métricas en porcentajes de \textit{Accuracy} y \textit{Losses}.\\
-			
+			Donde $x$ es la entrada, $y$ el objetivo de predicción, $w$ es el peso, $C$ el número de clases y $N$ es la dimensión del \textit{Batch}. Usando la función \textit{nn.CrossEntropyLoss()}, se calculan las pérdidas entre entrada y salida del modelo entrenado, para posteriormente utilizar estas pérdidas como métricas en porcentajes de \textit{Accuracy} y \textit{Losses}.\\			
 			
 			El rendimiento de esta función de pérdidas, es mejor cuando el objetivo contiene índices de clase y no las etiquetas, ya que esto permite optimizar el cálculo, por esta razón, se agruparon las etiquetas de las imágenes en $4 \ Clases$ definidas.
 			
-<<<<<<< HEAD
-			
-			
-			
-			
-=======
->>>>>>> 3882cbf97b40caa890a25706ebf29e459efa8288
 			\subsubsection{OPTIMIZADOR}
 			
 			\textit{Pytorch} posee \textit{torch.optim}, que es un paquete que implementa varios algoritmos de optimización. 
@@ -475,20 +454,14 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 					\caption{Modelo AlexNet}
 					\label{fig:AlexNet}
 				\end{figure}
-<<<<<<< HEAD
 				
 				Como se aprecia en la Figura \ref{fig:AlexNet}, el modelo de AlexNet, toma una imagen de entrada con una resolución de \textit{227 x 227} pixeles y 3 canales de color, la información recibida pasa por cinco capas convolucionales, (en negro), de neuronas ReLu y tres capas de Max-pooling, (en azul). La quinta capa de convolución posee 256 mapas diferentes con dimensiones de \textit{13 x 13}. Seguidamente se aplican las dos capas densas de 4096 neuronas, las cuales son seguidas por una capa de salida de 1000 neuronas, dotadas con una función softmax. Cada neurona de la capa de salida representa un conjunto semántico diferente. Y su valor de activación indica la probabilidad de que la imagen de entrada pertenezca a dicho conjunto semántico.\\
-=======
 
-				Como se aprecia en la Figura \ref{fig:AlexNet}, el modelo de AlexNet, toma una imagen de entrada con una resolución de \textit{227 x 227} pixeles y 3 canales de color, la información recibida pasa por cinco capas convolucionales, (en negro), de neuronas ReLu y tres capas de Max-pooling, (en azul). La quinta capa de convolución posee 256 mapas diferentes con dimensiones de \textit{13 x 13}. Seguidamente se aplican las dos capas densas de 4096 neuronas, las cuales son seguidas por una capa de salida de 1000 neuronas, dotadas con una función softmax. Cada neurona de la capa de salida representa un conjunto semántico diferente. Y su valor de activación indica la probabilidad de que la imagen de entrada pertenezca a dicho conjunto semántico.
->>>>>>> 3882cbf97b40caa890a25706ebf29e459efa8288
-		
 
 			\subsubsection{\MakeUppercase{Modelo preentrenado VGG19}}
 			
-				La arquitectura VGG fue planteada por Simonyan y Zisserman, la cual consiste en stacks lineales de bloques, que se encuentran formados por una cantidad determinada de capas convolucionales, una función de activación no lineal y una capa Max Pooling, seguidos de tres capas fully-conected y finalmente una capa softmax \cite{ref_2}. Esta arquitectura cuenta con cinco bloques los cuales están distribuidos como se muestra en la Figura \ref{fig:VGG19}.
-				
-				\newpage
+				La arquitectura VGG fue planteada por Simonyan y Zisserman, la cual consiste en stacks lineales de bloques, que se encuentran formados por una cantidad determinada de capas convolucionales, una función de activación no lineal y una capa Max Pooling, seguidos de tres capas fully-conected y finalmente una capa softmax \cite{ref_2}. Esta arquitectura cuenta con cinco bloques los cuales están distribuidos como se muestra en la Figura \ref{fig:VGG19}.				
+			
 				\begin{figure}[ht]
 					\centering
 					\includegraphics[scale=0.45]{Figs/22.jpeg}
@@ -503,11 +476,7 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 				
 				\begin{figure}[ht]
 					\centering
-<<<<<<< HEAD
-					\includegraphics[scale=0.5]{Figs/21.jpeg}
-=======
 					\includegraphics[scale=0.2]{Figs/21.jpeg}
->>>>>>> 3882cbf97b40caa890a25706ebf29e459efa8288
 					\caption{Composición Modelo VGG19}
 					\label{fig:VGG19_tabla}
 				\end{figure}
@@ -517,18 +486,17 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 				
 				\begin{figure}[ht]
 					\centering
-					\includegraphics[scale=0.55]{Figs/101.png}
+					\includegraphics[scale=0.4]{Figs/101.png}
 					\caption{Accuracy Modelo VGG19}
 					\label{fig:VGG19_accuracy}
 				\end{figure}  
 				
-				Como se puede observar en la Figura \ref{fig:VGG19_accuracy}, la precisión del modelo al completar 50 épocas es inferior al 60.	\\
-				
-				En la FIGURA \ref{fig:VGG19_losses}, se puede apreciar que el modelo cuenta con \textit{16 \%} aproximadamente de desviación entre las predicciones y los valores reales, implementados durante el entrenamiento del modelo.
+				Como se puede observar en la Figura \ref{fig:VGG19_accuracy}, la precisión del modelo al completar 50 épocas es inferior al 60. 	
+				En la Figura \ref{fig:VGG19_losses}, se puede apreciar que el modelo cuenta con \textit{16 \%} aproximadamente de desviación entre las predicciones y los valores reales, implementados durante el entrenamiento del modelo.
 				
 				\begin{figure}[ht]
 					\centering
-					\includegraphics[scale=0.55]{Figs/102.png}
+					\includegraphics[scale=0.4]{Figs/102.png}
 					\caption{Losses Modelo VGG19}
 					\label{fig:VGG19_losses}
 				\end{figure}
@@ -666,24 +634,19 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 					\label{fig:ArqRes18}
 				\end{figure}
 				
-<<<<<<< HEAD
-				Como se puede observaren la Figura \ref{fig:ArqRes18}, la primera capa de convolución implementa una plantilla de \textit{7 x 77 x 7}, con un tamaño de paso de 2 y un relleno de 3, Seguido a eso, se realiza BN, ReLu y Maxpooling. Estos constituyen la primera parte del modulo de convolucion conv1.
-				\\
-				Luego hay cuatro etapas, cada etapa tiene múltiples módulos, cada módulo se llama un bloque de construcción, por ende se tiene que ResNet=[2,2,2,2] se puede evidenciar que hay 8 bloques de construcción.
 
-=======
-				Como se puede observaren la Figura \ref{fig:ArqRes18}, la primera capa de convolución implementa una plantilla de \textit{7 x 77 x 7}, con un tamaño de paso de 2 y un relleno de 3, Seguido a eso, se realiza BN, ReLu y Maxpooling. Estos constituyen la primera parte del modulo de convolucion conv1.	
+				Como se puede observar en la Figura \ref{fig:ArqRes18}, la primera capa de convolución implementa una plantilla de \textit{7 x 77 x 7}, con un tamaño de paso de 2 y un relleno de 3, Seguido a eso, se realiza BN, ReLu y Maxpooling. Estos constituyen la primera parte del modulo de convolucion conv1.\\
+					
 				Luego hay cuatro etapas, cada etapa tiene múltiples módulos, cada módulo se llama un bloque de construcción, por ende se tiene que ResNet=[2,2,2,2] se evidencia que hay 8 bloques de construcción, como se presenta en la Figura \ref{fig:RESNET18} \cite{ref_5}.				
 		
 				\begin{figure}[ht]
 					\centering
-					\includegraphics[scale=0.09]{Figs/69.png}
+					\includegraphics[scale=0.07]{Figs/69.png}
 					\caption{Arquitectura Resnet18}
 					\label{fig:RESNET18}
 				\end{figure}
->>>>>>> 3882cbf97b40caa890a25706ebf29e459efa8288
 
-		\newpage	
+	
 		En la FIGURA \ref{fig:preci_RESNET18}, se procede a presentar la precisión obtenida del modelo ResNet-18 durante 50 épocas, sin haber aplicado la optimizacion bayesiana.
 		
 		\begin{figure}[ht]
