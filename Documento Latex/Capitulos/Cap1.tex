@@ -880,7 +880,35 @@ En este capitulo se presenta la definicion y estructura de una red neuronal arti
 	Aquí se describe el funcionamiento mecánico de la maquina y el funcionamiento de la red neuronal, la cual fue programada en la tarjeta Jetson Nano para realizar la clasificación de los tubérculos de papa.
 	
 	\subsection{Funcionamiento Mecánico}
+		El funcionamiento mecánico inicia conectando la alimentación de la maquina, una vez la maquina se encuentre conectada, el indicador luminoso que se encuentra en el pulsador de inicio se activará, esto para dar a conocer que la maquina ya puede entrar en funcionamiento. Se presiona el pulsador anteriormente mencionado y se genera la conmutación del relé para la activación del motor, el cual se encuentra conectado a una caja reductora, que transmite la energía a tres engranajes rectos (Figura \ref{fig:caja}), en donde el ultimo engranaje se encuentra conectado y transmite la energía a uno de los rodillos tensores de la banda transportadora mediante un eje, como se aprecia en la Figura \ref{fig:eje} con el fin de generar el movimiento de la banda. 
+		
+\newpage	
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[scale=0.21]{Figs/201.jpg}
+			\caption{Caja reductora conectada a los engranajes rectos}
+			\label{fig:caja}
+		\end{figure}
 	
+		
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[scale=0.21]{Figs/202.jpg}
+			\caption{Conexión engranajes y rodillo tensor}
+			\label{fig:eje}
+		\end{figure}
+
+\newpage	
+		Una vez se inicia el movimiento de la banda transportadora, este seguirá hasta que el tubérculo entre en contacto con el con la luz infrarroja del sensor foto eléctrico como se observa en la Figura \ref{fig:sensor}, cuando el sensor detecte el tubérculo, la señal enviada detendrá la banda y activara un timer de un segundo, esto con el fin de permitir que la cámara tome la foto del tubérculo y la envié a la red neuronal para su análisis. Culminado el tiempo establecido en el timer, la banda continuara su movimiento para desplazar y continuar con la clasificación de los tubérculos.
+		
+			\begin{figure}[ht]
+			\centering
+			\includegraphics[scale=0.23]{Figs/203.jpg}
+			\caption{Detección del sensor fotoeléctrico}
+			\label{fig:sensor}
+			\end{figure}
+	
+\newpage
 	\subsection{Funcionamiento de la red neuronal}		
 
 
