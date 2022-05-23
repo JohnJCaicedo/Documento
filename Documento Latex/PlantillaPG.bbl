@@ -16,6 +16,11 @@ E.~Garc{\'\i}a and F.~Flego, ``Agricultura de precisi{\'o}n,'' {\em Revista
 A.~Krogh, ``What are artificial neural networks?,'' {\em Nature biotechnology},
   vol.~26, no.~2, pp.~195--197, 2008.
 
+\bibitem{wu2019fastfcn}
+H.~Wu, J.~Zhang, K.~Huang, K.~Liang, and Y.~Yu, ``Fastfcn: Rethinking dilated
+  convolution in the backbone for semantic segmentation,'' {\em arXiv preprint
+  arXiv:1903.11816}, 2019.
+
 \bibitem{van2001art}
 D.~A. Van~Dyk and X.-L. Meng, ``The art of data augmentation,'' {\em Journal of
   Computational and Graphical Statistics}, vol.~10, no.~1, pp.~1--50, 2001.
@@ -24,6 +29,10 @@ D.~A. Van~Dyk and X.-L. Meng, ``The art of data augmentation,'' {\em Journal of
 G.~E. Hinton, N.~Srivastava, A.~Krizhevsky, I.~Sutskever, and R.~R.
   Salakhutdinov, ``Improving neural networks by preventing co-adaptation of
   feature detectors,'' {\em arXiv preprint arXiv:1207.0580}, 2012.
+
+\bibitem{zhu2012improved}
+Y.~Zhu and C.~Huang, ``An improved median filtering algorithm for image noise
+  reduction,'' {\em Physics Procedia}, vol.~25, pp.~609--616, 2012.
 
 \bibitem{ref_12}
 J.~C. Tello, ``La visi{\'o}n artificial y las operaciones morfol{\'o}gicas en

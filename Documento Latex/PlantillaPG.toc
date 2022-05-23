@@ -11,53 +11,57 @@
 \contentsline {chapter}{\numberline {2}Marco Conceptual}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Agricultura de precisión}{7}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Artificial Neural Networks}{7}{section.2.2}%
-\contentsline {section}{\numberline {2.3}DATA AUGMENTATION}{8}{section.2.3}%
-\contentsline {section}{\numberline {2.4}\textit {Dropout}}{8}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Imagen Binaria}{8}{section.2.5}%
-\contentsline {section}{\numberline {2.6}\textit {Max-pooling}}{9}{section.2.6}%
-\contentsline {section}{\numberline {2.7}\textit {Over-fitting}}{9}{section.2.7}%
-\contentsline {section}{\numberline {2.8}\textit {Padding}}{9}{section.2.8}%
-\contentsline {section}{\numberline {2.9}Procesamiento de imágenes}{9}{section.2.9}%
-\contentsline {section}{\numberline {2.10}\textit {Stride}}{10}{section.2.10}%
-\contentsline {section}{\numberline {2.11}Transfer Learning}{10}{section.2.11}%
-\contentsline {section}{\numberline {2.12}\textit {Under-fitting}}{10}{section.2.12}%
-\contentsline {section}{\numberline {2.13}Visión artificial}{11}{section.2.13}%
-\contentsline {chapter}{\numberline {3}Estado del arte}{12}{chapter.3}%
-\contentsline {section}{\numberline {3.1}MatLab.}{12}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Artificial Neural Networks.}{12}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Super Vector Machine.}{13}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Otros métodos}{14}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Diseño Del Algoritmo de Clasificación}{16}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Preparación y Adquisición De Las Imágenes}{17}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Distribución del Dataset}{19}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Algoritmo de Clasificación}{20}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Red Neuronal Artificial Convolucional}{20}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Preparación Del \textit {Dataset}}{21}{subsection.5.1.1}%
-\contentsline {subsubsection}{\nonumberline PREPROCESAMIENTO DE IMÁGENES}{21}{subsubsection*.3}%
-\contentsline {subsection}{\numberline {5.1.2}Funciones PotatoDataset y DataLoader}{24}{subsection.5.1.2}%
-\contentsline {subsubsection}{\nonumberline FUNCIÓN POTATODATASET}{24}{subsubsection*.5}%
-\contentsline {subsubsection}{\nonumberline FUNCIÓN DATALOADER}{25}{subsubsection*.7}%
-\contentsline {subsection}{\numberline {5.1.3}Hiperparámetros Del Modelo}{26}{subsection.5.1.3}%
-\contentsline {subsubsection}{\nonumberline FUNCIÓN DE PÉRDIDAS}{26}{subsubsection*.9}%
-\contentsline {subsubsection}{\nonumberline OPTIMIZADOR}{27}{subsubsection*.11}%
-\contentsline {subsection}{\numberline {5.1.4}Arquitectura del modelo}{28}{subsection.5.1.4}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado ALEXNET}}{28}{subsubsection*.13}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG19}}{29}{subsubsection*.15}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG11}}{33}{subsubsection*.17}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado RESNET18}}{37}{subsubsection*.19}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Comparación de arquitecturas}}{41}{subsubsection*.21}%
-\contentsline {subsection}{\numberline {5.1.5}Optimización Bayesiana}{42}{subsection.5.1.5}%
-\contentsline {section}{\numberline {5.2}Clasificación Por Tamaño}{44}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Prototipo}{47}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Especificaciones principales}{47}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Descripción de la maquina}{48}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Esquema eléctrico}{49}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Estructura}{50}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Bombillos}{50}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Sensor Fotoeléctrico}{50}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}Cámara Web}{51}{subsection.6.4.3}%
-\contentsline {section}{\numberline {6.5}Funcionamiento}{51}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Funcionamiento Mecánico}{51}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}Implementación en Sistema Embebido}{54}{subsection.6.5.2}%
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{55}{subsection.6.5.2}%
+\contentsline {section}{\numberline {2.3}Convolución Dilatada}{8}{section.2.3}%
+\contentsline {section}{\numberline {2.4}DATA AUGMENTATION}{8}{section.2.4}%
+\contentsline {section}{\numberline {2.5}\textit {Dropout}}{9}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Filtro de mediana}{9}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Imagen Binaria}{9}{section.2.7}%
+\contentsline {section}{\numberline {2.8}\textit {Max-pooling}}{9}{section.2.8}%
+\contentsline {section}{\numberline {2.9}\textit {Over-fitting}}{10}{section.2.9}%
+\contentsline {section}{\numberline {2.10}\textit {Padding}}{10}{section.2.10}%
+\contentsline {section}{\numberline {2.11}Procesamiento de imágenes}{11}{section.2.11}%
+\contentsline {section}{\numberline {2.12}\textit {Stride}}{11}{section.2.12}%
+\contentsline {section}{\numberline {2.13}Transfer Learning}{12}{section.2.13}%
+\contentsline {section}{\numberline {2.14}\textit {Under-fitting}}{12}{section.2.14}%
+\contentsline {section}{\numberline {2.15}Visión artificial}{12}{section.2.15}%
+\contentsline {chapter}{\numberline {3}Estado del arte}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}MatLab.}{13}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Artificial Neural Networks.}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Super Vector Machine.}{14}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Otros métodos}{15}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Clasificación de Tuberculos de Papa En La Agricultara Colombiana}{16}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Diseño Del Algoritmo de Clasificación}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Preparación y Adquisición De Las Imágenes}{18}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Distribución del Dataset}{20}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Algoritmo de Clasificación}{21}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Red Neuronal Artificial Convolucional}{21}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Preparación Del \textit {Dataset}}{22}{subsection.5.1.1}%
+\contentsline {subsubsection}{\nonumberline PREPROCESAMIENTO DE IMÁGENES}{22}{subsubsection*.3}%
+\contentsline {subsection}{\numberline {5.1.2}Funciones PotatoDataset y DataLoader}{25}{subsection.5.1.2}%
+\contentsline {subsubsection}{\nonumberline FUNCIÓN POTATODATASET}{25}{subsubsection*.5}%
+\contentsline {subsubsection}{\nonumberline FUNCIÓN DATALOADER}{26}{subsubsection*.7}%
+\contentsline {subsection}{\numberline {5.1.3}Hiperparámetros Del Modelo}{27}{subsection.5.1.3}%
+\contentsline {subsubsection}{\nonumberline FUNCIÓN DE PÉRDIDAS}{27}{subsubsection*.9}%
+\contentsline {subsubsection}{\nonumberline OPTIMIZADOR}{28}{subsubsection*.11}%
+\contentsline {subsection}{\numberline {5.1.4}Arquitectura del modelo}{29}{subsection.5.1.4}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado ALEXNET}}{29}{subsubsection*.13}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG19}}{30}{subsubsection*.15}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG11}}{34}{subsubsection*.17}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado RESNET18}}{38}{subsubsection*.19}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Comparación de arquitecturas}}{42}{subsubsection*.21}%
+\contentsline {subsection}{\numberline {5.1.5}Optimización Bayesiana}{43}{subsection.5.1.5}%
+\contentsline {section}{\numberline {5.2}Clasificación Por Tamaño}{45}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Prototipo}{48}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Especificaciones principales}{48}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Descripción de la maquina}{49}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Esquema eléctrico}{50}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Estructura}{51}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Bombillos}{51}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Sensor Fotoeléctrico}{51}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Cámara Web}{52}{subsection.6.4.3}%
+\contentsline {section}{\numberline {6.5}Funcionamiento}{52}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Funcionamiento Mecánico}{52}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Implementación en Sistema Embebido}{55}{subsection.6.5.2}%
+\contentsline {chapter}{\numberline {7}Trabajo Futuro}{57}{chapter.7}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{58}{chapter.7}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

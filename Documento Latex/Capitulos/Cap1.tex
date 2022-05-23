@@ -63,6 +63,19 @@ En este capitulo se abordan algunos términos básicos necesarios, que ayuden al
 
 \section{Artificial Neural Networks} Las RNA son sistemas de procesamiento de la información, cuya composición y manejo permanecen inspirados en las redes neuronales biológicas. Consisten en un enorme conjunto de recursos básicos de procesamiento, denominados nodos o neuronas, que permanecen organizados en capas. De esta forma, las RNA son sistemas adaptativos que aprenden de la vivencia, en otros términos, aprenden a realizar ciertas labores por medio de un entrenamiento con ejemplos ilustrativos \cite{ref_11}.
 \\ 
+
+\section{Convolución Dilatada}
+
+Se trata de un método que busca ampliar la entrada insertando huecos entre sus elementos consecutivos. Siendo igual que una convolución normal, pero con la diferencia de que omite pixeles, con el fin de cubrir más área de la entrada, dando un campo de visión más amplio con el mismo coste computacional, por medio de un parámetro llamado factor de dilatación \textit{l}, indicando cuanto se expande la entrada \cite{wu2019fastfcn}. La Figura \ref{fig:cd} muestra un ejemplo de la implementación de la convolución dilatada.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.6]{Figs/Convolucion_dilatada.png}
+	\caption{Ejemplo Convolución Dilatada}
+	\label{fig:cd}
+\end{figure}
+
+
 \section{DATA AUGMENTATION}
 El Data augmentation consiste en la transformación de los datos existentes, para crear un \textit{dataset} con mayor cantidad de datos diferentes. El objetivo de esta herramienta es crear nuevos datos que puedan ser añadidos al conjunto ya existente, y así contar con más muestras para un mejor desempeño del algoritmo. Además de esto, también es implementado para reducir el \textit{overfitting}, ya que al añadir más información al conjunto de entrenamiento se evita que el modelo se sobre ajuste. \\
 
@@ -73,6 +86,10 @@ El concepto Data Augmentation tiene relación con los procedimientos para edific
 
 Para cada entrenamiento de redes neuronales, la propagación hacia adelante involucra la eliminación aleatoria de la mitad de activaciones en cada capa. Haciendo que el error se extienda hacia atrás a traves de las activaciones remanentes, reduciendo sustancialmente al sobreajuste.Se cree que es debido al impedimento de que los pesos de la red colaboren entre sí para memorizar las muestras del entrenamiento mejorando su rendimiento \cite{hinton2012improving}
 
+\section{Filtro de mediana}
+
+Es una tecnología que procesa señales no lineales. El valor del ruido que proviene de la imagen digital o la secuencia es sustituida por el valor mediano de la vecindad (máscara).\\
+Los pixeles de la máscara se clasifican en el orden de sus niveles de gris, el valor mediano del grupo es almacenado para sustituir el valor del ruido \cite{zhu2012improved}.
 
 \section{Imagen Binaria} Se define una imagen binaria como una función de dos variables discretas
 a[m,n] las cuales puede tomar dos valores, ‘0’ o ‘1’, dependiendo del nivel de gris de la
@@ -82,13 +99,21 @@ coordenadas discretas (también pueden ser reales pero no es el objetivo de este
 \section{\textit{Max-pooling}}
 
 Una capa de agrupación normal, realiza un muestreo decreciente divideindo la entrada en agrupaciones rectangulares y calculando los valores maximas de cada agrupación.\\
+
 Un operador max-pooling, se puede hacer uso para la reducción del muestreo sobre las bandas de salida convolucionales, haciendo una reducción de la variabilidad.Esto lo realiza a travez de un valor máximo dentro de un grupo de activaciones A.La banda máxima agrupada m está compuesta por f filtros relacionados $p_{m}=[p_{1m},...,p_{fm}] \in A^f$.
 
 \begin{equation}
 	p_{f,m}=max(h_{f,(m-1)N+r})
 \end{equation}
 
-Donde $N \in (1,...,R) $ representado como un desplazamiento de agrupación cuando N < R.La capa de agrupación disminuye la dimensionalidad de salida de K bandas convolucionales a $M=(K-R)/N+1$ bandas que han sido agrupadas teniendo como resultante $p=[p1,...,pM] \in R^{M.J}$ \cite{gholamalinezhad2020pooling}.
+Donde $N \in (1,...,R) $ representado como un desplazamiento de agrupación cuando N < R.La capa de agrupación disminuye la dimensionalidad de salida de K bandas convolucionales a $M=(K-R)/N+1$ bandas que han sido agrupadas teniendo como resultante $p=[p1,...,pM] \in R^{M.J}$ \cite{gholamalinezhad2020pooling}, un ejemplo de max-pooling se puede observar en la Figura \ref{mp}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.6]{Figs/mp.png}
+	\caption{Ejemplo Max-Pooling}
+	\label{mp}
+\end{figure}
 
 \section{\textit{Over-fitting}}
 
@@ -98,21 +123,36 @@ Un problema al momento de entrenar redes neuronales, es el \textit{over-fitting}
 
 Se utiliza para acomodar el dominio finito de las muestras a lo cual permite que el soporte de la convolución se extienda mas allá de los limites de las mismas, reduciendo el impacto de los efectos de frontera.\\
 
-El mas utilizado es el \textit{zero padding}, debido a que mantiene la misma dimensionalidad al aplicar convoluciones.Por otro lado permite a las redes neuronales convolucionadas codificar información de posición absoluta a pesar de capas de agrupamiento en su arquitectura \cite{islam2021position}.
+El mas utilizado es el \textit{zero padding}, debido a que mantiene la misma dimensionalidad al aplicar convoluciones.Por otro lado permite a las redes neuronales convolucionadas codificar información de posición absoluta a pesar de capas de agrupamiento en su arquitectura \cite{islam2021position}, un ejemplo de padding se puede observar en la Figura \ref{padding}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.65]{Figs/padding.png}
+	\caption{Ejemplo Zero-Padding}
+	\label{padding}
+\end{figure}
 
 
+\newpage
 \section{Procesamiento de imágenes} El procesamiento digital de imágenes es el conjunto de prácticas que modifican imágenes digitales para mejorar la visibilidad de ciertas características de los objetos presentes en la imagen, para su posterior análisis o simplemente para mejorar la visualización de la
 imagen.\\
 
 El objetivo del procesamiento de imágenes no es aumentar la información que se puede extraer de las imágenes, solo se busca realzar ciertas características de la imagen. Para procesar la imagen efectivamente se debe considerar el proceso de formación y las características de interés de la imagen \cite{ref_13}.
-\\ 
- 
+
  
  \section{\textit{Stride}}
 
  
- Es un parámetro que especifica cuántos píxeles se traslada horizontalmente y verticalmente, mientras es convolucionada la imagen. En algunas arquitecturas el \textit{stride} se utiliza en vez de \textit{max pooling} para reducir el tamaño de la capa \cite{murphy2016overview}.
+ Es un parámetro que especifica cuántos píxeles se traslada horizontalmente y verticalmente, mientras es convolucionada la imagen. En algunas arquitecturas el \textit{stride} se utiliza en vez de \textit{max pooling} para reducir el tamaño de la capa \cite{murphy2016overview}, un ejemplo de stride se puede observar en la Figura \ref{stride}.
  
+ \begin{figure}[ht]
+ 	\centering
+ 	\includegraphics[scale=0.5]{Figs/stride.png}
+ 	\caption{Convolución con Zero Padding y Stride $> 1$}
+ 	\label{stride}
+ \end{figure}
+ 
+ \newpage
 \section{Transfer Learning}
 El aprendizaje por transferencia se define como la mejora del aprendizaje en una nueva tarea a través de la transferencia de conocimientos de una tarea relacionada que ya se ha aprendido. Aunque la mayoría de los algoritmos de aprendizaje automático están diseñados para abordar tareas individuales, el desarrollo de algoritmos que faciliten el aprendizaje por transferencia es un tema de interés permanente en la comunidad de aprendizaje automático. El aprendizaje por transferencia se utiliza para mejorar a un alumno de un dominio mediante la transferencia de información de un dominio relacionado. Podemos basarnos en experiencias no técnicas del mundo real para entender por qué es posible el aprendizaje por transferencia.\\
 
@@ -155,7 +195,7 @@ Es lo contrario al \textit{over-fitting}, siendo este cuando el modelo creado es
 	
 	El último artículo revisado es presentado por \textit{Michael Barnes y Tom Duckett} el \cite{Barnes2010}, cuyo objetivo de  investigación es introducir un método automático de detección de manchas en imágenes digitales de patatas. El sistema desarrollado es entrenable, de modo que pueda trabajar con diferentes variedades de patatas y variaciones en las estaciones, condiciones de iluminación, etc. Otro objetivo, pensando en su posible implantación en entornos industriales, es permitir el procesamiento de imágenes en tiempo real, posiblemente mediante la construcción de \textit{Minimalist Boosted Classifier}, que extraigan un subconjunto mínimo de todas las características que optimicen el rendimiento de la detección con el menor coste computacional posible.
 
-
+\section{Clasificación de Tuberculos de Papa En La Agricultara Colombiana}
 
 
 
@@ -1003,26 +1043,64 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 \newpage	
 		Una vez se inicia el movimiento de la banda transportadora, este seguirá hasta que el tubérculo entre en contacto con el con la luz infrarroja del sensor foto eléctrico como se observa en la Figura \ref{fig:sensor}, cuando el sensor detecte el tubérculo, la señal enviada detendrá la banda y activara un timer de un segundo, esto con el fin de permitir que la cámara tome la foto del tubérculo y la envié a la red neuronal para su análisis. Culminado el tiempo establecido en el timer, la banda continuara su movimiento para desplazar y continuar con la clasificación de los tubérculos.
 		
-			\begin{figure}[ht]
+		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.23]{Figs/203.jpg}
 			\caption{Detección del sensor fotoeléctrico}
 			\label{fig:sensor}
-			\end{figure}
+		\end{figure}
 	
-\newpage
+	\newpage
 	\subsection{Implementación en Sistema Embebido}
 	
 	Para el funcionamiento del algoritmo en tiempo real en el prototipo construido, se utilizó una tarjeta de desarrollo Nvidia Jetson Nano $2 \ GB$, debido a que cuenta con una tarjeta gráfica y está diseñada para ejecutar modelos de redes neuronales. La implementación del algoritmo, debido a que la red fue entrenada con imágenes de tubérculos de papa estáticas, se realizó de igual forma.\\
 	
-	El algoritmo captura una foto desde la webcam, realiza el procesamiento en la red neuronal y posteriormente, la clasificaicón por tamaño. Los resultados de cada imágen son mostrados por consola y la imágen capturada es guardada en formato $.jpg$ con el nombre de ${CLASE}\_{TAMANO}$, para verificar si la clasificación fue correcta. Se realizó un experimento con 50 papas de las diferentes clases definidas para verificar la precisión del algoritmo. La tabla \ref{table:res} muestra los resultados de 10 papas.
+	El algoritmo captura una foto desde la webcam, realiza el procesamiento en la red neuronal y posteriormente, la clasificaicón por tamaño. Los resultados de cada imágen son mostrados por consola y la imágen capturada es guardada en formato $.jpg$ con la información de las predicciones, para verificar si la clasificación fue correcta. La imagen \ref{fig:implementacion}, muestra una de las papas pasando dentro de las estructura hecha para la clasificación.
 	
-	 	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.2]{Figs/implementacion.jpg}
+		\caption{Tubérculo de Papa Dentro de La Estructura}
+		\label{fig:implementacion}
+	\end{figure}
+
+	Se realizó un experimento con 50 papas de las diferentes clases para verificar la precisión del algoritmo. La tabla \ref{table:res} muestra los resultados de algunas de las papas utilizadas.
 	
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|cc|cc|}
+			\hline
+			\multicolumn{2}{|c|}{Real}                 & \multicolumn{2}{c|}{Prediccion}           \\ \hline
+			\multicolumn{1}{|c|}{Clase}   & Tamaño     & \multicolumn{1}{c|}{Clase}   & Tamaño     \\ \hline
+			\multicolumn{1}{|c|}{Clase 1} & Grande     & \multicolumn{1}{c|}{Clase 1} & Mediano    \\ \hline
+			\multicolumn{1}{|c|}{Clase 1} & Muy Grande & \multicolumn{1}{c|}{Clase4}  & Muy Grande \\ \hline
+			\multicolumn{1}{|c|}{Clase 4} & Mediana    & \multicolumn{1}{c|}{Clase 4} & Mediana    \\ \hline
+			\multicolumn{1}{|c|}{Clase 3} & Grande     & \multicolumn{1}{c|}{Clase 3} & Grande     \\ \hline
+			\multicolumn{1}{|c|}{Clase 2} & Mediana    & \multicolumn{1}{c|}{Clase 2} & Mediana    \\ \hline
+			\multicolumn{1}{|c|}{Clase 1} & Mediana    & \multicolumn{1}{c|}{Clase 2} & Grande     \\ \hline
+			\multicolumn{1}{|c|}{Clase 4} & Grande     & \multicolumn{1}{c|}{Clase 3} & Grande     \\ \hline
+			\multicolumn{1}{|c|}{Clase 3} & Mediana    & \multicolumn{1}{c|}{Clase 3} & Mediana    \\ \hline
+			\multicolumn{1}{|c|}{Clase 1} & Mediana    & \multicolumn{1}{c|}{Clase 1} & Mediana    \\ \hline
+		\end{tabular}
+		\caption{Resultados Papas Predichas}
+		\label{table:res}
+	\end{table}
+	
+	
+	De las 50 papas utlizadas para la verificación, se obtuvo un resultado de $80\%$ de clases con correcta predicción y $88\%$ de tamaños correctamente clasificados. Esto da una presición total de $85\%$ para las papas que fueron correctamente clasificadas en ambas categorias.\\
+	
+	El tiempo de ejecución del algoritmo desde el momento en el que toma la foto y la procesa hasta que realiza la clasificación varia entre los $2$ y $3$ segundos. El tiempo que demora la papa en llegar desde el comienzo de la banda transportadora, hasta la posición dentro de la estrucutra de análisis es de $7$ segundos, por lo tanto, se puede asumir un tiempo promedio de $10$ segundos en analisar 1 tubérculo de papa. Este prototipo clasificaría $100$ tubérculos de papa cada $15$ minutos.	 	
 
+	\chapter{Trabajo Futuro}
 
-
-
+	Debido a que es el desarrollo del proyecto es un prototipo, la máquina puede ser mejorada para realizar la clasificación mecánica de las diferentes categorias, de igual forma, se puede implementar un variador para que la banda sea más rápida que el movimiento actual, mejorando así la velocidad de clasificación.\\
+	
+	La red neuronal artificial que se obtuvo con una precisión superior al $83\%$, puede ser mejorada de tal manera que se puedan obtener precisiones superiores al $90\%$ para mejorar los resultados de las predicciones finales. Esto se puede lograr enriqueciendo el \textit{Dataset}, mejorando la dsitribución de los datos iniciales de manera que sean proprcionales entre sí y realizando una optimización de hiperparámetros, teniendo en cuenta diferentes parámetros utilizados en este proyecto. Si se desea realizar una mejor optimización, el poder de computo necesario para realizarla di debe ser muy superior, en las condiciones actuales, la optimización tomó un tiempo de $6$ horas por cada modelo en el que se aplicó.\\
+	
+	Los tiempos de ejecución del algoritmo implementado en el sistema embebido se debe mejorar para que el prototipo sea viable en la agricultura de precisión. Mejor capacidad de procesamiento en la tarjeta de desarrollo escogida y mejorar la sintaxis y consumo de memoria por parte del diseño del algoritmo hecho en \textit{Python}.
+	
+	
+	
 
 
 
