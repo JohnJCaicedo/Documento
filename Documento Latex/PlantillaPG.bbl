@@ -20,14 +20,37 @@ A.~Krogh, ``What are artificial neural networks?,'' {\em Nature biotechnology},
 D.~A. Van~Dyk and X.-L. Meng, ``The art of data augmentation,'' {\em Journal of
   Computational and Graphical Statistics}, vol.~10, no.~1, pp.~1--50, 2001.
 
+\bibitem{hinton2012improving}
+G.~E. Hinton, N.~Srivastava, A.~Krizhevsky, I.~Sutskever, and R.~R.
+  Salakhutdinov, ``Improving neural networks by preventing co-adaptation of
+  feature detectors,'' {\em arXiv preprint arXiv:1207.0580}, 2012.
+
 \bibitem{ref_12}
 J.~C. Tello, ``La visi{\'o}n artificial y las operaciones morfol{\'o}gicas en
   im{\'a}genes binarias,'' {\em Una Perspectiva de la Inteligencia Artificial
   en su 50 Aniversario}, p.~570, 2006.
 
+\bibitem{gholamalinezhad2020pooling}
+H.~Gholamalinezhad and H.~Khosravi, ``Pooling methods in deep neural networks,
+  a review,'' {\em arXiv preprint arXiv:2009.07485}, 2020.
+
+\bibitem{jabbar2015methods}
+H.~Jabbar and R.~Z. Khan, ``Methods to avoid over-fitting and under-fitting in
+  supervised machine learning (comparative study),'' {\em Computer Science,
+  Communication and Instrumentation Devices}, vol.~70, 2015.
+
+\bibitem{islam2021position}
+M.~A. Islam, M.~Kowal, S.~Jia, K.~G. Derpanis, and N.~D. Bruce, ``Position,
+  padding and predictions: A deeper look at position information in cnns,''
+  {\em arXiv preprint arXiv:2101.12322}, 2021.
+
 \bibitem{ref_13}
 G.~I. Viera~Maza, ``Procesamiento de im{\'a}genes usando opencv aplicado en
   raspberry pi para la clasificaci{\'o}n del cacao,'' 2017.
+
+\bibitem{murphy2016overview}
+J.~Murphy, ``An overview of convolutional neural network architectures for deep
+  learning,'' {\em Microway Inc}, pp.~1--22, 2016.
 
 \bibitem{ref_14}
 L.~Torrey and J.~Shavlik, ``Transfer learning,'' in {\em Handbook of research

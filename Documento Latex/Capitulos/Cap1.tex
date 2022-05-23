@@ -57,7 +57,7 @@ El sector agricultor de Colombia ha implementado diferentes técnicas de visión
 
 
 \chapter{Marco Conceptual}
-En este capitulo se van abordar algunos términos básicos necesarios, que ayuden al entendimiento y desarrollo del proyecto. 
+En este capitulo se abordan algunos términos básicos necesarios, que ayuden al entendimiento y desarrollo del proyecto. 
 
 \section{Agricultura de precisión} El término sobre el que se inspira la agricultura de precisión, es utilizar la porción adecuada de insumos, en el instante correcto y en el sitio preciso. La agricultura de precisión, (AP), implica la utilización de sistemas de posicionamiento universal, (GPS), y de otros medios electrónicos, para obtener datos del cultivo. Las tecnologías de la agricultura de precisión, permiten saciar una de las exigencias de la agricultura actualizada: el funcionamiento óptimo de enormes extensiones. Se muestra como primordial virtud, que la exploración de resultados de los ensayos se puede hacer por sectores diferentes en un mismo lote, y tal cual ajustar el desempeño diferencial en los mismos. La utilización de las tecnologías de la agricultura de precisión puede contribuir a mejorar los márgenes, por medio de un incremento del costo del rendimiento, (cantidad o calidad), de una reducción en la proporción de insumos, o de los dos paralelamente \cite{ref_10}.
 
@@ -69,27 +69,65 @@ El Data augmentation consiste en la transformación de los datos existentes, par
 
 El concepto Data Augmentation tiene relación con los procedimientos para edificar algoritmos iterativos de mejora o muestreo, por medio de la introducción de datos no vigilados o cambiantes latentes. Para los algoritmos estocásticos, el procedimiento se popularizó en la literatura estadística por el algoritmo de incremento de datos de Tanner y Wong y en la literatura de física por el algoritmo de Swendsen y Wang, para el muestreo de los modelos de Ising y Potts y sus generalizaciones; en la literatura de física, el Data Augmentation, se conoce como el procedimiento de las cambiantes auxiliares. Generalmente, no obstante, la obra de esquemas de el Data augmentation es que den sitio a algoritmos básicos y rápidos, debido a que las tácticas famosas varían de una manera significativa con respecto a los modelos.\cite{van2001art}
 
+\section{\textit{Dropout}}
+
+Para cada entrenamiento de redes neuronales, la propagación hacia adelante involucra la eliminación aleatoria de la mitad de activaciones en cada capa. Haciendo que el error se extienda hacia atrás a traves de las activaciones remanentes, reduciendo sustancialmente al sobreajuste.Se cree que es debido al impedimento de que los pesos de la red colaboren entre sí para memorizar las muestras del entrenamiento mejorando su rendimiento \cite{hinton2012improving}
+
 
 \section{Imagen Binaria} Se define una imagen binaria como una función de dos variables discretas
 a[m,n] las cuales puede tomar dos valores, ‘0’ o ‘1’, dependiendo del nivel de gris de la
 imagen (una imagen binaria tiene dos niveles: blanco y negro). Existe una definición alternativa si consideramos que una imagen consiste en un conjunto de
 coordenadas discretas (también pueden ser reales pero no es el objetivo de este estudio). En este sentido, el conjunto corresponde a todos aquellos puntos o píxeles que pertenecen a la imagen. Por lo tanto, se puede decir que en morfología matemática los conjuntos representan objetos en una imagen \cite{ref_12}.
 
+\section{\textit{Max-pooling}}
+
+Una capa de agrupación normal, realiza un muestreo decreciente divideindo la entrada en agrupaciones rectangulares y calculando los valores maximas de cada agrupación.\\
+Un operador max-pooling, se puede hacer uso para la reducción del muestreo sobre las bandas de salida convolucionales, haciendo una reducción de la variabilidad.Esto lo realiza a travez de un valor máximo dentro de un grupo de activaciones A.La banda máxima agrupada m está compuesta por f filtros relacionados $p_{m}=[p_{1m},...,p_{fm}] \in A^f$.
+
+\begin{equation}
+	p_{f,m}=max(h_{f,(m-1)N+r})
+\end{equation}
+
+Donde $N \in (1,...,R) $ representado como un desplazamiento de agrupación cuando N < R.La capa de agrupación disminuye la dimensionalidad de salida de K bandas convolucionales a $M=(K-R)/N+1$ bandas que han sido agrupadas teniendo como resultante $p=[p1,...,pM] \in R^{M.J}$ \cite{gholamalinezhad2020pooling}.
+
+\section{\textit{Over-fitting}}
+
+Un problema al momento de entrenar redes neuronales, es el \textit{over-fitting}, al hacer que la red neuronal en un momento especifico del ciclo de entrenamiento no muestra un progreso en la capacidad de resolver problemas. Sino que solamente aprende una regularidad aleatoria dentro del conjunto de patrones de entrenamiento \cite{jabbar2015methods}.
+
+\section{\textit{Padding}}
+
+Se utiliza para acomodar el dominio finito de las muestras a lo cual permite que el soporte de la convolución se extienda mas allá de los limites de las mismas, reduciendo el impacto de los efectos de frontera.\\
+
+El mas utilizado es el \textit{zero padding}, debido a que mantiene la misma dimensionalidad al aplicar convoluciones.Por otro lado permite a las redes neuronales convolucionadas codificar información de posición absoluta a pesar de capas de agrupamiento en su arquitectura \cite{islam2021position}.
 
 
 \section{Procesamiento de imágenes} El procesamiento digital de imágenes es el conjunto de prácticas que modifican imágenes digitales para mejorar la visibilidad de ciertas características de los objetos presentes en la imagen, para su posterior análisis o simplemente para mejorar la visualización de la
-imagen.
+imagen.\\
+
 El objetivo del procesamiento de imágenes no es aumentar la información que se puede extraer de las imágenes, solo se busca realzar ciertas características de la imagen. Para procesar la imagen efectivamente se debe considerar el proceso de formación y las características de interés de la imagen \cite{ref_13}.
 \\ 
+ 
+ 
+ \section{\textit{Stride}}
+
+ 
+ Es un parámetro que especifica cuántos píxeles se traslada horizontalmente y verticalmente, mientras es convolucionada la imagen. En algunas arquitecturas el \textit{stride} se utiliza en vez de \textit{max pooling} para reducir el tamaño de la capa \cite{murphy2016overview}.
  
 \section{Transfer Learning}
 El aprendizaje por transferencia se define como la mejora del aprendizaje en una nueva tarea a través de la transferencia de conocimientos de una tarea relacionada que ya se ha aprendido. Aunque la mayoría de los algoritmos de aprendizaje automático están diseñados para abordar tareas individuales, el desarrollo de algoritmos que faciliten el aprendizaje por transferencia es un tema de interés permanente en la comunidad de aprendizaje automático. El aprendizaje por transferencia se utiliza para mejorar a un alumno de un dominio mediante la transferencia de información de un dominio relacionado. Podemos basarnos en experiencias no técnicas del mundo real para entender por qué es posible el aprendizaje por transferencia.\\
 
 Como en el caso del aprendizaje semisupervisado, los métodos de aprendizaje por transferencia se utilizan cuando hay una escasez directa de los datos de entrenamiento subyacentes. Sin embargo, la diferencia con el aprendizaje semisupervisado es que, en lugar de utilizar datos sin etiquetar, se utilizan datos etiquetados de un dominio diferente para mejorar \cite{ref_14}.
 
+\section{\textit{Under-fitting}}
+
+Es lo contrario al \textit{over-fitting}, siendo este cuando el modelo creado es incapaz de percibir variabilidad alguna en los datos. Dando como resultado que el clasificador resultante no tenga la capacidad de realizar una predicción aceptable \cite{jabbar2015methods}.
+
+\section{Visión artificial} La visión artificial o visión por computador intenta replicar la capacidad que tienen algunos seres vivos para visualizar una imagen, entenderla y actuar en base a lo observado. Existe un crecimiento en los diferentes tipos de aplicaciones industriales que requieren el uso de técnicas de visión artificial. El  continuo  desarrollo  de  nuevos  algoritmos  y  aplicaciones  hacen  de  esta  disciplina  una tecnología en constante evolución la cual ha experimentado un rápido avance en las últimas décadas, así lo demuestran las numerosas investigaciones y publicaciones existentes en la comunidad científica.  Esto podría deberse a la gran cantidad de contenido visual como imágenes y video que se genera en  la  actualidad,  así  como  la  capacidad  de  procesamiento  y  almacenamiento  que  tienen  los dispositivos electrónicos y la disponibilidad de herramientas, librerías y lenguajes de programación para dicho fin \cite{ref_15}.
 
 
-\section{Visión artificial} La visión artificial o visión por computador intenta replicar la capacidad que tienen algunos seres vivos para visualizar una imagen, entenderla y actuar en base a lo observado. Existe un crecimiento en los diferentes tipos de aplicaciones industriales que requieren el uso de técnicas de visión artificial. El  continuo  desarrollo  de  nuevos  algoritmos  y  aplicaciones  hacen  de  esta  disciplina  una tecnología en constante evolución la cual ha experimentado un rápido avance en las últimas décadas, así lo demuestran las numerosas investigaciones y publicaciones existentes en la comunidad científica.  Esto podría deberse a la gran cantidad de contenido visual como imágenes y video que se genera en  la  actualidad,  así  como  la  capacidad  de  procesamiento  y  almacenamiento  que  tienen  los dispositivos electrónicos y la disponibilidad de herramientas, librerías y lenguajes de programación para dicho fin \cite{ref_15}
+
+
+
 
 \chapter{Estado del arte}
 
@@ -875,7 +913,7 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 		En la Figura \ref{fig:Esquema} se presenta las conexiones eléctricas realizadas para el funcionamiento del prototipo, ademas de esto se anexa en la Tabla \ref{table:esquema} el listado de elementos implementados.  
 		\begin{figure}[ht]
 			\centering
-			\includegraphics[scale=0.5]{Figs/66.jpg}
+			\includegraphics[scale=0.5]{Figs/66.png}
 			\caption{Esquema eléctrico}
 			\label{fig:Esquema}
 		\end{figure}
@@ -977,7 +1015,9 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 	
 	Para el funcionamiento del algoritmo en tiempo real en el prototipo construido, se utilizó una tarjeta de desarrollo Nvidia Jetson Nano $2 \ GB$, debido a que cuenta con una tarjeta gráfica y está diseñada para ejecutar modelos de redes neuronales. La implementación del algoritmo, debido a que la red fue entrenada con imágenes de tubérculos de papa estáticas, se realizó de igual forma.\\
 	
-	El algoritmo captura una foto desde la webcam, realiza el procesamiento en la red neuronal y posteriormente, la clasificaicón por tamaño. Los resultados de cada imágen son mostrados por consola y la imágen capturada es guardada en formato $.jpg$ con el nombre de ${CLASE}\_{TAMANO}$, para verificar si la clasificación fue correcta. 	
+	El algoritmo captura una foto desde la webcam, realiza el procesamiento en la red neuronal y posteriormente, la clasificaicón por tamaño. Los resultados de cada imágen son mostrados por consola y la imágen capturada es guardada en formato $.jpg$ con el nombre de ${CLASE}\_{TAMANO}$, para verificar si la clasificación fue correcta. Se realizó un experimento con 50 papas de las diferentes clases definidas para verificar la precisión del algoritmo. La tabla \ref{table:res} muestra los resultados de 10 papas.
+	
+	 	
 	
 
 

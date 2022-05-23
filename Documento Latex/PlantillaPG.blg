@@ -26,45 +26,45 @@ Warning--empty journal in article5
 Warning--empty journal in bottou2012stochastic
 Warning--empty school in ref_2
 Warning--empty journal in ref_4
-You've used 39 entries,
+You've used 44 entries,
             1876 wiz_defined-function locations,
-            689 strings with 10477 characters,
-and the built_in function-call counts, 9399 in all, are:
-= -- 881
-> -- 384
+            712 strings with 11421 characters,
+and the built_in function-call counts, 10315 in all, are:
+= -- 956
+> -- 438
 < -- 0
-+ -- 146
-- -- 107
-* -- 654
-:= -- 1330
-add.period$ -- 36
-call.type$ -- 39
-change.case$ -- 38
++ -- 166
+- -- 122
+* -- 720
+:= -- 1482
+add.period$ -- 41
+call.type$ -- 44
+change.case$ -- 43
 chr.to.int$ -- 0
-cite$ -- 46
-duplicate$ -- 485
-empty$ -- 931
-format.name$ -- 107
-if$ -- 2298
+cite$ -- 51
+duplicate$ -- 534
+empty$ -- 1024
+format.name$ -- 122
+if$ -- 2510
 int.to.chr$ -- 0
-int.to.str$ -- 39
-missing$ -- 34
-newline$ -- 121
-num.names$ -- 34
-pop$ -- 146
+int.to.str$ -- 44
+missing$ -- 39
+newline$ -- 136
+num.names$ -- 39
+pop$ -- 164
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 333
+skip$ -- 347
 stack$ -- 0
-substring$ -- 559
-swap$ -- 180
+substring$ -- 578
+swap$ -- 189
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 7
-while$ -- 82
-width$ -- 41
-write$ -- 340
+while$ -- 90
+width$ -- 46
+write$ -- 382
 (There were 12 warnings)
