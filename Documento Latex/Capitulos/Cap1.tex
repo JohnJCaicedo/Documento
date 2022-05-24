@@ -587,23 +587,46 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 				\label{fig:VGG19_prediccion}
 			\end{figure}
 		
-			Se genera la matriz de confusión para validar los verdaderos positivos, verdaderos negativos, falsos positivos y falsos negativos, y se plasman en la Figura \ref{fig:MC_VGG19}.
-		
-			\begin{figure}[ht]
-				\centering
-				\includegraphics[scale=0.5]{Figs/131.png}
-				\caption{Matriz de confusión modelo VGG19}
-				\label{fig:MC_VGG19}
-			\end{figure}
+			Se genera la matriz de confusión para validar los verdaderos positivos, verdaderos negativos, falsos positivos y falsos negativos, y se plasman en la Tabla \ref{fig:MC_VGG19}.
 			
-			Para finalizar en la FIGURA \ref{fig:ACU_VGG19}, se presenta la precisión del modelo VGG-19 por clase.
-		
-			\begin{figure}[ht]
+			\begin{table}[htbp]
 				\centering
-				\includegraphics[scale=0.6]{Figs/132.png}
+				\begin{tabular}{|c|l|c|c|c|c|}
+					\hline
+					\multicolumn{2}{|c|}{\multirow{2}[4]{*}{}} & \multicolumn{4}{c|}{Predicción} \bigstrut\\
+					\cline{3-6}    \multicolumn{2}{|c|}{} & CLASE 1 & CLASE 2 & CLASE 3 & CLASE 4 \bigstrut\\
+					\hline
+					\multirow{4}[8]{*}{\begin{sideways}Observación\end{sideways}} & CLASE 1 & 27     & 2     & 0    & 0 \bigstrut\\
+					\cline{2-6}     & CLASE 2 & 21     & 1     & 0    & 2 \bigstrut\\
+					\cline{2-6}      & CLASE 3 & 6     & 5     & 0    & 11 \bigstrut\\
+					\cline{2-6}     & CLASE 4 & 20     & 15     & 0    & 8 \bigstrut\\
+					\hline
+				\end{tabular}%
+				\caption{Matriz de confusión modelo VGG-19}
+				\label{fig:MC_VGG19}
+			\end{table}%
+
+			Para finalizar en la Tabla \ref{fig:ACU_VGG19}, se presenta la precisión del modelo VGG-19 por clase.
+			
+			\begin{table}[htbp]
+				\centering
+				\begin{tabular}{|c|c|}
+					\hline
+					CLASE 1 & 75.9 \bigstrut\\
+					\hline
+					CLASE 2 & 50 \bigstrut\\
+					\hline
+					CLASE 3 & 90.9 \bigstrut\\
+					\hline
+					CLASE 4 & 51.2 \bigstrut\\
+					\hline
+					\multicolumn{2}{|c|}{Overall Accuracy: 65.78947} \bigstrut\\
+					\hline
+				\end{tabular}%
 				\caption{Precisión por clase modelo VGG19}
 				\label{fig:ACU_VGG19}
-			\end{figure}
+			\end{table}%
+		
 		
 			\newpage
 			\subsubsection{\MakeUppercase{Modelo preentrenado VGG11}}
@@ -637,8 +660,7 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 			El modelo cuenta con 11 capas ponderadas, sus pesos representan la fuerza de las conexiones entre unidades de capas de red adyacentes, son implementadas con el fin de conectar cada neurona de una capa con todas las neuronas de la siguiente capa, se debe tener en cuenta que la capa MAX-POOLING no se considera como una capa ponderada, debido a que es un mapa de características que contiene las características más destacadas.\\
 			
 			 El Max-Pooling es una operación de pooling que calcula el valor máximo que contiene cada parche en cada mapa de características, como resultado se obtiene mapas de características muestreados que destacan la característica más relevante en el parche, en la practica se ha comprobado que este método, es más eficiente que la agrupación media en tareas de visión por ordenador como la clasificación de imágenes.
-			 
-			\newpage
+
 			Una vez conocida la forma en que se estructura el modelo VGG-11, se procede a evaluar su precisión antes de ser aplicada la optimización bayesiana y durante 50 épocas.
 			
 			\begin{figure}[ht]
@@ -666,25 +688,51 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 				\label{fig:Pre_VGG11}
 			\end{figure}
 			
-			En la Figura \ref{fig:Pre_VGG11}, se presenta la predicción del modelo VGG-11 con las muestras implementadas para su validación.
+			En la Figra \ref{fig:Pre_VGG11}, se presenta la predicción del modelo VGG-11 con las muestras implementadas para su validación.
 			
-			\begin{figure}[ht]
+			\begin{table}[htbp]
 				\centering
-				\includegraphics[scale=0.55]{Figs/51.png}
-				\caption{Matriz de confusión Modelo VGG-11}
+				\begin{tabular}{|c|l|c|c|c|c|}
+					\hline
+					\multicolumn{2}{|c|}{\multirow{2}[4]{*}{}} & \multicolumn{4}{c|}{Predicción} \bigstrut\\
+					\cline{3-6}    \multicolumn{2}{|c|}{} & CLASE 1 & CLASE 2 & CLASE 3 & CLASE 4 \bigstrut\\
+					\hline
+					\multirow{4}[8]{*}{\begin{sideways}Observación\end{sideways}} & CLASE 1 & 0     & 0     & 0    & 29 \bigstrut\\
+					\cline{2-6}     & CLASE 2 & 0     & 0     & 0    & 24 \bigstrut\\
+					\cline{2-6}      & CLASE 3 & 0     & 0     & 0    & 22 \bigstrut\\
+					\cline{2-6}     & CLASE 4 & 0     & 0     & 0    & 43 \bigstrut\\
+					\hline
+				\end{tabular}%
+				\caption{Matriz de confusión VGG-11}
 				\label{fig:MC_VGG11}
-			\end{figure}
+			\end{table}%
 			
-			La figura \ref{fig:MC_VGG11}, se presenta la matriz de confusión del modelo VGG-11, donde se aprecian los verdaderos positivos, verdaderos negativos, falsos positivos y falsos negativos.
+			
+			
+			
+			La Tabla \ref{fig:MC_VGG11}, se presenta la matriz de confusión del modelo VGG-11, donde se aprecian los verdaderos positivos, verdaderos negativos, falsos positivos y falsos negativos.
 			\\
-			Para finalizar, la precisión de clasificación del modelo VGG-11 por clases sin optimización bayesiana se presenta en la Figura \ref{fig:clase_VGG11}.  
+			Para finalizar, la precisión de clasificación del modelo VGG-11 por clases sin optimización bayesiana se presenta en la Tabla \ref{fig:clase_VGG11}.
 			
-			\begin{figure}[ht]
+			\begin{table}[htbp]
 				\centering
-				\includegraphics[scale=0.6]{Figs/52.png}
-				\caption{Precisión por clase Modelo VGG-11}
+				\begin{tabular}{|c|c|}
+					\hline
+					CLASE 1 & 0 \bigstrut\\
+					\hline
+					CLASE 2 & 0 \bigstrut\\
+					\hline
+					CLASE 3 & 0 \bigstrut\\
+					\hline
+					CLASE 4 & 100 \bigstrut\\
+					\hline
+					\multicolumn{2}{|c|}{Overall Accuracy: 34.21052} \bigstrut\\
+					\hline
+				\end{tabular}%
+				\caption{Clasificación por clase modelos VGG-11}
 				\label{fig:clase_VGG11}
-			\end{figure}
+			\end{table}%  
+			
 		
 			\newpage
 			\subsubsection{\MakeUppercase{Modelo preentrenado RESNET18}}
@@ -717,8 +765,8 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 				Luego hay cuatro etapas, cada etapa tiene múltiples módulos, cada módulo se llama un bloque de construcción, por ende se tiene que ResNet=[2,2,2,2] se evidencia que hay 8 bloques de construcción, como se presenta en la Figura \ref{fig:ArqRes18} \cite{ref_5}.				
 		
 
-	
-		En la FIGURA \ref{fig:preci_RESNET18}, se procede a presentar la precisión obtenida del modelo ResNet-18 durante 50 épocas, sin haber aplicado la optimizacion bayesiana.
+\newpage	
+		En la Figura \ref{fig:preci_RESNET18}, se procede a presentar la precisión obtenida del modelo ResNet-18 durante 50 épocas, sin haber aplicado la optimizacion bayesiana.
 		
 		\begin{figure}[ht]
 			\centering
@@ -746,43 +794,68 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 		\label{fig:pre_RESNET18}
 	\end{figure}
 
-	La matriz de confusión del modelos ResNet-18 es presentada en la Figura \ref*{MC_RESNET18}, con el fin de dar a conocer los verdaderos positivos, verdaderos negativos, falsos positivos, y falsos negativos del modelo
-	
-	\begin{figure}[ht]
+	La matriz de confusión del modelos ResNet-18 es presentada en la Tabla \ref*{MC_RESNET18} , con el fin de dar a conocer los verdaderos positivos, verdaderos negativos, falsos positivos, y falsos negativos del modelo
+
+	\begin{table}[htbp]
 		\centering
-		\includegraphics[scale=0.55]{Figs/71.png}
-		\caption{Matriz de confusión modelo ResNet-18}
+		\begin{tabular}{|c|l|c|c|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\multirow{2}[4]{*}{}} & \multicolumn{4}{c|}{Predicción} \bigstrut\\
+			\cline{3-6}    \multicolumn{2}{|c|}{} & CLASE 1 & CLASE 2 & CLASE 3 & CLASE 4 \bigstrut\\
+			\hline
+			\multirow{4}[8]{*}{\begin{sideways}Observación\end{sideways}} & CLASE 1 & 0     & 0     & 29    & 0 \bigstrut\\
+			\cline{2-6}          & CLASE 2 & 0     & 0     & 24    & 0 \bigstrut\\
+			\cline{2-6}          & CLASE 3 & 0     & 0     & 22    & 0 \bigstrut\\
+			\cline{2-6}          & CLASE 4 & 0     & 0     & 43    & 0 \bigstrut\\
+			\hline
+		\end{tabular}%
+		\caption{Matriz de confusión ResNet-18}
 		\label{MC_RESNET18}
-	\end{figure}
-		 	
-	Para finalizar, en la Figura \ref{clase_RESNET18}, se presenta la precisión del modelo sin optimización bayesiana por clases.
+	\end{table}%
 	
-	\begin{figure}[ht]
+
+	Para finalizar, en la Tabla \ref*{clase_RESNET18}, se presenta la precisión del modelo sin optimización bayesiana por clases.
+	
+		\begin{table}[htbp]
 		\centering
-		\includegraphics[scale=0.55]{Figs/72.png}
-		\caption{Precisión por clase modelo ResNet-18}
+		\begin{tabular}{|c|c|}
+			\hline
+			CLASE 1 & 0 \bigstrut\\
+			\hline
+			CLASE 2 & 0 \bigstrut\\
+			\hline
+			CLASE 3 & 100 \bigstrut\\
+			\hline
+			CLASE 4 & 0 \bigstrut\\
+			\hline
+			\multicolumn{2}{|c|}{Overall Accuracy: 18,42105} \bigstrut\\
+			\hline
+		\end{tabular}%
+		\caption{Clasificación por clase modelos ResNet-18}
 		\label{clase_RESNET18}
-	\end{figure}
-\newpage
-			\subsubsection{\MakeUppercase{Comparación de arquitecturas sin optimizar}}
-			En la Tabla \ref{table:compasin}, se presenta la comparación de los cuatro modelos sin optimización bayesiana implementados para la clasificación de tubérculos de papa.
+	\end{table}%
+\newpage	
+	\subsubsection{\MakeUppercase{Comparación de arquitecturas sin optimizar}}
+	En la Tabla \ref{table:compasin}, se presenta la comparación de los cuatro modelos sin optimización bayesiana implementados para la clasificación de tubérculos de papa.
+	
+	\begin{table}[ht]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			MODELOS & AlexNet & VGG-19 & VGG-11 & ResNet-18 \\
+			\hline
+			PRECISIÓN (\%) &  & $$65.78$$ & $$34.21$$ & $$18.42$$ \\
+			\hline
+			PERDIDAS (\%) &  & $$16$$ & $$12$$ & $$2$$ \\
+			\hline
+		\end{tabular}	
+		\caption{Comparación modelos sin optimizar}
+		\label{table:compasin}
+	\end{table}	
+	
+	En la Tabla \ref{table:compasin},se puede observar que el modelo con mejor precisión es el modelo \textit{VGG-19}, pero también se aprecia que es el modelos con mayores perdidas.
+
 			
-			\begin{table}[ht]
-				\centering
-				\begin{tabular}{|c|c|c|c|c|}
-					\hline
-					MODELOS & AlexNet & VGG-19 & VGG-11 & ResNet-18 \\
-					\hline
-					PRECISIÓN (\%) &  & $$65.78$$ & $$34.21$$ & $$18.42$$ \\
-					\hline
-					PERDIDAS (\%) &  & $$16$$ & $$12$$ & $$2$$ \\
-					\hline
-				\end{tabular}	
-				\caption{Comparación modelos sin optimizar}
-				\label{table:compasin}
-			\end{table}	
-		
-			En la Tabla \ref{table:compasin},se puede observar que el modelo con mejor precisión es el modelo \textit{VGG-19}, pero también se aprecia que es el modelos con mayores perdidas.
 	\newpage
 	\subsection{Optimización Bayesiana}
 	
@@ -823,9 +896,13 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 	\end{table}
 
 	\textit{Botorch} realiza $20$ pruebas con parámetros distintos en los rangos definidos y encuentra la combinación de parámetros que den el mejor resultado de precisión final del algoritmo. Estos resultados fueron utilizados para entrenar nuevamente los modelos descritos anteriormente. 
+	
+	
+	
+	
 \newpage	
 	\subsubsection{\MakeUppercase{Modelo preentrenado AlexNet optimizado}}
-	
+	En la Figura \ref{fig:preci_Alex_OPT}, se puede observar que el modelo AlexNet, implementando la optimización bayesiana, presenta un deterioro en la precisión cuando se realiza la validación.
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.5]{Figs/500.png}
@@ -833,6 +910,7 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 			\label{fig:preci_Alex_OPT}
 		\end{figure}
 	
+	En la Figura \ref{fig:perdda_Alex_opt}, se aprecia que el modelo AlexNet es poco eficiente, ya que existe una desviación significativa entre la predicción realizada y los valores reales implementados.
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.5]{Figs/501.png}
@@ -840,6 +918,7 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 			\label{fig:perdda_Alex_opt}
 		\end{figure}
 	
+	La Figura \ref{fig:pre_alex_opt}, presenta la clasificación realizada por el modelo con las muestras implementadas.
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.25]{Figs/502.png}
@@ -848,7 +927,7 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 		\end{figure}
 		
 	
-	
+	La Tabla \ref{tab:MC_ALEX_OPT}, almacena los datos de la matriz de confusión del modelo AlexNet, esto con el fin de dar a conocer los verdaderos positivos, verdaderos negativos, falsos positivos y falsos negativos del modelo.
 	
 
 		\begin{table}[htbp]
@@ -868,7 +947,7 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 			\label{tab:MC_ALEX_OPT}%
 		\end{table}%
 	
-	
+	Para finalizar, en la Tabla \ref{tab:Alexoptclases} se presenta la precisión del modelo por cada clase de clasificación y la precisión general.
 	
 		\begin{table}[htbp]
 			\centering
@@ -890,23 +969,26 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 		\end{table}%
 	
 	
-\newpage	
-	\subsubsection{\MakeUppercase{Modelo preentrenado VGG-19 optimizado}}
 	
-		\begin{figure}[ht]
+	\subsubsection{\MakeUppercase{Modelo preentrenado VGG-19 optimizado}}
+	La Figura \ref{fig:preci_vgg19_OPT}, presenta que la precisión del modelo VGG-19 es de alrededor del 75 \% en validación, el cual es un valor que se acerca mucho al valor del modelo en entrenamiento, el cual era de aproximadamente el 80 \%.
+ 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.5]{Figs/504.png}
 			\caption{Precisión modelo VGG-19 optimizado}
 			\label{fig:preci_vgg19_OPT}
 		\end{figure}
-		
+	
+	La Figura \ref{fig:perdda_vgg19_opt}, permite verificar que el modelo VGG-19 es eficiente, ya que la desviación que existe entre la prediccón realizada y los valores reales implementados es muy baja.
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.5]{Figs/505.png}
 			\caption{Perdidas modelo VGG-19 optimizado}
 			\label{fig:perdda_vgg19_opt}
 		\end{figure}
-		
+	
+	Se puede apreciar la clasificación y eficiencia del modelo en la Figura \ref{fig:pre_vgg19_opt}.
+	
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.25]{Figs/506.png}
@@ -914,6 +996,7 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 			\label{fig:pre_vgg19_opt}
 		\end{figure}
 
+	En la Tabla \ref{tab:MC_VGG19_OPT}, se presenta la matriz de confusión del modelo VGG-19, la cual es necesaria para tener conocimiento de los verdaderos positivos, verdaderos negativos, falsos positivos y falsos negativos que presenta el modelo.
 		\begin{table}[htbp]
 			\centering
 			\begin{tabular}{|c|l|c|c|c|c|}
@@ -931,6 +1014,7 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 			\label{tab:MC_VGG19_OPT}%
 		\end{table}%
 	
+	Para finalizar en la Tabla \ref{tab:VGG19optclases}, se presentan las precisiones realizadas por el modelo para cada clase a clasificar y la precisión en general.
 		\begin{table}[htbp]
 			\centering
 			\begin{tabular}{|c|c|}
@@ -952,6 +1036,7 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 
 \newpage	
 	\subsubsection{\MakeUppercase{Modelo preentrenado VGG-11 optimizado}}
+	En la Figura \ref{fig:preci_vgg11_OPT}, se puede observar que la precisión del modelo VGG-11 cuando se valida, es cercana a la precisión obtenida cuando el modelo es entrenado.
 	
 		\begin{figure}[ht]
 			\centering
@@ -959,14 +1044,17 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 			\caption{Precisión modelo VGG-11 optimizado}
 			\label{fig:preci_vgg11_OPT}
 		\end{figure}
-		
+	
+	La Figura \ref{fig:perdda_vgg11_opt}, permite apreciar que apesar que en el modelo existe una clara desviación en cuanto a los datos predichos y los valores reales implementados, esta no es lo suficientemente grande para convertir al modelo en ineficiente.
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.5]{Figs/509.png}
 			\caption{Perdidas modelo VGG-11 optimizado}
 			\label{fig:perdda_vgg11_opt}
 		\end{figure}
-		
+	
+	
+	La Figura \ref{fig:pre_vgg11_opt}, permite evidenciar la precisión y eficiencia del modelo al clasificar los tubérculos de papas implementados. 	
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.25]{Figs/510.png}
@@ -974,6 +1062,7 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 			\label{fig:pre_vgg11_opt}
 		\end{figure}
 	
+	La Tabla \ref{tab:MC_VGG11_OPT}, almacena la matriz de confusión del modelo VGG-11, la cual da a conocer los verdaderos positivos, verdaderos negativos, falsos positivos y falsos negativos que presenta el modelo.
 		\begin{table}[htbp]
 			\centering
 			\begin{tabular}{|c|l|c|c|c|c|}
@@ -991,6 +1080,7 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 			\label{tab:MC_VGG11_OPT}%
 		\end{table}%
 	
+	Por ultimo en la Tabla \ref{tab:VGG11optclases}, se presentan las precisiones realizadas por el modelo para cada clase a clasificar y la precisión en general.
 	
 		\begin{table}[htbp]
 			\centering
@@ -1014,20 +1104,23 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 \newpage	
 	\subsubsection{\MakeUppercase{Modelo preentrenado ResNet-18 optimizado}}
 	
+	La precisión del modelos ResNet-18 se presenta en la Figura \ref{fig:preci_RES_OPT}, en donde se puede apreciar que el modelo, tiene un gran margen de error en su validación con respecto a la precisión obtenida durante su entrenamiento.
+	
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.5]{Figs/512.png}
 			\caption{Precisión modelo ResNet-18 optimizado}
 			\label{fig:preci_RES_OPT}
 		\end{figure}
-		
+	La Figura \ref{fig:perdda_REs_opt}, da a conocer que el modelo presenta overffiting, causando una desviación entre las predicciones realizadas y los datos reales implementados, volviendo así, poco eficiente el modelo.	
+	
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.5]{Figs/513.png}
 			\caption{Perdidas modelo ResNet-18 optimizado}
 			\label{fig:perdda_REs_opt}
 		\end{figure}
-		
+	La Figura \ref{fig:pre_res_opt}, enseña la clasificación de los tubérculos implementados, realizada por el modelo ResNet-18.
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[scale=0.25]{Figs/514.png}
@@ -1035,6 +1128,7 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 			\label{fig:pre_res_opt}
 		\end{figure}
 	
+	En la Tabla \ref{tab:MC_resnet_OPT}, se puede evidenciar la matriz de confusión del modelo ResNet-18, esto con el fin de conocer los verdaderos positivos, verdaderos negativos, falsos positivos y falsos negativos que se encuentran presentes en el modelo.
 		\begin{table}[htbp]
 			\centering
 			\begin{tabular}{|c|l|c|c|c|c|}
@@ -1051,7 +1145,7 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 			\caption{Matriz de confusión ResNet-18 Optimizado }
 			\label{tab:MC_resnet_OPT}%
 		\end{table}%
-	
+	Para finalizar en la Tabla \ref{tab:resnetoptclases}, se presenta la precisión general del modelo ResNet-18 y la precisón por cada clase de clasificación.
 		\begin{table}[htbp]
 			\centering
 			\begin{tabular}{|c|c|}
@@ -1091,7 +1185,9 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 			\label{table:compacon}
 		\end{table}	
 		
-		En la Tabla \ref{table:compacon},se puede observar que el modelo con mejor precisión es el modelo \textit{VGG-19}, pero también se aprecia que es el modelos con mayores perdidas. Sin embargo, se puede apreciar que la precisión de los modelos documentada en la Tabla \ref{table:compacon} es superior a la precisión documentada en la Tabla \ref{table:compasin}.
+		En la Tabla \ref{table:compacon},se puede observar que el modelo con mejor precisión es el modelo \textit{VGG-19}, pero también se aprecia que es el modelos con mayores perdidas. 
+		\\
+		Sin embargo, se puede apreciar que la precisión de los modelos documentada en la Tabla \ref{table:compacon} es superior a la precisión documentada en la Tabla \ref{table:compasin}. Lo cual permite concluir que la implementación de la optimización bayesiana afecto de manera significativa a los modelos para mejorar sus precisiones y reducir sus perdidas.
 	
 	
 	
@@ -1185,12 +1281,42 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 		Se implementa una banda transportadora tomada de una maquina selladora de banda continua horizontal FR-900, la cual es impulsada por un motor DC a 220V.
 		Las especificaciones técnicas de la selladora de banda continua horizontal RF-900 se presentan en la Figura \ref{fig:principales}.
 		
-		\begin{figure}[ht]
+		\begin{table}[htbp]
 			\centering
-			\includegraphics[scale=0.75]{Figs/13.png}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				\multicolumn{4}{|l|}{\textbf{ALIMENTACIÓN}} \bigstrut\\
+				\hline
+				\multicolumn{4}{|c|}{220+-10 V, 50 HZ} \bigstrut\\
+				\hline
+				\multicolumn{4}{|l|}{\textbf{MATERIAL}} \bigstrut\\
+				\hline
+				\multicolumn{4}{|c|}{Estructura en acero inoxidable y aleación de aluminio/acero} \bigstrut\\
+				\hline
+				\multicolumn{4}{|l|}{\textbf{MOTOR}} \bigstrut\\
+				\hline
+				\multicolumn{2}{|c|}{REFERENCIA:} & \multicolumn{2}{c|}{ZYT 90-01} \bigstrut\\
+				\hline
+				\multicolumn{2}{|c|}{CORRIENTE:} & \multicolumn{2}{c|}{0,32 A} \bigstrut\\
+				\hline
+				\multicolumn{2}{|c|}{VOLTAJE:} & \multicolumn{2}{c|}{220 VDC} \bigstrut\\
+				\hline
+				\multicolumn{2}{|c|}{VELOCIDAD:} & \multicolumn{2}{c|}{2000 r/min} \bigstrut\\
+				\hline
+				\multicolumn{2}{|c|}{POTENCIA:} & \multicolumn{2}{c|}{50 W} \bigstrut\\
+				\hline
+				\multicolumn{4}{|l|}{\textbf{DIMENSIONES}} \bigstrut\\
+				\hline
+				\multicolumn{2}{|c|}{HORIZONTAL:} & \multicolumn{2}{c|}{850 x 420 x 320 (mm)} \bigstrut\\
+				\hline
+				\multicolumn{2}{|c|}{VERTICAL:} & \multicolumn{2}{c|}{850 x 320 x 550 (mm)} \bigstrut\\
+				\hline
+				\multicolumn{2}{|c|}{CONSOLA:} & \multicolumn{2}{c|}{850 x 320 x 1000 (mm)} \bigstrut\\
+				\hline
+			\end{tabular}%
 			\caption{Especificaciones Principales}
 			\label{fig:principales}
-		\end{figure}
+		\end{table}%
 		
 	
 	\newpage
@@ -1261,39 +1387,48 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 		
 \newpage	
 	\section{Estructura}
-		La caja elaborada para el análisis de los tubérculos de papas, fue construida en acetato con medidas de, \textit{35 x 25(cm)} las laminas frontal y trasera, \textit{16 x 25(cm)} lamina superior, \textit{20 x 16(cm)} laminas laterales como se muestra en las Figuras.
+		La caja elaborada para el análisis de los tubérculos de papas, fue construida en acetato con medidas de, \textit{35 x 25(cm)} las laminas frontal y trasera (Figuras \ref{fig:frontal} y \ref{fig:trasera}), \textit{16 x 25(cm)} lamina superior (Figura \ref{fig:superior}), \textit{20 x 16(cm)} laminas laterales como se muestra en la Figura \ref{fig:lateral}.
 		
-		\begin{figure}[ht]
-			\centering
-			\includegraphics[scale=0.21]{Figs/300.png}
-			\caption{Caja reductora conectada a los engranajes rectos}
-			\label{fig:caja}
+		\begin{figure}[H]
+			\begin{minipage}[b]{0.35\linewidth}
+				\centering
+				\centering
+				\includegraphics[width=\linewidth]{Figs/300.png}
+				\caption{Lamina Frontal}
+				\label{fig:frontal}
+			\end{minipage}
+			\hspace{2.5cm}
+			\begin{minipage}[b]{0.35\linewidth}
+				\centering
+				\centering
+				\includegraphics[width=\linewidth]{Figs/301.png}
+				\caption{Lamina superior}
+				\label{fig:superior}
+			\end{minipage}
 		\end{figure}
 	
-		\begin{figure}[ht]
-			\centering
-			\includegraphics[scale=0.21]{Figs/301.png}
-			\caption{Caja reductora conectada a los engranajes rectos}
-			\label{fig:caja}
+		\begin{figure}[H]
+			\begin{minipage}[b]{0.35\linewidth}
+				\centering
+				\centering
+				\includegraphics[width=\linewidth]{Figs/302.png}
+				\caption{Lamina lateral}
+				\label{fig:lateral}
+			\end{minipage}
+			\hspace{2.5cm}
+			\begin{minipage}[b]{0.35\linewidth}
+				\centering
+				\centering
+				\includegraphics[width=\linewidth]{Figs/303.png}
+				\caption{Lamina Trasera}
+				\label{fig:trasera}
+			\end{minipage}
 		\end{figure}
-	
-		\begin{figure}[ht]
-			\centering
-			\includegraphics[scale=0.21]{Figs/302.png}
-			\caption{Caja reductora conectada a los engranajes rectos}
-			\label{fig:caja}
-		\end{figure}
-	
-		\begin{figure}[ht]
-			\centering
-			\includegraphics[scale=0.21]{Figs/303.png}
-			\caption{Caja reductora conectada a los engranajes rectos}
-			\label{fig:caja}
-		\end{figure}
+		
 		
 	
 		Como se muestra en las Figuras , las laminas fueron diseñadas con las medidas necesarias que permitan posicionar algunos elementos necesarios para realizar la clasificación de los tuberculos, como lo son bombillos, un sensor optico y una camara web, los cuales seran definidos en los numerales \textit{6.4.1, 6.4.2 y 6.4.3}.
-\newpage
+
 		\subsection{Bombillos}
 			La estructura cuenta con dos agujeros donde se ubican dos bombillos de luz blanca de 6500 Kelvin de temperatura de color para mantener la iluminación fija a una distancia de 30cm de todas las fotos al igual que se tomaron durante la construcción del Dataset.
 		\subsection{Sensor Fotoeléctrico}
@@ -1309,7 +1444,7 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 					\item Capacidad de salida: 3 A/30 VCC, 3 A/250 VAC.
 					\item Temperatura ambiente: -4-131 °F (-20-55 °C).
 				\end{itemize}
-\newpage			
+			
 		\subsection{Cámara Web}
 			Para la detección de los tubérculos de papa, se implementa una cámara \textit{Web Camera America Store}, la cual será la encargada de la toma de fotos de los tubérculos, mientras son transportados en la banda transportadora para su análisis.
 			\\
@@ -1330,12 +1465,20 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 	Aquí se describe el funcionamiento mecánico de la maquina y el funcionamiento de la red neuronal, la cual fue programada en la tarjeta Jetson Nano para realizar la clasificación de los tubérculos de papa.
 	
 	\subsection{Funcionamiento Mecánico}
-		El funcionamiento mecánico inicia conectando la alimentación de la maquina, una vez la maquina se encuentre conectada, el indicador luminoso que se encuentra en el pulsador de inicio se activará, esto para dar a conocer que la maquina ya puede entrar en funcionamiento. Se presiona el pulsador anteriormente mencionado y se genera la conmutación del relé para la activación del motor, el cual se encuentra conectado a una caja reductora, que transmite la energía a tres engranajes rectos (Figura \ref{fig:caja}), en donde el ultimo engranaje se encuentra conectado y transmite la energía a uno de los rodillos tensores de la banda transportadora mediante un eje, como se aprecia en la Figura \ref{fig:eje} con el fin de generar el movimiento de la banda. 
+		El funcionamiento mecánico inicia conectando la alimentación de la maquina, una vez la maquina se encuentre conectada, el indicador luminoso que se encuentra en el pulsador de inicio se activará como se muestra en la Figura \ref{fig:indicador}, esto para dar a conocer que la maquina ya puede entrar en funcionamiento. Se presiona el pulsador anteriormente mencionado y se genera la conmutación del relé para la activación del motor, el cual se encuentra conectado a una caja reductora, que transmite la energía a tres engranajes rectos (Figura \ref{fig:caja}), en donde el ultimo engranaje se encuentra conectado y transmite la energía a uno de los rodillos tensores de la banda transportadora mediante un eje, como se aprecia en la Figura \ref{fig:eje} con el fin de generar el movimiento de la banda. 
 		
-\newpage	
+\newpage
+
 		\begin{figure}[ht]
 			\centering
-			\includegraphics[scale=0.21]{Figs/201.jpg}
+			\includegraphics[angle=270, scale=0.21]{Figs/200.jpg}
+			\caption{Indicador Luminoso}
+			\label{fig:indicador}
+		\end{figure}
+			
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[scale=0.13]{Figs/201.jpg}
 			\caption{Caja reductora conectada a los engranajes rectos}
 			\label{fig:caja}
 		\end{figure}
@@ -1343,13 +1486,13 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 		
 		\begin{figure}[ht]
 			\centering
-			\includegraphics[scale=0.21]{Figs/202.jpg}
+			\includegraphics[angle=270, scale=0.21]{Figs/202.jpg}
 			\caption{Conexión engranajes y rodillo tensor}
 			\label{fig:eje}
 		\end{figure}
 
 \newpage	
-		Una vez se inicia el movimiento de la banda transportadora, este seguirá hasta que el tubérculo entre en contacto con el con la luz infrarroja del sensor foto eléctrico como se observa en la Figura \ref{fig:sensor}, cuando el sensor detecte el tubérculo, la señal enviada detendrá la banda y activara un timer de un segundo, esto con el fin de permitir que la cámara tome la foto del tubérculo y la envié a la red neuronal para su análisis. Culminado el tiempo establecido en el timer, la banda continuara su movimiento para desplazar y continuar con la clasificación de los tubérculos.
+		Una vez se inicia el movimiento de la banda transportadora, este seguirá hasta que el tubérculo entre en contacto con el con la luz infrarroja del sensor foto eléctrico como se observa en la Figura \ref{fig:sensor}, cuando el sensor detecte el tubérculo, la señal enviada detendrá la banda y activara un timer de un segundo, esto con el fin de permitir que la cámara tome la foto del tubérculo y la envié a la red neuronal para su análisis el cual se explicará en la sección \textit{Implementación en Sistema Embedido}. Culminado el tiempo establecido en el timer, la banda continuara su movimiento para desplazar y continuar con la clasificación de los tubérculos.
 		
 		\begin{figure}[ht]
 			\centering
@@ -1363,7 +1506,7 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 	
 	Para el funcionamiento del algoritmo en tiempo real en el prototipo construido, se utilizó una tarjeta de desarrollo Nvidia Jetson Nano $2 \ GB$, debido a que cuenta con una tarjeta gráfica y está diseñada para ejecutar modelos de redes neuronales. La implementación del algoritmo, debido a que la red fue entrenada con imágenes de tubérculos de papa estáticas, se realizó de igual forma.\\
 	
-	El algoritmo captura una foto desde la webcam, realiza el procesamiento en la red neuronal y posteriormente, la clasificaicón por tamaño. Los resultados de cada imágen son mostrados por consola y la imágen capturada es guardada en formato $.jpg$ con la información de las predicciones, para verificar si la clasificación fue correcta. La imagen \ref{fig:implementacion}, muestra una de las papas pasando dentro de las estructura hecha para la clasificación.
+	El algoritmo captura una foto desde la webcam, realiza el procesamiento en la red neuronal y posteriormente, la clasificación por tamaño. Los resultados de cada imágen son mostrados por consola y la imágen capturada es guardada en formato $.jpg$ con la información de las predicciones, para verificar si la clasificación fue correcta. La imagen \ref{fig:implementacion}, muestra una de las papas pasando dentro de las estructura hecha para la clasificación.
 	
 	\begin{figure}[ht]
 		\centering
@@ -1395,17 +1538,19 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 	\end{table}
 	
 	
-	De las 50 papas utlizadas para la verificación, se obtuvo un resultado de $80\%$ de clases con correcta predicción y $88\%$ de tamaños correctamente clasificados. Esto da una presición total de $85\%$ para las papas que fueron correctamente clasificadas en ambas categorias.\\
+	De las 50 papas utilizadas para la verificación, se obtuvo un resultado de $80\%$ de clases con correcta predicción y $88\%$ de tamaños correctamente clasificados. Esto da una precisión total de $85\%$ para las papas que fueron correctamente clasificadas en ambas categorías.\\
 	
-	El tiempo de ejecución del algoritmo desde el momento en el que toma la foto y la procesa hasta que realiza la clasificación varia entre los $2$ y $3$ segundos. El tiempo que demora la papa en llegar desde el comienzo de la banda transportadora, hasta la posición dentro de la estrucutra de análisis es de $7$ segundos, por lo tanto, se puede asumir un tiempo promedio de $10$ segundos en analisar 1 tubérculo de papa. Este prototipo clasificaría $100$ tubérculos de papa cada $15$ minutos.	 	
+	El tiempo de ejecución del algoritmo desde el momento en el que toma la foto y la procesa hasta que realiza la clasificación varia entre los $2$ y $3$ segundos. El tiempo que demora la papa en llegar desde el comienzo de la banda transportadora, hasta la posición dentro de la estructura de análisis es de $7$ segundos, por lo tanto, se puede asumir un tiempo promedio de $10$ segundos en analizar 1 tubérculo de papa. Este prototipo clasificaría $100$ tubérculos de papa cada $15$ minutos.	 	
 
 	\chapter{Trabajo Futuro}
 
-	Debido a que es el desarrollo del proyecto es un prototipo, la máquina puede ser mejorada para realizar la clasificación mecánica de las diferentes categorias, de igual forma, se puede implementar un variador para que la banda sea más rápida que el movimiento actual, mejorando así la velocidad de clasificación.\\
+	Debido a que es el desarrollo del proyecto es un prototipo, la máquina puede ser mejorada para realizar la clasificación mecánica de las diferentes categorías, de igual forma, se puede implementar un vareador para que la banda sea más rápida que el movimiento actual, mejorando así la velocidad de clasificación.\\
 	
-	La red neuronal artificial que se obtuvo con una precisión superior al $83\%$, puede ser mejorada de tal manera que se puedan obtener precisiones superiores al $90\%$ para mejorar los resultados de las predicciones finales. Esto se puede lograr enriqueciendo el \textit{Dataset}, mejorando la dsitribución de los datos iniciales de manera que sean proprcionales entre sí y realizando una optimización de hiperparámetros, teniendo en cuenta diferentes parámetros utilizados en este proyecto. Si se desea realizar una mejor optimización, el poder de computo necesario para realizarla di debe ser muy superior, en las condiciones actuales, la optimización tomó un tiempo de $6$ horas por cada modelo en el que se aplicó.\\
+	La red neuronal artificial que se obtuvo con una precisión superior al $83\%$, puede ser mejorada de tal manera que se puedan obtener precisiones superiores al $90\%$ para mejorar los resultados de las predicciones finales. Esto se puede lograr enriqueciendo el \textit{Dataset}, mejorando la distribución de los datos iniciales de manera que sean proporcionales entre sí y realizando una optimización de hiperparámetros, teniendo en cuenta diferentes parámetros utilizados en este proyecto. Si se desea realizar una mejor optimización, el poder de computo necesario para realizarla di debe ser muy superior, en las condiciones actuales, la optimización tomó un tiempo de $6$ horas por cada modelo en el que se aplicó.\\
 	
 	Los tiempos de ejecución del algoritmo implementado en el sistema embebido se debe mejorar para que el prototipo sea viable en la agricultura de precisión. Mejor capacidad de procesamiento en la tarjeta de desarrollo escogida y mejorar la sintaxis y consumo de memoria por parte del diseño del algoritmo hecho en \textit{Python}.
+	
+	
 	
 	
 	
