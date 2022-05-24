@@ -203,9 +203,9 @@ Es lo contrario al \textit{over-fitting}, siendo este cuando el modelo creado es
 
 \section{Recolección de papa en la actualidad}
 
-La papa es un tubérculo conocido mundialmente con una enorme producción y valores nutritivos, contiene muchos micronutrientes primarios y cruciales como vitamina, vitamina B6, niacina, ácido fólico, potasio, hierro y magnesio, que es una fuente importante de carbohidratos, vitaminas y minerales para el ser humano.\\
+La papa es un tubérculo conocido mundialmente con una enorme producción y valores nutritivos, contiene muchos micro nutrientes primarios y cruciales como vitamina, vitamina B6, niacina, ácido fólico, potasio, hierro y magnesio, que es una fuente importante de carbohidratos, vitaminas y minerales para el ser humano.\\
 En el transcurso del crecimiento, la cosecha, el transporte y el tratamiento postcosecha del tubérculo, se generan daños como cáscara verde, germinación, pudrición seca, etc.…, defectos que terminan en una reducción drástica en la calidad de venta. Tener un control de este producto es fundamental para aumentar el valor de este y generar un crecimiento en su comercialización.\\
-El control de calidad actualmente se realiza de forma manual, realizado por personas, clasificando según su defecto y tamaño, esta acción tiene algunas desventajas: es subjetiva, laboriosa y lleva bastante tiempo, llevando a que la clasificación decaiga con el tiempo.
+El control de calidad actualmente se realiza de forma manual, realizado por personas, clasificando según su defecto y tamaño, esta acción tiene algunas desventajas: es subjetiva, laboriosa y lleva bastante tiempo, llevando a que la clasificación decaiga con el tiempo \cite{refjaither}.
 
 
 
@@ -626,7 +626,7 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 					\hline
 					CLASE 4 & 51.2 \bigstrut\\
 					\hline
-					\multicolumn{2}{|c|}{Overall Accuracy: 65.78947} \bigstrut\\
+					\multicolumn{2}{|c|}{Overall Accuracy: 36.84210} \bigstrut\\
 					\hline
 				\end{tabular}%
 				\caption{Precisión por clase modelo VGG19}
@@ -849,7 +849,7 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 			\hline
 			MODELOS & AlexNet & VGG-19 & VGG-11 & ResNet-18 \\
 			\hline
-			PRECISIÓN (\%) &  & $$65.78$$ & $$34.21$$ & $$18.42$$ \\
+			PRECISIÓN (\%) &  & $$36.84$$ & $$34.21$$ & $$18.42$$ \\
 			\hline
 			PERDIDAS (\%) &  & $$16$$ & $$12$$ & $$2$$ \\
 			\hline
@@ -858,7 +858,9 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 		\label{table:compasin}
 	\end{table}	
 	
-	En la Tabla \ref{table:compasin},se puede observar que el modelo con mejor precisión es el modelo \textit{VGG-19}, pero también se aprecia que es el modelos con mayores perdidas.
+	En la Tabla \ref{table:compasin},se puede observar que el modelo con mejor precisión es el modelo \textit{VGG-19}, esto debido a que la función de perdidas de este modelo no presenta una desviación significante entre los valores predichos y los valores reales implementados.
+	
+	NOTA: El modelo AlexNet no es tenido en cuenta, ya que este modelo presento una precisión por debajo del 10 \% tanto en la etapa del entrenamiento como en la etapa de validación.
 
 			
 	\newpage
@@ -1192,7 +1194,7 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 				\hline
 				PRECISIÓN (\%) & $$21.05$$ & $$65.78$$ & $$39.47$$ & $$36.84$$ \\
 				\hline
-				PERDIDAS (\%) &  & $$16$$ & $$12$$ & $$36.84$$ \\
+				PERDIDAS (\%) & $$18$$ & $$16$$ & $$12$$ & $$65$$ \\
 				\hline
 			\end{tabular}	
 			\caption{Comparación modelos optimizados}
@@ -1371,15 +1373,15 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 			\hline
 			 V1 & Fuente de Voltaje & 1 \\
 			\hline
-			 S1 & Pulsador & 1 \\
+			 T1 & Temporizador & 1 \\
 			\hline
-			 K1 & Timer & 1 \\
+			 K1 & Relé & 1 \\
 			\hline
 			 M1 & Motor DC & 1 \\
 			\hline
-			 B1 & Sensor Fotoeléctrico & 1 \\
+			 SENSOR & Sensor Fotoeléctrico & 1 \\
 			\hline
-			 H1 & Bombillos & 2 \\
+			 K2 & Relé & 1 \\
 			\hline
 		\end{tabular}	
 		\caption{Elementos Esquema Eléctrico}
@@ -1391,16 +1393,14 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 		La caja elaborada para el análisis de los tubérculos de papas, fue construida en acetato con medidas de, \textit{35 x 25(cm)} las laminas frontal y trasera (Figuras \ref{fig:frontal} y \ref{fig:trasera}), \textit{16 x 25(cm)} lamina superior (Figura \ref{fig:superior}), \textit{20 x 16(cm)} laminas laterales como se muestra en la Figura \ref{fig:lateral}.
 		
 		\begin{figure}[H]
-			\begin{minipage}[b]{0.35\linewidth}
-				\centering
+			\begin{minipage}[b]{0.25\linewidth}
 				\centering
 				\includegraphics[width=\linewidth]{Figs/300.png}
 				\caption{Lamina Frontal}
 				\label{fig:frontal}
 			\end{minipage}
 			\hspace{2.5cm}
-			\begin{minipage}[b]{0.35\linewidth}
-				\centering
+			\begin{minipage}[b]{0.25\linewidth}
 				\centering
 				\includegraphics[width=\linewidth]{Figs/301.png}
 				\caption{Lamina superior}
@@ -1409,16 +1409,14 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 		\end{figure}
 	
 		\begin{figure}[H]
-			\begin{minipage}[b]{0.35\linewidth}
-				\centering
+			\begin{minipage}[b]{0.25\linewidth}
 				\centering
 				\includegraphics[width=\linewidth]{Figs/302.png}
 				\caption{Lamina lateral}
 				\label{fig:lateral}
 			\end{minipage}
 			\hspace{2.5cm}
-			\begin{minipage}[b]{0.35\linewidth}
-				\centering
+			\begin{minipage}[b]{0.25\linewidth}
 				\centering
 				\includegraphics[width=\linewidth]{Figs/303.png}
 				\caption{Lamina Trasera}
@@ -1464,25 +1462,27 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 	Aquí se describe el funcionamiento mecánico de la maquina y el funcionamiento de la red neuronal, la cual fue programada en la tarjeta Jetson Nano para realizar la clasificación de los tubérculos de papa.
 	
 	\subsection{Funcionamiento Mecánico}
-		El funcionamiento mecánico inicia conectando la alimentación de la maquina, una vez la maquina se encuentre conectada, el indicador luminoso que se encuentra en el pulsador de inicio se activará como se muestra en la Figura \ref{fig:indicador}, esto para dar a conocer que la maquina ya puede entrar en funcionamiento. Se presiona el pulsador anteriormente mencionado y se genera la conmutación del relé para la activación del motor, el cual se encuentra conectado a una caja reductora, que transmite la energía a tres engranajes rectos (Figura \ref{fig:caja}), en donde el ultimo engranaje se encuentra conectado y transmite la energía a uno de los rodillos tensores de la banda transportadora mediante un eje, como se aprecia en la Figura \ref{fig:eje} con el fin de generar el movimiento de la banda. 
+		El funcionamiento mecánico inicia conectando la alimentación de la maquina, una vez la maquina se encuentre conectada, el indicador luminoso que se encuentra en el pulsador de inicio se activará como se muestra en la Figura \ref{fig:indicador}, esto para dar a conocer que la maquina ya puede entrar en funcionamiento.
 		
-\newpage
-
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[angle=270, scale=0.21]{Figs/200.jpg}
 			\caption{Indicador Luminoso}
 			\label{fig:indicador}
 		\end{figure}
-			
-		\begin{figure}[ht]
-			\centering
-			\includegraphics[scale=0.13]{Figs/201.jpg}
-			\caption{Caja reductora conectada a los engranajes rectos}
-			\label{fig:caja}
-		\end{figure}
-	
 		
+		
+		 Se presiona el pulsador anteriormente mencionado y se genera la conmutación del relé para la activación del motor, el cual se encuentra conectado a una caja reductora, que transmite la energía a tres engranajes rectos como se presentan en la Figura \ref{fig:caja}.
+		 
+		 \begin{figure}[ht]
+		 	\centering
+		 	\includegraphics[scale=0.13]{Figs/201.jpg}
+		 	\caption{Caja reductora conectada a los engranajes rectos}
+		 	\label{fig:caja}
+		 \end{figure}
+		 
+		  en donde el ultimo engranaje se encuentra conectado y transmite la energía a uno de los rodillos tensores de la banda transportadora mediante un eje, como se aprecia en la Figura \ref{fig:eje} con el fin de generar el movimiento de la banda. 
+
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[angle=270, scale=0.21]{Figs/202.jpg}

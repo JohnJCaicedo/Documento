@@ -67,7 +67,7 @@
 \contentsline {subsection}{\numberline {6.4.3}Cámara Web}{64}{subsection.6.4.3}%
 \contentsline {section}{\numberline {6.5}Funcionamiento}{65}{section.6.5}%
 \contentsline {subsection}{\numberline {6.5.1}Funcionamiento Mecánico}{65}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}Implementación en Sistema Embebido}{68}{subsection.6.5.2}%
-\contentsline {chapter}{\numberline {7}Trabajo Futuro}{70}{chapter.7}%
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{71}{chapter.7}%
+\contentsline {subsection}{\numberline {6.5.2}Implementación en Sistema Embebido}{67}{subsection.6.5.2}%
+\contentsline {chapter}{\numberline {7}Trabajo Futuro}{69}{chapter.7}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{70}{chapter.7}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
