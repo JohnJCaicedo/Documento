@@ -1392,7 +1392,8 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 	\section{Estructura}
 		La caja elaborada para el análisis de los tubérculos de papas, fue construida en acetato con medidas de, \textit{35 x 25(cm)} las laminas frontal y trasera (Figuras \ref{fig:frontal} y \ref{fig:trasera}), \textit{16 x 25(cm)} lamina superior (Figura \ref{fig:superior}), \textit{20 x 16(cm)} laminas laterales como se muestra en la Figura \ref{fig:lateral}.
 		
-		\begin{figure}[H]
+		\begin{figure}[ht]
+			\centering
 			\begin{minipage}[b]{0.25\linewidth}
 				\centering
 				\includegraphics[width=\linewidth]{Figs/300.png}
@@ -1408,7 +1409,8 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 			\end{minipage}
 		\end{figure}
 	
-		\begin{figure}[H]
+		\begin{figure}[ht]
+			\centering
 			\begin{minipage}[b]{0.25\linewidth}
 				\centering
 				\includegraphics[width=\linewidth]{Figs/302.png}
@@ -1471,9 +1473,9 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 			\label{fig:indicador}
 		\end{figure}
 		
-		
 		 Se presiona el pulsador anteriormente mencionado y se genera la conmutación del relé para la activación del motor, el cual se encuentra conectado a una caja reductora, que transmite la energía a tres engranajes rectos como se presentan en la Figura \ref{fig:caja}.
 		 
+		 \newpage		 
 		 \begin{figure}[ht]
 		 	\centering
 		 	\includegraphics[scale=0.13]{Figs/201.jpg}
@@ -1490,17 +1492,18 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 			\label{fig:eje}
 		\end{figure}
 
-\newpage	
+	
 		Una vez se inicia el movimiento de la banda transportadora, este seguirá hasta que el tubérculo entre en contacto con el con la luz infrarroja del sensor foto eléctrico como se observa en la Figura \ref{fig:sensor}, cuando el sensor detecte el tubérculo, la señal enviada detendrá la banda y activara un timer de un segundo, esto con el fin de permitir que la cámara tome la foto del tubérculo y la envié a la red neuronal para su análisis el cual se explicará en la sección \textit{Implementación en Sistema Embedido}. Culminado el tiempo establecido en el timer, la banda continuara su movimiento para desplazar y continuar con la clasificación de los tubérculos.
 		
+		\newpage
 		\begin{figure}[ht]
 			\centering
-			\includegraphics[scale=0.23]{Figs/203.jpg}
+			\includegraphics[scale=0.15]{Figs/203.jpg}
 			\caption{Detección del sensor fotoeléctrico}
 			\label{fig:sensor}
 		\end{figure}
 	
-	\newpage
+	
 	\subsection{Implementación en Sistema Embebido}
 	
 	Para el funcionamiento del algoritmo en tiempo real en el prototipo construido, se utilizó una tarjeta de desarrollo Nvidia Jetson Nano $2 \ GB$, debido a que cuenta con una tarjeta gráfica y está diseñada para ejecutar modelos de redes neuronales. La implementación del algoritmo, debido a que la red fue entrenada con imágenes de tubérculos de papa estáticas, se realizó de igual forma.\\
@@ -1509,11 +1512,12 @@ Se desarrolló una red neuronal artificial, (\textit{CNN}), para clasificar las 
 	
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[scale=0.2]{Figs/implementacion.jpg}
+		\includegraphics[scale=0.25]{Figs/implementacion.jpg}
 		\caption{Tubérculo de Papa Dentro de La Estructura}
 		\label{fig:implementacion}
 	\end{figure}
 
+	\newpage
 	Se realizó un experimento con 50 papas de las diferentes clases para verificar la precisión del algoritmo. La tabla \ref{table:res} muestra los resultados de algunas de las papas utilizadas.
 	
 	\begin{table}[ht]
