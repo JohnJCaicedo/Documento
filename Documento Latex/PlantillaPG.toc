@@ -37,37 +37,37 @@
 \contentsline {chapter}{\numberline {5}Algoritmo de Clasificación}{23}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Red Neuronal Artificial Convolucional}{23}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}Preparación Del \textit {Dataset}}{24}{subsection.5.1.1}%
-\contentsline {subsubsection}{\nonumberline PREPROCESAMIENTO DE IMÁGENES}{24}{subsubsection*.3}%
+\contentsline {subsubsection}{\nonumberline PREPROCESAMIENTO DE IMÁGENES}{24}{subsubsection*.15}%
 \contentsline {subsection}{\numberline {5.1.2}Funciones PotatoDataset y DataLoader}{27}{subsection.5.1.2}%
-\contentsline {subsubsection}{\nonumberline FUNCIÓN POTATODATASET}{27}{subsubsection*.5}%
-\contentsline {subsubsection}{\nonumberline FUNCIÓN DATALOADER}{28}{subsubsection*.7}%
+\contentsline {subsubsection}{\nonumberline FUNCIÓN POTATODATASET}{27}{subsubsection*.20}%
+\contentsline {subsubsection}{\nonumberline FUNCIÓN DATALOADER}{28}{subsubsection*.22}%
 \contentsline {subsection}{\numberline {5.1.3}Hiperparámetros Del Modelo}{29}{subsection.5.1.3}%
-\contentsline {subsubsection}{\nonumberline FUNCIÓN DE PÉRDIDAS}{29}{subsubsection*.9}%
-\contentsline {subsubsection}{\nonumberline OPTIMIZADOR}{30}{subsubsection*.11}%
+\contentsline {subsubsection}{\nonumberline FUNCIÓN DE PÉRDIDAS}{29}{subsubsection*.25}%
+\contentsline {subsubsection}{\nonumberline OPTIMIZADOR}{30}{subsubsection*.27}%
 \contentsline {subsection}{\numberline {5.1.4}Arquitectura del modelo}{31}{subsection.5.1.4}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado ALEXNET}}{31}{subsubsection*.13}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG19}}{32}{subsubsection*.15}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG11}}{36}{subsubsection*.17}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado RESNET18}}{40}{subsubsection*.19}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Comparación de arquitecturas sin optimizar}}{44}{subsubsection*.21}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado ALEXNET}}{31}{subsubsection*.29}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG19}}{32}{subsubsection*.32}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG11}}{36}{subsubsection*.40}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado RESNET18}}{40}{subsubsection*.48}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Comparación de arquitecturas sin optimizar}}{44}{subsubsection*.57}%
 \contentsline {subsection}{\numberline {5.1.5}Optimización Bayesiana}{45}{subsection.5.1.5}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado AlexNet optimizado}}{47}{subsubsection*.23}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG-19 optimizado}}{49}{subsubsection*.25}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG-11 optimizado}}{52}{subsubsection*.27}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo Preentrenado ResNet-18 Optimizado}}{54}{subsubsection*.29}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Comparación de Arquitecturas Optimizadas}}{56}{subsubsection*.31}%
-\contentsline {section}{\numberline {5.2}Clasificación Por Tamaño}{57}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Prototipo}{60}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Especificaciones principales}{60}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Descripción de la maquina}{61}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Esquema eléctrico}{62}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Estructura}{63}{section.6.4}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado AlexNet optimizado}}{47}{subsubsection*.62}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG-19 optimizado}}{50}{subsubsection*.69}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG-11 optimizado}}{52}{subsubsection*.76}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo Preentrenado ResNet-18 Optimizado}}{55}{subsubsection*.83}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Comparación de Arquitecturas Optimizadas}}{56}{subsubsection*.90}%
+\contentsline {section}{\numberline {5.2}Clasificación Por Tamaño}{58}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Prototipo}{61}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Especificaciones principales}{61}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Descripción de la maquina}{62}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Esquema eléctrico}{63}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Estructura}{64}{section.6.4}%
 \contentsline {subsection}{\numberline {6.4.1}Bombillos}{64}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Sensor Fotoeléctrico}{64}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}Cámara Web}{64}{subsection.6.4.3}%
-\contentsline {section}{\numberline {6.5}Funcionamiento}{65}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Funcionamiento Mecánico}{65}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.4.2}Sensor Fotoeléctrico}{65}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Cámara Web}{65}{subsection.6.4.3}%
+\contentsline {section}{\numberline {6.5}Funcionamiento}{66}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Funcionamiento Mecánico}{66}{subsection.6.5.1}%
 \contentsline {subsection}{\numberline {6.5.2}Implementación en Sistema Embebido}{67}{subsection.6.5.2}%
-\contentsline {chapter}{\numberline {7}Trabajo Futuro}{69}{chapter.7}%
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{70}{chapter.7}%
+\contentsline {chapter}{\numberline {7}Trabajo Futuro}{70}{chapter.7}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{71}{chapter.7}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
