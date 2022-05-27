@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {2.1}Agricultura De Precisión}{7}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Artificial Neural Networks}{7}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Convolución Dilatada}{8}{section.2.3}%
-\contentsline {section}{\numberline {2.4}DATA AUGMENTATION}{8}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Data Augmentation}{8}{section.2.4}%
 \contentsline {section}{\numberline {2.5}\textit {Dropout}}{9}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Filtro de mediana}{9}{section.2.6}%
 \contentsline {section}{\numberline {2.7}Imagen Binaria}{9}{section.2.7}%
