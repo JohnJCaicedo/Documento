@@ -5,9 +5,9 @@
 \contentsline {subsection}{\numberline {1.1.2}Objetivos Específicos}{4}{subsection.1.1.2}%
 \contentsline {section}{\numberline {1.2}Alcances y Limitaciones}{4}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Alcances}{4}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Limitaciones}{4}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.2}Limitaciones}{5}{subsection.1.2.2}%
 \contentsline {section}{\numberline {1.3}Justificación}{5}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Descripción y formulación del problema}{5}{section.1.4}%
+\contentsline {section}{\numberline {1.4}Descripción y Formulación Del Problema}{5}{section.1.4}%
 \contentsline {chapter}{\numberline {2}Marco Conceptual}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Agricultura De Precisión}{7}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Redes Neuronales Artificiales}{7}{section.2.2}%

@@ -9,16 +9,20 @@ Reallocating 'name_of_file' (item size: 1) to 7 items.
 The style file: ieeetr.bst
 Reallocating 'name_of_file' (item size: 1) to 11 items.
 Database file #1: Bib/biblio.bib
+Warning--entry type for "Dane2016" isn't style-file defined
+--line 7 of file Bib/biblio.bib
+Warning--entry type for "ntc341" isn't style-file defined
+--line 59 of file Bib/biblio.bib
 Warning--entry type for "Camara" isn't style-file defined
---line 453 of file Bib/biblio.bib
+--line 533 of file Bib/biblio.bib
 Warning--entry type for "Referencia1" isn't style-file defined
---line 461 of file Bib/biblio.bib
+--line 541 of file Bib/biblio.bib
 Warning--entry type for "Referencia2" isn't style-file defined
---line 469 of file Bib/biblio.bib
+--line 549 of file Bib/biblio.bib
 Warning--entry type for "Pytorch" isn't style-file defined
---line 505 of file Bib/biblio.bib
+--line 585 of file Bib/biblio.bib
 Warning--entry type for "cnnarchitecture" isn't style-file defined
---line 531 of file Bib/biblio.bib
+--line 611 of file Bib/biblio.bib
 Warning--empty journal in ref_13
 Warning--empty booktitle in inproceedings
 Warning--empty author in Shrivastava2017
@@ -26,36 +30,36 @@ Warning--empty journal in article5
 Warning--empty journal in bottou2012stochastic
 Warning--empty school in ref_2
 Warning--empty journal in ref_4
-You've used 49 entries,
+You've used 52 entries,
             1876 wiz_defined-function locations,
-            738 strings with 12230 characters,
-and the built_in function-call counts, 11560 in all, are:
-= -- 1084
-> -- 478
+            749 strings with 12941 characters,
+and the built_in function-call counts, 11961 in all, are:
+= -- 1118
+> -- 501
 < -- 0
-+ -- 182
-- -- 133
-* -- 796
-:= -- 1655
-add.period$ -- 46
-call.type$ -- 49
-change.case$ -- 48
++ -- 191
+- -- 139
+* -- 817
+:= -- 1716
+add.period$ -- 49
+call.type$ -- 52
+change.case$ -- 52
 chr.to.int$ -- 0
-cite$ -- 56
-duplicate$ -- 609
-empty$ -- 1141
-format.name$ -- 133
-if$ -- 2822
+cite$ -- 59
+duplicate$ -- 623
+empty$ -- 1188
+format.name$ -- 139
+if$ -- 2920
 int.to.chr$ -- 0
-int.to.str$ -- 49
+int.to.str$ -- 52
 missing$ -- 44
-newline$ -- 151
-num.names$ -- 44
-pop$ -- 179
+newline$ -- 160
+num.names$ -- 46
+pop$ -- 197
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 399
+skip$ -- 409
 stack$ -- 0
 substring$ -- 647
 swap$ -- 224
@@ -64,7 +68,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 7
-while$ -- 103
-width$ -- 51
-write$ -- 429
-(There were 12 warnings)
+while$ -- 105
+width$ -- 54
+write$ -- 451
+(There were 14 warnings)

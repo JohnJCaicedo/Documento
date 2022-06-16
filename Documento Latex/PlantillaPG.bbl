@@ -1,5 +1,21 @@
 \begin{thebibliography}{10}
 
+\bibitem{Dane2016}
+Dane, ``3 censo nacional agropecuario bogotá,'' 2016.
+
+\bibitem{goyeneche2015miradas}
+R.~L. Goyeneche~Orteg{\'o}n and Y.~A.~C. Jim{\'e}nez~S{\'a}nchez, ``Dos miradas
+  sobre el riesgo laboral: cultivadores de papa del municipio de toca,
+  boyac{\'a}, colombia,'' {\em Revista Ciencias de la Salud}, vol.~13, no.~2,
+  pp.~249--259, 2015.
+
+\bibitem{avellaneda2021evaluacion}
+A.~J. Avellaneda~Barrantes, L.~E. Ruiz~G{\'o}mez, J.~A. Monroy~Naranjo, {\em
+  et~al.}, ``Evaluaci{\'o}n financiera del sistema de distribuci{\'o}n de la
+  producci{\'o}n de peque{\~n}os agricultores de papa en sabana centro
+  cundinamarca,'' {B.S.} thesis, Especializaci{\'o}n en Administraci{\'o}n
+  Financiera Presencial, 2021.
+
 \bibitem{referencia2}
 ``Sector papero se prepara para aumentar el consumo de papa en colombia |
   finagro.''
@@ -7,6 +23,10 @@
 \bibitem{referencia1}
 ``El aporte de la papa a la economía colombiana • periódico el campesino
   – la voz del campo colombiano.''
+
+\bibitem{ntc341}
+``Industria alimentaria. papa para consumo. especificaciones: E: Food
+  industries. potatoes for consumption. specifications,'' 2018.
 
 \bibitem{agricultura}
 M.~L. Marote, ``Agricultura de precisi{\'o}n,'' {\em Ciencia y
@@ -16,14 +36,15 @@ M.~L. Marote, ``Agricultura de precisi{\'o}n,'' {\em Ciencia y
 R.~Salas, ``Redes neuronales artificiales,'' {\em Universidad de Valpara{\i}so.
   Departamento de Computaci{\'o}n}, vol.~1, pp.~1--7, 2004.
 
-\bibitem{ref_11}
-A.~Krogh, ``What are artificial neural networks?,'' {\em Nature biotechnology},
-  vol.~26, no.~2, pp.~195--197, 2008.
-
 \bibitem{wu2019fastfcn}
 H.~Wu, J.~Zhang, K.~Huang, K.~Liang, and Y.~Yu, ``Fastfcn: Rethinking dilated
   convolution in the backbone for semantic segmentation,'' {\em arXiv preprint
   arXiv:1903.11816}, 2019.
+
+\bibitem{jabbar2015methods}
+H.~Jabbar and R.~Z. Khan, ``Methods to avoid over-fitting and under-fitting in
+  supervised machine learning (comparative study),'' {\em Computer Science,
+  Communication and Instrumentation Devices}, vol.~70, 2015.
 
 \bibitem{van2001art}
 D.~A. Van~Dyk and X.-L. Meng, ``The art of data augmentation,'' {\em Journal of
@@ -46,11 +67,6 @@ J.~C. Tello, ``La visi{\'o}n artificial y las operaciones morfol{\'o}gicas en
 \bibitem{gholamalinezhad2020pooling}
 H.~Gholamalinezhad and H.~Khosravi, ``Pooling methods in deep neural networks,
   a review,'' {\em arXiv preprint arXiv:2009.07485}, 2020.
-
-\bibitem{jabbar2015methods}
-H.~Jabbar and R.~Z. Khan, ``Methods to avoid over-fitting and under-fitting in
-  supervised machine learning (comparative study),'' {\em Computer Science,
-  Communication and Instrumentation Devices}, vol.~70, 2015.
 
 \bibitem{islam2021position}
 M.~A. Islam, M.~Kowal, S.~Jia, K.~G. Derpanis, and N.~D. Bruce, ``Position,
