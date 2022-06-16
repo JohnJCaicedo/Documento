@@ -1,16 +1,20 @@
 \begin{thebibliography}{10}
 
-\bibitem{referencia1}
-``El aporte de la papa a la economía colombiana • periódico el campesino
-  – la voz del campo colombiano.''
-
 \bibitem{referencia2}
 ``Sector papero se prepara para aumentar el consumo de papa en colombia |
   finagro.''
 
-\bibitem{ref_10}
-E.~Garc{\'\i}a and F.~Flego, ``Agricultura de precisi{\'o}n,'' {\em Revista
-  Ciencia y Tecnolog{\'\i}a}, vol.~1, no.~8, pp.~99--116, 2008.
+\bibitem{referencia1}
+``El aporte de la papa a la economía colombiana • periódico el campesino
+  – la voz del campo colombiano.''
+
+\bibitem{agricultura}
+M.~L. Marote, ``Agricultura de precisi{\'o}n,'' {\em Ciencia y
+  tecnolog{\'\i}a}, pp.~143--167, 2010.
+
+\bibitem{redes}
+R.~Salas, ``Redes neuronales artificiales,'' {\em Universidad de Valpara{\i}so.
+  Departamento de Computaci{\'o}n}, vol.~1, pp.~1--7, 2004.
 
 \bibitem{ref_11}
 A.~Krogh, ``What are artificial neural networks?,'' {\em Nature biotechnology},

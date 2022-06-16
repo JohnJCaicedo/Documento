@@ -10,14 +10,14 @@
 \contentsline {section}{\numberline {1.4}Descripción y formulación del problema}{5}{section.1.4}%
 \contentsline {chapter}{\numberline {2}Marco Conceptual}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Agricultura De Precisión}{7}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Artificial Neural Networks}{7}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Convolución Dilatada}{8}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Data Augmentation}{8}{section.2.4}%
-\contentsline {section}{\numberline {2.5}\textit {Dropout}}{9}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Filtro de mediana}{9}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Imagen Binaria}{9}{section.2.7}%
-\contentsline {section}{\numberline {2.8}\textit {Max-pooling}}{9}{section.2.8}%
-\contentsline {section}{\numberline {2.9}\textit {Over-fitting}}{10}{section.2.9}%
+\contentsline {section}{\numberline {2.2}Redes Neuronales Artificiales}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Convolución Dilatada}{7}{section.2.3}%
+\contentsline {section}{\numberline {2.4}\textit {Over-fitting}}{8}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Data Augmentation}{8}{section.2.5}%
+\contentsline {section}{\numberline {2.6}\textit {Dropout}}{9}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Filtro de mediana}{9}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Imagen Binaria}{9}{section.2.8}%
+\contentsline {section}{\numberline {2.9}\textit {Max-pooling}}{9}{section.2.9}%
 \contentsline {section}{\numberline {2.10}\textit {Padding}}{10}{section.2.10}%
 \contentsline {section}{\numberline {2.11}Procesamiento de imágenes}{11}{section.2.11}%
 \contentsline {section}{\numberline {2.12}\textit {Stride}}{11}{section.2.12}%

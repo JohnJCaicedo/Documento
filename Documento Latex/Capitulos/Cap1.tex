@@ -56,12 +56,11 @@ El sector agricultor de Colombia ha implementado diferentes técnicas de visión
 
 
 \chapter{Marco Conceptual}
-En este capitulo se abordan algunos términos básicos necesarios, que ayuden al entendimiento y desarrollo del proyecto. 
 
-\section{Agricultura De Precisión} El término sobre el que se inspira la agricultura de precisión, es utilizar la porción adecuada de insumos, en el instante correcto y en el sitio preciso. La agricultura de precisión, (AP), implica la utilización de sistemas de posicionamiento universal, (GPS), y de otros medios electrónicos, para obtener datos del cultivo. Las tecnologías de la agricultura de precisión, permiten saciar una de las exigencias de la agricultura actualizada. Se muestra como primordial virtud, que la exploración de resultados de los ensayos se puede hacer por sectores diferentes en un mismo lote, y tal cual ajustar el desempeño diferencial en los mismos. La utilización de las tecnologías de la agricultura de precisión puede contribuir a mejorar los márgenes de precisión, por medio de un incremento del costo del rendimiento, (cantidad o calidad), de una reducción en la proporción de insumos, o de los dos paralelamente \cite{ref_10}.
+\section{Agricultura De Precisión} La agricultura de precisión (AP), es definida por \textit{Marote (2010)}, como \textit{''un concepto agronómico de gestión de parcelas agrícolas, basado en la existencia de variabilidad en campo"}. La cual para ser implementada requiere el uso de sistemas de posición Global (GPS), imágenes aéreas, sensores y satélites, para obtener datos del cultivo que permitan el análisis y entendimiento de dichas variaciones. El objetivo de la AP es evaluar la precisión y predicción de la producción de los cultivos, teniendo en cuenta entradas necesarias como la densidad óptima de siembra, estimar fertilizantes, precipitaciones, entre otras, con el fin de obtener mayor exactitud en los resultados, teniendo en cuenta que las bases fundamentales de la AP son la variabilidad espacial y temporal del terreno y los factores que pueden afectar la producción del cultivo.\cite{agricultura} 
 
-\section{Artificial Neural Networks} Las RNA son sistemas de procesamiento de la información, cuya composición y manejo permanecen inspirados en las redes neuronales biológicas. Consisten en un enorme conjunto de recursos básicos de procesamiento, denominados nodos o neuronas, que permanecen organizados en capas. De esta forma, las RNA son sistemas adaptativos que aprenden de la vivencia, en otros términos, aprenden a realizar ciertas labores por medio de un entrenamiento con ejemplos ilustrativos \cite{ref_11}.
-\\ 
+
+\section{Redes Neuronales Artificiales} Las redes neuronales artificiales (RNA), son definidas por \textit{Salas, R. (2004)}, como \textit{''un esquema de computación distribuida inspirada en la	estructura del sistema nervioso de los seres humanos ''}. Las RNA son métodos que ofrecen las herramientas necesarias para modelar de forma eficiente y eficaz problemas con una alta complejidad, esto se logra mediante la implementación de algoritmos de aprendizaje supervisado o no supervisado. El objetivo de las RNA es ajustar su arquitectura y parámetros en busca de minimizar su función de error, de tal manera que la salida generada sea lo más cercana a la verdadera salida según la entrada asignada \cite{redes}.
 
 \section{Convolución Dilatada}
 
@@ -73,6 +72,10 @@ Se trata de un método que busca ampliar la entrada insertando huecos entre sus 
 	\caption{Ejemplo Convolución Dilatada}
 	\label{fig:cd}
 \end{figure}
+
+\section{\textit{Over-fitting}}
+
+Un problema al momento de entrenar redes neuronales, es el \textit{over-fitting}, el cual se da cuando la red neuronal en un momento específico del ciclo de entrenamiento no muestra un progreso en la capacidad de resolver problemas. Si no que solamente aprende una regularidad aleatoria dentro del conjunto de patrones de entrenamiento, esto quiere decir que la red está sufriendo un exceso de flexibilidad a la hora de agrupar los datos \cite{jabbar2015methods}.
 
 
 \section{Data Augmentation}
@@ -115,9 +118,7 @@ Donde $N \in (1,...,R) $ representado como un desplazamiento de agrupación cuan
 	\label{mp}
 \end{figure}
 
-\section{\textit{Over-fitting}}
 
-Un problema al momento de entrenar redes neuronales, es el \textit{over-fitting}, el cual se da cuando la red neuronal en un momento especifico del ciclo de entrenamiento no muestra un progreso en la capacidad de resolver problemas. Sino que solamente aprende una regularidad aleatoria dentro del conjunto de patrones de entrenamiento \cite{jabbar2015methods}.
 
 \section{\textit{Padding}}
 
