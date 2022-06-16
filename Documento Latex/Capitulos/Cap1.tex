@@ -79,26 +79,24 @@ Un problema al momento de entrenar redes neuronales, es el \textit{over-fitting}
 
 
 \section{Data Augmentation}
-El Data augmentation consiste en la transformación de los datos existentes, para crear un \textit{dataset} con mayor cantidad de datos diferentes. El objetivo de esta herramienta es crear nuevos datos que puedan ser añadidos al conjunto ya existente, y así contar con más muestras para un mejor desempeño del algoritmo. Además de esto, también es implementado para reducir el \textit{overfitting}, ya que al añadir más información al conjunto de entrenamiento se evita que el modelo se sobre ajuste. \\
+El Data augmentation consiste en la transformación de los datos existentes, para crear un \textit{dataset} con mayor cantidad de datos diferentes. El objetivo de esta herramienta es generar nuevos datos que puedan ser añadidos al conjunto ya existente, y así contar con más muestras para un mejor desempeño del algoritmo. Además de esto, también es implementado para reducir el \textit{overfitting}, ya que al añadir más información al conjunto de entrenamiento se evita que el modelo se sobre ajuste, normalmente esta técnica es implementada en problemas de clasificación donde el Dataset base del algoritmo no cuenta con una cantidad significativa de muestras para el entrenamiento de la red neuronal \cite{data}. \\
 
 
-El concepto Data Augmentation tiene relación con los procedimientos para edificar algoritmos iterativos de mejora o muestreo, por medio de la introducción de datos no vigilados o cambiantes latentes. Para los algoritmos estocásticos, el procedimiento se popularizó en la literatura estadística por el algoritmo de incremento de datos de Tanner y Wong, y en la literatura de física por el algoritmo de Swendsen y Wang, para el muestreo de los modelos de Ising y Potts y sus generalizaciones; en la literatura de física, el Data Augmentation, se conoce como el procedimiento de las cambiantes auxiliares. Generalmente, la obra de esquemas de el Data augmentation es que den sitio a algoritmos básicos y rápidos, debido a que las tácticas famosas varían de una manera significativa con respecto a los modelos \cite{van2001art}.
 
 \section{\textit{Dropout}}
 
-Para cada entrenamiento de redes neuronales, la propagación hacia adelante involucra la eliminación aleatoria de la mitad de activaciones en cada capa. Haciendo que el error se extienda hacia atrás a traves de las activaciones remanentes, reduciendo sustancialmente al sobreajuste. Se cree que es debido al impedimento de que los pesos de la red colaboren entre sí para memorizar las muestras del entrenamiento mejorando su rendimiento \cite{hinton2012improving}
+El Dropout es una técnica de regularización implementada en el entrenamiento de redes neuronales, el fin de esta técnica es evitar que las neuronas que se encuentran en la red memoricen parte de la entrada, ya que si la red memoriza la entrada, se presentará un sobre ajuste en la red. El Dropout cumple su objetivo desactivando de manera aleatoria un porcentaje de las neuronas ubicadas en cada capa oculta \cite{drop}.
 
 \section{Filtro de mediana}
 
 Es una tecnología que procesa señales no lineales. El valor del ruido que proviene de la imagen digital o la secuencia es sustituida por el valor mediano de la vecindad (máscara).\\
 Los pixeles de la máscara se clasifican en el orden de sus niveles de gris, el valor mediano del grupo es almacenado para sustituir el valor del ruido \cite{zhu2012improved}.
 
-\section{Imagen Binaria} Una imagen binaria puede ser definida como una función de dos variables discretas
-[m, n], las cuales pueden tomar dos valores, ‘0’ o ‘1’, de ahí su nombre de imagen binaria, estos valores pueden ser asignados dependiendo el nivel de gris que contenga la imagen (las imágenes binarias poseen dos niveles: blanco y negro). Las imágenes binarias son implementadas en visión artificial para realizar tareas de preprocesamiento de imágenes, el cual consiste en la eliminación del ruido y la simplificación del objeto que se encuentra en la imagen, además de esto, también se implementa para la descripción cualitativa de los objetos esto quiere decir que una imagen binaria facilita el cálculo de áreas, perímetros, diámetros, etc.\cite{ref_12}.
+\section{Imagen Binaria} Una imagen binaria puede ser definida como una función de dos variables discretas [m, n], las cuales pueden	 tomar dos valores, ‘0’ o ‘1’, de ahí su nombre de imagen binaria, estos valores pueden ser asignados dependiendo el nivel de gris que contenga la imagen (las imágenes binarias poseen dos niveles: blanco y negro). Las imágenes binarias son implementadas en visión artificial para realizar tareas de preprocesamiento de imágenes, el cual consiste en la eliminación del ruido y la simplificación del objeto que se encuentra en la imagen, además de esto, también se implementa para la descripción cualitativa de los objetos esto quiere decir que una imagen binaria facilita el cálculo de áreas, perímetros, diámetros, etc.\cite{ref_12}.
 
 \section{\textit{Max-pooling}}
 
-Una capa de agrupación normal, realiza un muestreo decreciente dividiendo la entrada en agrupaciones rectangulares y calculando los valores máximos de cada agrupación.\\
+El pooling es conocido como una operación la cual permite analizar imágenes por regiones, el objetivo de esta operación es obtener la información más importante que se encuentra en las imágenes, esto se logra reduciendo la cantidad de datos que están presentes entre una capa y otra, una ventaja de implementar el max-pooling en las redes neuronales es que permite facilitar el procesamiento de las imágenes y el entrenamiento de la red sin perder información en el proceso.\\
 
 Un operador max-pooling, se puede usar para la reducción del muestreo sobre las bandas de salida convolucionales, haciendo una reducción de la variabilidad. Esto lo realiza a través de un valor máximo como se muestra en la Ecuación ~\ref{eq:maxp}, dentro de un grupo de activaciones A. La banda máxima agrupada m está compuesta por f filtros relacionados $p_{m}=[p_{1m},...,p_{fm}] \in A^f$.
 
@@ -1289,7 +1287,6 @@ De esta forma, se realiza la clasificación por tamaño en nuevas imágenes de p
 
 \newpage
 \chapter{Prototipo}
-En este capitulo se presentan diferentes numerales, para detallar y explicar el prototipo implementado para la clasificación de tubérculos de papa. En el numeral \textit{6.1} se dan a conocer las especificaciones de la maquina implementada. seguido en el numeral \textit{6.2} donde se realiza la descripción de la maquina. En el numeral \textit{6.3} se tiene la descripción del sistema eléctrico y sus componentes, y por ultimo, se termina con los numerales \textit{6.4 y 6.5}, donde se explica la estructura construida para la clasificación de los tubérculos, y se finaliza con el funcionamiento de la maquina.
 
 \section{Especificaciones principales}
 Se implementa una banda transportadora, tomada de una maquina selladora de banda continua horizontal FR-900, la cual es impulsada por un motor DC a 220V. Las especificaciones técnicas de la selladora, se presentan en la Tabla \ref{fig:principales}. La máquina se alimenta con $220 \ VAC$ a $50 \ HZ$ y su estructura es en acero inoxidable. 

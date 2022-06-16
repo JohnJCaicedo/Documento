@@ -32,37 +32,37 @@ Warning--empty school in ref_2
 Warning--empty journal in ref_4
 You've used 52 entries,
             1876 wiz_defined-function locations,
-            749 strings with 12941 characters,
-and the built_in function-call counts, 11961 in all, are:
-= -- 1118
-> -- 501
+            749 strings with 12880 characters,
+and the built_in function-call counts, 11894 in all, are:
+= -- 1116
+> -- 488
 < -- 0
-+ -- 191
-- -- 139
-* -- 817
-:= -- 1716
++ -- 187
+- -- 135
+* -- 805
+:= -- 1699
 add.period$ -- 49
 call.type$ -- 52
 change.case$ -- 52
 chr.to.int$ -- 0
 cite$ -- 59
-duplicate$ -- 623
-empty$ -- 1188
-format.name$ -- 139
-if$ -- 2920
+duplicate$ -- 618
+empty$ -- 1189
+format.name$ -- 135
+if$ -- 2910
 int.to.chr$ -- 0
 int.to.str$ -- 52
-missing$ -- 44
+missing$ -- 43
 newline$ -- 160
 num.names$ -- 46
-pop$ -- 197
+pop$ -- 200
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 409
+skip$ -- 412
 stack$ -- 0
 substring$ -- 647
-swap$ -- 224
+swap$ -- 223
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
@@ -70,5 +70,5 @@ type$ -- 0
 warning$ -- 7
 while$ -- 105
 width$ -- 54
-write$ -- 451
+write$ -- 450
 (There were 14 warnings)
