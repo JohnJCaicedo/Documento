@@ -105,6 +105,10 @@ J.~Porras, M.~De~la Cruz, and A.~Mor{\'a}n, ``Clasification system based on
 C.~Nandi, ``Machine vision based automatic fruit grading system using fuzzy
   algorithm,'' 02 2014.
 
+\bibitem{lecun2015deep}
+Y.~LeCun, Y.~Bengio, and G.~Hinton, ``Deep learning,'' {\em nature}, vol.~521,
+  no.~7553, pp.~436--444, 2015.
+
 \bibitem{article2}
 L.~Pencue-Fierro and J.~León~Téllez, ``Detección y clasificación de
   defectos en frutas mediante el procesamiento digital de imágenes,'' {\em
@@ -171,10 +175,14 @@ M.~Barnes, T.~Duckett, G.~Cielniak, G.~Stroud, and G.~Harper, ``Visual
   detection of blemishes in potatoes using minimalist boosted classifiers,''
   {\em Journal of Food Engineering}, vol.~98, pp.~339--346, 2010.
 
-\bibitem{refjaither}
-S.~Marino, P.~Beauseroy, and A.~Smolarz, ``Unsupervised adversarial deep domain
-  adaptation method for potato defects classification,'' {\em Computers and
-  Electronics in Agriculture}, vol.~174, p.~105501, 2020.
+\bibitem{informepapa2019}
+V.~D.~A. AGROPECUARIOS and D.~D. C. A.~Y. FORESTALES, ``Estrategia de
+  ordenamiento de la producciÓn cadena productiva de la papa y su industria,''
+  2019.
+
+\bibitem{recoleccionpapa}
+J.~M.~B. Lópe, ``DocumentaciÓn del proceso tÉcnico utilizado en el cultivo
+  de papa en el municipio de chita boyacÁ vereda rechÍniga,'' 2017.
 
 \bibitem{artificial2012aplicacion}
 V.~Artificial, ``Aplicaci{\'o}n pr{\'a}ctica de la visi{\'o}n artificial en el
@@ -184,9 +192,17 @@ V.~Artificial, ``Aplicaci{\'o}n pr{\'a}ctica de la visi{\'o}n artificial en el
 \bibitem{Camara}
 ``La camara fotografica cuerpo y controles basicos.''
 
+\bibitem{normaespanola}
+A.~E. de~Normalización~y Certificación, ``Iluminacion de los lugares de
+  trabajo en interiores,'' 2003.
+
 \bibitem{cnnarchitecture}
 T.~Afridi, A.~Alam, M.~N. Khan, and J.~Khan, ``A multimodal memes
   classification: A survey and open research issues,'' 09 2020.
+
+\bibitem{o2015introduction}
+K.~O'Shea and R.~Nash, ``An introduction to convolutional neural networks,''
+  {\em arXiv preprint arXiv:1511.08458}, 2015.
 
 \bibitem{Pytorch}
 ``Pytorch documentation — pytorch 1.10.1 documentation.''

@@ -12,17 +12,23 @@ Database file #1: Bib/biblio.bib
 Warning--entry type for "Dane2016" isn't style-file defined
 --line 7 of file Bib/biblio.bib
 Warning--entry type for "ntc341" isn't style-file defined
---line 59 of file Bib/biblio.bib
+--line 81 of file Bib/biblio.bib
 Warning--entry type for "Camara" isn't style-file defined
---line 533 of file Bib/biblio.bib
+--line 555 of file Bib/biblio.bib
 Warning--entry type for "Referencia1" isn't style-file defined
---line 541 of file Bib/biblio.bib
+--line 563 of file Bib/biblio.bib
 Warning--entry type for "Referencia2" isn't style-file defined
---line 549 of file Bib/biblio.bib
+--line 571 of file Bib/biblio.bib
 Warning--entry type for "Pytorch" isn't style-file defined
---line 585 of file Bib/biblio.bib
+--line 607 of file Bib/biblio.bib
 Warning--entry type for "cnnarchitecture" isn't style-file defined
---line 611 of file Bib/biblio.bib
+--line 633 of file Bib/biblio.bib
+Warning--entry type for "normaespanola" isn't style-file defined
+--line 1049 of file Bib/biblio.bib
+Warning--entry type for "informepapa2019" isn't style-file defined
+--line 1091 of file Bib/biblio.bib
+Warning--entry type for "recoleccionpapa" isn't style-file defined
+--line 1109 of file Bib/biblio.bib
 Warning--empty journal in ref_13
 Warning--empty booktitle in inproceedings
 Warning--empty author in Shrivastava2017
@@ -30,45 +36,45 @@ Warning--empty journal in article5
 Warning--empty journal in bottou2012stochastic
 Warning--empty school in ref_2
 Warning--empty journal in ref_4
-You've used 52 entries,
+You've used 56 entries,
             1876 wiz_defined-function locations,
-            749 strings with 12880 characters,
-and the built_in function-call counts, 11894 in all, are:
-= -- 1116
-> -- 488
+            769 strings with 13521 characters,
+and the built_in function-call counts, 12468 in all, are:
+= -- 1165
+> -- 512
 < -- 0
-+ -- 187
-- -- 135
-* -- 805
-:= -- 1699
-add.period$ -- 49
-call.type$ -- 52
-change.case$ -- 52
++ -- 197
+- -- 141
+* -- 838
+:= -- 1786
+add.period$ -- 53
+call.type$ -- 56
+change.case$ -- 56
 chr.to.int$ -- 0
-cite$ -- 59
-duplicate$ -- 618
-empty$ -- 1189
-format.name$ -- 135
-if$ -- 2910
+cite$ -- 63
+duplicate$ -- 635
+empty$ -- 1266
+format.name$ -- 141
+if$ -- 3048
 int.to.chr$ -- 0
-int.to.str$ -- 52
-missing$ -- 43
-newline$ -- 160
-num.names$ -- 46
-pop$ -- 200
+int.to.str$ -- 56
+missing$ -- 44
+newline$ -- 172
+num.names$ -- 50
+pop$ -- 223
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 412
+skip$ -- 422
 stack$ -- 0
-substring$ -- 647
-swap$ -- 223
+substring$ -- 667
+swap$ -- 220
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 7
-while$ -- 105
-width$ -- 54
-write$ -- 450
-(There were 14 warnings)
+while$ -- 111
+width$ -- 58
+write$ -- 480
+(There were 17 warnings)
