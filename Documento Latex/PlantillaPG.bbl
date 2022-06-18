@@ -196,10 +196,6 @@ V.~Artificial, ``Aplicaci{\'o}n pr{\'a}ctica de la visi{\'o}n artificial en el
 A.~E. de~Normalización~y Certificación, ``Iluminacion de los lugares de
   trabajo en interiores,'' 2003.
 
-\bibitem{cnnarchitecture}
-T.~Afridi, A.~Alam, M.~N. Khan, and J.~Khan, ``A multimodal memes
-  classification: A survey and open research issues,'' 09 2020.
-
 \bibitem{o2015introduction}
 K.~O'Shea and R.~Nash, ``An introduction to convolutional neural networks,''
   {\em arXiv preprint arXiv:1511.08458}, 2015.
@@ -212,6 +208,10 @@ V.~Mathivet, {\em Inteligencia artificial para desarrolladores: conceptos e
   implementaci{\'o}n en C}.
 \newblock Ediciones ENI., 2018.
 
+\bibitem{ruder2016overview}
+S.~Ruder, ``An overview of gradient descent optimization algorithms,'' {\em
+  arXiv preprint arXiv:1609.04747}, 2016.
+
 \bibitem{rumelhart1986learning}
 D.~E. Rumelhart, G.~E. Hinton, and R.~J. Williams, ``Learning internal
   representations by error propagation, parallel distributed processing, vol.
@@ -220,10 +220,13 @@ D.~E. Rumelhart, G.~E. Hinton, and R.~J. Williams, ``Learning internal
 \bibitem{bottou2012stochastic}
 L.~Bottou, ``Stochastic gradient descent tricks,'' pp.~421--436, 2012.
 
-\bibitem{ref_1}
-A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton, ``Imagenet classification with
-  deep convolutional neural networks,'' {\em Advances in neural information
-  processing systems}, vol.~25, 2012.
+\bibitem{krizhevsky2014one}
+A.~Krizhevsky, ``One weird trick for parallelizing convolutional neural
+  networks,'' {\em arXiv preprint arXiv:1404.5997}, 2014.
+
+\bibitem{simonyan2014very}
+K.~Simonyan and A.~Zisserman, ``Very deep convolutional networks for
+  large-scale image recognition,'' {\em arXiv preprint arXiv:1409.1556}, 2014.
 
 \bibitem{ref_2}
 L.~Moreno-D{\'\i}az-Alejo, ``An{\'a}lisis comparativo de arquitecturas de redes

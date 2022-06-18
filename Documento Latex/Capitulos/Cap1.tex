@@ -219,7 +219,7 @@ Se diseñó un algoritmo de clasificación utilizando Redes Neuronales Convoluci
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.28]{Figs/FGGeneral.jpg}
-	\caption{Arquitectura del Sistema de Clasificación}
+	\caption{Arquitectura del Sistema de Clasificación \\ Fuente: Elaboración Propia}
 	\label{fig:flujogeneral}
 \end{figure}
 
@@ -268,7 +268,7 @@ Las fotos tomadas para la creación del \textit{dataset}, poseen un tamaño de $
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.16]{Figs/Chamber.JPEG}
-	\caption{Récamara Para la Toma de Fotos}
+	\caption{Récamara Para la Toma de Fotos\\ Fuente: Elaboración Propia}
 	\label{fig:chamber}
 \end{figure}
 
@@ -329,7 +329,7 @@ La librería \textit{Plotly}, que permite realizar gráficas en \textit{Python},
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.5]{Figs/Distribucion.jpg}
-	\caption{Distribución del Dataset Según Sus Características Y Clases Definidas}
+	\caption{Distribución del Dataset Según Sus Características Y Clases Definidas \\ Fuente: Elaboración Propia}
 	\label{fig:distribuciontipo}
 \end{figure}
 
@@ -343,41 +343,42 @@ Se definieron los conjuntos de \textit{entrenamiento} y \textit{validación}, a 
 
 \section{Red Neuronal Convolucional}
 
-La arquitectura general de una red neuronal convolucional (\textit{RNC}) se muestra en la Figura \ref{fig:cnnarchitecture}, que consiste en varias capas de procesamiento de imágenes en donde se realizan convoluciones () \cite{o2015introduction}
+La arquitectura general de una red neuronal convolucional (\textit{RNC}) se muestra en la Figura \ref{fig:cnnarchitecture}, que consiste en varias capas de procesamiento de imágenes en donde se realizan convoluciones (operación matricial en la entrada de a red ue extrae características y disminuye la complejidad del modelo) \cite{o2015introduction}. Se realizaron pruebas con las arquitecturas de (\textit{RNC}) pre entrenadas \textit{Alexnet}, \textit{Resnet18}, \textit{VGG11} y \textit{VGG19} y se implementó la optimización bayesiana en ciertos hiperparámetros de las arquitecturas existentes, para mejorar los resultados.
 
- A common form of CNN architecture in which convolutional layers are
-stacked between ReLus continuously before being passed through the pooling
-layer, before going between one or many fully connected ReLus.
-
-
- que consiste en  
-Se realizaron pruebas con las arquitecturas \textit{Alexnet}, \textit{Resnet18}, \textit{VGG11} y \textit{VGG19} y se implementó la optimización bayesiana en ciertos hiperparámetros de las arquitecturas existentes, para mejorar los resultados. 
+\vspace{1cm}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.6]{Figs/A-generic-CNN-Architecture.png}	
-	\caption{Arquitectura General De Una \textit{RNC} \\ Fuente: Apellido, Inicial. (año). Título del trabajo [Tipo]} 
+	\includegraphics[scale=0.8]{Figs/A-generic-CNN-Architecture.png}	
+	\caption{Arquitectura General De Una \textit{RNC} \\ Fuente: O'Shea, K. (2015)} 
 	\label{fig:cnnarchitecture}
 \end{figure}	
 
-El procedimiento realizado para desarrollar la red neuronal, se aprecia en la Figura \ref{fig:procedimiento}, donde se indican los pasos a seguir, previo a implementar alguna de las arquitecturas. Cada ítem será descrito en las próximas secciones.  
+\vspace{0.5cm}
 
+El procedimiento realizado para implementar la red neuronal convolucional se aprecia en la Figura \ref{fig:procedimiento}, donde se indican los pasos a seguir previo a utilizar alguna de las arquitecturas pre entrenadas. Cada ítem será descrito en las próximas secciones.  
+
+\newpage
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.15]{Figs/procedimiento.jpg}
-	\caption{Procedimiento Diseñado Para Implementar La \textit{CNN}}
+	\includegraphics[scale=0.4]{Figs/procedimiento.jpg}
+	\caption{Procedimiento Para Implementar La \textit{RNC} \\ Fuente: Elaboración Propia}
 	\label{fig:procedimiento}
 \end{figure}	
 
-
-\newpage
 \subsection{Preparación Del \textit{Dataset}}
 
-Para realizar un correcto entrenamiento de un modelo de red neuronal, es necesario aplicar un preprocesamiento a las imágenes para que el modelo extraiga características pertinentes a las clases definidas. En este apartado se explica como se lleva acabo el preprocesamiento de imágenes y los diferentes filtros aplicados para realizar el Data Augmentation.
+Para realizar un correcto entrenamiento del modelo de red neuronal convolucional es necesario aplicar un preprocesamiento a las imágenes, para que el modelo extraiga características pertinentes a las clases definidas. En este apartado se explica el procedimiento que se lleva a cabo para el preprocesamiento de imágenes y los diferentes filtros aplicados para realizar el \textit{Data Augmentation}.
 
 \subsubsection{PREPROCESAMIENTO DE IMÁGENES}
 
-Usando el módulo \textit{tranforms.compose()}, de la librería \textit{Pytorch}, se pueden encadenar unas determinadas funciones, que aplican diferentes tipos de filtros y transformaciones al \textit{Dataset}. De esta forma, se crea la tarea de segmentación debido a que las transformaciones aumentan en consideración el tamaño original del \textit{Dataset}, facilitando así, la extracción de características. Las transformaciones disponibles se presentan en la Tabla \ref{table:Filters1}.
+Usando el módulo \textit{tranforms.compose()}, de la librería \textit{Pytorch}, se pueden encadenar unas determinadas funciones que aplican diferentes tipos de filtros y transformaciones al \textit{Dataset} \cite{Pytorch}. De esta forma, se crea la tarea de segmentación debido a que las transformaciones aumentan en consideración el tamaño original del \textit{Dataset}, facilitando así, la extracción de características.\\
+
+En la Tabla \ref{table:Filters1} se observa una parte de las transformaciones de imágenes disponibles en el módulo \textit{torchvision.tranforms.compose} de la librería \textit{Pytorch}. En el caso del \textit{Dataset} de papas creado, se deben tener en cuenta únicamente las transformaciones cuyo resultado sea relevante para la extracción de características de la imágen, por ejemplo, como se explicó anteriormente, se va a clasificar el tubérculo de papá en tipo y daño, con la red neuronal, por este motivo, el color es una característica que define si la papa pertenece a la clase \textit{R12} o \textit{Pastusa} y, en algunos casos, si se encuentra con algún tipo de daño, por este motivo, los filtros que transforman la imágen en escala de grises no son relevantes y podrían afectar el rendimiento del algoritmo.
+
+\newpage
+
+\vspace{1cm}
 
 \begin{table}[ht]
 	\centering
@@ -388,15 +389,18 @@ Usando el módulo \textit{tranforms.compose()}, de la librería \textit{Pytorch}
 		ColorJitter           & Cambia aleatoriamente el brillo, el contraste, la saturación y el tono de una imagen   & RandomRotation        & Rota la imagen a un ángulo determinado                                                          \\ \hline
 		FiverCrop              & Recorta la imagen en cuatro esquinas y el recorte central                              & RandomVerticalFlip    & Voltea verticalmente la imagen al azar con una probabilidad dada                                \\ \hline
 		Grayscale             & Convierte la imágen en escala de grises                                                & Resize                & Redimensiona la imagen al tamaño dado                                                           \\ \hline
-		Pad                   & Rellena la imágen en todos sus lados con el valor de "pad" dado                        & TenCrop               & Recorta la imagen dada en cuatro esquinas y el recorte central \\ \hline
-		RandomAffine          & Transformación afín aleatoria de la imagen manteniendo el centro invariante            & GaussianBlur          & Desenfoca la imágen con un filtro gausseano                                                                                                                     \\ \hline
+		Pad                   & Rellena la imágen en todos sus lados con el valor de \textit{pad} dado                        & TenCrop               & Recorta la imagen dada en cuatro esquinas y el recorte central \\ \hline
+		RandomAffine          & Transformación aleatoria de la imagen manteniendo el centro invariante            & GaussianBlur          & Desenfoca la imágen con un filtro gausseano                                                                                                                     \\ \hline
 	\end{tabular}
 	\caption{Funciones de transformación de imágenes del módulo de \textit{Pytorch}}
 	\label{table:Filters1}
 \end{table}
 
-En la Tabla \ref{table:Filters1} se observa una parte de las transformaciones de imágenes disponibles en el módulo \textit{torchvision.tranforms.compose} de la librería \textit{Pytorch}. En el caso del \textit{Dataset} de papas creado, se deben tener en cuenta únicamente las transformaciones cuyo resultado sea relevante para la extracción de características de la imágen, por ejemplo, como se explicó anteriormente, se va a clasificar el tubérculo de papá en tipo y daño, con la red neuronal, por este motivo, el color es una característica que define si la papa pertenece a la clase \textit{R12} o \textit{Pastusa} y, en algunos casos, si se encuentra con algún tipo de daño, por este motivo, los filtros que transforman la imágen en escala de grises no son relevantes y podrían afectar el rendimiento del algoritmo.
+\vspace{0.5cm}
 
+De igual forma, en la Tabla \ref{table:filters2} se observan algunos filtros como recortes en la imagen, rotaciones, cambios de perspectiva, cambios en la nitidez y contraste de la imagen. El uso de los filtros en la fase de preprocesamiento permite enriquecer el \textit{dataset} para garantizar que el modelo aprenda las características que debe clasificar y se disminuya el \textit{overfitting} y \textit{underfitting}.
+
+\newpage
 \begin{table}[ht]
 	\centering
 	\begin{tabular}{|p{3.5cm}|p{3.5cm}|p{3.8cm}|p{3.5cm}|}
@@ -413,8 +417,7 @@ En la Tabla \ref{table:Filters1} se observa una parte de las transformaciones de
 	\label{table:filters2}
 \end{table}
 
-\newpage
-De igual forma, en la Tabla \ref{table:filters2}, se observan algunos filtros como recortes en la imágen, rotaciones, cambios de perspectiva, cambios en la nitidez y contraste de la imágen. Se escogieron los filtros considerados mejores, (No cambian la morfología del color), para el caso del \textit{Dataset} de tubérculos de papa creado en este documento. Los filtros que se utilizaron en el desarrollo del algoritmo de clasificación, teniendo en cuenta aquellas transformaciones que podrían afectar el rendimiento del algoritmo son:
+Se escogieron los filtros considerados mejores, aquellos que no cambian la morfología del color, para el caso del \textit{dataset} de tubérculos de papa creado en este documento. Los filtros que se utilizaron en el desarrollo del algoritmo de clasificación, teniendo en cuenta aquellas transformaciones que podrían afectar el rendimiento del algoritmo son:
 
 \begin{itemize}
 	\item Resize
@@ -425,16 +428,17 @@ De igual forma, en la Tabla \ref{table:filters2}, se observan algunos filtros co
 	\item RandomAdjustSharpness
 \end{itemize}
 
-Como se está utilizando la librería \textit{Pytorch}, las imágenes deben ingresar en formato \textit{Tensor}, que convierte los valores de los píxeles de una imágen \textit{PIL} estándar, con un rango de $[0, 255]$,  a un tensor decimal de \textit{Pythorch}, con valores en un rango con valores $[0.0, 1.0]$ de la forma  $(C, H, W)$, siendo C el número de canales de la imágen, (1 si es en escala de grises, 3 si es \textit{RGB}), $H$ y $W$ el tamaño de la imágen. \\
+Como se está utilizando la librería \textit{Pytorch}, las imágenes deben ingresar en formato \textit{Tensor}, que convierte los valores de los píxeles de una imágen \textit{PIL} estándar, con un rango de $[0, 255]$,  a un tensor decimal de \textit{Pythorch}, con valores en un rango con valores $[0.0 \ , 1.0]$ de la forma  $(C, H, W)$, siendo C el número de canales de la imágen, ($1$ si es en escala de grises, $3$ si es \textit{RGB}), $H$ y $W$ el tamaño de la imágen. \\
 
-Una vez la imágen está en formato \textit{PyTorch FloatTensor}, se decidió utilizar la función \textit{torchvision.tranforms.normalize()} para normalizar las imágenes. La normalización de una imágen consiste en modificar los valores del tensor, que se encuentran entre $[0.0, 1.0]$, para que el promedio y la desviación estándar sean $0$ y $1$ respectivamente. Para hacer esto se utiliza la Ecuación \ref{eq:normalize} \cite{Pytorch}
+Una vez la imágen está en formato \textit{PyTorch FloatTensor}, se decidió utilizar la función \textit{torchvision.tranforms.normalize()} para normalizar las imágenes. La normalización de una imágen consiste en modificar los valores del tensor, que se encuentran entre $[0.0 \ , 1.0]$, para que el promedio y la desviación estándar sean $0$ y $1$ respectivamente. Para hacer esto se utiliza la Ecuación \ref{eq:normalize} \cite{Pytorch}\\
 
 \begin{equation}
 	{output[Channel]=\frac{Input[Channel]-Mean[Channel]}{std[Channel]}}
 	\label{eq:normalize}
 \end{equation}
 
-La normalización se utiliza debido a que ayuda a los datos a estar definidos dentro de un rango y reducir la asimetría entre ellos, lo que permite un aprendizaje más rápido. Se diseñó una función en \textit{Python} que calcula el promedio y la desviación estándar, para \textit{Trainset} y para el \textit{Testset}. De esta forma se garantiza que la normalización sea correcta en el total del \textit{Dataset}. Los valores obtenidos para el \textit{Trainset} Ecuación \ref{eq:meanstd1} y el \textit{Testset} Ecuación \ref{eq:meanstd2} respectivamente.
+\vspace{0.5cm}
+La normalización se utiliza debido a que ayuda a los datos a estar definidos dentro de un rango y reducir la asimetría entre ellos, lo que permite un aprendizaje más rápido. Se diseñó una función en \textit{Python} que calcula el promedio y la desviación estándar, para el conjunto de datos de \textit{entrenamiento} y \textit{validación}. De esta forma se garantiza que la normalización sea correcta en el conjunto total de imágenes del \textit{dataset}. Los valores obtenidos para el conjunto de \textit{entrenamiento} se presentan en la Ecuación \ref{eq:meanstd1} y el conjunto de \textit{validación} en la Ecuación \ref{eq:meanstd2}.\\
 
 \begin{equation}				{mean = [0.7467, 0.7389, 0.7432] \hspace*{1cm}  std  = [0.1288, 0.1633, 0.2045]}
 	\label{eq:meanstd1}
@@ -446,29 +450,30 @@ La normalización se utiliza debido a que ayuda a los datos a estar definidos de
 	\label{eq:meanstd2}
 \end{equation}
 
-La Figura \ref{fig:agumentation} enseña una matriz de imágenes como parte del \textit{Trainset}, que muestra las transformaciones hechas al $80\%$ de las imágenes del \textit{Dataset}, y la clase a la que pertenece la Tabla \ref{table:Clases}, verificando así que las funciones creadas están enlazando correctamente la imágen con su respectiva clase y aplicando de forma correcta las transformaciones.
+\vspace{0.3cm}
+La Figura \ref{fig:agumentation} enseña una matriz de imágenes como parte del conjunto de \textit{entrenamiento}, que muestra las transformaciones hechas al $80\%$ de las imágenes del \textit{dataset}, y la clase a la que pertenece según la Tabla \ref{table:Clases}, verificando así que las funciones creadas están enlazando correctamente la imágen con su respectiva clase y aplicando de forma correcta las transformaciones.
 
-
+\newpage
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.4]{Figs/augmentation.png}
-	\caption{Matriz de Imágenes Con Transformaciones Aplicadas}
+	\caption{Matriz de Imágenes Con Transformaciones Aplicadas \\ Fuente: Elaboración Propia}
 	\label{fig:agumentation}
 \end{figure}	
 
 \subsection{Funciones PotatoDataset y DataLoader}
 
-Una vez se realiza el proceso de \textit{Data Augmentation}, se deben cargar las imágenes en \textit{Pytorch} para que puedan ser procesadas por el modelo de red neuronal. En este capítulo se presenta la creación de la función \textit{PotatoDataset()}, y la implementación de la función \textit{Dataloader}, ademas de la explicación de cada función, para cargar el conjunto de datos en \textit{Pytorch}.
+Una vez se realiza el proceso de \textit{Data Augmentation}, se deben cargar las imágenes en \textit{Pytorch} para que puedan ser procesadas por el modelo de red neuronal. En esta sección se explica la creación de la función \textit{PotatoDataset()}, y la implementación de la función \textit{Dataloader}, ademas de la explicación de cada función, para cargar el conjunto de datos en \textit{Pytorch}.
 
 
 \subsubsection{FUNCIÓN POTATODATASET}
 
-Se creó una clase, (\textit{Python Class Object Constructor}), con el nombre de \textit{AttributesDataset()}, que se encarga de leer el \textit{Metadata}  de cada imágen y convertirlo en \textit{labelID}, en la Tabla \ref{table:metadata} se muestra como son ingresadas las imágenes en el algoritmo, sin embargo, las características deben ser ingresadas como \textit{labelID}, es decir, el label Pastusa corresponde al ID 0 en la categoría de Tipo. Este diccionario se presenta a continuación:			
+Se creó una clase de \textit{Python} (\textit{Python Class Object Constructor}), con el nombre de \textit{AttributesDataset()}, que se encarga de leer el \textit{metadata}  de cada imágen y convertirlo en \textit{labelID}, en la Tabla \ref{table:metadata} se muestra como el algoritmo lee las imágenes dentro del modelo, sin embargo, las características deben ser ingresadas como \textit{labelID}, es decir, el \textit{label} Pastusa corresponde al ID $0$ en la categoría de Tipo. Este diccionario se presenta a continuación:			
 
 \begin{itemize}
-	\item Tipo: ${'Pastusa': 0, 'R12': 1}$
-	\item Daño: ${'Buena': 0, 'Defectuosa': 1}$
-	\item Tamaño: ${'Muy Grande': 0, 'Grande': 1, 'Mediana': 2}$
+	\item Tipo: ${'Pastusa': 0, \ 'R12': 1}$
+	\item Daño: ${'Buena': 0,\  'Defectuosa': 1}$
+	\item Tamaño: ${'Muy Grande': 0,\ 'Grande': 1,\ 'Mediana': 2}$
 \end{itemize}
 
 En la red neuronal, únicamente se utilizaron \textit{labels} y \textit{labelID} de tipo y daño para definir las clases de la Tabla \ref{table:Clases}. La función \textit{Dataset} de \textit{Python} realiza el proceso de cargar y relacionar cada imágen con su respectivo \textit{label}, para \textit{Dataset's} que se encuentran organizados dentro de carpetas jerarquicamente. El \textit{Dataset} creado en éste documento no se encuentra organizado de esta manera, sino que la organización jerárquica que define las clases se encuentra dentro del \textit{metadata}, en el nombre de cada imágen, Tabla \ref{table:metadata}, debido a esto es que se desarrolló una función que cargara y relacionara de la misma manera que lo hace la función integrada de \textit{Pythorch}. Esta función fue llamada \textit{PotatoDataset()}, que utiliza los \textit{labelID} generados por la función \textit{AttributesDataset()}, y carga cada imágen relacionada con sus \textit{labelID}. Como se desarrolló la función, de igual forma debe ser capaz de aplicar las transformaciones a cada imágen. El objeto regresa las 592 imágenes cargadas en \textit{Python}, cada una relacionada con su respectivo \textit{labelID} y \textit{label}, y con una transformación o múltiples aplicadas. Esta función desarrollada, cuenta con los mismos atributos iterables que poseen los \textit{dataset's} creados a partir de la función integrada en \textit{Pytorch}.			
@@ -476,13 +481,14 @@ En la red neuronal, únicamente se utilizaron \textit{labels} y \textit{labelID}
 
 \subsubsection{FUNCIÓN DATALOADER}			
 
-Generalmente, una vez se finaliza el proceso de cargar las imágenes utilizando la función \textit{DataSet} de \textit{Pytorch}, se procede a utilizar la función \textit{DataLoader} para generar múltiples lotes de imágenes, a partir de las transformaciones utilizadas. La función \textit{DataLoader()}, de \textit{Pytorch}, es implementada para realizar la importación de datos a gran escala. Para el uso de esta función se debe tener en cuenta que el argumento más importante será el \textit{dataset}, que fue generado por el objeto \textit{PotatoDataset()}. \\
+Generalmente, una vez se finaliza el proceso de cargar las imágenes utilizando la función \textit{DataSet} de \textit{Pytorch}, se procede a utilizar la función \textit{DataLoader} para generar múltiples lotes de imágenes, a partir de las transformaciones utilizadas. La función \textit{DataLoader()} de \textit{Pytorch}, es implementada para realizar la importación de datos a gran escala.\\
+ 
+El \textit{dataset} que se generó a partir de la función creada \textit{PotatoDataset()} es del tipo \textit{iterable-style Datsets}, lo que permite utilizar la función integrada \textit{DataLoader()} de \textit{Pytorch}. La función permite la agrupación automática de muestras de datos individuales obtenidas en los lotes mediante argumentos. Los \textit{DataLoader's} cuentan con una gran cantidad de argumentos que permiten que la carga de datos sea más eficiente \cite{Pytorch}. Para la ejecución de la función se deben tener en cuenta los parámetros de la Tabla \ref{table:Argumentos}.
 
-Según como se explico en el apartado anterior, se generó un \textit{dataset} del tipo \textit{iterable-style Datsets}, lo que permite utilizar la función integrada \textit{DataLoader()} de \textit{Pytorch}. El \textit{DataLoader} permite la agrupación automática de muestras de datos individuales obtenidas en los \textit{Batch's} mediante argumentos. Los \textit{DataLoader's} cuentan con una gran catidad de argumentos que ayudan a que la carga de datos sea más eficiente \cite{Pytorch}. Es por esta razón, que para la ejecución de este dataloader se implementaron los parámetros de la Tabla \ref{table:Argumentos}.
-\newpage			
+		
 \begin{table}[ht]
 	\centering
-	\begin{tabular}{|p{3cm}|p{8cm}|}
+	\begin{tabular}{|p{2.5cm}|p{11cm}|}
 		\hline
 		FUNCIÓN & DESCRIPCIÓN \\ 
 		\hline
@@ -513,19 +519,20 @@ Esto con el objetivo de que el \textit{Dataloader} cargue 40 muestras por época
 
 \subsection{Hiperparámetros Del Modelo}
 
-La mayor parte de modelos implementados en machine learning, poseen una serie de parámetros que no pueden ser aprendidos de los datos, es por esto que deben ser establecidos antes del entrenamiento. Estos parámetros son conocidos como hiperparámetros. En este capítulo se abordan los hiperparámetros utilizados en el desarrollo de este proyecto.
+La mayor parte de modelos implementados en \textit{machine learning} poseen una serie de parámetros que no pueden ser aprendidos de los datos, es por esto que deben ser establecidos antes del entrenamiento. Estos parámetros son conocidos como hiperparámetros. En este capítulo se abordan los hiperparámetros utilizados en el desarrollo de este proyecto.
 
 \subsubsection{FUNCIÓN DE PÉRDIDAS}		
 
-\textit{Pytorch} posee una cantidad interesante de funciones de pérdidas, para su uso en la clasificación de clases en redes neuronales. Una función de pérdidas, evalúa la desviación entre las predicciones realizadas por la red neuronal y los valores reales de las muestras utilizadas durante el entrenamiento de la red. Cuanto menor sea el valor de la función, es más eficiente la red neuronal \cite{mathivet2018inteligencia}. 	
-Para el desarrollo de la red neuronal, se utilizó la pérdida de entropía cruzada entre la entrada y el objetivo \cite{Pytorch}. Es útil cuando se entrena un problema de clasificación con más de una clase.  El objetivo que espera este criterio debe contener:
+\textit{Pytorch} posee una cantidad interesante de funciones de pérdidas para su uso en la clasificación de clases en redes neuronales. Una función de pérdidas, evalúa la desviación entre las predicciones realizadas por la red neuronal y los valores reales de las muestras utilizadas durante el entrenamiento de la red. La eficiencia de una red neuronal se mide en objeto a la función de pérdidas, cuanto menor sea el valor, es un indicativo que es más eficiente \cite{mathivet2018inteligencia}.\\
+ 	
+Para el desarrollo de la red neuronal, se utilizó la pérdida de entropía cruzada entre la entrada y el objetivo. Es útil cuando se entrena un problema de clasificación con más de una clase. El objetivo que espera este criterio debe contener:
 
 \begin{itemize}
 	\item Índices de clase en el rango $[0,C)$ donde $C$ es el número de clases.
 	\item Probabilidades de clase se requieren más allá de una sola clase cuando se encuentran etiquetas combinadas.				 
 \end{itemize}
 
-En cada lote usado en el entrenamiento de la red neuronal, se encuentran etiquetas combinadas en el \textit{Metadata} de las imágenes, como se describió en la Tabla \ref{table:Clases}, por lo tanto, una función de pérdida no reducida \cite{Pytorch} se describe en la Ecuación ~\ref{eq:perd}.\\
+En cada lote usado en el entrenamiento de la red neuronal se encuentran etiquetas combinadas en el \textit{metadata} de las imágenes, como se describió en la Tabla \ref{table:Clases}, por lo tanto, una función de pérdida no reducida \cite{Pytorch} se describe en la Ecuación ~\ref{eq:perd}.\\
 
 \begin{equation}
 	\label{eq:perd}
@@ -534,22 +541,20 @@ En cada lote usado en el entrenamiento de la red neuronal, se encuentran etiquet
 
 Donde $x$ es la entrada, $y$ el objetivo de predicción, $w$ es el peso, $C$ el número de clases y $N$ es la dimensión del \textit{Batch}. Usando la función \textit{nn.CrossEntropyLoss()}, se calculan las pérdidas entre entrada y salida del modelo entrenado, para posteriormente utilizar estas pérdidas como métricas en porcentajes de \textit{Accuracy} y \textit{Losses}.\\			
 
-El rendimiento de esta función de pérdidas, es mejor cuando el objetivo contiene índices de clase y no las etiquetas, ya que esto permite optimizar el cálculo, por esta razón, se agruparon las etiquetas de las imágenes en $4 \ Clases$ definidas.
+El rendimiento de esta función de pérdidas es mejor cuando el objetivo contiene índices de clase y no las etiquetas, ya que esto permite optimizar el cálculo, por esta razón, se agruparon las etiquetas de las imágenes en $4 \ Clases$ definidas en la Tabla \ref{table:Clases}.
 
 \subsubsection{OPTIMIZADOR}
 
-\textit{Pytorch} posee el paquete \textit{torch.optim}, que implementa varios algoritmos de optimización basados en el gradiente descendiente. A menudo se ha propuesto, por ejemplo Rumhart \cite{rumelhart1986learning}, minimizar el riesgo empírico $E_n(fw)$ utilizando el gradiente descendiente. Consiste en cada iteración actualizar los pesos $w$,como se muestra en la Ecuación ~\ref{eq:GD1}.
-
+\textit{Pytorch} posee el paquete \textit{torch.optim}, que implementa varios algoritmos de optimización derivados del \textit{gradiente descendiente}, definido por \textit{Sebastian Ruder (2016)} como "\textit{una forma de minimizar una función objetvio parametrizada por un modelo}" \cite{ruder2016overview}. A menudo se ha propuesto, por ejemplo \textit{Rumelhart (1986)} \cite{rumelhart1986learning}, minimizar el riesgo empírico  de una función objetivo $E_n(fw)$ utilizando el gradiente descendiente. Consiste en cada iteración actualizar los pesos $w$, como se muestra en la Ecuación \ref{eq:GD1}.
 
 \begin{equation}
 	\label{eq:GD1}
 	{w_{i+1}=w_i-\gamma\frac{1}{n}\sum_{i=1}^{n}\nabla Q(z_i,w_t)}
 \end{equation}\\
 
-Donde $\gamma$ es la taza de aprendizaje elegida adecuadamente (\textit{learning rate}). Cuando la estimación inicial $w_0$ está lo suficientemente cerca del óptimo y cuando la tasa de aprendizaje es suficientemente pequeña, este algoritmo alcanza una convergencia lineal.\\
+Donde $\gamma$ es la taza de aprendizaje elegida adecuadamente (\textit{learning rate}) y $\nabla Q(z,w)$ es la función de pérdidas evaluada en un punto y un peso $w$. Cuando la estimación inicial $w_0$ está lo suficientemente cerca del óptimo y cuando la tasa de aprendizaje es suficientemente pequeña, este algoritmo alcanza una convergencia lineal.\\
 
-
-En el algoritmo desarrollado en este documento, se utilizó el optimizador de descenso estocástico del gradiente $SGD$, que es una simplificación drástica del algoritmo del gradiente descendiente. En lugar de calcular exáctamente el gradiente de $E_n(fw)$, cada iteración estima este gradiente sobre la base de un único ejemplo $z_t$ elegido al azar \cite{bottou2012stochastic}.
+En el algoritmo desarrollado en este documento, se utilizó el optimizador de descenso estocástico del gradiente $SGD$, que es una simplificación drástica del algoritmo del gradiente descendiente. En lugar de calcular exactamente el gradiente de $E_n(fw)$, cada iteración estima este gradiente sobre la base de un único ejemplo $z_t$ elegido al azar \cite{bottou2012stochastic}.
 
 \begin{equation}
 	\label{eq:SGD1}
@@ -560,95 +565,84 @@ Se espera que la Ecuación~\ref{eq:GD1} se comporte como la Ecuación~\ref{eq:SG
 
 \subsection{Arquitectura del modelo}
 
-Se utilzaron modelos pre definidos para realizar el entrenamiento del \textit{Dataset}, utilzando la teoría de \textit{Transfer Learning} que permite entrenar los modelos, con pesos establecidos entrenadas para otro tipo de datos, para obtener resultados a partir de ellos sin empezar desde cero la creación de una red neuronal y sus pesos. En este capítulo se presenta la estructura y los resultados obtenidos de los modelos pre entrenados AlexNet, VGG-19, VGG-11 y ResNet-18, sin el uso de un método de optimización de hiperparámetros.
+Se utilzaron modelos pre entrenados para realizar el entrenamiento del  \textit{dataset}, utilizando la teoría de \textit{Transfer Learning} que permite entrenar los modelos, con pesos establecidos entrenadas para otro tipo de datos, para obtener resultados a partir de ellos sin empezar desde cero la creación de una red neuronal y sus pesos. En este capítulo se presenta la estructura y los resultados obtenidos de los modelos pre entrenados \textit{AlexNet}, \textit{VGG19}, \textit{VGG11} y \textit{ResNet18}, sin el uso de un método de optimización de hiperparámetros.
 
 \subsubsection{\MakeUppercase{Modelo preentrenado ALEXNET}}
 
-El modelo AlexNet fue implementado en el año 2012 en el desafió de reconocimiento visual a gran escala Imaget. Este modelo tuvo un resultado tan satisfactorio, que los modelos de aprendizaje profundo, se convirtieron en la referencia para la investigación y desarrollo en los principales sectores de la industria. \cite{Pytorch}\\
+El modelo \textit{AlexNet} fue implementado en el año $2012$ en el desafió de reconocimiento visual a gran escala \textit{ImageNet}. Este modelo tuvo un resultado tan satisfactorio, que los modelos de aprendizaje profundo, se convirtieron en la referencia para la investigación y desarrollo en los principales sectores de la industria \cite{krizhevsky2014one}\\
 
 
-El modelo se compone de cinco capas convolucionales y tres capas densas, donde las capas convolucionales están normalizadas por lotes. El kernel tiene dimensiones diferentes que se distribuyen en \textit{11 x 11} en la primera capa, \textit{5 x 5} en la segunda y \textit{3 x 3} en las demás. La primera, cuarta y quinta capa convolucional, están seguidas por una capa Max-pooling con dimensiones de \textit{3 x 3}, que posee un stride de dos.\\
+El modelo se compone de $5$ capas convolucionales y $3$ capas densas, donde las capas convolucionales están normalizadas por lotes de datos. El $kernel$ (Máscara aplicada en la convolución) tiene dimensiones diferentes que se distribuyen en \textit{11 x 11} en la primera capa, \textit{5 x 5} en la segunda y \textit{3 x 3} en las demás. La primera, cuarta y quinta capa convolucional están seguidas por una capa \textit{Max pooling} con dimensiones de \textit{3 x 3}, que posee un \textit{stride} de $2$.\\
 
 
-Las capas convolusioonales y de Max-pooling son seguidas por tres capas densas, en donde las dos primeras poseen 4096 neuronas cada una y la ultima capa es la de salida, la cual se compone de 1000 neuronas que poseen una función de activación softmax. Estas neuronas son las encargadas de realizar la clasificación de la imagen. Como es habitual en estos sistemas de clasificación, la función de perdidas implementada es la entropía cruzada \cite{ref_1}.\\
+Las capas convolucionales y de \textit{Max pooling} son seguidas por tres capas densas, en donde las dos primeras poseen $4096$ neuronas cada una y la ultima capa es la de salida, la cual se compone de $1000$ neuronas que poseen una función de activación \textit{softmax}, esta capa fue modificada para que sea $4$ neuronas de salida referentes a las 4 clases definidas. Estas neuronas son las encargadas de realizar la clasificación de la imagen. 
 
 \newpage
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.4]{Figs/5.png}
-	\caption{Modelo AlexNet}
+	\includegraphics[scale=0.5]{Figs/5.png}
+	\caption{Arquitectura Del Modelo \textit{AlexNet} \\ Fuente:Alex Krizhevsky (2014)}
 	\label{fig:AlexNet}
 \end{figure}
 
-Como se aprecia en la Figura \ref{fig:AlexNet}, el modelo de AlexNet, toma una imagen de entrada con una resolución de \textit{227 x 227} pixeles y 3 canales de color, la información recibida pasa por cinco capas convolucionales, (en negro), de neuronas ReLu y tres capas de Max-pooling, (en azul). La quinta capa de convolución posee 256 mapas diferentes con dimensiones de \textit{13 x 13}. Seguidamente se aplican las dos capas densas de 4096 neuronas, las cuales son seguidas por una capa de salida de 1000 neuronas, dotadas con una función softmax. Cada neurona de la capa de salida representa un conjunto semántico diferente. Y su valor de activación indica la probabilidad de que la imagen de entrada pertenezca a dicho conjunto semántico.\\
-
+Como se aprecia en la Figura \ref{fig:AlexNet}, el modelo de \textit{AlexNet} toma una imagen de entrada con una resolución de \textit{227 x 227} pixeles y $3$ canales de color, la información recibida pasa por cinco capas convolucionales (en negro) de neuronas con función de activación \textit{ReLu} y $3$ capas de \textit{Max pooling} (en azul). La quinta capa de convolución posee $256$ máscaras diferentes con dimensiones de \textit{13 x 13}. Seguidamente se aplican las dos capas densas de $4096$ neuronas, las cuales son seguidas por una capa de salida de $1000$ neuronas, dotadas con una función de activación \textit{softmax}. Cada neurona de la capa de salida representa una clase diferente y su valor de activación indica la probabilidad de que la imagen de entrada pertenezca a dicho conjunto semántico. Los resultados del entrenamiento obtenidos fueron inferiores al $20\%$, por lo tanto, fueron excluidos en el análisis sin optimización de los hiperparámetros.
 
 \subsubsection{\MakeUppercase{Modelo preentrenado VGG19}}
 
-La arquitectura VGG fue planteada por Simonyan y Zisserman, la cual consiste en stacks lineales de bloques, que se encuentran formados por una cantidad determinada de capas convolucionales, una función de activación no lineal y una capa Max Pooling, seguidos de tres capas fully-conected y finalmente una capa softmax \cite{ref_2}. Esta arquitectura cuenta con cinco bloques los cuales están distribuidos como se muestra en la Figura \ref{fig:VGG19}.				
+La arquitectura \textit{VGG} fue planteada por Simonyan y Zisserman \cite{simonyan2014very}, la cual consiste en grupos lineales de bloques que se encuentran formados por una cantidad determinada de capas convolucionales, una función de activación no lineal y una capa de \textit{Max pooling}, seguidos de tres capas densas y finalmente una capa de activación \textit{softmax} \cite{ref_2}. Esta arquitectura cuenta con $5$ bloques los cuales están distribuidos como se muestra en la Figura \ref{fig:VGG19}.				
 
-\newpage
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.38]{Figs/22.jpeg}
-	\caption{Modelo VGG19}
+	\includegraphics[scale=0.45]{Figs/22.jpeg}
+	\caption{Arquitectura Del Modelo VGG \\ Fuente: Karen Simonya (2015)}
 	\label{fig:VGG19}
 \end{figure}			
 
 
-Como se puede observar, la arquitectura cuenta con dos capas convolucionales de 64 y 128 filtros respectivamente, en sus dos primeros bloques, el bloque intermedio se compone de tres capas convolucionales de 256 filtros, y los últimos dos bloques están compuestos por tres capas concolucionales de 512 filtros cada uno. El numero 19 representa la cantidad de capas entrenables que posee la arquitectura, donde hay 16 capas convolucionales y 3 capas fully-conected.\\			
+Como se puede observar en la Figura \ref{fig:VGG19}, la columna \textit{E} muestra que la arquitectura del modelo \textit{VGG19}  cuenta con $2$ capas convolucionales de $64$ y $128$ filtros respectivamente, en sus dos primeros bloques, el bloque intermedio se compone de $3$ capas convolucionales de $256$ filtros, y los últimos dos bloques están compuestos por $3$ capas convolucionales de $512$ filtros cada uno. El numero $19$ representa la cantidad de capas que se pueden entrenar en la arquitectura, donde hay $16$ capas convolucionales y $3$ capas densas.\\			
 
-Las capas convolucionales de esta arquitectura presentadas en la Figura \ref{fig:VGG19}, cuentan con un campo receptivo de \textit{3 x 3}, stride de \textit{1 x 1} y pading de 1 pixel. Para la operaciones del Max Pooling se implementa un kernel de \textit{2 x 2} y un stride de \textit{2 x 2}, y por ultimo cada capa oculta de la red cuenta con la función de activación ReLu. la Figura \ref{fig:VGG19_accuracy}, muestra la precisión obtenida del entrenamiento hecho sobre esta arquitectura.
-
+Las capas convolucionales de esta arquitectura presentadas en la Figura \ref{fig:VGG19}, cuentan con un campo receptivo de \textit{3 x 3}, \textit{stride} de \textit{1 x 1} y \textit{padding} de $1$ pixel. Para la operaciones de \textit{Max pooling} se implementa un \textit{kernel} de \textit{2 x 2} y un \textit{stride} de \textit{2 x 2}, y por ultimo cada capa oculta de la red cuenta con la función de activación \textit{ReLu}. La Figura \ref{fig:VGG19_accuracy} muestra la precisión obtenida del entrenamiento hecho sobre esta arquitectura.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.5]{Figs/101.png}
-	\caption{Accuracy Modelo VGG19}
+	\includegraphics[scale=0.61]{Figs/101.png}
+	\caption{Precisión Obtenida Con Modelo \textit{VGG19} \\ Fuente: Elaboración Propia}
 	\label{fig:VGG19_accuracy}
 \end{figure}  
 
-La precisión del modelo al completar 50 épocas es inferior al 60 \%.	En la Figura \ref{fig:VGG19_losses}, se puede apreciar que el modelo cuenta con \textit{16 \%} de desviación aproximadamente entre las predicciones y los valores reales, implementados durante el entrenamiento del modelo.
+La precisión del modelo al completar las $50$ épocas de entrenamiento es inferior al 60 \% como se observa en la Figura \ref{fig:VGG19_losses}. El hecho de que en la última época, la precisión en el entrenamiento y en la validación dan valores similares, indica que el modelo no sufre de \textit{overfitting} que significaría un mal aprendizaje en la salida del modelo. 
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.55]{Figs/102.png}
-	\caption{Losses Modelo VGG19}
+	\includegraphics[scale=0.61]{Figs/102.png}
+	\caption{Pérdidas Obtenidas Con Modelo \textit{VGG19} \\ Fuente: Elaboración Propia}
 	\label{fig:VGG19_losses}
 \end{figure}
 
-Teniendo en cuenta la información presentada en las Figuras \ref{fig:VGG19_accuracy} y \ref{fig:VGG19_losses}, se puede apreciar que el modelo presenta \textit{overfiting} durante el transcurso de las épocas 18 hasta la época 30, y finalmente culminada la época 50 del modelo, el porcentaje de \textit{overfiting} es aproximadamente cero, y se procede a presentar en la Figura \ref*{fig:VGG19_prediccion} la predicción realizada por el modelo.
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.4]{Figs/103.png}
-	\caption{Predicción Modelo VGG19}
-	\label{fig:VGG19_prediccion}
-\end{figure}
-
 \newpage
-Luego de esto see genera la matriz de confusión para validar los verdaderos positivos, verdaderos negativos, falsos positivos y falsos negativos, La Tabla \ref{fig:MC_VGG19} muestra los resultados.
-
+Una vez se obtiene el modelo entrenado con los hiperparámetros no optimizados, se calcula la matriz de confusión con el conjunto de datos de \textit{validación}, los resultados se presentan en la Tabla \ref{fig:MC_VGG19}.
 
 \begin{table}[htbp]
 	\centering
+	\resizebox{10cm}{!} {
 	\begin{tabular}{|c|l|c|c|c|c|}
 		\hline
 		\multicolumn{2}{|c|}{\multirow{2}[4]{*}{}} & \multicolumn{4}{c|}{Predicción} \bigstrut\\
 		\cline{3-6}    \multicolumn{2}{|c|}{} & CLASE 1 & CLASE 2 & CLASE 3 & CLASE 4 \bigstrut\\
 		\hline
-		\multirow{4}[8]{*}{\begin{sideways}Observación\end{sideways}} & CLASE 1 & 27     & 2     & 0    & 0 \bigstrut\\
+		\multirow{4}[8]{*}{\begin{sideways}Valor Real\end{sideways}} & CLASE 1 & 27     & 2     & 0    & 0 \bigstrut\\
 		\cline{2-6}     & CLASE 2 & 21     & 1     & 0    & 2 \bigstrut\\
 		\cline{2-6}      & CLASE 3 & 6     & 5     & 0    & 11 \bigstrut\\
 		\cline{2-6}     & CLASE 4 & 20     & 15     & 0    & 8 \bigstrut\\
 		\hline
-	\end{tabular}%
-	\caption{Matriz de confusión modelo VGG-19}
+	\end{tabular}
+	}
+	\caption{Matriz de confusión en conjunto de \textit{validación}}
 	\label{fig:MC_VGG19}
-\end{table}%
+\end{table}
 
-En la Tabla \ref{fig:ACU_VGG19}, se presenta la precisión del modelo VGG-19 obtenida en el entrenamiento, en cada una de las clases definidas.
+En la Tabla \ref{fig:ACU_VGG19} se presenta la precisión del modelo \textit{VGG 19} obtenida a partir de la matriz de confusión del conjunto de datos de \textit{validación} para cada una de las clases definidas.
 
 \begin{table}[htbp]
 	\centering
@@ -665,116 +659,72 @@ En la Tabla \ref{fig:ACU_VGG19}, se presenta la precisión del modelo VGG-19 obt
 		\multicolumn{2}{|c|}{Overall Accuracy: 36,84} \bigstrut\\
 		\hline
 	\end{tabular}%
-	\caption{Precisión por clase modelo VGG19}
+	\caption{Precisión por clase en conjunto de \textit{validación}}
 	\label{fig:ACU_VGG19}
 \end{table}%
 
+Para comparar los resultados posteriormente, también se calcula la matriz de confusión con el conjunto de datos de \textit{entrenamiento}, los resultados se presentan en la Tabla \ref{fig:MC_VGG19_2}.
 
-\newpage
-\subsubsection{\MakeUppercase{Modelo preentrenado VGG11}}
-VGG es un modelo preentrenado, en un conjunto de datos que contiene el peso que representan las características del conjunto de datos entrenados. Los modelos VGG toman una imagen de entrada de dimensiones \textit{224 x 224} pixeles en formato RGB, que son tratadas con un tamaño de imagen constante.\\
-
-
-El modelo de aprendizaje profundo VGG11. Es la configuración más sencilla. Tiene 11 capas de peso en total, de ahí el nombre VGG-11, 8 de ellas son capas convolucionales y 3 son capas completamente conectadas, como se aprecia en la Figura \ref{fig:VGG11} \cite{ref_3}.
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.6]{Figs/70.png}
-	\caption{Composición Modelo VGG-11}
-	\label{fig:VGG11}
-\end{figure}
-
-Las 11 capas del modelo VGG11 son:
-\begin{itemize}
-	\item Convolución usando 64 filtros + Max Pooling
-	\item Convolución usando 128 filtros + Max Pooling
-	\item Convolución usando 256 filtros
-	\item Convolución usando 256 filtros + Max Pooling
-	\item Convolución usando filtros 512
-	\item Convolución usando 512 filtros + Max Pooling
-	\item Convolución usando filtros 512
-	\item Convolución usando 512 filtros + Max Pooling
-	\item Totalmente conectado con 4096 nodos
-	\item Totalmente conectado con 4096 nodos
-	\item Capa de salida con activación Softmax con 1000 nodos.
-\end{itemize}
-
-El modelo cuenta con 11 capas ponderadas, sus pesos representan la fuerza de las conexiones entre unidades de capas de red adyacentes, son implementadas con el fin de conectar cada neurona de una capa con todas las neuronas de la siguiente capa, se debe tener en cuenta que la capa MAX-POOLING no se considera como una capa ponderada, debido a que es un mapa de características que contiene las características más destacadas.\\
-
-El Max-Pooling es una operación de pooling, que calcula el valor máximo que contiene cada parche en cada mapa de características, como resultado se obtienen mapas de características muestreados, que destacan la característica más relevante en el parche, en la practica se ha comprobado que este método, es más eficiente que la agrupación media en tareas de visión por ordenador, como la clasificación de imágenes.\\		 
-
-
-Una vez conocida la forma en que se estructura el modelo VGG-11, se procede a evaluar su precisión antes de ser aplicada la optimización bayesiana y durante 50 épocas. La Figura \ref{fig:precision_VGG11}, muestra la precsión obtenida durante el entrenamiento, que no supera el 25 \%.
-
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.5]{Figs/105.png}
-	\caption{Precisión Modelo VGG-11}
-	\label{fig:precision_VGG11}
-\end{figure}
-
-En la Figura \ref{fig:loses_VGG11}, se aprecia que el modelo cuenta con una desviación bastante significativa, entre las predicciones y los valores reales. Gracias a la información brindada por las figuras anteriores se deduce que el sistema posee un alto porcentaje de \textit{overfiting}, que no puede ser corregido en el transcurso de las épocas.
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.5]{Figs/106.png}
-	\caption{Losses Modelo VGG-11}
-	\label{fig:loses_VGG11}
-\end{figure}
-
-En la Figra \ref{fig:Pre_VGG11}, se presenta la predicción del modelo VGG-11 con las muestras implementadas para su validación.
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.4]{Figs/107.png}
-	\caption{Predicción Modelo VGG-11}
-	\label{fig:Pre_VGG11}
-\end{figure}
-
-La Tabla \ref{fig:MC_VGG11}, presenta la matriz de confusión del modelo VGG-11, donde se aprecian los verdaderos positivos, verdaderos negativos, falsos positivos y falsos negativos.
-
-\newpage
 \begin{table}[htbp]
 	\centering
-	\begin{tabular}{|c|l|c|c|c|c|}
-		\hline
-		\multicolumn{2}{|c|}{\multirow{2}[4]{*}{}} & \multicolumn{4}{c|}{Predicción} \bigstrut\\
-		\cline{3-6}    \multicolumn{2}{|c|}{} & CLASE 1 & CLASE 2 & CLASE 3 & CLASE 4 \bigstrut\\
-		\hline
-		\multirow{4}[8]{*}{\begin{sideways}Observación\end{sideways}} & CLASE 1 & 0     & 0     & 0    & 29 \bigstrut\\
-		\cline{2-6}     & CLASE 2 & 0     & 0     & 0    & 24 \bigstrut\\
-		\cline{2-6}      & CLASE 3 & 0     & 0     & 0    & 22 \bigstrut\\
-		\cline{2-6}     & CLASE 4 & 0     & 0     & 0    & 43 \bigstrut\\
-		\hline
-	\end{tabular}%
-	\caption{Matriz de confusión VGG-11}
-	\label{fig:MC_VGG11}
-\end{table}%
+	\resizebox{10cm}{!} {
+		\begin{tabular}{|c|l|c|c|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\multirow{2}[4]{*}{}} & \multicolumn{4}{c|}{Predicción} \bigstrut\\
+			\cline{3-6}    \multicolumn{2}{|c|}{} & CLASE 1 & CLASE 2 & CLASE 3 & CLASE 4 \bigstrut\\
+			\hline
+			\multirow{4}[8]{*}{\begin{sideways}Valor Real\end{sideways}} & CLASE 1 & 27     & 2     & 0    & 0 \bigstrut\\
+			\cline{2-6}     & CLASE 2 & 21     & 1     & 0    & 2 \bigstrut\\
+			\cline{2-6}      & CLASE 3 & 6     & 5     & 0    & 11 \bigstrut\\
+			\cline{2-6}     & CLASE 4 & 20     & 15     & 0    & 8 \bigstrut\\
+			\hline
+		\end{tabular}
+	}
+	\caption{Matriz de confusión en conjunto de \textit{entrenamiento}}
+	\label{fig:MC_VGG19_2}
+\end{table}
 
-Finalmente, se obtiene la precisión de clasificación del modelo VGG-11 por clases en la Tabla \ref{fig:clase_VGG11}.
+\newpage
+En la Tabla \ref{fig:ACU_VGG19_2} se presenta la precisión del modelo obtenida a partir de la matriz de confusión del conjunto de datos de \textit{entrenamiento} para cada una de las clases definidas.
 
-\begin{table}[ht]
+\begin{table}[htbp]
 	\centering
 	\begin{tabular}{|c|c|}
 		\hline
-		CLASE 1 & 0,00 \bigstrut\\
+		CLASE 1 & 75,90 \bigstrut\\
 		\hline
-		CLASE 2 & 0,00 \bigstrut\\
+		CLASE 2 & 50,00 \bigstrut\\
 		\hline
-		CLASE 3 & 0,00 \bigstrut\\
+		CLASE 3 & 90,90 \bigstrut\\
 		\hline
-		CLASE 4 & 100,00 \bigstrut\\
+		CLASE 4 & 51,20 \bigstrut\\
 		\hline
-		\multicolumn{2}{|c|}{Overall Accuracy: 34,21} \bigstrut\\
+		\multicolumn{2}{|c|}{Precisión Total: 36,84} \bigstrut\\
 		\hline
 	\end{tabular}%
-	\caption{Clasificación por clase modelos VGG-11}
-	\label{fig:clase_VGG11}
-\end{table}%  
+	\caption{Precisión por clase en conjunto de \textit{entrenamiento}}
+	\label{fig:ACU_VGG19_2}
+\end{table}
 
+\subsubsection{\MakeUppercase{Modelo preentrenado VGG11}}
 
-\newpage
+El modelo de aprendizaje profundo \textit{VGG11} es la configuración más sencilla de los modelos de arquitectura \textit{VGG}. Tiene 11 capas de peso en total, de ahí el nombre, 8 de ellas son capas convolucionales y 3 son capas completamente conectadas, como se aprecia en la Figura \ref{fig:VGG19} en la columna \textit{A}. Las 11 capas del modelo \textit{VGG11} son:
+\begin{itemize}
+	\item Convolución usando $64$ filtros + \textit{Max pooling}
+	\item Convolución usando $128$ filtros + \textit{Max pooling}
+	\item Convolución usando $256$ filtros
+	\item Convolución usando $256$ filtros + \textit{Max pooling}
+	\item Convolución usando filtros $512$
+	\item Convolución usando $512$ filtros + \textit{Max pooling}
+	\item Convolución usando filtros $512$
+	\item Convolución usando $512$ filtros + \textit{Max pooling}
+	\item Totalmente conectado con $4096$ neuronas
+	\item Totalmente conectado con $4096$ neuronas
+	\item Capa de salida con activación Softmax con $1000$ neuronas.
+\end{itemize}
+
+El modelo cuenta con $11$ capas ponderadas, sus pesos representan la fuerza de las conexiones entre unidades de capas de red adyacentes, son implementadas con el fin de conectar cada neurona de una capa con todas las neuronas de la siguiente capa, se debe tener en cuenta que la capa \textit{Max pooling} no se considera como una capa ponderada, debido a que es un mapa de características que contiene las características más destacadas. Los resultados del entrenamiento obtenidos fueron inferiores al $15\%$, por lo tanto, fueron excluidos en el análisis sin optimización de los hiperparámetros.
+
 \subsubsection{\MakeUppercase{Modelo preentrenado RESNET18}}
 La arquitectura Resnet, (Residual Net), fue propuesta por un equipo de Microsoft Research, el cual fue liderado por Kaiming He, en donde se propone que si a una red neuronal de 20 capas, se le intercalan 36 capas que calculan la simple función de identidad, la red resultante, (56 capas), debería tener exactamente la misma eficacia y no ser inferior que la primera. Se debe recordar que la función identidad es la encargada de devolver exactamente el mismo valor que su argumento \cite{ref_4}.\\
 
