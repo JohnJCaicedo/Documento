@@ -118,9 +118,9 @@ Donde $N \in (1,...,R) $ representado como un desplazamiento de agrupación cuan
 
 \section{\textit{Padding}}
 
-Se utiliza para acomodar el dominio finito de las muestras, lo cual permite que el soporte de la convolución se extienda más allá de los limites de las mismas, reduciendo el impacto de los efectos de frontera.\\
+El padding es un método utilizado con el fin de añadir píxeles de valor cero a los bordes de la imagen original, esto con el objetivo de que la imagen resultante al realizar la convolución sea del mismo tamaño que la original. Se debe tener en cuenta que si el padding no es implementado y se realiza la convolución, la imagen resultante será de un tamaño menor a la original, además este método permite la creación de redes más profundas y la extracción de características más especificas durante el entrenamiento.\\
 
-El más utilizado es el \textit{zero padding}, debido a que mantiene la misma dimensionalidad al aplicar convoluciones. Por otro lado permite a las redes neuronales convolucionadas codificar información de posición absoluta, a pesar de capas de agrupamiento en su arquitectura \cite{islam2021position}, un ejemplo de padding se puede observar en la Figura \ref{padding}.
+El más usado es el \textit{zero padding}, debido a que mantiene la misma dimensionalidad al aplicar convoluciones. Por otro lado, permite a las redes neuronales convolucionadas codificar información de posición absoluta, a pesar de capas de agrupamiento en su arquitectura \cite{islam2021position}, un ejemplo de padding se puede observar en la Figura \ref{padding}.
 
 \begin{figure}[ht]
 	\centering
@@ -131,14 +131,11 @@ El más utilizado es el \textit{zero padding}, debido a que mantiene la misma di
 
 
 \newpage
-\section{Procesamiento de imágenes} El procesamiento digital de imágenes, es el conjunto de prácticas que modifican imágenes digitales para mejorar la visibilidad de ciertas características de los objetos presentes en la imagen, para su posterior análisis o simplemente para mejorar la visualización de la
-imagen.\\
-
-El objetivo del procesamiento de imágenes no es aumentar la información que se puede extraer de las imágenes, solo se busca realzar ciertas características de la imagen. Para procesar la imagen efectivamente se debe considerar el proceso de formación y las características de interés de la imagen \cite{ref_13}.
+\section{Procesamiento de imágenes} El procesamiento de imágenes, se puede definir como la implementación de prácticas (disminuir el ruido, mejorar el contraste, ajustar el brillo, suavizar bordes, etc.), que buscan modificar ciertas características de la imagen con el fin de tener una mejor visualización de la misma, para realizar su posterior análisis de una manera más eficiente \cite{ref_13}.\\
+El procesamiento de imágenes no tiene como objetivo incrementar la información que se puede obtener de las imágenes, pues el enfoque de esta técnica es resaltar las características más significativas que se encuentren en la imagen para que esta puede ser procesada de la mejor manera \cite{ref_13}.
 
 
 \section{\textit{Stride}}
-
 
 Es un parámetro que especifica cuántos píxeles se traslada horizontalmente y verticalmente, mientras es convolucionada la imagen. En algunas arquitecturas el \textit{stride} se utiliza en vez de \textit{max pooling} para reducir el tamaño de la capa \cite{murphy2016overview}, un ejemplo de stride se puede observar en la Figura \ref{stride}.
 
