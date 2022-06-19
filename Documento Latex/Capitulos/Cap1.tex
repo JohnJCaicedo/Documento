@@ -586,25 +586,30 @@ Se utilzaron modelos pre entrenados para realizar el entrenamiento del  \textit{
 El modelo \textit{AlexNet} fue implementado en el año $2012$ en el desafió de reconocimiento visual a gran escala \textit{ImageNet}. Este modelo tuvo un resultado tan satisfactorio, que los modelos de aprendizaje profundo, se convirtieron en la referencia para la investigación y desarrollo en los principales sectores de la industria \cite{krizhevsky2014one}\\
 
 
-El modelo se compone de $5$ capas convolucionales y $3$ capas densas, donde las capas convolucionales están normalizadas por lotes de datos. El $kernel$ (Máscara aplicada en la convolución) tiene dimensiones diferentes que se distribuyen en \textit{11 x 11} en la primera capa, \textit{5 x 5} en la segunda y \textit{3 x 3} en las demás. La primera, cuarta y quinta capa convolucional están seguidas por una capa \textit{Max pooling} con dimensiones de \textit{3 x 3}, que posee un \textit{stride} de $2$.\\
+El modelo se compone de $5$ capas convolucionales y $3$ capas densas, donde las capas convolucionales están normalizadas por lotes de datos. El $kernel$ (Máscara aplicada en la convolución) tiene dimensiones diferentes que se distribuyen en \textit{11 x 11} en la primera capa, \textit{5 x 5} en la segunda y \textit{3 x 3} en las demás. La primera, cuarta y quinta capas convolucionales están conectadas por una capa \textit{Max pooling} con dimensiones de \textit{3 x 3}, que posee un \textit{stride} de $2$.\\
 
 
-Las capas convolucionales y de \textit{Max pooling} son seguidas por tres capas densas, en donde las dos primeras poseen $4096$ neuronas cada una y la ultima capa es la de salida, la cual se compone de $1000$ neuronas que poseen una función de activación \textit{softmax}, esta capa fue modificada para que sea $4$ neuronas de salida referentes a las 4 clases definidas. Estas neuronas son las encargadas de realizar la clasificación de la imagen. 
+Las capas convolucionales y de \textit{Max pooling} son seguidas por tres capas densas, en donde las primeras dos constan de $4096$ neuronas cada una y la última capa es la de salida, la cual se compone de $1000$ neuronas que poseen una función de activación \textit{softmax}, esta capa fue modificada para que sean $4$ neuronas de salida referentes a las 4 clases definidas para realizar la clasificación.
 
 \newpage
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.5]{Figs/5.png}
-	\caption{Arquitectura Del Modelo \textit{AlexNet} \\ Fuente:Alex Krizhevsky (2014)}
+	\includegraphics[scale=0.72]{Figs/5.png}
+	\caption{Arquitectura Del Modelo \textit{AlexNet} \\ Fuente:Krizhevsky et al., (2012)}
 	\label{fig:AlexNet}
 \end{figure}
 
-Como se aprecia en la Figura \ref{fig:AlexNet}, el modelo de \textit{AlexNet} toma una imagen de entrada con una resolución de \textit{227 x 227} pixeles y $3$ canales de color, la información recibida pasa por cinco capas convolucionales (en negro) de neuronas con función de activación \textit{ReLu} y $3$ capas de \textit{Max pooling} (en azul). La quinta capa de convolución posee $256$ máscaras diferentes con dimensiones de \textit{13 x 13}. Seguidamente se aplican las dos capas densas de $4096$ neuronas, las cuales son seguidas por una capa de salida de $1000$ neuronas, dotadas con una función de activación \textit{softmax}. Cada neurona de la capa de salida representa una clase diferente y su valor de activación indica la probabilidad de que la imagen de entrada pertenezca a dicho conjunto semántico. Los resultados del entrenamiento obtenidos fueron inferiores al $20\%$, por lo tanto, fueron excluidos en el análisis sin optimización de los hiperparámetros.
+Como se aprecia en la Figura \ref{fig:AlexNet}, el modelo de \textit{AlexNet} toma una imagen de entrada con una resolución de \textit{224 x 224} píxeles y $3$ canales de color, la información recibida pasa por cinco capas convolucionales de neuronas con función de activación \textit{ReLu} y $3$ capas de \textit{Max pooling}. La quinta capa de convolución posee $256$ máscaras diferentes con dimensiones de \textit{13 x 13}. Se implementan las dos capas densas de $4096$ neuronas, las cuales están conectadas  por una capa de salida de $1000$ neuronas, que poseen una función de activación \textit{softmax}. Las neuronas presentes en la capa de salida representa una clase diferente \cite{alex}.
+\\
+\\
+Los resultados del entrenamiento obtenidos fueron inferiores al $20\%$, por lo tanto, fueron excluidos en el análisis sin optimización de los hiperparámetros.
 
+
+\newpage
 \subsubsection{\MakeUppercase{Modelo preentrenado VGG19}}
 
-La arquitectura \textit{VGG} fue planteada por Simonyan y Zisserman \cite{simonyan2014very}, la cual consiste en grupos lineales de bloques que se encuentran formados por una cantidad determinada de capas convolucionales, una función de activación no lineal y una capa de \textit{Max pooling}, seguidos de tres capas densas y finalmente una capa de activación \textit{softmax} \cite{ref_2}. Esta arquitectura cuenta con $5$ bloques los cuales están distribuidos como se muestra en la Figura \ref{fig:VGG19}.				
+La arquitectura \textit{VGG} fue planteada por Simonyan y Zisserman \cite{simonyan2014very},y es definida por Diaz-Gaxiola (2019) como ''grupos lineales de bloques que se encuentran formados por una cantidad determinada de capas convolucionales, una función de activación no lineal y una capa de \textit{Max pooling}, seguidos de tres capas densas y finalmente una capa de activación \textit{softmax}''. Esta arquitectura cuenta con $5$ bloques los cuales están distribuidos como se muestra en la Figura \ref{fig:VGG19}.				
 
 \begin{figure}[ht]
 	\centering
@@ -614,9 +619,10 @@ La arquitectura \textit{VGG} fue planteada por Simonyan y Zisserman \cite{simony
 \end{figure}			
 
 
-Como se puede observar en la Figura \ref{fig:VGG19}, la columna \textit{E} muestra que la arquitectura del modelo \textit{VGG19}  cuenta con $2$ capas convolucionales de $64$ y $128$ filtros respectivamente, en sus dos primeros bloques, el bloque intermedio se compone de $3$ capas convolucionales de $256$ filtros, y los últimos dos bloques están compuestos por $3$ capas convolucionales de $512$ filtros cada uno. El numero $19$ representa la cantidad de capas que se pueden entrenar en la arquitectura, donde hay $16$ capas convolucionales y $3$ capas densas.\\			
+Como se puede observar en la Figura \ref{fig:VGG19}, la columna \textit{E} muestra que la arquitectura del modelo \textit{VGG19}  cuenta con $2$ capas convolucionales de $64$ y $128$ filtros respectivamente, en sus dos primeros bloques, el bloque intermedio se compone de $3$ capas convolucionales de $256$ filtros, y los últimos dos bloques están compuestos por $3$ capas convolucionales de $512$ filtros cada uno. El numero $19$ representa la cantidad de capas que se pueden entrenar en la arquitectura, donde hay $16$ capas convolucionales y $3$ capas densas \cite{19}.\\			
 
-Las capas convolucionales de esta arquitectura presentadas en la Figura \ref{fig:VGG19}, cuentan con un campo receptivo de \textit{3 x 3}, \textit{stride} de \textit{1 x 1} y \textit{padding} de $1$ pixel. Para la operaciones de \textit{Max pooling} se implementa un \textit{kernel} de \textit{2 x 2} y un \textit{stride} de \textit{2 x 2}, y por ultimo cada capa oculta de la red cuenta con la función de activación \textit{ReLu}. La Figura \ref{fig:VGG19_accuracy} muestra la precisión obtenida del entrenamiento hecho sobre esta arquitectura.
+Las capas convolucionales de esta arquitectura presentadas en la Figura \ref{fig:VGG19}, cuentan con un campo receptivo de \textit{3 x 3}, \textit{stride} de \textit{1 x 1} y \textit{padding} de $1$ pixel. Para realizar las operaciones de \textit{Max pooling} se tienen en cuenta un \textit{kernel} de dimensiones \textit{2 x 2}, \textit{stride} de \textit{2 x 2}, y por ultimo se implementa una función \textit{ReLu}. en cada capa oculta de la red para su activación. La Figura \ref{fig:VGG19_accuracy} muestra la precisión obtenida del entrenamiento hecho sobre esta arquitectura.
+
 
 \begin{figure}[ht]
 	\centering
