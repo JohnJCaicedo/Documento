@@ -233,9 +233,10 @@ L.~Moreno-D{\'\i}az-Alejo, ``An{\'a}lisis comparativo de arquitecturas de redes
   neuronales para la clasificaci{\'o}n de im{\'a}genes,'' Master's thesis,
   2020.
 
-\bibitem{ref_3}
-K.~Simonyan and A.~Zisserman, ``Very deep convolutional networks for
-  large-scale image recognition,'' {\em arXiv preprint arXiv:1409.1556}, 2014.
+\bibitem{he2016deep}
+K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image
+  recognition,'' in {\em Proceedings of the IEEE conference on computer vision
+  and pattern recognition}, pp.~770--778, 2016.
 
 \bibitem{ref_4}
 A.~Atienza~Arroyo {\em et~al.}, ``Detecci{\'o}n e identificaci{\'o}n

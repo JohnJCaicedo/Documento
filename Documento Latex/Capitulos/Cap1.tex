@@ -330,8 +330,32 @@ La librería \textit{Plotly}, que permite realizar gráficas en \textit{Python},
 
 Se definieron los conjuntos de \textit{entrenamiento} y \textit{validación}, a partir del archivo \textit{metadata.csv} de la Tabla \ref{table:metadata}. Se utilizó $80\%$ para \textit{entrenamiento} y $20\%$ para \textit{validación}. Se crearon los archivos \textit{train.csv} y \textit{test.csv} que contienen el \textit{metadata} y la dirección de las imágenes separadas en el respectivo $80\%$ y $20\%$.\\
 
+\section{Optimización Bayesiana}
+
+La mayor parte de modelos implementados en \textit{machine learning} poseen una serie de parámetros que no pueden ser aprendidos de los datos, es por esto que deben ser establecidos antes del entrenamiento. Estos parámetros son conocidos como hiperparámetros. \\
+
+Dos de las estrategias más empleadas para probar diferentes combinaciones de hiperparámetros y evaluarlas mediante métodos de validación, son \textit{grid search y random search} \cite{liashchynskyi2019grid}. En la estrategia de \textit{grid search}, los valores estudiados de cada hiperparámetro, son distribuidos uniformemente dentro de un rango delimitado por el analista. En la estrategia de \textit{random search}, los datos son aleatorios dentro de ese rango como se muestra en la Figura \ref{fig:Hiperparámetros grid search y random search}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.6]{Figs/121.png}
+	\caption{Métodos de Optimización De Hiperparámetros \\Fuente: Amat, J. (2020)}
+	\label{fig:Hiperparámetros grid search y random search}
+\end{figure}
+
+A pesar de que las dos estrategias son válidas y se obtienen buenos resultados, sobretodo cuando se tiene criterio para acotar el rango de búsqueda, poseen una carencia similar: ninguna de las dos tiene en cuenta los resultados obtenidos hasta el momento, lo cual impide que se focalicen en la búsqueda de las regiones de mayor interés y evitando las regiones innecesarias.\\
 
 
+Otro método utilizado para la búsqueda de los hiperparámetros de un modelo es la optimización bayesiana, definido por \textit{Peter Frazier (2018)} \cite{frazier2018tutorial} como \textit{"crear un modelo probabilístico en el que el valor de la función objetivo es la métrica de validación del modelo, en este caso, la precisión}. Con este método, se logra que la búsqueda se vaya redirigiendo en cada iteración hacia las regiones de mayor interés. Esto con el fin de reducir el número de combinaciones de los hiperparámetros con los que el modelo es evaluado, seleccionando únicamente los mejores candidatos. Esto significa que, la ventaja frente a las estrategias descritas anteriormente, se maximiza cuando el espacio de búsqueda es muy amplio o la evaluación del modelo es muy lenta.\\
+
+Para realizar la optimización bayesiana, se utilizó el módulo para \textit{Python} \textit{Botorch}  \cite{balandat2020botorch}. Es el motor de optimización de \textit{Ax-Services} compatible con \textit{Pytorch}, que admite algunas funciones de minimización y maximización, como la mejora esperada (\textit{EI}), la probabilidad de mejora y el límite superior de confianza. \textit{EI} es una función de adquisición que recompensa la evaluación del objetivo $f(x)$, basándose en la mejora esperada en relación con el mejor momento $f*$. La Ecuación \ref{EI}, define el comportamiento de la mejora esperada.
+
+\begin{equation}
+	{EI(x)=\in[max(f(x)-f*),0]}
+	\label{EI}
+\end{equation}
+
+El resultado de la parametrización, se selecciona y se evalúa en el siguiente paso. Una vez que se ha explorado adecuadamente el espacio de los parámetros, la mejora esperada se estrecha naturalmente en las ubicaciones donde hay una alta probabilidad de un buen valor objetivo. Este proceso se realiza por $20$ etapas, en las que se varían los parámetros de acuerdo a lo descrito anteriormente. 
 
 
 \chapter{Algoritmo de Clasificación}
@@ -509,12 +533,7 @@ Los argumentos explicados en la tabla \ref{table:Argumentos} fueron establecidos
 Esto con el objetivo de que el \textit{Dataloader} cargue 40 muestras por época, y tome otras 40 diferentes para la siguiente época, y así sucesivamente hasta terminar todas las épocas establecidas.  
 
 
-
-
-
 \subsection{Hiperparámetros Del Modelo}
-
-La mayor parte de modelos implementados en \textit{machine learning} poseen una serie de parámetros que no pueden ser aprendidos de los datos, es por esto que deben ser establecidos antes del entrenamiento. Estos parámetros son conocidos como hiperparámetros. En este capítulo se abordan los hiperparámetros utilizados en el desarrollo de este proyecto.
 
 \subsubsection{FUNCIÓN DE PÉRDIDAS}		
 
@@ -606,7 +625,7 @@ Las capas convolucionales de esta arquitectura presentadas en la Figura \ref{fig
 	\label{fig:VGG19_accuracy}
 \end{figure}  
 
-La precisión del modelo al completar las $50$ épocas de entrenamiento es inferior al 60 \% como se observa en la Figura \ref{fig:VGG19_losses}. El hecho de que en la última época, la precisión en el entrenamiento y en la validación dan valores similares, indica que el modelo no sufre de \textit{overfitting} que significaría un mal aprendizaje en la salida del modelo. 
+La precisión del modelo al completar las $50$ épocas de entrenamiento es inferior al 60 \% como se observa en la Figura \ref{fig:VGG19_accuracy}. La figura \ref{fig:VGG19_losses} muestra el comportamiento de la función de pérdidas, que tiende a $0$ a medida que las épocas avanzan. La eficacia del modelo se mide a partir de que tan cercano a $0$ se obtiene la función de pérdidas. 
 
 \begin{figure}[ht]
 	\centering
@@ -616,7 +635,7 @@ La precisión del modelo al completar las $50$ épocas de entrenamiento es infer
 \end{figure}
 
 \newpage
-Una vez se obtiene el modelo entrenado con los hiperparámetros no optimizados, se calcula la matriz de confusión con el conjunto de datos de \textit{validación}, los resultados se presentan en la Tabla \ref{fig:MC_VGG19}.
+El hecho de que en la última época, la precisión en el entrenamiento y en la validación dan valores similares, indica que el modelo no sufre de \textit{overfitting} que significaría un mal aprendizaje en la salida del modelo. Una vez se obtiene el modelo entrenado con los hiperparámetros no optimizados, se calcula la matriz de confusión con el conjunto de datos de \textit{validación}, los resultados se presentan en la Tabla \ref{fig:MC_VGG19}.
 
 \begin{table}[htbp]
 	\centering
@@ -668,10 +687,10 @@ Para comparar los resultados posteriormente, también se calcula la matriz de co
 			\multicolumn{2}{|c|}{\multirow{2}[4]{*}{}} & \multicolumn{4}{c|}{Predicción} \bigstrut\\
 			\cline{3-6}    \multicolumn{2}{|c|}{} & CLASE 1 & CLASE 2 & CLASE 3 & CLASE 4 \bigstrut\\
 			\hline
-			\multirow{4}[8]{*}{\begin{sideways}Valor Real\end{sideways}} & CLASE 1 & 27     & 2     & 0    & 0 \bigstrut\\
-			\cline{2-6}     & CLASE 2 & 21     & 1     & 0    & 2 \bigstrut\\
-			\cline{2-6}      & CLASE 3 & 6     & 5     & 0    & 11 \bigstrut\\
-			\cline{2-6}     & CLASE 4 & 20     & 15     & 0    & 8 \bigstrut\\
+			\multirow{4}[8]{*}{\begin{sideways}Valor Real\end{sideways}} & CLASE 1 & 26     & 3     & 0    & 0 \bigstrut\\
+			\cline{2-6}     & CLASE 2 & 17     & 7     & 0    & 0 \bigstrut\\
+			\cline{2-6}      & CLASE 3 & 6     & 15     & 0    & 1 \bigstrut\\
+			\cline{2-6}     & CLASE 4 & 19     & 21     & 0    & 3 \bigstrut\\
 			\hline
 		\end{tabular}
 	}
@@ -686,15 +705,15 @@ En la Tabla \ref{fig:ACU_VGG19_2} se presenta la precisión del modelo obtenida 
 	\centering
 	\begin{tabular}{|c|c|}
 		\hline
-		CLASE 1 & 75,90 \bigstrut\\
+		CLASE 1 & 89.7 \bigstrut\\
 		\hline
-		CLASE 2 & 50,00 \bigstrut\\
+		CLASE 2 & 29.2\bigstrut\\
 		\hline
-		CLASE 3 & 90,90 \bigstrut\\
+		CLASE 3 & 0.0 \bigstrut\\
 		\hline
-		CLASE 4 & 51,20 \bigstrut\\
+		CLASE 4 & 7.0 \bigstrut\\
 		\hline
-		\multicolumn{2}{|c|}{Precisión Total: 36,84} \bigstrut\\
+		\multicolumn{2}{|c|}{Precisión Total: 34.21} \bigstrut\\
 		\hline
 	\end{tabular}%
 	\caption{Precisión por clase en conjunto de \textit{entrenamiento}}
@@ -721,84 +740,73 @@ El modelo de aprendizaje profundo \textit{VGG11} es la configuración más senci
 El modelo cuenta con $11$ capas ponderadas, sus pesos representan la fuerza de las conexiones entre unidades de capas de red adyacentes, son implementadas con el fin de conectar cada neurona de una capa con todas las neuronas de la siguiente capa, se debe tener en cuenta que la capa \textit{Max pooling} no se considera como una capa ponderada, debido a que es un mapa de características que contiene las características más destacadas. Los resultados del entrenamiento obtenidos fueron inferiores al $15\%$, por lo tanto, fueron excluidos en el análisis sin optimización de los hiperparámetros.
 
 \subsubsection{\MakeUppercase{Modelo preentrenado RESNET18}}
-La arquitectura Resnet, (Residual Net), fue propuesta por un equipo de Microsoft Research, el cual fue liderado por Kaiming He, en donde se propone que si a una red neuronal de 20 capas, se le intercalan 36 capas que calculan la simple función de identidad, la red resultante, (56 capas), debería tener exactamente la misma eficacia y no ser inferior que la primera. Se debe recordar que la función identidad es la encargada de devolver exactamente el mismo valor que su argumento \cite{ref_4}.\\
+La arquitectura \textit{ResNet} (Residual Net), fue propuesta por un equipo de Microsoft Research liderado por \textit{Kaiming He} \cite{he2016deep}, en donde se propone que si a una red neuronal de $20$ capas se le intercalan $36$ capas que calculan la simple función de identidad, la red resultante debería tener exactamente la misma eficacia y no ser inferior que la primera. Se debe recordar que la función identidad es la encargada de devolver exactamente el mismo valor que su argumento \cite{ref_4}.\\
 
-Conociendo esto para permitir que una red pueda variar su cantidad efectiva de capas, se introduce el concepto de bloque residual:
+Conociendo esto para permitir que una red residual pueda variar su cantidad efectiva de capas, se introduce el concepto de bloque residual:
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.6]{Figs/67.png}
-	\caption{Bloque Residual}
+	\includegraphics[scale=0.7]{Figs/67.png}
+	\caption{Bloque Residual \\ Fuente: Kaiming He (2015) }
 	\label{fig:Bloque}
 \end{figure}
 
-Como se aprecia en la Figura \ref{fig:Bloque}, el bloque residual se compone de una ruta residual, (izquierda), y una conexión atajo, (derecha), que la soslaya. La ruta residual F(x), esta compuesta de dos capas de pesos sinapticos, (pueden ser densas o convolucionales), que se intercalan por una función rectificadora. El resultado se suma con la información que atraviesa la conexión atajo \textit{X "identidad"}. Y por ultimo se aplica nuevamente la función rectificadora. La información puede atravesar con ello dos caminos diferentes que son: el de la función de identidad X o el de la ruta residual \textit{F(x)} \cite{ref_5}.
+Como se aprecia en la Figura \ref{fig:Bloque}, el bloque residual se compone de una ruta residual, (izquierda), y una conexión atajo (derecha), que las une. La ruta residual $F(x)$, esta compuesta de dos capas de pesos sinápticos (pueden ser densas o convolucionales), que se intercalan por una función rectificadora. El resultado se suma con la información que atraviesa la conexión atajo \textit{X "identidad"}. Y por ultimo se aplica nuevamente la función rectificadora. La información puede atravesar con ello dos caminos diferentes que son: el de la función de identidad $X$ o el de la ruta residual \textit{F(x)} \cite{ref_5}.
 
 \newpage
-En la arquitectura Resnet18, Las 18 capas de esta arquitectura representan las 18 capas con pesos, en donde se incluye la capa de convolución y la capa totalmente conectada, excluyendo la capa de agrupación y la capa BN.
+En la arquitectura \textit{ResNet18}, las $18$ capas de esta arquitectura representan las 18 capas con pesos, en donde se incluye la capa de convolución y la capa totalmente conectada, excluyendo la capa de agrupación.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.65]{Figs/68.png}
-	\caption{Arquitectura ResNet18}
+	\caption{Arquitectura \textit{ResNet18} \\ Fuente: Kaiming He (2015)}
 	\label{fig:ArqRes18}
 \end{figure}
 
-
-Como se puede observar en la Figura \ref{fig:ArqRes18}, la primera capa de convolución implementa una plantilla de \textit{7 x 77 x 7}, con un tamaño de paso de 2 y un relleno de 3, Seguido a eso, se realiza BN, ReLu y Maxpooling. Estos constituyen la primera parte del modulo de convolucion conv1.\\
-
-Luego hay cuatro etapas, cada etapa tiene múltiples módulos, cada módulo se llama un bloque de construcción, por ende se evidencia que hay 8 bloques de construcción, como se presenta en la Figura \ref{fig:ArqRes18} \cite{ref_5}.				
-
+Como se puede observar en la Figura \ref{fig:ArqRes18}, la primera capa de convolución implementa una máscara de \textit{7 x 77 x 7}, con un tamaño de paso de $2$ y un relleno de $3$. Luego, se aplican las capas con la función de activación \textit{ReLu} y \textit{Max pooling}. Estos constituyen la primera parte del modulo de convolución \textit{conv1}. Luego hay cuatro etapas, cada etapa tiene múltiples módulos, cada módulo se llama un bloque de construcción, por ende se evidencia que hay 8 bloques de construcción, como se presenta en la Figura \ref{fig:ArqRes18} \cite{ref_5}.\\				
 
 \newpage	
-En la Figura \ref{fig:preci_RESNET18}, se procede a presentar la precisión obtenida del modelo ResNet-18 durante 50 épocas, sin haber aplicado la optimizacion bayesiana.
+La Figura \ref{fig:preci_RESNET18}, muestra la precisión obtenida en el entrenamiento del modelo \textit{ResNet18} durante $50$ épocas, sin haber aplicado la optimización bayesiana.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.55]{Figs/109.png}
-	\caption{Precisión modelo Resnet-18}
+	\includegraphics[scale=0.66]{Figs/109.png}
+	\caption{Precisión Obtenida Con Modelo \textit{Resnet18}}
 	\label{fig:preci_RESNET18}
 \end{figure}
 
-La información presentada en la Figura \ref{fig:perdda_RESNET18}, permite observar que el modelo cuenta con una desviación muy baja entre las predicciones y los valores reales, permitiendo concluir que el modelo cuenta con un bajo porcentaje de \textit{overfiting}. 
+La información presentada en la Figura \ref{fig:preci_RESNET18} permite observar que el modelo obtuvo una precisión inferior al $80\%$ y, que el porcentaje de \textit{overfitting} se reduce en las épocas finales. La figura \ref{fig:perdda_RESNET18} muestra que la función de pérdidas tuvo un comportamiento con mayor eficacia en el entrenamiento con el modelo \textit{ResNet18}.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.55]{Figs/110.png}
-	\caption{Perdidas modelo Resnet-18}
+	\includegraphics[scale=0.66]{Figs/110.png}
+	\caption{Pérdidas Obtenidas Con Modelo \textit{Resnet18}}
 	\label{fig:perdda_RESNET18}
 \end{figure}
 
 \newpage
-La Figura \ref{fig:pre_RESNET18}, presenta las predicciones realizadas por el modelo ResNet-18 con las muestras implementadas durante su validación.
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.4]{Figs/111.png}
-	\caption{Predicción modelo Resnet-18}
-	\label{fig:pre_RESNET18}
-\end{figure}
-
-La matriz de confusión del modelos ResNet-18 es presentada en la Tabla \ref*{MC_RESNET18} , con el fin de dar a conocer los verdaderos positivos, verdaderos negativos, falsos positivos, y falsos negativos del modelo
+La matriz de confusión obtenida del modelo \textit{ResNet18} con el conjunto de datos de \textit{validación}, es presentada en la Tabla \ref*{MC_RESNET18}.
 
 \begin{table}[htbp]
 	\centering
+	\resizebox{10cm}{!} {
 	\begin{tabular}{|c|l|c|c|c|c|}
 		\hline
 		\multicolumn{2}{|c|}{\multirow{2}[4]{*}{}} & \multicolumn{4}{c|}{Predicción} \bigstrut\\
 		\cline{3-6}    \multicolumn{2}{|c|}{} & CLASE 1 & CLASE 2 & CLASE 3 & CLASE 4 \bigstrut\\
 		\hline
-		\multirow{4}[8]{*}{\begin{sideways}Observación\end{sideways}} & CLASE 1 & 0     & 0     & 29    & 0 \bigstrut\\
+		\multirow{4}[8]{*}{\begin{sideways}Valor Real\end{sideways}} & CLASE 1 & 0     & 0     & 29    & 0 \bigstrut\\
 		\cline{2-6}          & CLASE 2 & 0     & 0     & 24    & 0 \bigstrut\\
 		\cline{2-6}          & CLASE 3 & 0     & 0     & 22    & 0 \bigstrut\\
 		\cline{2-6}          & CLASE 4 & 0     & 0     & 43    & 0 \bigstrut\\
 		\hline
 	\end{tabular}%
-	\caption{Matriz de confusión ResNet-18}
+	}
+	\caption{Matriz de confusión en conjunto de \textit{validación}}
 	\label{MC_RESNET18}
 \end{table}%
 
-Para finalizar, en la Tabla \ref*{clase_RESNET18}, se presenta la precisión del modelo sin optimización bayesiana por clases.
+En la Tabla \ref*{clase_RESNET18}, se presenta la precisión del modelo aplicada al conjunto de datos de \textit{validación} por clases, obtenidas a partir de la matriz de confusión.
 
 \begin{table}[htbp]
 	\centering
@@ -815,107 +823,91 @@ Para finalizar, en la Tabla \ref*{clase_RESNET18}, se presenta la precisión del
 		\multicolumn{2}{|c|}{Overall Accuracy: 18,42} \bigstrut\\
 		\hline
 	\end{tabular}%
-	\caption{Clasificación por clase modelos ResNet-18}
+	\caption{Precisión por clase en conjunto de \textit{validación}}
 	\label{clase_RESNET18}
 \end{table}%
 
+Para comprara los resultados posteriormente, se calcula la matriz de confusión con el conjunto de datos de \textit{entrenamiento}, los resultados se presentan en la Tabla \ref{MC_RESNET18_2}.
 
-\newpage	
-\subsubsection{\MakeUppercase{Comparación de arquitecturas sin optimizar}}
-En la Tabla \ref{table:compasin}, se presenta la comparación de los cuatro modelos sin optimización bayesiana, implementados para la clasificación de tubérculos de papa.
-
-\begin{table}[ht]
+\begin{table}[htbp]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|}
-		\hline
-		MODELOS & AlexNet & VGG-19 & VGG-11 & ResNet-18 \\
-		\hline
-		PRECISIÓN (\%) &  & $$36,84$$ & $$34,21$$ & $$18,42$$ \\
-		\hline
-		PERDIDAS (\%) &  & $$16,00$$ & $$12,00$$ & $$2,00$$ \\
-		\hline
-	\end{tabular}	
-	\caption{Comparación modelos sin optimizar}
-	\label{table:compasin}
-\end{table}	
-
-En la Tabla \ref{table:compasin},se puede observar que el modelo con mejor precisión es el modelo \textit{VGG-19}, esto debido a que la función de perdidas de este modelo no presenta una desviación significativa entre los valores predichos y los valores reales implementados. El modelo AlexNet no es tenido en cuenta, ya que este modelo presento una precisión por debajo del 10 \% tanto en la etapa del entrenamiento como en la etapa de validación.
-
+	\resizebox{10cm}{!} {
+		\begin{tabular}{|c|l|c|c|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\multirow{2}[4]{*}{}} & \multicolumn{4}{c|}{Predicción} \bigstrut\\
+			\cline{3-6}    \multicolumn{2}{|c|}{} & CLASE 1 & CLASE 2 & CLASE 3 & CLASE 4 \bigstrut\\
+			\hline
+			\multirow{4}[8]{*}{\begin{sideways}Valor Real\end{sideways}} & CLASE 1 & 0     & 0     & 29    & 0 \bigstrut\\
+			\cline{2-6}          & CLASE 2 & 0     & 0     & 24    & 0 \bigstrut\\
+			\cline{2-6}          & CLASE 3 & 0     & 0     & 22    & 0 \bigstrut\\
+			\cline{2-6}          & CLASE 4 & 0     & 0     & 43    & 0 \bigstrut\\
+			\hline
+		\end{tabular}%
+	}
+	\caption{Matriz de confusión en conjunto de \textit{entrenamiento}}
+	\label{MC_RESNET18_2}
+\end{table}%
 
 \newpage
-\subsection{Optimización Bayesiana}
+En la Tabla \ref*{clase_RESNET18_2} se presenta la precisión del modelo aplicada al conjunto de datos de \textit{entrenamiento} por clases, obtenidas a partir de la matriz de confusión.
 
-Dos de las estrategias más empleadas para probar diferentes combinaciones de hipérparámetros y evaluarlas mediante métodos de validación, son \textit{grid search y random search} \cite{liashchynskyi2019grid}. En la primera estrategia, los valores estudiados de cada hiperparámetro, son distribuidos uniformemente dentro de un rango delimitado por el analista. En la segunda estrategia, los datos son aleatorios dentro de ese rango como se muestra en la Figura \ref{fig:Hiperparámetros grid search y random search}.
-
-\begin{figure}[ht]
+\begin{table}[htbp]
 	\centering
-	\includegraphics[scale=0.6]{Figs/121.png}
-	\caption{Métodos de Optimización De Hiperparámetros}
-	\label{fig:Hiperparámetros grid search y random search}
-\end{figure}
+	\begin{tabular}{|c|c|}
+		\hline
+		CLASE 1 & 0,00 \bigstrut\\
+		\hline
+		CLASE 2 & 0,00 \bigstrut\\
+		\hline
+		CLASE 3 & 100,00 \bigstrut\\
+		\hline
+		CLASE 4 & 0,00 \bigstrut\\
+		\hline
+		\multicolumn{2}{|c|}{Overall Accuracy: 29.00} \bigstrut\\
+		\hline
+	\end{tabular}%
+	\caption{Precisión por clase en conjunto de \textit{validación}}
+	\label{clase_RESNET18_2}
+\end{table}%
 
-A pesar de que las dos estrategias son válidas y se obtienen buenos resultados, sobretodo cuando se tiene criterio para acotar el rango de búsqueda, poseen una carencia similar: ninguna de las dos tiene en cuenta los resultados obtenidos hasta el momento, lo cual impide que se focalicen en la búsqueda de las regiones de mayor interés y evitando las regiones innecesarias.\\
+\subsection{Optimización De Hiperparámetros}
 
+La Tabla \ref{paraopt} muestra los hiperparámetros escogidos para optimizar utilizando la técnica de optimización Bayesiana. Estos hiperparámetros influyen en el comportamiento del optimizador, mejorando el proceso de aprendizaje de la \textit{RNC}.  
 
-Otro método utilizado para la búsqueda de los hiperparámetros de un modelo, es la optimización bayesiana, la cual consiste en crear un modelo probabilístico, en el que el valor de la función objetivo es la métrica de validación del modelo, en este caso, la presición. Con este método, se logra que la búsqueda se vaya redirigiendo en cada iteración hacia las regiones de mayor interés \cite{frazier2018tutorial}. Esto con el fin de reducir el número de combinaciones de los hiperparámetros con los que el modelo es evaluado, seleccionando únicamente los mejores candidatos. Esto significa que, la ventaja frente a las estrategias descritas anteriormente, se maximiza cuando el espacio de búsqueda es muy amplio o la evaluación del modelo es muy lenta.\\
-
-Para realizar la optimización bayesiana, se utilizó el módulo para \textit{Python} \textit{Botorch}  \cite{balandat2020botorch}. Es el motor de optimización de \textit{Ax-Services} compatible con \textit{Pytorch}, que admite algunas funciones de minimización y maximización, como la mejora esperada (\textit{EI}), la probabilidad de mejora y el límite superior de confianza. La mejora esperada es una función de adquisición recompensa la evaluación del objetivo $f$, basándose en la mejora esperada en relación con el mejor momento. En la Ecuación \ref{EI} se define  \textit{EI} .
-
-\begin{equation}
-	{EI(x)=\in[max(f(x)-f*),0]}
-	\label{EI}
-\end{equation}
-
-El resultado de la parametrización, con la mejora esperada, se selecciona y se evalúa en el siguiente paso. Una vez que se ha explorado adecuadamente el espacio de los parámetros, la mejora esperada se estrecha naturalmente en las ubicaciones donde hay una alta probabilidad de un buen valor objetivo. Este proceso se realiza por 20 etapas de acuerdo a los parámetros de optimización elegidos. La Tabla \ref{paraopt} muestra los parámetros escogidos para optimizar.
+\vspace{0.5cm}
 
 \begin{table}[ht]
 	\centering
 	\begin{tabular}{|c|c|c|ll}
 		\cline{1-3}
 		Parámetro & Limite inferior              & Limite Superior &  &  \\ \cline{1-3}
-		lr         & $1*10^{-6}$ & 0.4             &  &  \\ \cline{1-3}
-		Momentum   & 0                            & 1               &  &  \\ \cline{1-3}
-		Stepsize   & 20                           & 40              &  &  \\ \cline{1-3}
+		Taza de Aprendizaje        & $1*10^{-6}$ & 0.4             &  &  \\ \cline{1-3}
+		Momento   & 0                            & 1               &  &  \\ \cline{1-3}
+		Tamaño del Paso   & 20                           & 40              &  &  \\ \cline{1-3}
 	\end{tabular}
 	\caption{Hiperparámetros Optimizados}
 	\label{paraopt}
 \end{table}
 
-\textit{Botorch} realiza $20$ pruebas con parámetros distintos en los rangos definidos, y encuentra la combinación de parámetros que den el mejor resultado de precisión final del algoritmo. Estos resultados fueron utilizados para entrenar nuevamente los modelos descritos anteriormente. 
+\vspace{0.5cm}
 
+\textit{Botorch} realiza $20$ pruebas con parámetros distintos en los rangos definidos, y encuentra la combinación de parámetros que den el mejor resultado de precisión final del algoritmo. Estos resultados fueron utilizados para entrenar nuevamente los modelos descritos anteriormente, para comparar la eficacia de los algoritmos y modelos implementados.
 
 
 
 \newpage	
-\subsubsection{\MakeUppercase{Modelo preentrenado AlexNet optimizado}}
-En la Figura \ref{fig:preci_Alex_OPT}, se puede observar que el modelo AlexNet, implementando la optimización bayesiana, presenta un deterioro en la precisión cuando se realiza la validación.
+\subsubsection{\MakeUppercase{Modelo AlexNet optimizado}}
+
+En la Figura \ref{fig:preci_Alex_OPT}, se observa la precisión obtenida en el entrenamiento del modelo \textit{AlexNet} con hiperparámetros optimizados. A pesar de que la precisión es superior al $60\%$, que indica una mejora en los resultados con respecto a la versión no optimizada que no fueron tenidos en cuenta, se presenta un \textit{overfitting}, por lo que la red no está aprendiendo de manera correcta las características de el \textit{dataset}.
+
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.8]{Figs/500.png}
+	\includegraphics[scale=0.7]{Figs/500.png}
 	\caption{Precisión modelo AlexNet optimizado}
 	\label{fig:preci_Alex_OPT}
 \end{figure}
 
-En la Figura \ref{fig:perdda_Alex_opt}, se aprecia que el modelo AlexNet es poco eficiente, ya que existe una desviación significativa entre la predicción realizada y los valores reales implementados.
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.8]{Figs/501.png}
-	\caption{Perdidas modelo AlexNet optimizado}
-	\label{fig:perdda_Alex_opt}
-\end{figure}
-
-\newpage
-La Figura \ref{fig:pre_alex_opt}, presenta la clasificación realizada por el modelo con las muestras implementadas.
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.4]{Figs/502.png}
-	\caption{Predicción modelo AlexNet optimizado}
-	\label{fig:pre_alex_opt}
-\end{figure}
-
-
-La Tabla \ref{tab:MC_ALEX_OPT}, almacena los datos de la matriz de confusión del modelo AlexNet, esto con el fin de dar a conocer los verdaderos positivos, verdaderos negativos, falsos positivos y falsos negativos del modelo.
-
+La Tabla \ref{tab:MC_ALEX_OPT} almacena los datos de la matriz de confusión del modelo \textit{AlexNet} en el conjunto de datos de \textit{validación}.
 
 \begin{table}[htbp]
 	\centering
@@ -930,12 +922,13 @@ La Tabla \ref{tab:MC_ALEX_OPT}, almacena los datos de la matriz de confusión de
 		\cline{2-6}          & CLASE 4 & 0     & 1     & 42    & 0 \bigstrut\\
 		\hline
 	\end{tabular}%
-	\caption{Matriz de confusión AlexNet Optimizado }
+	\caption{Matriz de confusión en conjunto de \textit{validación}}
 	\label{tab:MC_ALEX_OPT}%
 \end{table}%
 
 \newpage
-Para finalizar, en la Tabla \ref{tab:Alexoptclases} se presenta la precisión del modelo por cada clase de clasificación y la precisión general.
+La Tabla \ref{tab:Alexoptclases} presenta la precisión del modelo por cada clase de clasificación en el conjunto de datos de \textit{validación}.
+
 
 \begin{table}[htbp]
 	\centering
@@ -952,7 +945,8 @@ Para finalizar, en la Tabla \ref{tab:Alexoptclases} se presenta la precisión de
 		\multicolumn{2}{|c|}{Overall Accuracy: 21,05} \bigstrut\\
 		\hline
 	\end{tabular}%
-	\caption{Clasificación por clase modelos AlexNet}
+	\caption{Clasificación por clase en conjunto de \textit{validación}.
+	}
 	\label{tab:Alexoptclases}%
 \end{table}%
 
