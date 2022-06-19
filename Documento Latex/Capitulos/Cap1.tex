@@ -332,9 +332,9 @@ Se definieron los conjuntos de \textit{entrenamiento} y \textit{validación}, a 
 
 \section{Optimización Bayesiana}
 
-La mayor parte de modelos implementados en \textit{machine learning} poseen una serie de parámetros que no pueden ser aprendidos de los datos, es por esto que deben ser establecidos antes del entrenamiento. Estos parámetros son conocidos como hiperparámetros. \\
+En \textit{machine learning}, una gran variedad de modelos contienen ciertos parámetros que no llegan a ser prendidos unicamente con el análisis de los datos, lo que lleva a que deban ser definidos antes de empezar el entrenamiento. Estos parámetros son conocidos como hiperparámetros. \\  
 
-Dos de las estrategias más empleadas para probar diferentes combinaciones de hiperparámetros y evaluarlas mediante métodos de validación, son \textit{grid search y random search} \cite{liashchynskyi2019grid}. En la estrategia de \textit{grid search}, los valores estudiados de cada hiperparámetro, son distribuidos uniformemente dentro de un rango delimitado por el analista. En la estrategia de \textit{random search}, los datos son aleatorios dentro de ese rango como se muestra en la Figura \ref{fig:Hiperparámetros grid search y random search}.
+Las estrategias más se emplean a la hora de probar diferentes combinaciones de hiperparámetros y evaluarlas mediante métodos de validación, son \textit{grid search y random search} \cite{liashchynskyi2019grid}. En la estrategia de \textit{grid search}, los valores estudiados de cada hiperparámetro, deben ser distribuidos uniformemente dentro de un rango que será establecido por el analista. En la estrategia de \textit{random search}, los datos son aleatorios dentro del rango definido, como se muestra en la Figura \ref{fig:Hiperparámetros grid search y random search}.
 
 \begin{figure}[ht]
 	\centering
@@ -343,10 +343,10 @@ Dos de las estrategias más empleadas para probar diferentes combinaciones de hi
 	\label{fig:Hiperparámetros grid search y random search}
 \end{figure}
 
-A pesar de que las dos estrategias son válidas y se obtienen buenos resultados, sobretodo cuando se tiene criterio para acotar el rango de búsqueda, poseen una carencia similar: ninguna de las dos tiene en cuenta los resultados obtenidos hasta el momento, lo cual impide que se focalicen en la búsqueda de las regiones de mayor interés y evitando las regiones innecesarias.\\
+En general las dos estrategias anteriormente mencionadas son válidas y los resultados obtenidos son buenos, sin embargo estas estrategias comparten la misma insuficiencia y es que ninguna de las dos tiene en cuenta los resultados obtenidos hasta el momento, Esto trae como consecuencia que estas estrategias no estén focalizadas en la búsqueda de las regiones de mayor interés y así evitar las regiones innecesarias.\\
 
 
-Otro método utilizado para la búsqueda de los hiperparámetros de un modelo es la optimización bayesiana, definido por \textit{Peter Frazier (2018)} \cite{frazier2018tutorial} como \textit{"crear un modelo probabilístico en el que el valor de la función objetivo es la métrica de validación del modelo, en este caso, la precisión}. Con este método, se logra que la búsqueda se vaya redirigiendo en cada iteración hacia las regiones de mayor interés. Esto con el fin de reducir el número de combinaciones de los hiperparámetros con los que el modelo es evaluado, seleccionando únicamente los mejores candidatos. Esto significa que, la ventaja frente a las estrategias descritas anteriormente, se maximiza cuando el espacio de búsqueda es muy amplio o la evaluación del modelo es muy lenta.\\
+La optimización bayesiana es otro método utilizado para la búsqueda de los hiperparámetros de un modelo, esta estrategia fue definida por \textit{Peter Frazier (2018)} \cite{frazier2018tutorial} como \textit{"crear un modelo probabilístico en el que el valor de la función objetivo es la métrica de validación del modelo, en este caso, la precisión"}. Con este método, se logra que la búsqueda sea redirigida en cada iteración hacia las regiones de mayor interés. Esto con el fin de reducir el número de combinaciones de los hiperparámetros con los que el modelo es evaluado.\\
 
 Para realizar la optimización bayesiana, se utilizó el módulo para \textit{Python} \textit{Botorch}  \cite{balandat2020botorch}. Es el motor de optimización de \textit{Ax-Services} compatible con \textit{Pytorch}, que admite algunas funciones de minimización y maximización, como la mejora esperada (\textit{EI}), la probabilidad de mejora y el límite superior de confianza. \textit{EI} es una función de adquisición que recompensa la evaluación del objetivo $f(x)$, basándose en la mejora esperada en relación con el mejor momento $f*$. La Ecuación \ref{EI}, define el comportamiento de la mejora esperada.
 
@@ -746,9 +746,9 @@ El modelo de aprendizaje profundo \textit{VGG11} es la configuración más senci
 El modelo cuenta con $11$ capas ponderadas, sus pesos representan la fuerza de las conexiones entre unidades de capas de red adyacentes, son implementadas con el fin de conectar cada neurona de una capa con todas las neuronas de la siguiente capa, se debe tener en cuenta que la capa \textit{Max pooling} no se considera como una capa ponderada, debido a que es un mapa de características que contiene las características más destacadas. Los resultados del entrenamiento obtenidos fueron inferiores al $15\%$, por lo tanto, fueron excluidos en el análisis sin optimización de los hiperparámetros.
 
 \subsubsection{\MakeUppercase{Modelo preentrenado RESNET18}}
-La arquitectura \textit{ResNet} (Residual Net), fue propuesta por un equipo de Microsoft Research liderado por \textit{Kaiming He} \cite{he2016deep}, en donde se propone que si a una red neuronal de $20$ capas se le intercalan $36$ capas que calculan la simple función de identidad, la red resultante debería tener exactamente la misma eficacia y no ser inferior que la primera. Se debe recordar que la función identidad es la encargada de devolver exactamente el mismo valor que su argumento \cite{ref_4}.\\
+La arquitectura \textit{ResNet} (Residual Net), fue propuesta por un equipo de Microsoft Research liderado por \textit{Kaiming He} \cite{he2016deep}, en donde se propone la implementación de de la red ResNet basándose en las conexiones residuales. El termino conexión residual es implementado para describir la conexión que existe entre el output de las capas nuevas con el output de las capas anteriores \cite{18}. 
 
-Conociendo esto para permitir que una red residual pueda variar su cantidad efectiva de capas, se introduce el concepto de bloque residual:
+Las redes residuales pueden variar su cantidad de capas efectivas, es por esto que es necesario introducir el concepto de bloque residual, el cual es presentado n la Figura \ref{fig:Bloque}.
 
 \begin{figure}[ht]
 	\centering
@@ -757,11 +757,8 @@ Conociendo esto para permitir que una red residual pueda variar su cantidad efec
 	\label{fig:Bloque}
 \end{figure}
 
-Como se aprecia en la Figura \ref{fig:Bloque}, el bloque residual se compone de una ruta residual, (izquierda), y una conexión atajo (derecha), que las une. La ruta residual $F(x)$, esta compuesta de dos capas de pesos sinápticos (pueden ser densas o convolucionales), que se intercalan por una función rectificadora. El resultado se suma con la información que atraviesa la conexión atajo \textit{X "identidad"}. Y por ultimo se aplica nuevamente la función rectificadora. La información puede atravesar con ello dos caminos diferentes que son: el de la función de identidad $X$ o el de la ruta residual \textit{F(x)} \cite{ref_5}.
-
+El bloque residual esta compuesto por dos rutas, una ruta residual (izquierda), y una conexión atajo (derecha), que las une. Se observa que la ruta residual $F(x)$, se compone por dos capas de pesos relativos, los cuales están intercalados por una función rectificadora. El resultado se suma con la información obtenida por la conexión atajo \textit{X "identidad"}. Y para finalizar se aplica nuevamente la función rectificadora. Así, las capas pueden aprender las diferencias entre lo que esta entrando y lo que esta saliendo del bloque. Esto con el fin de evitar el \textit{overfitting}, al añadir más capas \cite{18-2}.
 \newpage
-En la arquitectura \textit{ResNet18}, las $18$ capas de esta arquitectura representan las 18 capas con pesos, en donde se incluye la capa de convolución y la capa totalmente conectada, excluyendo la capa de agrupación.
-
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.65]{Figs/68.png}
@@ -769,7 +766,7 @@ En la arquitectura \textit{ResNet18}, las $18$ capas de esta arquitectura repres
 	\label{fig:ArqRes18}
 \end{figure}
 
-Como se puede observar en la Figura \ref{fig:ArqRes18}, la primera capa de convolución implementa una máscara de \textit{7 x 77 x 7}, con un tamaño de paso de $2$ y un relleno de $3$. Luego, se aplican las capas con la función de activación \textit{ReLu} y \textit{Max pooling}. Estos constituyen la primera parte del modulo de convolución \textit{conv1}. Luego hay cuatro etapas, cada etapa tiene múltiples módulos, cada módulo se llama un bloque de construcción, por ende se evidencia que hay 8 bloques de construcción, como se presenta en la Figura \ref{fig:ArqRes18} \cite{ref_5}.\\				
+Como se puede observar en la Figura \ref{fig:ArqRes18}, la primera capa de convolución implementa una máscara de \textit{7 x 77 x 7}, con un tamaño de paso de $2$ y un relleno de $3$. Luego, se aplican las capas con la función de activación \textit{ReLu} y \textit{Max pooling}. Luego hay cuatro etapas, cada etapa tiene múltiples módulos, cada módulo se llama un bloque de construcción, por ende se evidencia que hay 8 bloques de construcción, como se presenta en la Figura \ref{fig:ArqRes18} \cite{ref_5}.\\				
 
 \newpage	
 La Figura \ref{fig:preci_RESNET18}, muestra la precisión obtenida en el entrenamiento del modelo \textit{ResNet18} durante $50$ épocas, sin haber aplicado la optimización bayesiana.

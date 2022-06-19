@@ -27,43 +27,53 @@ Warning--entry type for "informepapa2019" isn't style-file defined
 --line 1073 of file Bib/biblio.bib
 Warning--entry type for "recoleccionpapa" isn't style-file defined
 --line 1091 of file Bib/biblio.bib
+I was expecting a `,' or a `}'---line 1289 of file Bib/biblio.bib
+ :  
+ :  title={Clasificaci{\'o}n de lesiones en la piel con un ensemble de redes neuronales residuales},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "alex"
+Warning--I didn't find a database entry for "19"
 Warning--empty journal in ref_13
 Warning--empty booktitle in inproceedings
 Warning--empty author in Shrivastava2017
 Warning--empty journal in article5
 Warning--empty journal in bottou2012stochastic
-Warning--empty school in ref_2
-Warning--empty journal in ref_4
+Warning--empty journal in 18
+Warning--empty author in 18-2
+Warning--empty title in 18-2
+Warning--empty school in 18-2
+Warning--empty year in 18-2
 You've used 57 entries,
             1876 wiz_defined-function locations,
-            771 strings with 13505 characters,
-and the built_in function-call counts, 12768 in all, are:
-= -- 1199
-> -- 509
+            771 strings with 13363 characters,
+and the built_in function-call counts, 12786 in all, are:
+= -- 1193
+> -- 515
 < -- 0
-+ -- 197
-- -- 140
-* -- 850
-:= -- 1822
++ -- 199
+- -- 142
+* -- 863
+:= -- 1820
 add.period$ -- 54
 call.type$ -- 57
-change.case$ -- 57
+change.case$ -- 56
 chr.to.int$ -- 0
-cite$ -- 64
+cite$ -- 67
 duplicate$ -- 661
 empty$ -- 1302
-format.name$ -- 140
-if$ -- 3125
+format.name$ -- 142
+if$ -- 3124
 int.to.chr$ -- 0
 int.to.str$ -- 57
 missing$ -- 46
 newline$ -- 175
-num.names$ -- 51
-pop$ -- 228
+num.names$ -- 50
+pop$ -- 231
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 434
+skip$ -- 433
 stack$ -- 0
 substring$ -- 699
 swap$ -- 230
@@ -71,8 +81,8 @@ text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 7
-while$ -- 115
+warning$ -- 10
+while$ -- 114
 width$ -- 59
-write$ -- 489
-(There were 16 warnings)
+write$ -- 486
+(There was 1 error message)
