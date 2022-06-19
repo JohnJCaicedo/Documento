@@ -224,18 +224,21 @@ L.~Bottou, ``Stochastic gradient descent tricks,'' pp.~421--436, 2012.
 A.~Krizhevsky, ``One weird trick for parallelizing convolutional neural
   networks,'' {\em arXiv preprint arXiv:1404.5997}, 2014.
 
+\bibitem{alex}
+A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton, ``Imagenet classification with
+  deep convolutional neural networks,'' {\em Advances in neural information
+  processing systems}, vol.~25, 2012.
+
 \bibitem{simonyan2014very}
 K.~Simonyan and A.~Zisserman, ``Very deep convolutional networks for
   large-scale image recognition,'' {\em arXiv preprint arXiv:1409.1556}, 2014.
 
-\bibitem{ref_2}
-L.~Moreno-D{\'\i}az-Alejo, ``An{\'a}lisis comparativo de arquitecturas de redes
-  neuronales para la clasificaci{\'o}n de im{\'a}genes,'' Master's thesis,
-  2020.
-
-\bibitem{ref_3}
-K.~Simonyan and A.~Zisserman, ``Very deep convolutional networks for
-  large-scale image recognition,'' {\em arXiv preprint arXiv:1409.1556}, 2014.
+\bibitem{19}
+E.~D{\'\i}az-Gaxiola, Z.~E. Morales-Casas, O.~Castro-L{\'o}pez,
+  G.~Beltr{\'a}n-Guti{\'e}rrez, I.~F.~V. L{\'o}pez, and A.~Y. Rend{\'o}n,
+  ``Estudio comparativo de arquitecturas de cnns en hojas de pimiento
+  morr{\'o}n infectadas con virus phyvv o pepgmv.,'' {\em Res. Comput. Sci.},
+  vol.~148, no.~7, pp.~289--303, 2019.
 
 \bibitem{ref_4}
 A.~Atienza~Arroyo {\em et~al.}, ``Detecci{\'o}n e identificaci{\'o}n
