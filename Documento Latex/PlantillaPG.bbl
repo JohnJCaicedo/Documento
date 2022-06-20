@@ -40,6 +40,10 @@ I.~Garc{\'\i}a and V.~Caranqui, ``La visi{\'o}n artificial y los campos de
 R.~Salas, ``Redes neuronales artificiales,'' {\em Universidad de Valpara{\i}so.
   Departamento de Computaci{\'o}n}, vol.~1, pp.~1--7, 2004.
 
+\bibitem{sharma2017activation}
+S.~Sharma, S.~Sharma, and A.~Athaiya, ``Activation functions in neural
+  networks,'' {\em towards data science}, vol.~6, no.~12, pp.~310--316, 2017.
+
 \bibitem{wu2019fastfcn}
 H.~Wu, J.~Zhang, K.~Huang, K.~Liang, and Y.~Yu, ``Fastfcn: Rethinking dilated
   convolution in the backbone for semantic segmentation,'' {\em arXiv preprint
@@ -67,9 +71,8 @@ J.~C. Tello, ``La visi{\'o}n artificial y las operaciones morfol{\'o}gicas en
   im{\'a}genes binarias,'' {\em Una Perspectiva de la Inteligencia Artificial
   en su 50 Aniversario}, p.~570, 2006.
 
-\bibitem{gholamalinezhad2020pooling}
-H.~Gholamalinezhad and H.~Khosravi, ``Pooling methods in deep neural networks,
-  a review,'' {\em arXiv preprint arXiv:2009.07485}, 2020.
+\bibitem{prakharr0y}
+prakharr0y, ``Dilated convolution,'' 2022.
 
 \bibitem{islam2021position}
 M.~A. Islam, M.~Kowal, S.~Jia, K.~G. Derpanis, and N.~D. Bruce, ``Position,

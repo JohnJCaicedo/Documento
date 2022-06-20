@@ -64,6 +64,31 @@ Debido a esto, la problemática que se plantea como estrategia para facilitar el
 
 \section{Redes Neuronales Artificiales} Las redes neuronales artificiales (RNA), son definidas por \textit{Salas, R. (2004)}, como "\textit{un esquema de computación distribuida inspirada en la	estructura del sistema nervioso de los seres humanos}". Las RNA son métodos que ofrecen las herramientas necesarias para modelar de forma eficiente y eficaz problemas con una alta complejidad, esto se logra mediante la implementación de algoritmos de aprendizaje supervisado o no supervisado. El objetivo de las RNA es ajustar su arquitectura y parámetros en busca de minimizar su función de error, de tal manera que la salida generada sea lo más cercana a la verdadera salida según la entrada asignada \cite{redes}.
 
+\section{Función de activación}
+
+Estas funciones, en las redes neuronales artificiales, son usadas para la conversión de señales entrantes a una saliente, que al mismo tiempo es la entrada de para la capa próxima. La exactitud de la predicción de una red neuronal está sujeta a la cantidad de capas a utilizar y sobre todo del tipo de función de activación.\\
+
+Las funciones mas comunes son las no lineales, ya que las redes neuronales se podrían interpretar como modelos de regresión lineal, en donde la salida es la misma que la entrada, parecido a lo que pasa si se usa una función de activación lineal con la diferencia de que la entrada se alimenta con algún error, pero como se tiene bien sabido es común que los errores tienen características   no lineales, por lo tanto, se utilizan las no lineales sobre las lineales.\cite{sharma2017activation}. Las funciones de activación comunmente usadas por las arquitecturas definidas son \textit{ReLU} y \textit	{Softmax}	
+
+
+\subsection{Función ReLU}
+
+Esta función de activación no lineal traduce en español ”Unidad de línea rectificada” , esta tiene el beneficio de que no activa todas las neuronas simultáneamente, haciendo que las neuronas se desactiven únicamente cuando la salida de la transformación lineal sea igual a cero\cite{sharma2017activation}, matemáticamente se expresa en la Ecuación ~\ref{eq:ReLU}.
+
+\begin{equation}
+	\label{eq:ReLU}
+	f(x)=max(0,x)
+\end{equation}
+
+\subsection{Función Softmax}
+
+Es una función compuesta por varias funciones sigmoides, la cual puede tomar cualquier numero dentro del grupo de reales y regresa la salida dentro del rango de 0 a 1, la diferencia entre ambas es que las sigmoides se usan para la clasificación binaria, en cambio la softmax es usada para la clasificación multiclase \cite{sharma2017activation}. Matemáticamente se puede expresar como en la Ecuación  ~\ref{eq:softmax}.
+
+\begin{equation}
+	\label{eq:softmax}
+	\sigma \left ( z \right )_j=\frac{e^{z_j}}{\sum ^{K}_{k=1}e^{z_k}}  for j=1,...,K.
+\end{equation}
+
 \section{Convolución Dilatada}
 
 Se trata de un método que busca ampliar la entrada insertando huecos entre sus elementos consecutivos. Siendo igual que una convolución normal, pero con la diferencia de que omite pixeles, con el fin de cubrir más área de la entrada, dando un campo de visión más amplio con el mismo coste computacional, por medio de un parámetro llamado factor de dilatación \textit{l}, indicando cuanto se expande la entrada \cite{wu2019fastfcn}. La Figura \ref{fig:cd} muestra un ejemplo de la implementación de la convolución dilatada.
@@ -110,15 +135,14 @@ Un operador \textit{max pooling}, se puede usar para la reducción del muestreo 
 	p_{f,m}=max(h_{f,(m-1)N+r})
 \end{equation}
 
-Donde $N \in (1,...,R) $ representado como un desplazamiento de agrupación cuando $N < R$. La capa de agrupación disminuye la dimensionalidad de salida de K bandas convolucionales a $M=(K-R)/N+1$ bandas, que han sido agrupadas teniendo como resultante $p=[p1,...,pM] \in R^{M.J}$ \cite{gholamalinezhad2020pooling}, un ejemplo de max-pooling se puede observar en la Figura \ref{mp}.
+Donde $N \in (1,...,R) $ representado como un desplazamiento de agrupación cuando $N < R$. La capa de agrupación disminuye la dimensionalidad de salida de K bandas convolucionales a $M=(K-R)/N+1$ bandas, que han sido agrupadas teniendo como resultante $p=[p1,...,pM] \in R^{M.J}$ \cite{prakharr0y}, un ejemplo de max-pooling se puede observar en la Figura \ref{mp}.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.6]{Figs/mp.png}
 	\caption{Ejemplo Max-Pooling\\Fuente: Elaboración Propia}
 	\label{mp}
-\end{figure}
-
+\end{figure} 
 
 
 \section{Padding}
@@ -172,7 +196,7 @@ La matriz como se muestra en la Tabla \ref{table:Matriz}, se compone de término
 		\begin{tabular}[c]{@{}l@{}}Real \\ No\end{tabular} & \begin{tabular}[c]{@{}l@{}}VN:\\ Predicción es negativo y \\ resultado real son positivos.\end{tabular} & \begin{tabular}[c]{@{}l@{}}FP:\\ Predicción es afirmativa\\ y la realidad es negativa.\end{tabular} &  \\ \cline{1-3}
 		\begin{tabular}[c]{@{}l@{}}Real\\ Si\end{tabular}  & \begin{tabular}[c]{@{}l@{}}FN:\\ Predicción es negativa\\ y la realidad es negativa.\end{tabular}       & \begin{tabular}[c]{@{}l@{}}VP:\\ Predicción y resultado real\\ son positivos.\end{tabular}          &  \\ \cline{1-3}
 	\end{tabular}
-	\caption{Matriz de confusión}
+	\caption{Matriz de confusión $> 1$\\Fuente: Elaboración Propia}
 	\label{table:Matriz}
 \end{table}
 
