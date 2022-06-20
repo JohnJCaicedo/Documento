@@ -27,54 +27,51 @@ Warning--entry type for "informepapa2019" isn't style-file defined
 --line 1073 of file Bib/biblio.bib
 Warning--entry type for "recoleccionpapa" isn't style-file defined
 --line 1091 of file Bib/biblio.bib
-Warning--entry type for "prakharr0y" isn't style-file defined
---line 1215 of file Bib/biblio.bib
 Warning--empty journal in ref_13
 Warning--empty booktitle in inproceedings
 Warning--empty author in Shrivastava2017
 Warning--empty journal in article5
 Warning--empty journal in bottou2012stochastic
-Warning--empty school in ref_2
 Warning--empty journal in ref_4
-You've used 56 entries,
+You've used 59 entries,
             1876 wiz_defined-function locations,
-            770 strings with 13395 characters,
-and the built_in function-call counts, 12519 in all, are:
-= -- 1184
-> -- 493
+            784 strings with 14021 characters,
+and the built_in function-call counts, 13488 in all, are:
+= -- 1271
+> -- 544
 < -- 0
-+ -- 191
-- -- 135
-* -- 833
-:= -- 1782
-add.period$ -- 53
-call.type$ -- 56
-change.case$ -- 56
++ -- 209
+- -- 150
+* -- 908
+:= -- 1923
+add.period$ -- 56
+call.type$ -- 59
+change.case$ -- 59
 chr.to.int$ -- 0
-cite$ -- 63
-duplicate$ -- 641
-empty$ -- 1275
-format.name$ -- 135
-if$ -- 3070
+cite$ -- 65
+duplicate$ -- 696
+empty$ -- 1364
+format.name$ -- 150
+if$ -- 3301
 int.to.chr$ -- 0
-int.to.str$ -- 56
-missing$ -- 44
-newline$ -- 172
-num.names$ -- 50
-pop$ -- 220
+int.to.str$ -- 59
+missing$ -- 49
+newline$ -- 181
+num.names$ -- 53
+pop$ -- 230
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 433
+skip$ -- 459
 stack$ -- 0
-substring$ -- 688
-swap$ -- 226
+substring$ -- 752
+swap$ -- 247
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 7
-while$ -- 114
-width$ -- 58
-write$ -- 483
-(There were 17 warnings)
+warning$ -- 6
+while$ -- 123
+width$ -- 61
+write$ -- 512
+(There were 15 warnings)
