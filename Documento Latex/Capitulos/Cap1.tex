@@ -66,13 +66,14 @@ Debido a esto, la problemática que se plantea como estrategia para facilitar el
 
 \section{Función de activación}
 
-Estas funciones en las redes neuronales artificiales son usadas para la conversión de señales entrantes a una saliente, que al mismo tiempo es la entrada de para la capa próxima. La exactitud de la predicción de una red neuronal está sujeta a la cantidad de capas a utilizar y sobre todo del tipo de función de activación.\\
-Las funciones mas comunes son las no lineales, ya que las redes neuronales se podrían interpretar como modelos de regresión lineal, en donde la salida es la misma que la entrada, parecido a lo que pasa si se usa una función de activación lineal con la diferencia de que la entrada se alimenta con algún error, pero como se tiene bien sabido es común que los errores tienen características   no lineales, por lo tanto, se utilizan las no lineales sobre las lineales.\cite{sharma2017activation}\\ 
-Algunas funciones de activación son:
+Estas funciones, en las redes neuronales artificiales, son usadas para la conversión de señales entrantes a una saliente, que al mismo tiempo es la entrada de para la capa próxima. La exactitud de la predicción de una red neuronal está sujeta a la cantidad de capas a utilizar y sobre todo del tipo de función de activación.\\
+
+Las funciones mas comunes son las no lineales, ya que las redes neuronales se podrían interpretar como modelos de regresión lineal, en donde la salida es la misma que la entrada, parecido a lo que pasa si se usa una función de activación lineal con la diferencia de que la entrada se alimenta con algún error, pero como se tiene bien sabido es común que los errores tienen características   no lineales, por lo tanto, se utilizan las no lineales sobre las lineales.\cite{sharma2017activation}. Las funciones de activación comunmente usadas por las arquitecturas definidas son \textit{ReLU} y \textit	{Softmax}	
+
 
 \subsection{Función ReLU}
 
-Esta función de activación no lineal traduce en español ”Unidad de línea rectificada” , esta tiene el beneficio de que no activa todas las neuronas simultáneamente, haciendo que las neuronas se desactiven únicamente cuando la salida de la transformación lineal sea igual a cero\cite{sharma2017activation}, matemáticamente se expresa en la Ecuación ~\ref{eq:ReLU}
+Esta función de activación no lineal traduce en español ”Unidad de línea rectificada” , esta tiene el beneficio de que no activa todas las neuronas simultáneamente, haciendo que las neuronas se desactiven únicamente cuando la salida de la transformación lineal sea igual a cero\cite{sharma2017activation}, matemáticamente se expresa en la Ecuación ~\ref{eq:ReLU}.
 
 \begin{equation}
 	\label{eq:ReLU}
