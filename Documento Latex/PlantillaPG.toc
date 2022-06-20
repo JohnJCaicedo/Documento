@@ -53,10 +53,10 @@
 \contentsline {subsection}{\numberline {5.1.5}Optimización De Hiperparámetros}{43}{subsection.5.1.5}%
 \contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo AlexNet optimizado}}{44}{subsubsection*.56}%
 \contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo VGG19 optimizado}}{46}{subsubsection*.63}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo VGG11 optimizado}}{49}{subsubsection*.72}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo ResNet18 Optimizado}}{52}{subsubsection*.80}%
-\contentsline {subsection}{\numberline {5.1.6}Comparación De Precisión De Modelos Implementados}{55}{subsection.5.1.6}%
-\contentsline {section}{\numberline {5.2}Clasificación Por Tamaño}{56}{section.5.2}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo VGG11 optimizado}}{48}{subsubsection*.71}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo ResNet18 Optimizado}}{51}{subsubsection*.79}%
+\contentsline {section}{\numberline {5.2}Comparación De Precisión De Modelos Implementados}{54}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Clasificación Por Tamaño}{56}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Prototipo}{58}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Especificaciones principales}{58}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Descripción de la maquina}{59}{section.6.2}%
