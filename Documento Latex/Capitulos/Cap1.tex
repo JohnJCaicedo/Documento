@@ -1494,7 +1494,7 @@ De esta forma se puede verificar que la optimización de hiperparámetros mejora
 	\label{tab:noordam}
 \end{table}
 
-En la Figura \ref{fig:tabPAUL}, se muestran los resultados del sistema de clasificación de tamaño implementado por \textit{Paul, H} usando lel \textit{algoritmo de rastreo de 8 vecinos}. La clasificación obtuvo resultados de $96\%$ a $98\%$ para las muestras estáticas y de $77\%$ a $88\%$ en muestras en movimiento.
+En la Figura \ref{fig:tabPAUL}, se muestran los resultados del sistema de clasificación de tamaño implementado por \textit{Paul, H} usando lel \textit{algoritmo de rastreo de 8 vecinos}. La clasificación obtuvo resultados de $96\%$ a $98\%$ para las muestras estáticas y de $77\%$ a $88\%$ para muestras en movimiento.
 
 \begin{figure}[ht]
 	\centering
@@ -1797,11 +1797,26 @@ El tiempo de ejecución del algoritmo, desde el momento en el que toma la foto y
 
 \chapter{Conclusiones y Trabajo Futuro}
 
+\begin{enumerate}
+	\item La red neuronal convolucional debe contar un dataset más robusto con distribución equitativa en sus muestras, ya que esto le permite extraer de una manera más eficiente las características que identifican a las clases definidas en la RNC.
+	
+	\item La identificación de daños presentes en los tubérculos, se realiza gracias al conjunto de capas convolucionales y de max pooling que tiene la red neuronal, para identificar las secciones de la imagen que tienen daño. Sin embargo, el uso de técnicas de segmentación de color, previo a la implementación de la RNC, mejora el desempeño del modelo y facilita el aprendizaje de las características que presenta el tubérculo.
+	
+	\item La clasificación de tamaño realizada con enfoque en calcular los el perímetro del tubérculo, funciona de manera eficiente, siempre y cuando las condiciones de iluminación sean uniformes y los tubérculos no posean daños fisiológicos, ya que esto trae como consecuencia perdidas en la precisión del algoritmo. Esto puede ser corregido implementando técnicas como \textit{el algoritmo de rastreo de 8 vecinos}.
+	\item
+	\item
+\end{enumerate}
+
+
 Debido a que el desarrollo del proyecto es un prototipo, la máquina puede ser mejorada para realizar la clasificación mecánica de las diferentes categorías, de igual forma, se puede implementar un variador para que la banda sea más rápida que el movimiento actual, mejorando así la velocidad de clasificación.\\
 
 La red neuronal artificial que se obtuvo con una precisión superior al $83\%$, puede ser mejorada de tal manera que se puedan obtener precisiones superiores al $90\%$, para mejorar los resultados de las predicciones finales. Esto se puede lograr enriqueciendo el \textit{Dataset}, mejorando la distribución de los datos iniciales, de manera que sean proporcionales entre sí y realizando una optimización de hiperparámetros, teniendo en cuenta diferentes parámetros utilizados en este proyecto. Si se desea realizar una mejor optimización, el poder de computo necesario para realizarla debe ser muy superior, en las condiciones actuales, la optimización tomó un tiempo de $6$ horas por cada modelo en el que se aplicó.\\
 
 Los tiempos de ejecución del algoritmo implementado en el sistema embebido, se deben mejorar, para que el prototipo sea viable en la agricultura de precisión. Además, se debe mejorar la capacidad de procesamiento en la tarjeta de desarrollo escogida y mejorar la sintaxis y consumo de memoria por parte del diseño del algoritmo hecho en \textit{Python}.
+
+
+
+
 
 
 
