@@ -1533,8 +1533,8 @@ En los trabajos presentados por \textit{Paul, H} y \textit{Noordam, J} se observ
 \newpage
 \chapter{Prototipo}
 
-\section{Materiales y Equipos}
-Para la implementación del prototipo se hizo uso de los materiales y equipos presentados en la tabla \ref{table:materiales}
+\section{Materiales y Métodos}
+Para la implementación del prototipo se hizo uso de los materiales y equipos presentados en la Tabla \ref{table:materiales}.
 
 \begin{table}[ht]
 	\centering
@@ -1556,81 +1556,84 @@ Para la implementación del prototipo se hizo uso de los materiales y equipos pr
 		\hline
 		Relé & 8 pines-110 V & 2 \\
 		\hline
+		Tarjeta de desarrollo & Jetson Nano V & 1 \\
+		\hline
 	\end{tabular}	
 	\caption{Materiales y Equipos}
 	\label{table:materiales}
 \end{table}	
 
+Se usa la estructura tomada de una maquina selladora de banda continua horizontal \textit{FR-900}, la cual es impulsada por un motor \textit{DC} a $220, \ V$ de referencia \textit{ZYT 90-01} con una velocidad de $2000 \ rpm$ y una potencia de $50 \ W$. La máquina se alimenta con $110 \ VAC$ a $60 \ HZ$ y su estructura es en acero inoxidable.
+\\
+Esta máquina fue seleccionada, ya que se encuentra certificada para ser empleada en diferentes campos, entre ellos se encuentra la industria alimenticia. La máquina posee dimensiones de $850 \ x \ 320 \ x \ 550 \ (mm) $, lo cual hace que sea fácil de transportar, además de esto la cinta transportadora tiene la capacidad para transportar productos con un peso de hasta $3 \ Kg$, suficiente para cubrir los intereses del proyecto.\\
 
-\section{Especificaciones principales}
-Se implementa una banda transportadora, tomada de una maquina selladora de banda continua horizontal FR-900, la cual es impulsada por un motor DC a 220V. Las especificaciones técnicas de la selladora, se presentan en la Tabla \ref{fig:principales}. La máquina se alimenta con $220 \ VAC$ a $50 \ HZ$ y su estructura es en acero inoxidable. 
+La maquina fue adaptada para posicionar una estructura elaborada en acetato con medidas de, \textit{35 x 25(cm)} las laminas frontal y trasera (Figuras \ref{fig:frontal} y \ref{fig:trasera}), \textit{16 x 25(cm)} lamina superior (Figura \ref{fig:superior}), \textit{20 x 16(cm)} laminas laterales como se muestra en la Figura \ref{fig:lateral}.\\
 
-\begin{table}[ht]
+\begin{figure}[h!]
 	\centering
-	\begin{tabular}{|c|c|c|c|}
-		\hline
-		\multicolumn{4}{|l|}{\textbf{MOTOR}} \bigstrut\\
-		\hline
-		\multicolumn{2}{|c|}{REFERENCIA:} & \multicolumn{2}{c|}{ZYT 90-01} \bigstrut\\
-		\hline
-		\multicolumn{2}{|c|}{CORRIENTE:} & \multicolumn{2}{c|}{0,32 A} \bigstrut\\
-		\hline
-		\multicolumn{2}{|c|}{VOLTAJE:} & \multicolumn{2}{c|}{220 VDC} \bigstrut\\
-		\hline
-		\multicolumn{2}{|c|}{VELOCIDAD:} & \multicolumn{2}{c|}{2000 r/min} \bigstrut\\
-		\hline
-		\multicolumn{2}{|c|}{POTENCIA:} & \multicolumn{2}{c|}{50 W} \bigstrut\\
-		\hline
-		\multicolumn{4}{|l|}{\textbf{DIMENSIONES}} \bigstrut\\
-		\hline
-		\multicolumn{2}{|c|}{HORIZONTAL:} & \multicolumn{2}{c|}{850 x 420 x 320 (mm)} \bigstrut\\
-		\hline
-		\multicolumn{2}{|c|}{VERTICAL:} & \multicolumn{2}{c|}{850 x 320 x 550 (mm)} \bigstrut\\
-		\hline
-		\multicolumn{2}{|c|}{CONSOLA:} & \multicolumn{2}{c|}{850 x 320 x 1000 (mm)} \bigstrut\\
-		\hline
-	\end{tabular}%
-	\caption{Especificaciones Principales}
-	\label{fig:principales}
-\end{table}%
+	\begin{subfigure}{0.47\linewidth}
+		\centering
+		\includegraphics[scale=0.3]{Figs/300.png}
+		\caption{Lamina Frontal}
+		\label{fig:frontal}
+	\end{subfigure}
+	\begin{subfigure}{0.47\linewidth}
+		\centering
+		\includegraphics[scale=0.5]{Figs/301.png}
+		\caption{Lamina superior}
+		\label{fig:superior}
+	\end{subfigure}
+	\caption{Estructura de Análisis Laminas Principales\\
+		Fuente: Elaboración Propia}
+	\label{fig:estructura}
+\end{figure} 
 
-
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}{0.47\linewidth}
+		\centering
+		\includegraphics[scale=0.3]{Figs/302.png}
+		\caption{Lamina lateral}
+		\label{fig:lateral}
+	\end{subfigure}
+	\begin{subfigure}{0.47\linewidth}
+		\centering
+		\includegraphics[scale=0.3]{Figs/303.png}
+		\caption{Lamina Trasera}
+		\label{fig:trasera}
+	\end{subfigure}
+	\caption{Estructura de Análisis Laminas Laterales\\
+	Fuente: Elaboración Propia}
+	\label{fig:estructuras}
+\end{figure}   
+ 
+Las laminas fueron diseñadas con las medidas necesarias para posicionar algunos elementos, que permitieran realizar la clasificación de los tubérculos, como lo son bombillos, un sensor óptico y una cámara web. De igual forma se modificó el sistema eléctrico de la máquina, con el fin de anular las funciones de sellado, es por esto que en la Figura \ref{fig:Esquema} se presenta el esquema eléctrico realizado para realizar el arranque directo del motor \textit{DC}, accionado por la señal emitida desde un sensor foto eléctrico. La Tabla \ref{table:esquema}, presenta el listado de elementos implementados en el esquema eléctrico.
+ 
+ \begin{table}[ht]
+ 	\centering
+ 	
+ 	\begin{tabular}{|p{2cm}|p{5cm}|p{3cm}|}
+ 		\hline
+ 		SÍMBOLO & NOMBRE & CANTIDAD \\ 
+ 		\hline
+ 		V1 & Fuente de Voltaje & 1 \\
+ 		\hline
+ 		T1 & Temporizador & 1 \\
+ 		\hline
+ 		K1 & Relé & 1 \\
+ 		\hline
+ 		M1 & Motor DC & 1 \\
+ 		\hline
+ 		SENSOR & Sensor Fotoeléctrico & 1 \\
+ 		\hline
+ 		K2 & Relé & 1 \\
+ 		\hline
+ 	\end{tabular}
+ 	\caption{Elementos Esquema Eléctrico}
+ 	\label{table:esquema}
+ \end{table}	
+ 
 \newpage
-\section{Descripción de la maquina}
-En la Figura \ref{fig:Banda}, se presenta un esquema general de la maquina selladora de banda continua horizontal FR-900, y en la Tabla \ref{table:Banda} se describen las partes presentadas en la Figura \ref{fig:Banda}.
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.95]{Figs/65.png}
-	\caption{Maquina Banda Transportadora}
-	\label{fig:Banda}
-\end{figure}
-
-\begin{table}[ht]
-	\centering
-	\begin{tabular}{|p{5cm}|p{8cm}|}
-		\hline
-		1- Cinta transportadora & 8- Enchufe de corriente y protección \\ 
-		\hline
-		2- Rueda de goma& 9- Mesa de trabajo fija\\
-		\hline
-		3- Rodillo de goma& 10- Tornillo de regulación de la elasticidad de las cintas transportadoras\\
-		\hline
-		4- Asiento rueda de tintorería& 11- Perilla de regulación de la entrada y salida de la estación de transporte\\
-		\hline
-		5- Rueda reguladora de presión& 12- Perilla de regulación de la altura de la estación transportadora\\
-		\hline
-		6- Rueda motriz& 13- Placa de identificación\\
-		\hline
-		7- Caja de Control& 14- Estación de transporte\\
-		\hline
-	\end{tabular}	
-	\caption{Descripción Maquina Transportadora}
-	\label{table:Banda}
-\end{table}
-
-\newpage
-\section{Esquema eléctrico}
-En la Figura \ref{fig:Esquema} se presenta las conexiones eléctricas realizadas para el funcionamiento del prototipo, ademas de esto, se anexa en la Tabla \ref{table:esquema} el listado de elementos implementados.  
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.5]{Figs/66.png}
@@ -1638,122 +1641,26 @@ En la Figura \ref{fig:Esquema} se presenta las conexiones eléctricas realizadas
 	\label{fig:Esquema}
 \end{figure}
 
-\begin{table}[ht]
-	\centering
-	\begin{tabular}{|p{2cm}|p{5cm}|p{3cm}|}
-		\hline
-		SÍMBOLO & NOMBRE & CANTIDAD \\ 
-		\hline
-		V1 & Fuente de Voltaje & 1 \\
-		\hline
-		T1 & Temporizador & 1 \\
-		\hline
-		K1 & Relé & 1 \\
-		\hline
-		M1 & Motor DC & 1 \\
-		\hline
-		SENSOR & Sensor Fotoeléctrico & 1 \\
-		\hline
-		K2 & Relé & 1 \\
-		\hline
-	\end{tabular}	
-	\caption{Elementos Esquema Eléctrico}
-	\label{table:esquema}
-\end{table}	
+
 
 \newpage	
-\section{Estructura}
-La caja elaborada para el análisis de los tubérculos de papas, fue construida en acetato con medidas de, \textit{35 x 25(cm)} las laminas frontal y trasera (Figuras \ref{fig:frontal} y \ref{fig:trasera}), \textit{16 x 25(cm)} lamina superior (Figura \ref{fig:superior}), \textit{20 x 16(cm)} laminas laterales como se muestra en la Figura \ref{fig:lateral}.
-
-\begin{figure}[h!]
-	\centering
-	\begin{subfigure}{0.45\linewidth}
-		\centering
-		\includegraphics[scale=0.3]{Figs/300.png}
-		\caption{Lamina Frontal}
-		\label{fig:frontal}
-	\end{subfigure}
-	\begin{subfigure}{0.45\linewidth}
-		\centering
-		\includegraphics[scale=0.5]{Figs/301.png}
-		\caption{Lamina superior}
-		\label{fig:superior}
-	\end{subfigure}
-	\caption{Estructura de Análisis Laminas Principales}
-	\label{fig:estructura}
-\end{figure} 
-
-\begin{figure}[h!]
-	\centering
-	\begin{subfigure}{0.45\linewidth}
-		\centering
-		\includegraphics[scale=0.3]{Figs/302.png}
-		\caption{Lamina lateral}
-		\label{fig:lateral}
-	\end{subfigure}
-	\begin{subfigure}{0.45\linewidth}
-		\centering
-		\includegraphics[scale=0.3]{Figs/303.png}
-		\caption{Lamina Trasera}
-		\label{fig:trasera}
-	\end{subfigure}
-	\caption{Estructura de Análisis Laminas Laterales}
-	\label{fig:estructura}
-\end{figure} 
-
-
-Como se muestra en las Figuras , las laminas fueron diseñadas con las medidas necesarias para posicionar algunos elementos, que permitieran realizar la clasificación de los tuberculos, como lo son bombillos, un sensor optico y una camara web, los cuales seran definidos en los numerales \textit{6.4.1, 6.4.2 y 6.4.3}.
-
-\subsection{Bombillos}
-La estructura cuenta con dos agujeros, donde se ubican dos bombillos de luz blanca de 6500 Kelvin de temperatura, para mantener la iluminación fija, a una distancia de 30 cm de todas las fotos, al igual que se tomaron durante la construcción del Dataset.
-\subsection{Sensor Fotoeléctrico}
-Se implementa un sensor fotoeléctrico, de referencia MAGEWAY, el cual tiene como objetivo detener la banda transportadora una vez el tubérculo de papa se encuentre posicionado bajo la cámara, para realizar su respectiva inspección, el sensor cuenta con las siguientes especificaciones.
-\\
-\\
-\textbf{ESPECIFICACIONES TÉCNICAS:}
-\begin{itemize}
-	\item Método de detección: retroreflectante.
-	\item Ángulo: 1,5 o aprox.
-	\item Máx. Rango de detección: 4 m.
-	\item Voltaje de alimentación: 12-240 VDC, 24-240V ACBR, Salida: Relé SPDT
-	\item Capacidad de salida: 3 A/30 VCC, 3 A/250 VAC.
-	\item Temperatura ambiente: -4-131 °F (-20-55 °C).
-\end{itemize}
-
-\subsection{Cámara Web}
-Para la detección de los tubérculos de papa, se implementa una cámara \textit{Web Camera America Store}, la cual será la encargada de la toma de fotos de los tubérculos, mientras son transportados en la banda transportadora para su análisis.
-\\
-\\
-\textbf{ESPECIFICACIONES TÉCNICAS:}
-\begin{itemize}
-	\item Lente: Lente de Cristal
-	\item Tamaño del artículo: 8 x 4 x 8 cm
-	\item Chip DSP: sin controlador
-	\item Sensor de imagen: CMOS
-	\item Resolución dinámica: 1920 x 1080
-	\item Marco: 30 fps
-	\item Longitud Focal: 8 mm - infinity
-	\item Longitud del Cable: aproximadamente 138 cm
-\end{itemize}
-
 \section{Funcionamiento}
-Aquí se describe el funcionamiento mecánico de la maquina y el funcionamiento de la red neuronal, la cual fue programada en la tarjeta Jetson Nano para realizar la clasificación de los tubérculos de papa.
 
 \subsection{Funcionamiento Mecánico}
-El funcionamiento mecánico inicia conectando la alimentación de la maquina, una vez la maquina se encuentre conectada, el indicador luminoso que se encuentra en el pulsador de inicio, se activará, como se muestra en la Figura \ref{fig:indicador}, esto para dar a conocer que la maquina ya puede entrar en funcionamiento.
+En la Figura \ref{fig:indicador}, se presenta el tablero de control, donde se encuentran ubicados los botones de encendido de la máquina y el temporizador.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[angle=270, scale=0.21]{Figs/200.jpg}
+	\includegraphics[angle=270, scale=0.25]{Figs/200.jpg}
 	\caption{Indicador Luminoso}
 	\label{fig:indicador}
 \end{figure}
 
-Se presiona el pulsador anteriormente mencionado, y se genera la conmutación del relé para la activación del motor, el cual se encuentra conectado a una caja reductora, que transmite la energía a tres engranajes rectos como se presentan en la Figura \ref{fig:caja}.
+Se genera la conmutación del relé para la activación del motor, el cual se encuentra conectado a una caja reductora, que transmite la energía a tres engranajes rectos como se presentan en la Figura \ref{fig:caja}.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.13]{Figs/201.jpg}
+	\includegraphics[scale=0.25]{Figs/201.jpg}
 	\caption{Caja Reductora De Transmisión A Engranajes Rectos}
 	\label{fig:caja}
 \end{figure}

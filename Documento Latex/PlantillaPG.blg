@@ -29,6 +29,9 @@ Warning--entry type for "recoleccionpapa" isn't style-file defined
 --line 1091 of file Bib/biblio.bib
 Warning--entry type for "prakharr0y" isn't style-file defined
 --line 1309 of file Bib/biblio.bib
+Warning--I didn't find a database entry for "elsharif2020potato"
+Warning--I didn't find a database entry for "noordam2000high"
+Warning--I didn't find a database entry for "heinemann1996automated"
 Warning--empty journal in ref_13
 Warning--empty booktitle in inproceedings
 Warning--empty author in Shrivastava2017
@@ -37,7 +40,7 @@ Warning--empty journal in bottou2012stochastic
 Warning--empty journal in ref_4
 You've used 60 entries,
             1876 wiz_defined-function locations,
-            788 strings with 14042 characters,
+            791 strings with 14097 characters,
 and the built_in function-call counts, 13805 in all, are:
 = -- 1307
 > -- 551
@@ -76,4 +79,4 @@ warning$ -- 6
 while$ -- 127
 width$ -- 62
 write$ -- 522
-(There were 16 warnings)
+(There were 19 warnings)
