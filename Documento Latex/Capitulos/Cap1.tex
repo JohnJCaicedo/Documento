@@ -4,7 +4,7 @@
 
 La agricultura ha sido uno de los pilares más importantes, tanto para el desarrollo económico como para el sustento de la sociedad, ya que gracias a esta los países pueden generar empleos y aumentar sus recursos económicos. En Colombia, según el censo nacional agropecuario realizado en el año $2014$ por el DANE (Departamento Administrativo Nacional de Estadística), existen $2.7 \ millones$ de productores residentes en el área rural y no rural del país, los cuales destinan la producción final de sus cultivos en un $74.3 \%$ a la comercialización en el territorio nacional \cite{Dane2016}.\\
 
-En la investigación realizada por Ruth Liliana Goyeneche Ortegón \cite{goyeneche2015miradas}, se encuentra que "los productores de papa están sometidos a riesgos ocupacionales por la ejecución de tareas como el empleo de contaminantes químicos, el manejo de cargas, las posturas forzadas y el trabajo a la intemperie". Es por esto que con el avance tecnológico se ha buscado mejorar el sector de la agricultura, buscando facilitar a los agricultores las tareas que deben realizar, además de querer mejorar la calidad del producto, para garantizar que su comercialización tenga un mayor impacto en el mercado nacional.\\
+En la investigación realizada por Ruth Liliana Goyeneche Ortegón \cite{goyeneche2015miradas}, se encuentra que "\textit{los productores de papa están sometidos a riesgos ocupacionales por la ejecución de tareas como el empleo de contaminantes químicos, el manejo de cargas, las posturas forzadas y el trabajo a la intemperie}". Es por esto que con el avance tecnológico se ha buscado mejorar el sector de la agricultura, buscando facilitar a los agricultores las tareas que deben realizar, además de querer mejorar la calidad del producto, para garantizar que su comercialización tenga un mayor impacto en el mercado nacional.\\
 
 La implementación de la visión artificial es uno de los principales avances tecnológicos en el sector agroindustrial, con esta se busca reducir las fallas en la intervención humana para mejorar el rendimiento y la eficiencia bajo la normativa INCONTEC la cual se debe tener en cuenta para la exportación de productos agrícolas. En este proyecto de investigación se tiene como objetivo implementar un algoritmo de clasificación con técnicas de visión artificial y un prototipo mecánico para la selección de tubérculos de papa según algunas características de calidad.
 
@@ -69,14 +69,17 @@ Se trata de un método que busca ampliar la entrada insertando huecos entre sus 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.6]{Figs/Convolucion_dilatada.png}
-	\caption{Ejemplo Convolución Dilatada}
+	\caption{Ejemplo Convolución Dilatada \\Fuente: Elaboración Propia}
 	\label{fig:cd}
 \end{figure}
 
-\section{\textit{Over-fitting}}
+\section{\textit{Overfitting}}
 
 Un problema al momento de entrenar redes neuronales, es el \textit{over-fitting}, el cual se da cuando la red neuronal en un momento específico del ciclo de entrenamiento no muestra un progreso en la capacidad de resolver problemas. Si no que solamente aprende una regularidad aleatoria dentro del conjunto de patrones de entrenamiento, esto quiere decir que la red está sufriendo un exceso de flexibilidad a la hora de agrupar los datos \cite{jabbar2015methods}.
 
+\section{\textit{Underfitting}}
+
+Es lo contrario al \textit{over-fitting}, siendo este cuando el modelo creado es incapaz de percibir variabilidad alguna en los datos. Dando como resultado que el clasificador resultante no tenga la capacidad de realizar una predicción aceptable \cite{jabbar2015methods}.
 
 \section{Data Augmentation}
 El Data augmentation consiste en la transformación de los datos existentes, para crear un \textit{dataset} con mayor cantidad de datos diferentes. El objetivo de esta herramienta es generar nuevos datos que puedan ser añadidos al conjunto ya existente, y así contar con más muestras para un mejor desempeño del algoritmo. Además de esto, también es implementado para reducir el \textit{overfitting}, ya que al añadir más información al conjunto de entrenamiento se evita que el modelo se sobre ajuste, normalmente esta técnica es implementada en problemas de clasificación donde el Dataset base del algoritmo no cuenta con una cantidad significativa de muestras para el entrenamiento de la red neuronal \cite{data}. \\
@@ -110,7 +113,7 @@ Donde $N \in (1,...,R) $ representado como un desplazamiento de agrupación cuan
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.6]{Figs/mp.png}
-	\caption{Ejemplo Max-Pooling}
+	\caption{Ejemplo Max-Pooling\\Fuente: Elaboración Propia}
 	\label{mp}
 \end{figure}
 
@@ -125,12 +128,10 @@ El más usado es el \textit{zero padding}, debido a que mantiene la misma dimens
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.65]{Figs/padding.png}
-	\caption{Ejemplo Zero-Padding}
+	\caption{Ejemplo Zero-Padding \\Fuente: Elaboración Propia}
 	\label{padding}
 \end{figure}
 
-
-\newpage
 \section{Procesamiento de imágenes} El procesamiento de imágenes, se puede definir como la implementación de prácticas (disminuir el ruido, mejorar el contraste, ajustar el brillo, suavizar bordes, etc.), que buscan modificar ciertas características de la imagen con el fin de tener una mejor visualización de la misma, para realizar su posterior análisis de una manera más eficiente \cite{ref_13}.\\
 El procesamiento de imágenes no tiene como objetivo incrementar la información que se puede obtener de las imágenes, pues el enfoque de esta técnica es resaltar las características más significativas que se encuentren en la imagen para que esta puede ser procesada de la mejor manera \cite{ref_13}.
 
@@ -139,26 +140,21 @@ El procesamiento de imágenes no tiene como objetivo incrementar la información
 
 Es un parámetro que especifica cuántos píxeles se traslada horizontalmente y verticalmente, mientras es convolucionada la imagen. En algunas arquitecturas el \textit{stride} se utiliza en vez de \textit{max pooling} para reducir el tamaño de la capa \cite{murphy2016overview}, un ejemplo de stride se puede observar en la Figura \ref{stride}.
 
+\newpage
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.5]{Figs/stride.png}
-	\caption{Convolución con Zero Padding y Stride $> 1$}
+	\caption{Convolución con Zero Padding y Stride $> 1$\\Fuente: Elaboración Propia}
 	\label{stride}
 \end{figure}
 
-\newpage
 \section{Aprendizaje por transferencia}
 El aprendizaje por transferencia, es definido por Lisa Torrey (2010) como "la mejora del aprendizaje en una nueva tarea, a través de la transferencia de conocimientos de una tarea relacionada que ya se ha aprendido". El objetivo del aprendizaje por transferencia es mejorar a un alumno con la transferencia de información de otro dominio relacionado. La mayor parte de algoritmos de aprendizaje automático fueron creados para ser empleados en tareas individuales \cite{ref_14}.
 
-\section{\textit{Thresholding}}
+\section{Umbralización De una Imagen Digital}
 
 
 Es un método que divide una imagen en grupos parecidos según un conjunto de criterios ya definidos. Podemos encontrar varias técnicas de \textit{Thresholding} teniendo un enfoque primordial de la segmentación, especialmente en aplicaciones en las que la velocidad es fundamental en el proceso. \textit{Thresholding} puede ser adaptativo al utilizarse diferentes umbrales para distintas regiones de la imagen \cite{kulkarni2012color}.
-
-
-\section{\textit{Under-fitting}}
-
-Es lo contrario al \textit{over-fitting}, siendo este cuando el modelo creado es incapaz de percibir variabilidad alguna en los datos. Dando como resultado que el clasificador resultante no tenga la capacidad de realizar una predicción aceptable \cite{jabbar2015methods}.
 
 \section{Visión artificial} La visión artificial, es conocida por intentar replicar la capacidad de algunos seres vivos para visualizar una imagen, entenderla y actuar con base en lo observado. Las diferentes aplicaciones industriales que requieren el uso de técnicas de visión artificial ha tenido un crecimiento considerable, es por esto que esta disciplina debe mantenerse en un continuo  desarrollo y evolución de nuevos algoritmos y aplicaciones. Esto puede considerarse como una consecuencia a que en la actualidad existe una gran cantidad de contenido visual como imágenes o videos \cite{ref_15}.
 
@@ -586,35 +582,26 @@ Se utilzaron modelos pre entrenados para realizar el entrenamiento del  \textit{
 El modelo \textit{AlexNet} fue implementado en el año $2012$ en el desafió de reconocimiento visual a gran escala \textit{ImageNet}. Este modelo tuvo un resultado tan satisfactorio, que los modelos de aprendizaje profundo, se convirtieron en la referencia para la investigación y desarrollo en los principales sectores de la industria \cite{krizhevsky2014one}\\
 
 
-El modelo se compone de $5$ capas convolucionales y $3$ capas densas, donde las capas convolucionales están normalizadas por lotes de datos. El $kernel$ (Máscara aplicada en la convolución) tiene dimensiones diferentes que se distribuyen en \textit{11 x 11} en la primera capa, \textit{5 x 5} en la segunda y \textit{3 x 3} en las demás. La primera, cuarta y quinta capas convolucionales están conectadas por una capa \textit{Max pooling} con dimensiones de \textit{3 x 3}, que posee un \textit{stride} de $2$.\\
-
-
-Las capas convolucionales y de \textit{Max pooling} son seguidas por tres capas densas, en donde las primeras dos constan de $4096$ neuronas cada una y la última capa es la de salida, la cual se compone de $1000$ neuronas que poseen una función de activación \textit{softmax}, esta capa fue modificada para que sean $4$ neuronas de salida referentes a las 4 clases definidas para realizar la clasificación.
-
-\newpage
+El modelo se compone de $5$ capas convolucionales y $3$ capas densas, donde las capas convolucionales están normalizadas por lotes de datos. El $kernel$ (Máscara aplicada en la convolución) tiene dimensiones diferentes que se distribuyen en \textit{11 x 11} en la primera capa, \textit{5 x 5} en la segunda y \textit{3 x 3} en las demás. La primera, cuarta y quinta capas convolucionales están conectadas por una capa \textit{Max pooling} con dimensiones de \textit{3 x 3}, que posee un \textit{stride} de $2$. Las capas convolucionales y de \textit{Max pooling} son seguidas por tres capas densas, en donde las primeras dos constan de $4096$ neuronas cada una y la última capa es la de salida, la cual se compone de $1000$ neuronas que poseen una función de activación \textit{softmax}, esta capa fue modificada para que sean $4$ neuronas de salida referentes a las 4 clases definidas para realizar la clasificación.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.72]{Figs/5.png}
-	\caption{Arquitectura Del Modelo \textit{AlexNet} \\ Fuente:Krizhevsky et al., (2012)}
+	\includegraphics[scale=0.75]{Figs/5.png}
+	\caption{Arquitectura Del Modelo \textit{AlexNet} \\ Fuente: Krizhevsky et al., (2012)}
 	\label{fig:AlexNet}
 \end{figure}
 
-Como se aprecia en la Figura \ref{fig:AlexNet}, el modelo de \textit{AlexNet} toma una imagen de entrada con una resolución de \textit{224 x 224} píxeles y $3$ canales de color, la información recibida pasa por cinco capas convolucionales de neuronas con función de activación \textit{ReLu} y $3$ capas de \textit{Max pooling}. La quinta capa de convolución posee $256$ máscaras diferentes con dimensiones de \textit{13 x 13}. Se implementan las dos capas densas de $4096$ neuronas, las cuales están conectadas  por una capa de salida de $1000$ neuronas, que poseen una función de activación \textit{softmax}. Las neuronas presentes en la capa de salida representa una clase diferente \cite{alex}.
-\\
-\\
-Los resultados del entrenamiento obtenidos fueron inferiores al $20\%$, por lo tanto, fueron excluidos en el análisis sin optimización de los hiperparámetros.
+Como se aprecia en la Figura \ref{fig:AlexNet}, el modelo de \textit{AlexNet} toma una imagen de entrada con una resolución de \textit{224 x 224} píxeles y $3$ canales de color, la información recibida pasa por cinco capas convolucionales de neuronas con función de activación \textit{ReLu} y $3$ capas de \textit{Max pooling}. La quinta capa de convolución posee $256$ máscaras diferentes con dimensiones de \textit{13 x 13}. Se implementan las dos capas densas de $4096$ neuronas, las cuales están conectadas  por una capa de salida de $1000$ neuronas, que poseen una función de activación \textit{softmax}. Las neuronas presentes en la capa de salida representa una clase diferente \cite{alex}. Los resultados del entrenamiento obtenidos fueron inferiores al $20\%$, por lo tanto, fueron excluidos en el análisis sin optimización de los hiperparámetros.
 
 
-\newpage
 \subsubsection{\MakeUppercase{Modelo preentrenado VGG19}}
 
 La arquitectura \textit{VGG} fue planteada por Simonyan y Zisserman \cite{simonyan2014very},y es definida por Diaz-Gaxiola (2019) como ''grupos lineales de bloques que se encuentran formados por una cantidad determinada de capas convolucionales, una función de activación no lineal y una capa de \textit{Max pooling}, seguidos de tres capas densas y finalmente una capa de activación \textit{softmax}''. Esta arquitectura cuenta con $5$ bloques los cuales están distribuidos como se muestra en la Figura \ref{fig:VGG19}.				
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{Figs/22.jpeg}
-	\caption{Arquitectura Del Modelo VGG \\ Fuente: Karen Simonya (2015)}
+	\includegraphics[scale=0.42]{Figs/22.jpeg}
+	\caption{Arquitectura Del Modelo VGG \\ Fuente: Simonya, K. (2015)}
 	\label{fig:VGG19}
 \end{figure}			
 
@@ -623,29 +610,34 @@ Como se puede observar en la Figura \ref{fig:VGG19}, la columna \textit{E} muest
 
 Las capas convolucionales de esta arquitectura presentadas en la Figura \ref{fig:VGG19}, cuentan con un campo receptivo de \textit{3 x 3}, \textit{stride} de \textit{1 x 1} y \textit{padding} de $1$ pixel. Para realizar las operaciones de \textit{Max pooling} se tienen en cuenta un \textit{kernel} de dimensiones \textit{2 x 2}, \textit{stride} de \textit{2 x 2}, y por ultimo se implementa una función \textit{ReLu}. en cada capa oculta de la red para su activación. La Figura \ref{fig:VGG19_accuracy} muestra la precisión obtenida del entrenamiento hecho sobre esta arquitectura.
 
-
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.61]{Figs/101.png}
+	\includegraphics[scale=0.7]{Figs/101.png}
 	\caption{Precisión Obtenida Con Modelo \textit{VGG19} \\ Fuente: Elaboración Propia}
 	\label{fig:VGG19_accuracy}
 \end{figure}  
 
+\vspace{0.5cm}
+
 La precisión del modelo al completar las $50$ épocas de entrenamiento es inferior al 60 \% como se observa en la Figura \ref{fig:VGG19_accuracy}. La figura \ref{fig:VGG19_losses} muestra el comportamiento de la función de pérdidas, que tiende a $0$ a medida que las épocas avanzan. La eficacia del modelo se mide a partir de que tan cercano a $0$ se obtiene la función de pérdidas. 
 
+\newpage
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.61]{Figs/102.png}
+	\includegraphics[scale=0.7]{Figs/102.png}
 	\caption{Pérdidas Obtenidas Con Modelo \textit{VGG19} \\ Fuente: Elaboración Propia}
 	\label{fig:VGG19_losses}
 \end{figure}
 
-\newpage
+\vspace{0.5cm}
+
 El hecho de que en la última época, la precisión en el entrenamiento y en la validación dan valores similares, indica que el modelo no sufre de \textit{overfitting} que significaría un mal aprendizaje en la salida del modelo. Una vez se obtiene el modelo entrenado con los hiperparámetros no optimizados, se calcula la matriz de confusión con el conjunto de datos de \textit{validación}, los resultados se presentan en la Tabla \ref{fig:MC_VGG19}.
+
+\vspace{0.5cm}
 
 \begin{table}[htbp]
 	\centering
-	\resizebox{10cm}{!} {
+	\resizebox{12cm}{!} {
 	\begin{tabular}{|c|l|c|c|c|c|}
 		\hline
 		\multicolumn{2}{|c|}{\multirow{2}[4]{*}{}} & \multicolumn{4}{c|}{Predicción} \bigstrut\\
@@ -662,6 +654,8 @@ El hecho de que en la última época, la precisión en el entrenamiento y en la 
 	\label{fig:MC_VGG19}
 \end{table}
 
+\newpage
+
 En la Tabla \ref{fig:ACU_VGG19} se presenta la precisión del modelo \textit{VGG 19} obtenida a partir de la matriz de confusión del conjunto de datos de \textit{validación} para cada una de las clases definidas.
 
 \begin{table}[htbp]
@@ -676,7 +670,7 @@ En la Tabla \ref{fig:ACU_VGG19} se presenta la precisión del modelo \textit{VGG
 		\hline
 		CLASE 4 & 51,20 \bigstrut\\
 		\hline
-		\multicolumn{2}{|c|}{Overall Accuracy: 36,84} \bigstrut\\
+		\multicolumn{2}{|c|}{Precisión Total: 36,84} \bigstrut\\
 		\hline
 	\end{tabular}%
 	\caption{Precisión por clase en conjunto de \textit{validación}}
@@ -687,16 +681,16 @@ Para comparar los resultados posteriormente, también se calcula la matriz de co
 
 \begin{table}[htbp]
 	\centering
-	\resizebox{10cm}{!} {
+	\resizebox{12cm}{!} {
 		\begin{tabular}{|c|l|c|c|c|c|}
 			\hline
 			\multicolumn{2}{|c|}{\multirow{2}[4]{*}{}} & \multicolumn{4}{c|}{Predicción} \bigstrut\\
 			\cline{3-6}    \multicolumn{2}{|c|}{} & CLASE 1 & CLASE 2 & CLASE 3 & CLASE 4 \bigstrut\\
 			\hline
-			\multirow{4}[8]{*}{\begin{sideways}Valor Real\end{sideways}} & CLASE 1 & 26     & 3     & 0    & 0 \bigstrut\\
-			\cline{2-6}     & CLASE 2 & 17     & 7     & 0    & 0 \bigstrut\\
-			\cline{2-6}      & CLASE 3 & 6     & 15     & 0    & 1 \bigstrut\\
-			\cline{2-6}     & CLASE 4 & 19     & 21     & 0    & 3 \bigstrut\\
+			\multirow{4}[8]{*}{\begin{sideways}Valor Real\end{sideways}} & CLASE 1 & 99     & 11     & 0    & 1 \bigstrut\\
+			\cline{2-6}     & CLASE 2 & 64     & 22     & 0    & 0 \bigstrut\\
+			\cline{2-6}      & CLASE 3 & 31     & 49     & 0    & 4 \bigstrut\\
+			\cline{2-6}     & CLASE 4 & 84     & 103     & 0    & 6 \bigstrut\\
 			\hline
 		\end{tabular}
 	}
@@ -704,28 +698,28 @@ Para comparar los resultados posteriormente, también se calcula la matriz de co
 	\label{fig:MC_VGG19_2}
 \end{table}
 
-\newpage
 En la Tabla \ref{fig:ACU_VGG19_2} se presenta la precisión del modelo obtenida a partir de la matriz de confusión del conjunto de datos de \textit{entrenamiento} para cada una de las clases definidas.
 
 \begin{table}[htbp]
 	\centering
 	\begin{tabular}{|c|c|}
 		\hline
-		CLASE 1 & 89.7 \bigstrut\\
+		CLASE 1 & 89.20 \bigstrut\\
 		\hline
-		CLASE 2 & 29.2\bigstrut\\
+		CLASE 2 & 25.60 \bigstrut\\
 		\hline
-		CLASE 3 & 0.0 \bigstrut\\
+		CLASE 3 & 0.00 \bigstrut\\
 		\hline
-		CLASE 4 & 7.0 \bigstrut\\
+		CLASE 4 & 3.10 \bigstrut\\
 		\hline
-		\multicolumn{2}{|c|}{Precisión Total: 34.21} \bigstrut\\
+		\multicolumn{2}{|c|}{Precisión Total: 26.47} \bigstrut\\
 		\hline
 	\end{tabular}%
 	\caption{Precisión por clase en conjunto de \textit{entrenamiento}}
 	\label{fig:ACU_VGG19_2}
 \end{table}
 
+\newpage
 \subsubsection{\MakeUppercase{Modelo preentrenado VGG11}}
 
 El modelo de aprendizaje profundo \textit{VGG11} es la configuración más sencilla de los modelos de arquitectura \textit{VGG}. Tiene 11 capas de peso en total, de ahí el nombre, 8 de ellas son capas convolucionales y 3 son capas completamente conectadas, como se aprecia en la Figura \ref{fig:VGG19} en la columna \textit{A}. Las 11 capas del modelo \textit{VGG11} son:
@@ -746,52 +740,54 @@ El modelo de aprendizaje profundo \textit{VGG11} es la configuración más senci
 El modelo cuenta con $11$ capas ponderadas, sus pesos representan la fuerza de las conexiones entre unidades de capas de red adyacentes, son implementadas con el fin de conectar cada neurona de una capa con todas las neuronas de la siguiente capa, se debe tener en cuenta que la capa \textit{Max pooling} no se considera como una capa ponderada, debido a que es un mapa de características que contiene las características más destacadas. Los resultados del entrenamiento obtenidos fueron inferiores al $15\%$, por lo tanto, fueron excluidos en el análisis sin optimización de los hiperparámetros.
 
 \subsubsection{\MakeUppercase{Modelo preentrenado RESNET18}}
-La arquitectura \textit{ResNet} (Residual Net), fue propuesta por un equipo de Microsoft Research liderado por \textit{Kaiming He} \cite{he2016deep}, en donde se propone que si a una red neuronal de $20$ capas se le intercalan $36$ capas que calculan la simple función de identidad, la red resultante debería tener exactamente la misma eficacia y no ser inferior que la primera. Se debe recordar que la función identidad es la encargada de devolver exactamente el mismo valor que su argumento \cite{ref_4}.\\
+La arquitectura \textit{ResNet} (Residual Net), fue propuesta por un equipo de Microsoft Research liderado por \textit{Kaiming He} \cite{he2016deep}, en donde se propone que si a una red neuronal de $20$ capas se le intercalan $36$ capas que calculan la simple función de identidad, la red resultante debería tener exactamente la misma eficacia y no ser inferior que la primera. Se debe recordar que la función identidad es la encargada de devolver exactamente el mismo valor que su argumento \cite{ref_4}. Para permitir que una red residual pueda variar su cantidad efectiva de capas, se introduce el concepto de bloque residual en la Figura \ref{fig:Bloque}.
 
-Conociendo esto para permitir que una red residual pueda variar su cantidad efectiva de capas, se introduce el concepto de bloque residual:
-
+\newpage
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.7]{Figs/67.png}
-	\caption{Bloque Residual \\ Fuente: Kaiming He (2015) }
+	\caption{Bloque Residual \\ Fuente: He, K. (2015) }
 	\label{fig:Bloque}
 \end{figure}
 
-Como se aprecia en la Figura \ref{fig:Bloque}, el bloque residual se compone de una ruta residual, (izquierda), y una conexión atajo (derecha), que las une. La ruta residual $F(x)$, esta compuesta de dos capas de pesos sinápticos (pueden ser densas o convolucionales), que se intercalan por una función rectificadora. El resultado se suma con la información que atraviesa la conexión atajo \textit{X "identidad"}. Y por ultimo se aplica nuevamente la función rectificadora. La información puede atravesar con ello dos caminos diferentes que son: el de la función de identidad $X$ o el de la ruta residual \textit{F(x)} \cite{ref_5}.
+Como se aprecia en la Figura \ref{fig:Bloque}, el bloque residual se compone de una ruta residual, (izquierda), y una conexión atajo (derecha), que las une. La ruta residual $F(x)$, esta compuesta de dos capas de pesos sinápticos (pueden ser densas o convolucionales), que se intercalan por una función rectificadora. El resultado se suma con la información que atraviesa la conexión atajo \textit{X "identidad"}. Y por ultimo se aplica nuevamente la función rectificadora. La información puede atravesar con ello dos caminos diferentes que son: el de la función de identidad $X$ o el de la ruta residual \textit{F(x)} \cite{ref_5}.\\
 
-\newpage
 En la arquitectura \textit{ResNet18}, las $18$ capas de esta arquitectura representan las 18 capas con pesos, en donde se incluye la capa de convolución y la capa totalmente conectada, excluyendo la capa de agrupación.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.65]{Figs/68.png}
-	\caption{Arquitectura \textit{ResNet18} \\ Fuente: Kaiming He (2015)}
+	\caption{Arquitectura \textit{ResNet18} \\ Fuente: He, K. (2015)}
 	\label{fig:ArqRes18}
 \end{figure}
 
 Como se puede observar en la Figura \ref{fig:ArqRes18}, la primera capa de convolución implementa una máscara de \textit{7 x 77 x 7}, con un tamaño de paso de $2$ y un relleno de $3$. Luego, se aplican las capas con la función de activación \textit{ReLu} y \textit{Max pooling}. Estos constituyen la primera parte del modulo de convolución \textit{conv1}. Luego hay cuatro etapas, cada etapa tiene múltiples módulos, cada módulo se llama un bloque de construcción, por ende se evidencia que hay 8 bloques de construcción, como se presenta en la Figura \ref{fig:ArqRes18} \cite{ref_5}.\\				
-
-\newpage	
+	
 La Figura \ref{fig:preci_RESNET18}, muestra la precisión obtenida en el entrenamiento del modelo \textit{ResNet18} durante $50$ épocas, sin haber aplicado la optimización bayesiana.
+
+\vspace{0.5cm}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.66]{Figs/109.png}
-	\caption{Precisión Obtenida Con Modelo \textit{Resnet18}}
+	\includegraphics[scale=0.7]{Figs/109.png}
+	\caption{Precisión Obtenida Con Modelo \textit{Resnet18} \\ Fuente: Elaboración Propia}
 	\label{fig:preci_RESNET18}
 \end{figure}
 
+
+\vspace{0.5cm}
+
 La información presentada en la Figura \ref{fig:preci_RESNET18} permite observar que el modelo obtuvo una precisión inferior al $80\%$ y, que el porcentaje de \textit{overfitting} se reduce en las épocas finales. La figura \ref{fig:perdda_RESNET18} muestra que la función de pérdidas tuvo un comportamiento con mayor eficacia en el entrenamiento con el modelo \textit{ResNet18}.
 
+\newpage
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.66]{Figs/110.png}
-	\caption{Pérdidas Obtenidas Con Modelo \textit{Resnet18}}
+	\includegraphics[scale=0.7]{Figs/110.png}
+	\caption{Pérdidas Obtenidas Con Modelo \textit{Resnet18}\\ Fuente: Elaboración Propia}
 	\label{fig:perdda_RESNET18}
 \end{figure}
 
-\newpage
-La matriz de confusión obtenida del modelo \textit{ResNet18} con el conjunto de datos de \textit{validación}, es presentada en la Tabla \ref*{MC_RESNET18}.
+La matriz de confusión obtenida del modelo \textit{ResNet18} con el conjunto de datos de \textit{validación}, es presentada en la Tabla \ref*{MC_RESNET18}.\\
 
 \begin{table}[htbp]
 	\centering
@@ -810,10 +806,11 @@ La matriz de confusión obtenida del modelo \textit{ResNet18} con el conjunto de
 	}
 	\caption{Matriz de confusión en conjunto de \textit{validación}}
 	\label{MC_RESNET18}
-\end{table}%
+\end{table}
 
 En la Tabla \ref*{clase_RESNET18}, se presenta la precisión del modelo aplicada al conjunto de datos de \textit{validación} por clases, obtenidas a partir de la matriz de confusión.
 
+\newpage
 \begin{table}[htbp]
 	\centering
 	\begin{tabular}{|c|c|}
@@ -826,14 +823,15 @@ En la Tabla \ref*{clase_RESNET18}, se presenta la precisión del modelo aplicada
 		\hline
 		CLASE 4 & 0,00 \bigstrut\\
 		\hline
-		\multicolumn{2}{|c|}{Overall Accuracy: 18,42} \bigstrut\\
+		\multicolumn{2}{|c|}{Precisión Total: 18,42} \bigstrut\\
 		\hline
-	\end{tabular}%
+	\end{tabular}	
 	\caption{Precisión por clase en conjunto de \textit{validación}}
 	\label{clase_RESNET18}
 \end{table}%
 
-Para comprara los resultados posteriormente, se calcula la matriz de confusión con el conjunto de datos de \textit{entrenamiento}, los resultados se presentan en la Tabla \ref{MC_RESNET18_2}.
+
+Para comparar los resultados posteriormente, se calcula la matriz de confusión con el conjunto de datos de \textit{entrenamiento}, los resultados se presentan en la Tabla \ref{MC_RESNET18_2}.
 
 \begin{table}[htbp]
 	\centering
@@ -843,10 +841,10 @@ Para comprara los resultados posteriormente, se calcula la matriz de confusión 
 			\multicolumn{2}{|c|}{\multirow{2}[4]{*}{}} & \multicolumn{4}{c|}{Predicción} \bigstrut\\
 			\cline{3-6}    \multicolumn{2}{|c|}{} & CLASE 1 & CLASE 2 & CLASE 3 & CLASE 4 \bigstrut\\
 			\hline
-			\multirow{4}[8]{*}{\begin{sideways}Valor Real\end{sideways}} & CLASE 1 & 0     & 0     & 29    & 0 \bigstrut\\
-			\cline{2-6}          & CLASE 2 & 0     & 0     & 24    & 0 \bigstrut\\
-			\cline{2-6}          & CLASE 3 & 0     & 0     & 22    & 0 \bigstrut\\
-			\cline{2-6}          & CLASE 4 & 0     & 0     & 43    & 0 \bigstrut\\
+			\multirow{4}[8]{*}{\begin{sideways}Valor Real\end{sideways}} & CLASE 1 & 0     & 0     & 111    & 0 \bigstrut\\
+			\cline{2-6}          & CLASE 2 & 0     & 0     & 86    & 0 \bigstrut\\
+			\cline{2-6}          & CLASE 3 & 0     & 0     & 84    & 0 \bigstrut\\
+			\cline{2-6}          & CLASE 4 & 0     & 0     & 193    & 0 \bigstrut\\
 			\hline
 		\end{tabular}%
 	}
@@ -854,7 +852,6 @@ Para comprara los resultados posteriormente, se calcula la matriz de confusión 
 	\label{MC_RESNET18_2}
 \end{table}%
 
-\newpage
 En la Tabla \ref*{clase_RESNET18_2} se presenta la precisión del modelo aplicada al conjunto de datos de \textit{entrenamiento} por clases, obtenidas a partir de la matriz de confusión.
 
 \begin{table}[htbp]
@@ -869,18 +866,16 @@ En la Tabla \ref*{clase_RESNET18_2} se presenta la precisión del modelo aplicad
 		\hline
 		CLASE 4 & 0,00 \bigstrut\\
 		\hline
-		\multicolumn{2}{|c|}{Overall Accuracy: 29.00} \bigstrut\\
+		\multicolumn{2}{|c|}{Precisión Total: 23.52} \bigstrut\\
 		\hline
 	\end{tabular}%
-	\caption{Precisión por clase en conjunto de \textit{validación}}
+	\caption{Precisión por clase en conjunto de \textit{entrenamiento}}
 	\label{clase_RESNET18_2}
 \end{table}%
 
 \subsection{Optimización De Hiperparámetros}
 
 La Tabla \ref{paraopt} muestra los hiperparámetros escogidos para optimizar utilizando la técnica de optimización Bayesiana. Estos hiperparámetros influyen en el comportamiento del optimizador, mejorando el proceso de aprendizaje de la \textit{RNC}.  
-
-\vspace{0.5cm}
 
 \begin{table}[ht]
 	\centering
@@ -895,13 +890,8 @@ La Tabla \ref{paraopt} muestra los hiperparámetros escogidos para optimizar uti
 	\label{paraopt}
 \end{table}
 
-\vspace{0.5cm}
-
 \textit{Botorch} realiza $20$ pruebas con parámetros distintos en los rangos definidos, y encuentra la combinación de parámetros que den el mejor resultado de precisión final del algoritmo. Estos resultados fueron utilizados para entrenar nuevamente los modelos descritos anteriormente, para comparar la eficacia de los algoritmos y modelos implementados.
-
-
-
-\newpage	
+	
 \subsubsection{\MakeUppercase{Modelo AlexNet optimizado}}
 
 En la Figura \ref{fig:preci_Alex_OPT}, se observa la precisión obtenida en el entrenamiento del modelo \textit{AlexNet} con hiperparámetros optimizados. A pesar de que la precisión es superior al $60\%$, que indica una mejora en los resultados con respecto a la versión no optimizada que no fueron tenidos en cuenta, se presenta un \textit{overfitting}, por lo que la red no está aprendiendo de manera correcta las características de el \textit{dataset}.
@@ -909,31 +899,33 @@ En la Figura \ref{fig:preci_Alex_OPT}, se observa la precisión obtenida en el e
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.7]{Figs/500.png}
-	\caption{Precisión modelo AlexNet optimizado}
+	\caption{Precisión modelo AlexNet optimizado\\ Fuente: Elaboración Propia}
 	\label{fig:preci_Alex_OPT}
 \end{figure}
 
-La Tabla \ref{tab:MC_ALEX_OPT} almacena los datos de la matriz de confusión del modelo \textit{AlexNet} en el conjunto de datos de \textit{validación}.
+\newpage
+La Tabla \ref{tab:MC_ALEX_OPT} almacena los datos de la matriz de confusión del modelo \textit{AlexNet} optimizado en el conjunto de datos de \textit{validación}.
 
 \begin{table}[htbp]
 	\centering
+	\resizebox{10cm}{!} {
 	\begin{tabular}{|c|l|c|c|c|c|}
 		\hline
 		\multicolumn{2}{|c|}{\multirow{2}[4]{*}{}} & \multicolumn{4}{c|}{Predicción} \bigstrut\\
 		\cline{3-6}    \multicolumn{2}{|c|}{} & CLASE 1 & CLASE 2 & CLASE 3 & CLASE 4 \bigstrut\\
 		\hline
-		\multirow{4}[8]{*}{\begin{sideways}Observación\end{sideways}} & CLASE 1 & 0     & 0     & 29    & 0 \bigstrut\\
+		\multirow{4}[8]{*}{\begin{sideways}Valor Real\end{sideways}} & CLASE 1 & 0     & 0     & 29    & 0 \bigstrut\\
 		\cline{2-6}          & CLASE 2 & 0     & 1     & 22    & 1 \bigstrut\\
 		\cline{2-6}          & CLASE 3 & 0     & 0     & 22    & 0 \bigstrut\\
 		\cline{2-6}          & CLASE 4 & 0     & 1     & 42    & 0 \bigstrut\\
 		\hline
-	\end{tabular}%
+	\end{tabular}
+	}
 	\caption{Matriz de confusión en conjunto de \textit{validación}}
 	\label{tab:MC_ALEX_OPT}%
 \end{table}%
 
-\newpage
-La Tabla \ref{tab:Alexoptclases} presenta la precisión del modelo por cada clase de clasificación en el conjunto de datos de \textit{validación}.
+La Tabla \ref{tab:Alexoptclases} presenta la precisión del modelo por cada clase en el conjunto de datos de \textit{validación}.
 
 
 \begin{table}[htbp]
@@ -948,46 +940,86 @@ La Tabla \ref{tab:Alexoptclases} presenta la precisión del modelo por cada clas
 		\hline
 		CLASE 4 & 0,00 \bigstrut\\
 		\hline
-		\multicolumn{2}{|c|}{Overall Accuracy: 21,05} \bigstrut\\
+		\multicolumn{2}{|c|}{Precisión Total: 21,05} \bigstrut\\
 		\hline
 	\end{tabular}%
-	\caption{Clasificación por clase en conjunto de \textit{validación}.
+	\caption{Clasificación por clase en conjunto de \textit{validación}
 	}
 	\label{tab:Alexoptclases}%
 \end{table}%
 
+La Tabla \ref{tab:MC_ALEX_OPT_2} almacena los datos de la matriz de confusión del modelo \textit{AlexNet} optimizado en el conjunto de datos de \textit{entrenamiento}.
+
+\begin{table}[htbp]
+	\centering
+	\resizebox{10cm}{!} {
+	\begin{tabular}{|c|l|c|c|c|c|}
+		\hline
+		\multicolumn{2}{|c|}{\multirow{2}[4]{*}{}} & \multicolumn{4}{c|}{Predicción} \bigstrut\\
+		\cline{3-6}    \multicolumn{2}{|c|}{} & CLASE 1 & CLASE 2 & CLASE 3 & CLASE 4 \bigstrut\\
+		\hline
+		\multirow{4}[8]{*}{\begin{sideways}Valor Real\end{sideways}} & CLASE 1 & 0     & 0     & 111    & 0 \bigstrut\\
+		\cline{2-6}          & CLASE 2 & 1     & 3     & 81    & 1 \bigstrut\\
+		\cline{2-6}          & CLASE 3 & 0     & 0     & 84    & 0 \bigstrut\\
+		\cline{2-6}          & CLASE 4 & 0     & 0     & 192    & 1 \bigstrut\\
+		\hline
+	\end{tabular}
+	}
+	\caption{Matriz de confusión en conjunto de \textit{entrenamiento}}
+	\label{tab:MC_ALEX_OPT_2}%
+\end{table}%
 
 \newpage
-\subsubsection{\MakeUppercase{Modelo preentrenado VGG-19 optimizado}}
-La Figura \ref{fig:preci_vgg19_OPT}, muestra que la precisión del modelo VGG-19 es de alrededor del 75 \% en validación, el cual es un valor que se acerca mucho al valor del modelo en entrenamiento, el cual era de aproximadamente el 80 \%.
+La Tabla \ref{tab:Alexoptclases_2} presenta la precisión del modelo por cada clase en el conjunto de datos de \textit{entrenamiento}.
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		CLASE 1 & 0,00 \bigstrut\\
+		\hline
+		CLASE 2 & 3.50 \bigstrut\\
+		\hline
+		CLASE 3 & 100,00 \bigstrut\\
+		\hline
+		CLASE 4 & 0,50 \bigstrut\\
+		\hline
+		\multicolumn{2}{|c|}{Precisión Total: 14.70} \bigstrut\\
+		\hline
+	\end{tabular}%
+	\caption{Clasificación por clase en conjunto de \textit{entrenamiento}
+	}
+	\label{tab:Alexoptclases_2}%
+\end{table}%
+
+A pesar de que la precisión en el entrenamiento del modelo superó el $60\%$ con los hiperparámetros optimizados, en la fase de validación del algoritmo, los resultados de precisión dieron una precisión del $14.7\%$, que indica el mal aprendizaje obtenido por la red representado en el \textit{overfitting} que presenta-
+
+\subsubsection{\MakeUppercase{Modelo  VGG19 optimizado}}
+
+La Figura \ref{fig:preci_vgg19_OPT}, muestra que la precisión obtenida en el entrenamiento del modelo \textit{VGG19} es de alrededor del $75 \%$ en validación, el cual es un valor que se acerca mucho al valor del modelo en entrenamiento de aproximadamente el $80 \%$.
+
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.6]{Figs/504.png}
-	\caption{Precisión modelo VGG-19 optimizado}
+	\includegraphics[scale=0.7]{Figs/504.png}
+	\caption{Precisión modelo VGG-19 optimizado\\ Fuente: Elaboración Propia}
 	\label{fig:preci_vgg19_OPT}
 \end{figure}
 
-La Figura \ref{fig:perdda_vgg19_opt}, permite verificar que el modelo VGG-19 es bueno, ya que la desviación que existe entre la prediccón realizada y los valores reales implementados es muy baja.
-
+\newpage
+La Figura \ref{fig:perdda_vgg19_opt}, de igual forma, permite verificar el comportamiento de la función de pérdidas en el entrenamiento de este modelo, que indica una eficacia superior a los demás modelos entrenados debido al cercano valor a $0$ que presenta. 
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.6]{Figs/505.png}
-	\caption{Perdidas modelo VGG-19 optimizado}
+	\includegraphics[scale=0.7]{Figs/505.png}
+	\caption{Perdidas modelo VGG-19 optimizado \\ Fuente: Elaboración Propia}
 	\label{fig:perdda_vgg19_opt}
 \end{figure}
 
-\newpage
-Se puede apreciar la clasificación y eficiencia del modelo en la Figura \ref{fig:pre_vgg19_opt}.
+\vspace{0.5cm}
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.4]{Figs/506.png}
-	\caption{Predicción modelo VGG-19 optimizado}
-	\label{fig:pre_vgg19_opt}
-\end{figure}
+En la Tabla \ref{tab:MC_VGG19_OPT} se presenta la matriz de confusión obtenida del modelo \textit{VGG19} optimizado en el conjunto de datos de \textit{validación}.
 
-En la Tabla \ref{tab:MC_VGG19_OPT}, se presenta la matriz de confusión del modelo VGG-19, la cual es necesaria para tener conocimiento de los verdaderos positivos, verdaderos negativos, falsos positivos y falsos negativos que presenta el modelo.
+\vspace{0.5cm}
 
 \begin{table}[htbp]
 	\centering
@@ -996,19 +1028,20 @@ En la Tabla \ref{tab:MC_VGG19_OPT}, se presenta la matriz de confusión del mode
 		\multicolumn{2}{|c|}{\multirow{2}[4]{*}{}} & \multicolumn{4}{c|}{Predicción} \bigstrut\\
 		\cline{3-6}    \multicolumn{2}{|c|}{} & CLASE 1 & CLASE 2 & CLASE 3 & CLASE 4 \bigstrut\\
 		\hline
-		\multirow{4}[8]{*}{\begin{sideways}Observación\end{sideways}} & CLASE 1 & 22    & 0     & 7    & 0 \bigstrut\\
+		\multirow{4}[8]{*}{\begin{sideways}Valor Real\end{sideways}} & CLASE 1 & 22    & 0     & 7    & 0 \bigstrut\\
 		\cline{2-6}          & CLASE 2 & 4     & 12     & 1    & 7 \bigstrut\\
 		\cline{2-6}          & CLASE 3 & 1     & 0     & 20    & 1 \bigstrut\\
 		\cline{2-6}          & CLASE 4 & 1     & 1     & 19    & 22 \bigstrut\\
 		\hline
 	\end{tabular}%
-	\caption{Matriz de confusión VGG-19 Optimizado }
+	\caption{Matriz de confusión en conjunto de \textit{validación}}
 	\label{tab:MC_VGG19_OPT}%
 \end{table}%
 
 
 \newpage
-Para finalizar, en la Tabla \ref{tab:VGG19optclases}, se presentan las precisiones realizadas por el modelo para cada clase a clasificar y la precisión en general.
+La Tabla \ref{tab:VGG19optclases} presenta presenta la precisión del modelo por cada clase en el conjunto de datos de \textit{validación}.
+
 \begin{table}[htbp]
 	\centering
 	\begin{tabular}{|c|c|}
@@ -1021,44 +1054,15 @@ Para finalizar, en la Tabla \ref{tab:VGG19optclases}, se presentan las precision
 		\hline
 		CLASE 4 & 51,20 \bigstrut\\
 		\hline
-		\multicolumn{2}{|c|}{Overall Accuracy: 65,78} \bigstrut\\
+		\multicolumn{2}{|c|}{Precisión Total: 65,78} \bigstrut\\
 		\hline
 	\end{tabular}%
-	\caption{Clasificación por clase modelos VGG-19}
+	\caption{Clasificación por clase en conjunto de \textit{validación}}
 	\label{tab:VGG19optclases}%
-\end{table}%
+\end{table}
 
-\subsubsection{\MakeUppercase{Modelo preentrenado VGG-11 optimizado}}
-En la Figura \ref{fig:preci_vgg11_OPT}, se puede observar que la precisión del modelo VGG-11 cuando se valida, es cercana a la precisión obtenida cuando el modelo es entrenado.
+La Tabla \ref{tab:MC_VGG19_OPT_2} almacena los datos de la matriz de confusión del modelo \textit{VGG19} optimizado en el conjunto de datos de \textit{entrenamiento}.
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.6]{Figs/508.png}
-	\caption{Precisión modelo VGG-11 optimizado}
-	\label{fig:preci_vgg11_OPT}
-\end{figure}
-
-La Figura \ref{fig:perdda_vgg11_opt}, permite apreciar que apesar que en el modelo existe una clara desviación en cuanto a los datos predichos y los valores reales implementados, esta no es lo suficientemente grande para convertir al modelo en ineficiente.
-
-\newpage
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.6]{Figs/509.png}
-	\caption{Perdidas modelo VGG-11 optimizado}
-	\label{fig:perdda_vgg11_opt}
-\end{figure}
-
-
-La Figura \ref{fig:pre_vgg11_opt}, permite evidenciar la precisión y eficiencia del modelo al clasificar los tubérculos de papas implementados. 	
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.4]{Figs/510.png}
-	\caption{Predicción modelo VGG-11 optimizado}
-	\label{fig:pre_vgg11_opt}
-\end{figure}
-
-\newpage
-La Tabla \ref{tab:MC_VGG11_OPT}, almacena la matriz de confusión del modelo VGG-11, la cual da a conocer los verdaderos positivos, verdaderos negativos, falsos positivos y falsos negativos que presenta el modelo.
 \begin{table}[htbp]
 	\centering
 	\begin{tabular}{|c|l|c|c|c|c|}
@@ -1066,17 +1070,95 @@ La Tabla \ref{tab:MC_VGG11_OPT}, almacena la matriz de confusión del modelo VGG
 		\multicolumn{2}{|c|}{\multirow{2}[4]{*}{}} & \multicolumn{4}{c|}{Predicción} \bigstrut\\
 		\cline{3-6}    \multicolumn{2}{|c|}{} & CLASE 1 & CLASE 2 & CLASE 3 & CLASE 4 \bigstrut\\
 		\hline
-		\multirow{4}[8]{*}{\begin{sideways}Observación\end{sideways}} & CLASE 1 & 18     & 0     & 11    & 0 \bigstrut\\
+		\multirow{4}[8]{*}{\begin{sideways}Valor Real\end{sideways}} & CLASE 1 & 80    & 0     & 31    & 0 \bigstrut\\
+		\cline{2-6}          & CLASE 2 & 8     & 66     & 3    & 9 \bigstrut\\
+		\cline{2-6}          & CLASE 3 & 1     & 0     & 83    & 0 \bigstrut\\
+		\cline{2-6}          & CLASE 4 & 0     & 5     & 73    & 115 \bigstrut\\
+		\hline
+	\end{tabular}%
+	\caption{Matriz de confusión en conjunto de \textit{entrenamiento}}
+	\label{tab:MC_VGG19_OPT_2}%
+\end{table}%
+
+La Tabla \ref{tab:VGG19optclases_2} presenta la precisión del modelo por cada clase en el conjunto de datos de \textit{entrenamiento}.
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		CLASE 1 & 72.10 \bigstrut\\
+		\hline
+		CLASE 2 & 76.70 \bigstrut\\
+		\hline
+		CLASE 3 & 98.80 \bigstrut\\
+		\hline
+		CLASE 4 & 59.60 \bigstrut\\
+		\hline
+		\multicolumn{2}{|c|}{Precisión Total: 73.52} \bigstrut\\
+		\hline
+	\end{tabular}%
+	\caption{Clasificación por clase en conjunto de \textit{entrenamiento}}
+	\label{tab:VGG19optclases_2}%
+\end{table}
+
+\newpage
+
+La Figura \ref{fig:predvgg19} muestra una matriz con imágenes aleatorias del conjunto de \textit{entrenamiento} para verificar las predicciones que el modelo está realizando. En la parte superior de cada imágen de tubérculo de papa se observa las siglas \textit{R.C} que corresponde a la clase real a la que pertenece, y la sigla \textit{Pred} que indica la predicción que realizó el modelo
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.4]{Figs/506.png}
+	\caption{Predicciones En El Conjunto De \textit{Entrenamiento} \\ Fuente: Elaboración Propia}
+	\label{fig:predvgg19}
+\end{figure}
+
+De esta forma se puede verificar que la optimización de hiperparámetros mejora considerablemente la eficiencia de una red neuronal, permitiendo que se obtengan mejores resultados en la fase de validación del algoritmo.
+
+\subsubsection{\MakeUppercase{Modelo VGG11 optimizado}}
+
+La Figura \ref{fig:preci_vgg11_OPT} muestra observar la precisión obtenida en el entrenamiento del modelo \textit{VGG11} con parámetros optimizados. A pesar que la precisión es superior al $80\%$, lo cual es una mejora a los resultados obtenidos en los modelos anteriores, el entrenamiento tiene un porcentaje de \textit{overfitting} de aproximadamente $10\%$ que podría causar errores considerables en las predicciones.
+
+\newpage
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.63]{Figs/508.png}
+	\caption{Precisión modelo VGG11 optimizado\\Fuente: Elaboración Propia}
+	\label{fig:preci_vgg11_OPT}
+\end{figure}
+
+La Figura \ref{fig:perdda_vgg11_opt} presenta las pérdidas del entrenamiento del modelo, a pesar que existe una clara desviación entre los datos predichos y los valores reales, las pérdidas indican valores inferiores a $1$, que indica que el entrenamiento no es totalmente ineficiente.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.63]{Figs/509.png}
+	\caption{Perdidas modelo VGG11 optimizado}
+	\label{fig:perdda_vgg11_opt}
+\end{figure}
+
+
+\newpage
+La Tabla \ref{tab:MC_VGG11_OPT},almacena los datos de la matriz de confusión del modelo \textit{VGG11} optimizado en el conjunto de datos de \textit{validación}.
+
+\begin{table}[htbp]
+	\centering
+	\resizebox{11cm}{!} {
+	\begin{tabular}{|c|l|c|c|c|c|}
+		\hline
+		\multicolumn{2}{|c|}{\multirow{2}[4]{*}{}} & \multicolumn{4}{c|}{Predicción} \bigstrut\\
+		\cline{3-6}    \multicolumn{2}{|c|}{} & CLASE 1 & CLASE 2 & CLASE 3 & CLASE 4 \bigstrut\\
+		\hline
+		\multirow{4}[8]{*}{\begin{sideways}Valor Real\end{sideways}} & CLASE 1 & 18     & 0     & 11    & 0 \bigstrut\\
 		\cline{2-6}          & CLASE 2 & 4     & 0     & 18    & 2 \bigstrut\\
 		\cline{2-6}          & CLASE 3 & 2     & 0     & 20    & 0 \bigstrut\\
 		\cline{2-6}          & CLASE 4 & 1     & 0     & 41    & 1 \bigstrut\\
 		\hline
-	\end{tabular}%
-	\caption{Matriz de confusión VGG-11 Optimizado }
+	\end{tabular}
+	}
+	\caption{Matriz de confusión en conjunto de \textit{validación}}
 	\label{tab:MC_VGG11_OPT}%
 \end{table}%
 
-Por ultimo, en la Tabla \ref{tab:VGG11optclases}, se presentan las precisiones realizadas por el modelo para cada clase a clasificar y la precisión en general.
+La Tabla \ref{tab:VGG11optclases} presenta la precisión del modelo por cada clase en el conjunto de datos de \textit{validación}.
 
 \begin{table}[htbp]
 	\centering
@@ -1090,63 +1172,105 @@ Por ultimo, en la Tabla \ref{tab:VGG11optclases}, se presentan las precisiones r
 		\hline
 		CLASE 4 & 2,30 \bigstrut\\
 		\hline
-		\multicolumn{2}{|c|}{Overall Accuracy: 39,47} \bigstrut\\
+		\multicolumn{2}{|c|}{Precisión Total: 39,47} \bigstrut\\
 		\hline
 	\end{tabular}%
-	\caption{Clasificación por clase modelos VGG-11}
+	\caption{Clasificación por clase en conjunto de \textit{validación}}
 	\label{tab:VGG11optclases}%
 \end{table}%
 
-\newpage	
-\subsubsection{\MakeUppercase{Modelo Preentrenado ResNet-18 Optimizado}}
-
-La precisión del modelos ResNet-18 se presenta en la Figura \ref{fig:preci_RES_OPT}, en donde se puede apreciar que el modelo, tiene un gran margen de error en su validación con respecto a la precisión obtenida durante su entrenamiento.
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.6]{Figs/512.png}
-	\caption{Precisión modelo ResNet-18 optimizado}
-	\label{fig:preci_RES_OPT}
-\end{figure}
-
-La Figura \ref{fig:perdda_REs_opt}, da a conocer que el modelo presenta overffiting, causando una desviación entre las predicciones realizadas y los datos reales implementados, volviendo así, poco eficiente el modelo.	
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.6]{Figs/513.png}
-	\caption{Perdidas modelo ResNet-18 optimizado}
-	\label{fig:perdda_REs_opt}
-\end{figure}
-
-\newpage
-La Figura \ref{fig:pre_res_opt}, enseña la clasificación de los tubérculos implementados, realizada por el modelo ResNet-18.
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.4]{Figs/514.png}
-	\caption{Predicción modelo ResNet-18 optimizado}
-	\label{fig:pre_res_opt}
-\end{figure}
-
-En la Tabla \ref{tab:MC_resnet_OPT}, se puede evidenciar la matriz de confusión del modelo ResNet-18, esto con el fin de conocer los verdaderos positivos, verdaderos negativos, falsos positivos y falsos negativos que se encuentran presentes en el modelo.
+La Tabla \ref{tab:MC_VGG11_OPT_2} almacena los datos de la matriz de confusión del modelo \textit{VGG11} optimizado en el conjunto de datos de \textit{entrenamiento}.
 
 \begin{table}[htbp]
 	\centering
+	\resizebox{11cm}{!} {
+		\begin{tabular}{|c|l|c|c|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\multirow{2}[4]{*}{}} & \multicolumn{4}{c|}{Predicción} \bigstrut\\
+			\cline{3-6}    \multicolumn{2}{|c|}{} & CLASE 1 & CLASE 2 & CLASE 3 & CLASE 4 \bigstrut\\
+			\hline
+			\multirow{4}[8]{*}{\begin{sideways}Valor Real\end{sideways}} & CLASE 1 & 69     & 0     & 42    & 0 \bigstrut\\
+			\cline{2-6}          & CLASE 2 & 29     & 2     & 54    & 1 \bigstrut\\
+			\cline{2-6}          & CLASE 3 & 2     & 0     & 82    & 0 \bigstrut\\
+			\cline{2-6}          & CLASE 4 & 2     & 0     & 186    & 5 \bigstrut\\
+			\hline
+		\end{tabular}
+	}
+	\caption{Matriz de confusión en conjunto de \textit{entrenamiento}}
+	\label{tab:MC_VGG11_OPT_2}%
+\end{table}%
+
+\newpage
+La Tabla \ref{tab:VGG11optclases_2} presenta la precisión del modelo por cada clase en el conjunto de datos de \textit{entrenamiento}.
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		CLASE 1 & 62,20 \bigstrut\\
+		\hline
+		CLASE 2 & 2.30 \bigstrut\\
+		\hline
+		CLASE 3 & 97.60 \bigstrut\\
+		\hline
+		CLASE 4 & 2,60 \bigstrut\\
+		\hline
+		\multicolumn{2}{|c|}{Precisión Total: 40,35} \bigstrut\\
+		\hline
+	\end{tabular}%
+	\caption{Clasificación por clase en conjunto de \textit{entrenamiento}}
+	\label{tab:VGG11optclases_2}%
+\end{table}%
+
+\subsubsection{\MakeUppercase{Modelo ResNet18 Optimizado}}
+
+La precisión obtenida en el entrenamiento del modelo \textit{ResNet18} se presenta en la Figura \ref{fig:preci_RES_OPT}, en donde se puede apreciar que el modelo presenta un alto porcentaje de \textit{overfitting}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.7]{Figs/512.png}
+	\caption{Precisión modelo ResNet18 optimizado\\Fuente: Elaboración Propia}
+	\label{fig:preci_RES_OPT}
+\end{figure}
+
+La Figura \ref{fig:perdda_REs_opt} muestra la tendencia del modelo a tener predicciones incorrectas e ineficiencia del entrenamiento debido al valor alto de pérdidas en la validación del modelo. 
+
+\newpage
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.7]{Figs/513.png}
+	\caption{Perdidas modelo ResNet18 optimizado\\Fuente: Elaboración Propia}
+	\label{fig:perdda_REs_opt}
+\end{figure}
+
+\vspace{0.5cm}
+
+En la Tabla \ref{tab:MC_resnet_OPT}, se puede evidenciar la matriz de confusión del modelo \textit{ResNet18} optimizado en el conjunto de datos de \textit{validación}.
+
+\vspace{0.5cm}
+
+\begin{table}[htbp]
+	\centering
+	\resizebox{13cm}{!} {
 	\begin{tabular}{|c|l|c|c|c|c|}
 		\hline
 		\multicolumn{2}{|c|}{\multirow{2}[4]{*}{}} & \multicolumn{4}{c|}{Predicción} \bigstrut\\
 		\cline{3-6}    \multicolumn{2}{|c|}{} & CLASE 1 & CLASE 2 & CLASE 3 & CLASE 4 \bigstrut\\
 		\hline
-		\multirow{4}[8]{*}{\begin{sideways}Observación\end{sideways}} & CLASE 1 & 29     & 0     & 0    & 0 \bigstrut\\
+		\multirow{4}[8]{*}{\begin{sideways}Valor Real\end{sideways}} & CLASE 1 & 29     & 0     & 0    & 0 \bigstrut\\
 		\cline{2-6}          & CLASE 2 & 19     & 0     & 5    & 0 \bigstrut\\
 		\cline{2-6}          & CLASE 3 & 12     & 0     & 10    & 0 \bigstrut\\
 		\cline{2-6}          & CLASE 4 & 21     & 0     & 21    & 1 \bigstrut\\
 		\hline
-	\end{tabular}%
-	\caption{Matriz de confusión ResNet-18 Optimizado }
+	\end{tabular}
+	}
+	\caption{Matriz de confusión en conjunto de \textit{validación}}
 	\label{tab:MC_resnet_OPT}%
-\end{table}%
-Para finalizar, en la Tabla \ref{tab:resnetoptclases}, se presenta la precisión general del modelo ResNet-18 y la precisón por cada clase de clasificación.
+\end{table}
+
+\newpage
+La Tabla \ref{tab:resnetoptclases} presenta la precisión del modelo por cada clase en el conjunto de datos de \textit{validación}.
+
 \begin{table}[htbp]
 	\centering
 	\begin{tabular}{|c|c|}
@@ -1159,15 +1283,57 @@ Para finalizar, en la Tabla \ref{tab:resnetoptclases}, se presenta la precisión
 		\hline
 		CLASE 4 & 2,30 \bigstrut\\
 		\hline
-		\multicolumn{2}{|c|}{Overall Accuracy: 36,84} \bigstrut\\
+		\multicolumn{2}{|c|}{Precisión Total: 36,84} \bigstrut\\
 		\hline
 	\end{tabular}%
-	\caption{Clasificación por clase modelos ResNet-18}
+	\caption{Clasificación por clase en conjunto de \textit{validación}}
 	\label{tab:resnetoptclases}%
-\end{table}%
+\end{table}
 
+La Tabla \ref{tab:MC_resnet_OPT_2} almacena los datos de la matriz de confusión del modelo \textit{ResNet18} optimizado en el conjunto de datos de \textit{entrenamiento}.
 
-\subsubsection{\MakeUppercase{Comparación de Arquitecturas Optimizadas}}
+\begin{table}[htbp]
+	\centering
+	\resizebox{10cm}{!} {
+		\begin{tabular}{|c|l|c|c|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\multirow{2}[4]{*}{}} & \multicolumn{4}{c|}{Predicción} \bigstrut\\
+			\cline{3-6}    \multicolumn{2}{|c|}{} & CLASE 1 & CLASE 2 & CLASE 3 & CLASE 4 \bigstrut\\
+			\hline
+			\multirow{4}[8]{*}{\begin{sideways}Valor Real\end{sideways}} & CLASE 1 & 110     & 0     & 1    & 0 \bigstrut\\
+			\cline{2-6}          & CLASE 2 & 68     & 0     & 18    & 0 \bigstrut\\
+			\cline{2-6}          & CLASE 3 & 47     & 0     & 37    & 0 \bigstrut\\
+			\cline{2-6}          & CLASE 4 & 101     & 0     & 92    & 0 \bigstrut\\
+			\hline
+		\end{tabular}
+	}
+	\caption{Matriz de confusión en conjunto de \textit{entrenamiento}}
+	\label{tab:MC_resnet_OPT_2}%
+\end{table}
+
+La Tabla \ref{tab:resnetoptclases_2} presenta la precisión del modelo por cada clase en el conjunto de datos de \textit{entrenamiento}.
+
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		CLASE 1 & 99,10 \bigstrut\\
+		\hline
+		CLASE 2 & 0,00 \bigstrut\\
+		\hline
+		CLASE 3 & 44,00 \bigstrut\\
+		\hline
+		CLASE 4 & 0,00 \bigstrut\\
+		\hline
+		\multicolumn{2}{|c|}{Precisión Total: 32,35} \bigstrut\\
+		\hline
+	\end{tabular}%
+	\caption{Clasificación por clase en conjunto de \textit{entrenamiento}}
+	\label{tab:resnetoptclases_2}%
+\end{table}
+
+\newpage
+\subsection{Comparación De Precisión De Modelos Implementados}
 
 En la Tabla \ref{table:compacon}, se presenta la comparación de los cuatro modelos explicados anteriormente, aplicando optimización bayesiana con el objetivo de mejorar su precisión.
 
@@ -1192,34 +1358,13 @@ En la Tabla \ref{table:compacon}, se puede observar que el modelo con mejor prec
 \newpage		
 \section{Clasificación Por Tamaño}
 
-La clasificación de los tubérculos de papa de acuerdo a su diámetro, se realiza para categorizar el producto bajo la norma técnica colombiana \textit{NTC 341}, establecida por la industria alimentaria, con el fin de garantizar la calidad de los tubérculos de consumo. 	La norma establece cuatro categorías para la clasificación de los tubérculos mediante la medición de su tamaño, estas categorías se presentan en la Tabla \ref{table:limites}.
-
-\begin{table}[ht]
-	\centering
-	\begin{tabular}{|c|c|}
-		\hline
-		DENOMINACIÓN & DIÁMETRO (mm) \\
-		\hline
-		MUY GRANDE & MAYOR DE 90 \\
-		\hline
-		GRANDE & 65-90 \\
-		\hline
-		MEDIANA	& 45-64 \\
-		\hline
-		PEQUEÑA & 30-44 \\
-		\hline
-	\end{tabular}	
-	\caption{Tamaño De tubérculos de Consumo}
-	\label{table:limites}
-\end{table}	
-
-De acuerdo con la creación del \textit{Dataset} de este documento, las categorías utilizados fueron \textit{Muy Grande, Grande y Mediana}. Para realizar la clasificación por tamaño se utilizó el módulo de visión artificial para \textit{Python} \textit{Open CV}. Primero se realizó un estudio a un grupo de $5$ imágenes por cada uno de los tamaños, retirando el fondo, la Figura \ref{fig:matlabcv}, utilizando la herramienta de MATLAB\textsuperscript{\textregistered} \textit{Color Thresholder}.
+Para realizar la clasificación por tamaño se utilizó el módulo de visión artificial para \textit{Python} \textit{OpenCV}. Primero se realizó un estudio a un grupo de $5$ imágenes por cada uno de los tamaños. Se debe aplicar una umbralización para retirar el fondo de las imágenes, la Figura \ref{fig:matlabcv} muestra el uso de la herramienta de MATLAB\textsuperscript{\textregistered} \textit{Color Thresholder}.
 
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.3]{Figs/matlabcv.png}
-	\caption{Matlab Color Thresholder}
+	\caption{Matlab Color Thresholder\\Fuente: Elaboración Propia}
 	\label{fig:matlabcv}
 \end{figure}
 
@@ -1229,44 +1374,46 @@ Se pretende encontrar el perímetro aproximado de la papa utilizando la función
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.05]{Figs/dilmed.png}
-	\caption{Imágen de Muestra Binarizada}
+	\includegraphics[scale=0.04]{Figs/dilmed.png}
+	\caption{Imágen de Muestra Binarizada\\Fuente: Elaboración Propia}
 	\label{fig:dilmed}
 \end{figure}
 
+\newpage
 Con la imágen aislada de la mayoría de características que puedan interferir en el cálculo del perímetro, utilizando la función de \textit{FindContour}, se puede encontrar y dibujar un perímetro aproximado como se muestra en la Figura \ref{fig:contour}.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.05]{Figs/contour.png}
-	\caption{Perímetro Aproximado De Las Papas}
+	\includegraphics[scale=0.04]{Figs/contour.png}
+	\caption{Perímetro Aproximado De Las Papas\\Fuente: Elaboración Propia}
 	\label{fig:contour}
 \end{figure}
 
-En este punto, utilizando la función \textit{ArcLenght} de\textit{OpenCV}, se puede calcular el perímetro del contorno encontrado en cantidad de píxeles. Debido a que las imágenes tomadas para crear el \textit{Dataset} fueron hechas desde una distancia fija desde el lente de la cámara, el tamaño relativo se puede asumuir correcto. Para clasificar estos tamaños, se realizo un estudio en $5$ imágenes de cada tamaño, en donde se calcularon los perímetros, se calculó un promedio y una desviación estádandar, para definir los límites en el tamaño de píxeles por cada tamaño de papa definido. En la Tabla \ref{table:perimetro} se muestran los resultados de estudio realizado.
+En este punto, utilizando la función \textit{ArcLenght} de \textit{OpenCV}, se puede calcular el perímetro del contorno encontrado en cantidad de píxeles. Debido a que las imágenes tomadas para crear el \textit{dataset} fueron hechas desde una distancia fija desde el lente de la cámara, el tamaño relativo se puede asumir correcto en relación de tamaños. Se realizó un estudio en $5$ imágenes de cada tamaño, en donde se calcularon los perímetros, se calculó un promedio y una desviación estándar, para definir los límites en el tamaño de píxeles por cada tamaño de papa definido. En la Tabla \ref{table:perimetro} se muestran los resultados de estudio realizado.
 
-\newpage	
 \begin{table}[ht]
 	\centering
+	\resizebox{14cm}{!} {
 	\begin{tabular}{cccccc}
 		\hline
 		\multicolumn{2}{|c|}{Muy Grande}                                                    & \multicolumn{2}{c|}{Grande}                                                        & \multicolumn{2}{c|}{Mediana}                                                       \\ \hline
 		\multicolumn{1}{|c|}{Imagen}            & \multicolumn{1}{|p{2cm}|}{Tamaño del Perimetro} & \multicolumn{1}{c|}{Imagen}            & \multicolumn{1}{|p{2cm}|}{Tamaño del Perimetro} & \multicolumn{1}{c|}{Imagen}            & \multicolumn{1}{|p{2cm}|}{Tamaño del Perimetro} \\ \hline
 		\multicolumn{1}{|c|}{0\_0\_0\_1963.jpg} & \multicolumn{1}{c|}{8580,08}              & \multicolumn{1}{c|}{0\_0\_1\_1239.jpg} & \multicolumn{1}{c|}{6524,93}          & \multicolumn{1}{c|}{0\_0\_2\_2011.jpg} & \multicolumn{1}{c|}{6074,97}          \\ \hline
-		\multicolumn{1}{|c|}{0\_1\_0\_1806.jpg} & \multicolumn{1}{c|}{9523,78}              & \multicolumn{1}{c|}{0\_1\_1\_1828.jpg} & \multicolumn{1}{c|}{6802,54}          & \multicolumn{1}{c|}{0\_1\_2\_1506.jpg} & \multicolumn{1}{c|}{5.018}                \\ \hline
-		\multicolumn{1}{|c|}{1\_0\_0\_0777.jpg} & \multicolumn{1}{c|}{13.275}               & \multicolumn{1}{c|}{1\_0\_1\_0796.jpg} & \multicolumn{1}{c|}{10602,79}          & \multicolumn{1}{c|}{1\_0\_2\_1995.jpg} & \multicolumn{1}{c|}{5090,17}          \\ \hline
-		\multicolumn{1}{|c|}{1\_1\_0\_0825.jpg} & \multicolumn{1}{c|}{27.830}               & \multicolumn{1}{c|}{1\_1\_1\_0770.jpg} & \multicolumn{1}{c|}{10285,33}          & \multicolumn{1}{c|}{1\_1\_2\_0857.jpg} & \multicolumn{1}{c|}{5500,75}          \\ \hline
-		\multicolumn{1}{|c|}{0\_0\_0\_1964.jpg} & \multicolumn{1}{c|}{21.607}               & \multicolumn{1}{c|}{0\_0\_1\_1240.jpg} & \multicolumn{1}{c|}{6.726}                & \multicolumn{1}{c|}{0\_0\_2\_2013.jpg} & \multicolumn{1}{c|}{6046,62}          \\ \hline
+		\multicolumn{1}{|c|}{0\_1\_0\_1806.jpg} & \multicolumn{1}{c|}{9523,78}              & \multicolumn{1}{c|}{0\_1\_1\_1828.jpg} & \multicolumn{1}{c|}{6802,54}          & \multicolumn{1}{c|}{0\_1\_2\_1506.jpg} & \multicolumn{1}{c|}{5018,00}                \\ \hline
+		\multicolumn{1}{|c|}{1\_0\_0\_0777.jpg} & \multicolumn{1}{c|}{13275,00}               & \multicolumn{1}{c|}{1\_0\_1\_0796.jpg} & \multicolumn{1}{c|}{10602,79}          & \multicolumn{1}{c|}{1\_0\_2\_1995.jpg} & \multicolumn{1}{c|}{5090,17}          \\ \hline
+		\multicolumn{1}{|c|}{1\_1\_0\_0825.jpg} & \multicolumn{1}{c|}{27830,00}               & \multicolumn{1}{c|}{1\_1\_1\_0770.jpg} & \multicolumn{1}{c|}{10285,33}          & \multicolumn{1}{c|}{1\_1\_2\_0857.jpg} & \multicolumn{1}{c|}{5500,75}          \\ \hline
+		\multicolumn{1}{|c|}{0\_0\_0\_1964.jpg} & \multicolumn{1}{c|}{21607,00}               & \multicolumn{1}{c|}{0\_0\_1\_1240.jpg} & \multicolumn{1}{c|}{6726,00}                & \multicolumn{1}{c|}{0\_0\_2\_2013.jpg} & \multicolumn{1}{c|}{6046,62}          \\ \hline
 		\multicolumn{1}{|c|}{Promedio}          & \multicolumn{1}{c|}{16163,19}             & \multicolumn{1}{c|}{Promedio}          & \multicolumn{1}{c|}{8188,33}              & \multicolumn{1}{c|}{Promedio}          & \multicolumn{1}{c|}{5546,12}              \\ \hline
 		\multicolumn{1}{|c|}{Variacion STD}     & \multicolumn{1}{c|}{7425,23}          & \multicolumn{1}{c|}{Variacion STD}     & \multicolumn{1}{c|}{1846,76}          & \multicolumn{1}{c|}{Variacion STD}     & \multicolumn{1}{c|}{451,43}          \\ \hline
 		\multicolumn{1}{|c|}{Limite inferior}   & \multicolumn{1}{c|}{9000,00}              & \multicolumn{1}{c|}{Limite inferior}   & \multicolumn{1}{c|}{6341,56}              & \multicolumn{1}{c|}{Limite inferior}   & \multicolumn{1}{c|}{5094,68}              \\ \hline
 		\multicolumn{1}{|c|}{Limite superior}   & \multicolumn{1}{c|}{23588,42}             & \multicolumn{1}{c|}{Limite superior}   & \multicolumn{1}{c|}{9000,00}              & \multicolumn{1}{c|}{Limite superior}   & \multicolumn{1}{c|}{5997,56}              \\ \hline                           
 	\end{tabular}
+	}
 	\caption{Perímetro en Tamaño de Píxeles}
 	\label{table:perimetro}
 \end{table}
 
-De esta forma, se realiza la clasificación por tamaño en nuevas imágenes de papas, si el valor del perímetro de encuentra dentro de los límites inferior y superior calculados para cada tamaño, la imagen será clasificada de acuerdo a los rangos.
+De esta forma, se realiza la clasificación por tamaño en nuevas imágenes de papas, si el valor del perímetro se encuentra dentro de los límites inferior y superior calculados para cada tamaño, la imagen será clasificada de acuerdo a los rangos.
 
 
 \newpage

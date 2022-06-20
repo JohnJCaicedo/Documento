@@ -12,18 +12,18 @@
 \contentsline {section}{\numberline {2.1}Agricultura De Precisión}{7}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Redes Neuronales Artificiales}{7}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Convolución Dilatada}{7}{section.2.3}%
-\contentsline {section}{\numberline {2.4}\textit {Over-fitting}}{8}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Data Augmentation}{8}{section.2.5}%
-\contentsline {section}{\numberline {2.6}\textit {Dropout}}{9}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Filtro de mediana}{9}{section.2.7}%
-\contentsline {section}{\numberline {2.8}Imagen Binaria}{9}{section.2.8}%
-\contentsline {section}{\numberline {2.9}\textit {Max-pooling}}{9}{section.2.9}%
-\contentsline {section}{\numberline {2.10}\textit {Padding}}{10}{section.2.10}%
-\contentsline {section}{\numberline {2.11}Procesamiento de imágenes}{11}{section.2.11}%
-\contentsline {section}{\numberline {2.12}\textit {Stride}}{11}{section.2.12}%
-\contentsline {section}{\numberline {2.13}Aprendizaje por transferencia}{12}{section.2.13}%
-\contentsline {section}{\numberline {2.14}\textit {Thresholding}}{12}{section.2.14}%
-\contentsline {section}{\numberline {2.15}\textit {Under-fitting}}{12}{section.2.15}%
+\contentsline {section}{\numberline {2.4}\textit {Overfitting}}{8}{section.2.4}%
+\contentsline {section}{\numberline {2.5}\textit {Underfitting}}{8}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Data Augmentation}{8}{section.2.6}%
+\contentsline {section}{\numberline {2.7}\textit {Dropout}}{9}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Filtro de mediana}{9}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Imagen Binaria}{9}{section.2.9}%
+\contentsline {section}{\numberline {2.10}\textit {Max-pooling}}{9}{section.2.10}%
+\contentsline {section}{\numberline {2.11}\textit {Padding}}{10}{section.2.11}%
+\contentsline {section}{\numberline {2.12}Procesamiento de imágenes}{11}{section.2.12}%
+\contentsline {section}{\numberline {2.13}\textit {Stride}}{11}{section.2.13}%
+\contentsline {section}{\numberline {2.14}Aprendizaje por transferencia}{12}{section.2.14}%
+\contentsline {section}{\numberline {2.15}Umbralización De una Imagen Digital}{12}{section.2.15}%
 \contentsline {section}{\numberline {2.16}Visión artificial}{12}{section.2.16}%
 \contentsline {chapter}{\numberline {3}Estado del arte}{13}{chapter.3}%
 \contentsline {section}{\numberline {3.1}MatLab}{13}{section.3.1}%
@@ -47,16 +47,16 @@
 \contentsline {subsubsection}{\nonumberline OPTIMIZADOR}{33}{subsubsection*.29}%
 \contentsline {subsection}{\numberline {5.1.4}Arquitectura del modelo}{34}{subsection.5.1.4}%
 \contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado ALEXNET}}{34}{subsubsection*.31}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG19}}{36}{subsubsection*.34}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG19}}{35}{subsubsection*.34}%
 \contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG11}}{39}{subsubsection*.43}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado RESNET18}}{40}{subsubsection*.45}%
-\contentsline {subsection}{\numberline {5.1.5}Optimización De Hiperparámetros}{44}{subsection.5.1.5}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo AlexNet optimizado}}{45}{subsubsection*.56}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG-19 optimizado}}{47}{subsubsection*.61}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado VGG-11 optimizado}}{49}{subsubsection*.68}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo Preentrenado ResNet-18 Optimizado}}{52}{subsubsection*.75}%
-\contentsline {subsubsection}{\nonumberline \MakeUppercase {Comparación de Arquitecturas Optimizadas}}{53}{subsubsection*.82}%
-\contentsline {section}{\numberline {5.2}Clasificación Por Tamaño}{55}{section.5.2}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo preentrenado RESNET18}}{39}{subsubsection*.45}%
+\contentsline {subsection}{\numberline {5.1.5}Optimización De Hiperparámetros}{43}{subsection.5.1.5}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo AlexNet optimizado}}{44}{subsubsection*.56}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo VGG19 optimizado}}{46}{subsubsection*.63}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo VGG11 optimizado}}{49}{subsubsection*.72}%
+\contentsline {subsubsection}{\nonumberline \MakeUppercase {Modelo ResNet18 Optimizado}}{52}{subsubsection*.80}%
+\contentsline {subsection}{\numberline {5.1.6}Comparación De Precisión De Modelos Implementados}{55}{subsection.5.1.6}%
+\contentsline {section}{\numberline {5.2}Clasificación Por Tamaño}{56}{section.5.2}%
 \contentsline {chapter}{\numberline {6}Prototipo}{58}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Especificaciones principales}{58}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Descripción de la maquina}{59}{section.6.2}%
