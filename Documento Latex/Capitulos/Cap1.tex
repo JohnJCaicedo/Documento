@@ -6,7 +6,7 @@ La agricultura ha sido uno de los pilares más importantes, tanto para el desarr
 
 En la investigación realizada por Ruth Liliana Goyeneche Ortegón \cite{goyeneche2015miradas}, se encuentra que "\textit{los productores de papa están sometidos a riesgos ocupacionales por la ejecución de tareas como el empleo de contaminantes químicos, el manejo de cargas, las posturas forzadas y el trabajo a la intemperie}". Es por esto que con el avance tecnológico se ha buscado mejorar el sector de la agricultura, buscando facilitar a los agricultores las tareas que deben realizar, además de querer mejorar la calidad del producto, para garantizar que su comercialización tenga un mayor impacto en el mercado nacional.\\
 
-La implementación de la visión artificial es uno de los principales avances tecnológicos en el sector agroindustrial, con esta se busca reducir las fallas en la intervención humana para mejorar el rendimiento y la eficiencia bajo la normativa INCONTEC la cual se debe tener en cuenta para la exportación de productos agrícolas. En este proyecto de investigación se tiene como objetivo implementar un algoritmo de clasificación con técnicas de visión artificial y un prototipo mecánico para la selección de tubérculos de papa según algunas características de calidad.
+La implementación de la visión artificial es uno de los principales avances tecnológicos en el sector agro industrial, con esta se busca reducir las fallas en la intervención humana para mejorar el rendimiento y la eficiencia bajo la normativa INCONTEC la cual se debe tener en cuenta para la exportación de productos agrícolas. En este proyecto de investigación se tiene como objetivo implementar un algoritmo de clasificación con técnicas de visión artificial y un prototipo mecánico para la selección de tubérculos de papa según algunas características de calidad.
 
 
 
@@ -44,26 +44,25 @@ En la actualidad, uno de los retos que enfrenta el sector de la agricultura es e
 
 \section{Descripción y Formulación Del Problema}
 
-La agricultura de Colombia es un componente fundamental en la economía del territorio, ya que juega un papel primordial en el desarrollo económico del país. Debido a que es la principal fuente de ingresos del área rural, hace un aporte relevante al desarrollo económico, la mitigación de la pobreza, y el desarrollo sustentable de Colombia. El sector papicultor en Colombia se caracteriza por tener poco desarrollo tecnológico que busca abastecer el consumo interno, sin mayor exploración en mercados internacionales. Frente a la coyuntura en la que se encuentra el sector, gracias a los retos que traen consigo los acuerdos comerciales firmados por el gobierno nacional, se requieren urgentes transformaciones que permitan aumentar su competitividad y lograr el crecimiento del sector.\\
+La agricultura de Colombia es un componente fundamental en la economía del territorio, ya que juega un papel primordial en el desarrollo económico del país. Debido a que es la principal fuente de ingresos del área rural, hace un aporte relevante al desarrollo económico, la mitigación de la pobreza, y el desarrollo sustentable de Colombia. El sector papicultor se caracteriza por tener poco desarrollo tecnológico que busca abastecer el consumo interno, sin mayor exploración en mercados internacionales. Frente a la coyuntura en la que se encuentra el sector, gracias a los retos que traen consigo los acuerdos comerciales firmados por el gobierno nacional, se requieren urgentes transformaciones que permitan aumentar su competitividad y lograr el crecimiento del sector.\\
 
-Como consecuencia, en los últimos años, el sector agricultor de Colombia ha implementado herramientas tecnológicas que le permitan a los agricultores mejorar la calidad de sus productos para poder competir, tanto en el mercado local, como en el global. Pensando en esto, las diferentes técnicas de visión artificial han tenido un auge en la agricultura de precisión, ayudando a clasificar productos basándose en sus diferentes características de calidad sin importar su clase, sin embargo, las técnicas de visión artificial no han sido aprovechadas para mejorar el sector papicultor colombiano.\\
+Las técnicas de visión artificial no se han implementado en la fase de almacenamiento de los tubérculos de papa en Colombia, la cual es importante ya que en esta fase es donde se separan los tubérculos que cumplen las condiciones de calidad de los que se encuentran defectuosos, ya que para la comercialización de este producto deben estar clasificados bajo la norma $NTC \ 341-3$ \cite{ntc341}. \\
 
-Las técnicas de visión artificial no se han implementado en la fase de almacenamiento de los tubérculos de papa en Colombia, la cual es importante ya que en esta fase es donde se separan los tubérculos que cumplen las condiciones de calidad de los que se encuentran defectuosos, ya que para la comercialización de este producto deben estar clasificados bajo la norma $NTC \ 341-3$ \cite{ntc341}.\\
+Como consecuencia, en los últimos años, el sector agricultor de Colombia ha implementado herramientas tecnológicas que le permitan a los agricultores mejorar la calidad de sus productos para poder competir, tanto en el mercado local, como en el global. Pensando en esto, las diferentes técnicas de visión artificial han tenido un auge en la agricultura de precisión, ayudando a clasificar productos basándose en sus diferentes características de calidad sin importar su clase, sin embargo, las técnicas de visión artificial no han sido aprovechadas para mejorar el sector papicultor colombiano. \\
 
-¿Cómo construir un prototipo para la clasificación de tubérculos de papa mediante técnicas de visión artificial?\\
 
-¿Qué tipo de proceso de clasificación permitirá agrupar los tubérculos de papa según sus características físicas y "patologías" mediante técnicas de visión artificial?	
+Debido a esto, la problemática que se plantea como estrategia para facilitar el proceso de selección de tubérculos de papa en el país es, ¿Con el uso del aprendizaje profundo, es posible obtener resultados de clasificación de tubérculos de papa de acuerdo a sus características de calidad de forma que facilite el proceso y dar un valor agregado mayor al producto?\\
 
 
 \chapter{Marco Conceptual}
 
-\section{Agricultura De Precisión} La agricultura de precisión (AP), es definida por \textit{Marote (2010)}, como \textit{''un concepto agronómico de gestión de parcelas agrícolas, basado en la existencia de variabilidad en campo"}. La cual para ser implementada requiere el uso de sistemas de posición Global (GPS), imágenes aéreas, sensores y satélites, para obtener datos del cultivo que permitan el análisis y entendimiento de dichas variaciones. El objetivo de la AP es evaluar la precisión y predicción de la producción de los cultivos, teniendo en cuenta entradas necesarias como la densidad óptima de siembra, estimar fertilizantes, precipitaciones, entre otras, con el fin de obtener mayor exactitud en los resultados, teniendo en cuenta que las bases fundamentales de la AP son la variabilidad espacial y temporal del terreno y los factores que pueden afectar la producción del cultivo \cite{agricultura}. 
+\section{Agricultura De Precisión} La agricultura de precisión (AP), es definida por \textit{Marote (2010)}, como "\textit{un concepto agronómico de gestión de parcelas agrícolas, basado en la existencia de variabilidad en campo}". La cual para ser implementada requiere el uso de sistemas de posición Global (GPS), imágenes aéreas, sensores y satélites, para obtener datos del cultivo que permitan el análisis y entendimiento de dichas variaciones. El objetivo de la AP es evaluar la precisión y predicción de la producción de los cultivos, teniendo en cuenta entradas necesarias como la densidad óptima de siembra, estimar fertilizantes, precipitaciones, entre otras, con el fin de obtener mayor exactitud en los resultados, teniendo en cuenta que las bases fundamentales de la AP son la variabilidad espacial y temporal del terreno y los factores que pueden afectar la producción del cultivo \cite{agricultura}. 
 
 
 \section{Visión artificial} La visión artificial, es conocida por intentar replicar la capacidad de algunos seres vivos para visualizar una imagen, entenderla y actuar con base en lo observado. Las diferentes aplicaciones industriales que requieren el uso de técnicas de visión artificial ha tenido un crecimiento considerable, es por esto que esta disciplina debe mantenerse en un continuo  desarrollo y evolución de nuevos algoritmos y aplicaciones. Esto puede considerarse como una consecuencia a que en la actualidad existe una gran cantidad de contenido visual como imágenes o videos \cite{ref_15}.
 
 
-\section{Redes Neuronales Artificiales} Las redes neuronales artificiales (RNA), son definidas por \textit{Salas, R. (2004)}, como \textit{''un esquema de computación distribuida inspirada en la	estructura del sistema nervioso de los seres humanos ''}. Las RNA son métodos que ofrecen las herramientas necesarias para modelar de forma eficiente y eficaz problemas con una alta complejidad, esto se logra mediante la implementación de algoritmos de aprendizaje supervisado o no supervisado. El objetivo de las RNA es ajustar su arquitectura y parámetros en busca de minimizar su función de error, de tal manera que la salida generada sea lo más cercana a la verdadera salida según la entrada asignada \cite{redes}.
+\section{Redes Neuronales Artificiales} Las redes neuronales artificiales (RNA), son definidas por \textit{Salas, R. (2004)}, como "\textit{un esquema de computación distribuida inspirada en la	estructura del sistema nervioso de los seres humanos}". Las RNA son métodos que ofrecen las herramientas necesarias para modelar de forma eficiente y eficaz problemas con una alta complejidad, esto se logra mediante la implementación de algoritmos de aprendizaje supervisado o no supervisado. El objetivo de las RNA es ajustar su arquitectura y parámetros en busca de minimizar su función de error, de tal manera que la salida generada sea lo más cercana a la verdadera salida según la entrada asignada \cite{redes}.
 
 \section{Convolución Dilatada}
 
@@ -76,35 +75,35 @@ Se trata de un método que busca ampliar la entrada insertando huecos entre sus 
 	\label{fig:cd}
 \end{figure}
 
-\section{\textit{Overfitting}}
+\section{Overfitting}
 
-Un problema al momento de entrenar redes neuronales, es el \textit{over-fitting}, el cual se da cuando la red neuronal en un momento específico del ciclo de entrenamiento no muestra un progreso en la capacidad de resolver problemas. Si no que solamente aprende una regularidad aleatoria dentro del conjunto de patrones de entrenamiento, esto quiere decir que la red está sufriendo un exceso de flexibilidad a la hora de agrupar los datos \cite{jabbar2015methods}.
+Un problema al momento de entrenar redes neuronales, es el \textit{overfitting}, el cual se da cuando la red neuronal en un momento específico del ciclo de entrenamiento no muestra un progreso en la capacidad de resolver problemas. Si no que solamente aprende una regularidad aleatoria dentro del conjunto de patrones de entrenamiento, esto quiere decir que la red está sufriendo un exceso de flexibilidad a la hora de agrupar los datos \cite{jabbar2015methods}.
 
-\section{\textit{Underfitting}}
+\section{Underfitting}
 
-Es lo contrario al \textit{over-fitting}, siendo este cuando el modelo creado es incapaz de percibir variabilidad alguna en los datos. Dando como resultado que el clasificador resultante no tenga la capacidad de realizar una predicción aceptable \cite{jabbar2015methods}.
+Es lo contrario al \textit{overfitting}, siendo este cuando el modelo creado es incapaz de percibir variabilidad alguna en los datos. Dando como resultado que el clasificador resultante no tenga la capacidad de realizar una predicción aceptable \cite{jabbar2015methods}.
 
 \section{Data Augmentation}
 El Data augmentation consiste en la transformación de los datos existentes, para crear un \textit{dataset} con mayor cantidad de datos diferentes. El objetivo de esta herramienta es generar nuevos datos que puedan ser añadidos al conjunto ya existente, y así contar con más muestras para un mejor desempeño del algoritmo. Además de esto, también es implementado para reducir el \textit{overfitting}, ya que al añadir más información al conjunto de entrenamiento se evita que el modelo se sobre ajuste, normalmente esta técnica es implementada en problemas de clasificación donde el Dataset base del algoritmo no cuenta con una cantidad significativa de muestras para el entrenamiento de la red neuronal \cite{data}. \\
 
 
 
-\section{\textit{Dropout}}
+\section{Dropout}
 
-El Dropout es una técnica de regularización implementada en el entrenamiento de redes neuronales, el fin de esta técnica es evitar que las neuronas que se encuentran en la red memoricen parte de la entrada, ya que si la red memoriza la entrada, se presentará un sobre ajuste en la red. El Dropout cumple su objetivo desactivando de manera aleatoria un porcentaje de las neuronas ubicadas en cada capa oculta \cite{drop}.
+El Dropout es una técnica de regularización implementada en el entrenamiento de redes neuronales, el fin de esta técnica es evitar que las neuronas que se encuentran en la red memoricen parte de la entrada, ya que si la red memoriza la entrada, se presentará un sobre ajuste en la red. El \textit{dropout} cumple su objetivo desactivando de manera aleatoria un porcentaje de las neuronas ubicadas en cada capa oculta \cite{drop}.
 
 \section{Filtro de mediana}
 
 Es una tecnología que procesa señales no lineales. El valor del ruido que proviene de la imagen digital o la secuencia es sustituida por el valor mediano de la vecindad (máscara).\\
 Los pixeles de la máscara se clasifican en el orden de sus niveles de gris, el valor mediano del grupo es almacenado para sustituir el valor del ruido \cite{zhu2012improved}.
 
-\section{Imagen Binaria} Una imagen binaria puede ser definida como una función de dos variables discretas [m, n], las cuales pueden	 tomar dos valores, ‘0’ o ‘1’, de ahí su nombre de imagen binaria, estos valores pueden ser asignados dependiendo el nivel de gris que contenga la imagen (las imágenes binarias poseen dos niveles: blanco y negro). Las imágenes binarias son implementadas en visión artificial para realizar tareas de preprocesamiento de imágenes, el cual consiste en la eliminación del ruido y la simplificación del objeto que se encuentra en la imagen, además de esto, también se implementa para la descripción cualitativa de los objetos esto quiere decir que una imagen binaria facilita el cálculo de áreas, perímetros, diámetros, etc.\cite{ref_12}.
+\section{Imagen Binaria} Una imagen binaria puede ser definida como una función de dos variables discretas [m, n], las cuales pueden tomar dos valores, \textit{0} o \textit{1}, de ahí su nombre de imagen binaria, estos valores pueden ser asignados dependiendo el nivel de gris que contenga la imagen (las imágenes binarias poseen dos niveles: blanco y negro). Las imágenes binarias son implementadas en visión artificial para realizar tareas de preprocesamiento de imágenes, el cual consiste en la eliminación del ruido y la simplificación del objeto que se encuentra en la imagen, además de esto, también se implementa para la descripción cualitativa de los objetos esto quiere decir que una imagen binaria facilita el cálculo de áreas, perímetros, diámetros, etc.\cite{ref_12}.
 
-\section{\textit{Max-pooling}}
+\section{Max pooling}
 
-El pooling es conocido como una operación la cual permite analizar imágenes por regiones, el objetivo de esta operación es obtener la información más importante que se encuentra en las imágenes, esto se logra reduciendo la cantidad de datos que están presentes entre una capa y otra, una ventaja de implementar el max-pooling en las redes neuronales es que permite facilitar el procesamiento de las imágenes y el entrenamiento de la red sin perder información en el proceso.\\
+El pooling es conocido como una operación la cual permite analizar imágenes por regiones, el objetivo de esta operación es obtener la información más importante que se encuentra en las imágenes, esto se logra reduciendo la cantidad de datos que están presentes entre una capa y otra, una ventaja de implementar el \textit{max pooling} en las redes neuronales es que permite facilitar el procesamiento de las imágenes y el entrenamiento de la red sin perder información en el proceso.\\
 
-Un operador max-pooling, se puede usar para la reducción del muestreo sobre las bandas de salida convolucionales, haciendo una reducción de la variabilidad. Esto lo realiza a través de un valor máximo de un grupo de \textit{R} activaciones.La \textit{m}-ésima banda de agrupación máxima está comprendido de \textit{J} filtros vinculados, como se muestra en la Ecuación ~\ref{eq:maxp}, dentro de un grupo de activaciones A. La banda máxima agrupada m está compuesta por f filtros relacionados $p_{m}=[p_{1m},...,p_{fm}] \in R^f$.
+Un operador \textit{max pooling}, se puede usar para la reducción del muestreo sobre las bandas de salida convolucionales, haciendo una reducción de la variabilidad. Esto lo realiza a través de un valor máximo de un grupo de \textit{R} activaciones.La \textit{m}-ésima banda de agrupación máxima está comprendido de \textit{J} filtros vinculados, como se muestra en la Ecuación ~\ref{eq:maxp}, dentro de un grupo de activaciones A. La banda máxima agrupada m está compuesta por f filtros relacionados $p_{m}=[p_{1m},...,p_{fm}] \in R^f$.
 
 \begin{equation}
 	\label{eq:maxp}
@@ -122,7 +121,7 @@ Donde $N \in (1,...,R) $ representado como un desplazamiento de agrupación cuan
 
 
 
-\section{\textit{Padding}}
+\section{Padding}
 
 El padding es un método utilizado con el fin de añadir píxeles de valor cero a los bordes de la imagen original, esto con el objetivo de que la imagen resultante al realizar la convolución sea del mismo tamaño que la original. Se debe tener en cuenta que si el padding no es implementado y se realiza la convolución, la imagen resultante será de un tamaño menor a la original, además este método permite la creación de redes más profundas y la extracción de características más especificas durante el entrenamiento.\\
 
@@ -131,15 +130,16 @@ El más usado es el \textit{zero padding}, debido a que mantiene la misma dimens
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.65]{Figs/padding.png}
-	\caption{Ejemplo Zero-Padding \\Fuente: Elaboración Propia}
+	\caption{Ejemplo Zero Padding \\Fuente: Elaboración Propia}
 	\label{padding}
 \end{figure}
 
 \section{Procesamiento de imágenes} El procesamiento de imágenes, se puede definir como la implementación de prácticas (disminuir el ruido, mejorar el contraste, ajustar el brillo, suavizar bordes, etc.), que buscan modificar ciertas características de la imagen con el fin de tener una mejor visualización de la misma, para realizar su posterior análisis de una manera más eficiente \cite{ref_13}.\\
+
 El procesamiento de imágenes no tiene como objetivo incrementar la información que se puede obtener de las imágenes, pues el enfoque de esta técnica es resaltar las características más significativas que se encuentren en la imagen para que esta puede ser procesada de la mejor manera \cite{ref_13}.
 
 
-\section{\textit{Stride}}
+\section{Stride}
 
 Es un parámetro que especifica cuántos píxeles se traslada horizontalmente y verticalmente, mientras es convolucionada la imagen. En algunas arquitecturas el \textit{stride} se utiliza en vez de \textit{max pooling} para reducir el tamaño de la capa \cite{murphy2016overview}, un ejemplo de stride se puede observar en la Figura \ref{stride}.
 
@@ -151,14 +151,14 @@ Es un parámetro que especifica cuántos píxeles se traslada horizontalmente y 
 \end{figure}
 
 \section{Aprendizaje por transferencia}
-El aprendizaje por transferencia, es definido por Lisa Torrey (2010) como "la mejora del aprendizaje en una nueva tarea, a través de la transferencia de conocimientos de una tarea relacionada que ya se ha aprendido". El objetivo del aprendizaje por transferencia es mejorar a un alumno con la transferencia de información de otro dominio relacionado. La mayor parte de algoritmos de aprendizaje automático fueron creados para ser empleados en tareas individuales \cite{ref_14}.
+El aprendizaje por transferencia, es definido por \textit{Lisa Torrey (2010)} como "\textit{la mejora del aprendizaje en una nueva tarea, a través de la transferencia de conocimientos de una tarea relacionada que ya se ha aprendido}". El objetivo del aprendizaje por transferencia es mejorar a un alumno con la transferencia de información de otro dominio relacionado. La mayor parte de algoritmos de aprendizaje automático fueron creados para ser empleados en tareas individuales \cite{ref_14}.
 
 \section{Umbralización De una Imagen Digital}
 
 
-Es un método que divide una imagen en grupos parecidos según un conjunto de criterios ya definidos. Podemos encontrar varias técnicas de \textit{Thresholding} teniendo un enfoque primordial de la segmentación, especialmente en aplicaciones en las que la velocidad es fundamental en el proceso. \textit{Thresholding} puede ser adaptativo al utilizarse diferentes umbrales para distintas regiones de la imagen \cite{kulkarni2012color}.
+Es un método que divide una imagen en grupos parecidos según un conjunto de criterios ya definidos. Podemos encontrar varias técnicas de \textit{umbralización} teniendo un enfoque primordial de la segmentación, especialmente en aplicaciones en las que la velocidad es fundamental en el proceso. \textit{umbralización} puede ser adaptativo al utilizarse diferentes umbrales para distintas regiones de la imagen \cite{kulkarni2012color}.
 
-\section{Matriz de confusión}
+\section{Matriz De Confusión}
 
 Una matriz de confusión en el ámbito del aprendizaje automático, se considera una herramienta utilizada para la visibilidad la eficacia de un algoritmo de aprendizaje supervisado. Toda columna de la matriz de confusión describe el número de predicciones de cada rango, por otra parte, las filas describen los casos de la categoría actual, en otras palabras, en la práctica nos concede observar cómo funciona el modelo de clasificación, junto con los errores y aciertos encuentra el modelo.\\
 
@@ -185,13 +185,25 @@ La precisión alude a la cercanía entre la eficacia de una medición y el valor
 
 \chapter{Estado del arte}
 
+\section{Selección Y Comercialización De Los Tubérculos Papa En Colombia}
+
+La papa es un tubérculo conocido mundialmente, con una enorme producción y valores nutritivos, contiene muchos micro nutrientes primarios y cruciales como vitamina, vitamina B6, niacina, ácido fólico, potasio, hierro y magnesio, que es una fuente importante de carbohidratos, vitaminas y minerales para el ser humano. Según el plan de ordenamiento de la producción de papa en el país, presentado por el Ministerio de Agricultura y Desarrollo Rural en $2019$ \cite{informepapa2019}, en Colombia se siembran  $130 \ mil$ hectáreas y se producen cerca de  $2.8 \ millones$  de  toneladas  de  papa  al año. Los departamentos de Boyacá y Nariño constituyeron al año $2018$ un total de $24\%$ y $21\%$ de participación en la producción. En Boyacá el $95\%$ de la producción se destina al consumo fresco y el $5\%$ al procesamiento industrial. En Nariño los porcentajes son de $90\%$ para el consumo fresco y $10\%$ para el procesamiento industrial.\\
+
+El procesamiento industrial de la producción de papa genera un valor agregado en comparación a la papa que se destina al mercado en fresco. El valor agregado depende del nivel en términos de lavado del producto, selección, clasificación y empaque. El plan de ordenamiento de la producción de papa en el país indica que un $25\%$ de la papa que se comercializa en fresco se comercializa con un valor agregado. El informe agrega también que "\textit{anualmente se  destina  aproximadamente  el  $6\%$  de  la  producción  nacional  al procesamiento industrial.  Existen en el país cerca de $50$ industrias dedicadas a la actividad de procesamiento de la papa, con diferente capacidad, diferentes niveles de desarrollo tecnológico y variada presencia en el mercado}".\\
+
+El control de calidad actualmente se realiza de forma manual, realizado por personas, clasificando según su defecto y tamaño, esta acción tiene algunas desventajas: es subjetiva, laboriosa y lleva bastante tiempo, llevando a que la clasificación decaiga con el tiempo. En el trabajo publicado por \textit{Jender Mauricio Buitrago} en $2017$ \cite{recoleccionpapa}, se presenta un estudio de las prácticas agrícolas en el cultivo y comercialización de papa en la vereda Rechíniga en el departamento de Boyacá. Uno de los métodos utilizados, una vez se hace la recolecta del cultivo, es descrito como el método de bloque, que consiste en amontonar toda la papa producida en surcos y después los obreros se dividen el trabajo para clasificar el cultivo por tamaño, uno de los obreros se encarga de seleccionar la papa gruesa y otro la pareja para finalmente, empacarla en costales.\\
+
+El estudio también menciona, que los campesinos de la vereda de Rechíniga, tienen en cuenta  el estado de la papa, el autor menciona que "\textit{en el proceso de extracción hay algunas que son tajadas por la herramienta utilizada para dicho proceso y se deben escoger y apartar para que no dañen las demás papas debido a que están más propensas a descomponerse fácil y rápidamente}".\\
+
+Según el plan de ordenamiento de la producción de papa en el país, "\textit{la  papa  se  comercializa  en  Colombia  a  través  de  un  sistema  considerado  como altamente ineficiente tanto por el elevado número de niveles de intermediación como por la escasa o nula agregación de valor}", esto genera altos costos en los procesos de producción de materia prima en el procesamiento industrial de la papa. Debido a esto, desde el Ministerio de Agricultura y Desarrollo Rural se han presentado informes y estrategias para incluir la tecnología en los procesos de producción del sector papicultor del país.  
+
 \section{MatLab}
 
-Se tiene el trabajo de \textit{J. porras} \cite{article3}, en donde se menciona que la implementación de MATLAB\textsuperscript{\textregistered} como una herramienta de procesamiento de imágenes, radica en su facilidad para realizar cambios a las imágenes, es por esto que diseñó un sistema para la clasificación de objetos con base en su forma y color, usando métodos de visión artificial en MATLAB\textsuperscript{\textregistered}, con el uso de la librería \textit{ufm.dll}, para capturar y procesar imágenes. Se pudo evidenciar en los resultados del proyecto que \textit{J. porras} implementó, que utilizando técnicas de visión artificial se puede automatizar un proceso de producción con el fin de reducir tiempos y costos de operación en una planta de producción industrial. El artículo de \textit{C. Nandi} \cite{inproceedings} presenta una investigación, en donde, se consiguió calcular el tamaño de diferentes mangos, estimando el área cubierta en una imagen binaria, (imagen digital que tiene únicamente dos valores posibles para cada píxel), con base en el número de píxeles, luego de ser procesadas las imágenes, se clasificaron implementando un algoritmo basado en \textit{fuzzy logic}, teniendo en cuenta 5 variedades diferentes de mangos y como referencias el color de la cascara, tamaño, defectos superficiales, forma, firmeza, peso y olor.\\
+Dentro de las técnicas de visión artificial para clasificar imágenes, se pueden usar diferentes ambientes de desarrollo como el ofrecido por MATLAB\textsuperscript{\textregistered}. Se tiene el trabajo de \textit{J. porras} \cite{article3}, en donde se menciona que la implementación de MATLAB\textsuperscript{\textregistered} como una herramienta de procesamiento de imágenes, radica en su facilidad para realizar cambios a las imágenes, es por esto que diseñó un sistema para la clasificación de objetos con base en su forma y color, usando métodos de visión artificial en MATLAB\textsuperscript{\textregistered}, con el uso de la librería \textit{ufm.dll}, para capturar y procesar imágenes. Se pudo evidenciar en los resultados del proyecto que \textit{J. porras} implementó, que utilizando técnicas de visión artificial se puede automatizar un proceso de producción con el fin de reducir tiempos y costos de operación en una planta de producción industrial. El artículo de \textit{C. Nandi} \cite{inproceedings} presenta una investigación, en donde, se consiguió calcular el tamaño de diferentes mangos, estimando el área cubierta en una imagen binaria, (imagen digital que tiene únicamente dos valores posibles para cada píxel), con base en el número de píxeles, luego de ser procesadas las imágenes, se clasificaron implementando un algoritmo basado en \textit{fuzzy logic}, teniendo en cuenta 5 variedades diferentes de mangos y como referencias el color de la cascara, tamaño, defectos superficiales, forma, firmeza, peso y olor.\\
 
 \section{Redes Neuronales Artificiales}
 
-Para la clasificación de imágenes usando técnicas de visión artificial, se tiene en primer lugar la literatura  acerca de las \textit{RNA} (\textit{Redes Neuronales Artificiales}). Las \textit{RNA} abarcan la temática del \textit{Deep Learning} \cite{lecun2015deep}, definido por \textit{LeCun (2015)}, como \textit{"el aprendizaje profundo permite que modelos computacionales compuestos por múltiples capas de procesamiento aprendan representaciones de datos con múltiples niveles de abstracción"}. Estos métodos permiten la implementación de aplicaciones que permiten el reconocimiento visual y detección de objetos así como la predicción de datos estadísticos.\\ 
+Para la clasificación de imágenes usando técnicas de visión artificial, se tiene en primer lugar la literatura  acerca de las \textit{RNA} (\textit{Redes Neuronales Artificiales}). Las \textit{RNA} abarcan la temática del \textit{Deep Learning} \cite{lecun2015deep}, definido por \textit{LeCun (2015)}, como "\textit{el aprendizaje profundo permite que modelos computacionales compuestos por múltiples capas de procesamiento aprendan representaciones de datos con múltiples niveles de abstracción}". Estos métodos permiten la implementación de aplicaciones que permiten el reconocimiento visual y detección de objetos así como la predicción de datos estadísticos.\\ 
 
 El trabajo de \textit{L. Pencue-Fierro y J. León Téllez} \cite{article2}, aborda una investigación hecha en Perú, en donde se aplicó visión artificial usando \textit{RNA} como método de clasificación de las principales características extraídas de las frutas, que son derivadas del análisis de las superficies, tanto en su contenido cromático como en la cantidad y distribución de defectos externos. La revista \textit{Multimedia Tools and Applications} \cite{Shrivastava2017} presentó una investigación, donde desarrollaron un sistema de visión artificial que usa un enfoque de categorización simplificado con un elevado índice de exactitud. El propósito del sistema es clasificar los granos de trigo de las especies \textit{triticum aestivum} y \textit{triticum durum} según sus propiedades visuales, usando una \textit{RNA} del tipo \textit{MLP}, (\textit{Multilayer Perceptron}); las imágenes se obtienen por medio de una cámara que captura las propiedades de tamaño, color y textura de cada grano con el objeto de que sirvan de acceso al procedimiento de categorización. El trabajo publicado por \textit{Ksh. Robert Singh y Saurabh Chaudhury} \cite{Singh2016}, en donde se propone el uso de redes neuronales \textit{BPNN}, (\textit{Back Propagation Artificial Neural Networks}), como método de clasificación y la descomposición mediante ondículas, (Tipo especial de transformada matemática que representa una señal en términos de versiones trasladadas y dilatadas de una onda finita), para clasificar los granos de arroz. El modelo de clasificación implemento una red neuronal \textit{BPNN} de cuatro capas la cual presento mejores resultados en comparación con otros métodos.\\
 
@@ -211,18 +223,19 @@ Se encuentran unos métodos poco comunes en la literatura, como por ejemplo los 
 
 El trabajo presentado por \textit{Michael Barnes y Tom Duckett} \cite{Barnes2010}, cuyo objetivo de  investigación es introducir un método automático de detección de manchas en imágenes digitales de patatas. El sistema desarrollado es entrenable, de modo que pueda trabajar con diferentes variedades de patatas y variaciones en las estaciones, condiciones de iluminación, etc. Otro objetivo, pensando en su posible implantación en entornos industriales, es permitir el procesamiento de imágenes en tiempo real, posiblemente mediante la construcción de \textit{Minimalist Boosted Classifier}, que extraigan un subconjunto mínimo de todas las características que optimicen el rendimiento de la detección con el menor coste computacional posible.
 
-\section{Clasificación De Papa En Colombia}
 
-La papa es un tubérculo conocido mundialmente, con una enorme producción y valores nutritivos, contiene muchos micro nutrientes primarios y cruciales como vitamina, vitamina B6, niacina, ácido fólico, potasio, hierro y magnesio, que es una fuente importante de carbohidratos, vitaminas y minerales para el ser humano. Según el plan de ordenamiento de la producción de papa en el país, presentado por el Ministerio de Agricultura y Desarrollo Rural en $2019$ \cite{informepapa2019}, en Colombia se siembran  $130 \ mil$ hectáreas y se producen cerca de  $2.8 \ millones$  de  toneladas  de  papa  al año. Los departamentos de Boyacá y Nariño constituyeron al año $2018$ un total de $24\%$ y $21\%$ de participación en la producción. En Boyacá el $95\%$ de la producción se destina al consumo fresco y el $5\%$ al procesamiento industrial. En Nariño los porcentajes son de $90\%$ para el consumo fresco y $10\%$ para el procesamiento industrial.\\
+\section{Clasificación De Papa Con Técnicas De Aprendizaje Profundo}
 
-El procesamiento industrial de la producción de papa genera un valor agregado en comparación a la papa que se destina al mercado en fresco. El valor agregado depende del nivel en términos de lavado del producto, selección, clasificación y empaque. El plan de ordenamiento de la producción de papa en el país indica que un $25\%$ de la papa que se comercializa en fresco se comercializa con un valor agregado. El informe agrega también que "\textit{anualmente se  destina  aproximadamente  el  $6\%$  de  la  producción  nacional  al procesamiento industrial.  Existen en el país cerca de $50$ industrias dedicadas a la actividad de procesamiento de la papa, con diferente capacidad, diferentes niveles de desarrollo tecnológico y variada presencia en el mercado}".\\
+\textit{Elsharif, Abeer} presenta el desarrollo de una red neuronal convolucional  para la clasificación de $4$ variedades de tubérculos de papa en un \textit{dataset} de $2400$ imágenes \cite{elsharif2020potato}. Los resultados de la implementación de la red fueron de casi un $100\%$ para una única característica, es te caso, la variedad a la que pertenece el tubérculo. \textit{Noordam, J.} presenta un proyecto para la clasificación en alta velocidad de tubérculos de papa de acuerdo a una inspección de calidad a partir del color y el tamaño \cite{noordam2000high}. En este proyecto utilizaron algoritmos de clasificación basados en la segmentación por color de las papas, debido a esto únicamente utilizaron defectos que puedan ser evidenciados por el color. Usaron los algoritmos de \textit{Multi-layer feed-forward Neural Networks} (MLF-NN) y \textit{Linear Discriminant Analysis} (LDA) con los que obtienen resultados superiores al $95\%$ en las predicciones hechas.\\
+
+\textit{Paul, H.} presenta su trabajo, donde desarrollan una estación de inspección automatizada para verificar la calidad de las papas \cite{heinemann1996automated}. La estación fue creada para el departamento de agricultura de Estados Unidos, consiste de una recámara para la toma de imágenes, banda transportadora, cámara, unidad de selección y análisis, un computador y equipo de control. La estación de inspección clasifica las papas de acuerdo a su forma y tamaño mediante el uso de an algoritmo conocido como \textit{algoritmo de rastreo de 8 vecinos} para encontrar los puntos principales que componen la forma del tubérculo analizado. Obtuvieron resultados de $88\%$ para imágenes en movimiento.
 
 
-El control de calidad actualmente se realiza de forma manual, realizado por personas, clasificando según su defecto y tamaño, esta acción tiene algunas desventajas: es subjetiva, laboriosa y lleva bastante tiempo, llevando a que la clasificación decaiga con el tiempo. En el trabajo publicado por \textit{Jender Mauricio Buitrago} en $2017$ \cite{recoleccionpapa}, se presenta un estudio de las prácticas agrícolas en el cultivo y comercialización de papa en la vereda Rechíniga en el departamento de Boyacá. Uno de los métodos utilizados, una vez se hace la recolecta del cultivo, es descrito como el método de bloque, que consiste en amontonar toda la papa producida en surcos y después los obreros se dividen el trabajo para clasificar el cultivo por tamaño, uno de los obreros se encarga de seleccionar la papa gruesa y otro la pareja para finalmente, empacarla en costales.\\
 
-El estudio también menciona, que los campesinos de la vereda de Rechíniga, tienen en cuenta  el estado de la papa, el autor menciona que "\textit{en el proceso de extracción hay algunas que son tajadas por la herramienta utilizada para dicho proceso y se deben escoger y apartar para que no dañen las demás papas debido a que están más propensas a descomponerse fácil y rápidamente}".\\
 
-Según el plan de ordenamiento de la producción de papa en el país, "\textit{la  papa  se  comercializa  en  Colombia  a  través  de  un  sistema  considerado  como altamente ineficiente tanto por el elevado número de niveles de intermediación como por la escasa o nula agregación de valor}", esto genera altos costos en los procesos de producción de materia prima en el procesamiento industrial de la papa. Debido a esto, desde el Ministerio de Agricultura y Desarrollo Rural se han presentado informes y estrategias para incluir la tecnología en los procesos de producción del sector papicultor del país.  
+
+
+
 
 
 \chapter{Diseño Del Algoritmo de Clasificación}
@@ -239,17 +252,49 @@ Se diseñó un algoritmo de clasificación utilizando Redes Neuronales Convoluci
 
 La estrategia propuesta para realizar la clasificación de tubérculos de papa en este documento, consiste desde la adquisición de muestras y creación de un \textit{dataset} de tubérculos de papa, hasta el diseño de un algoritmo de clasificación con Redes Neuronales, utilizando la librería \textit{Pytorch}, que es una biblioteca de software para la aplicación de aprendizaje profundo, y la librería de\textit{OpenCV} en el lenguaje de programación de \textit{Python}. El algoritmo de clasificación será implementado en un prototipo de banda transportadora, que permita el movimiento del elemento por debajo de una cámara, para ser analizado y clasificado. Los sistemas de visión artificial utilizados en inspecciones visuales, permiten que la operación sea más eficiente si la producción requiere que el proceso aumente en velocidad, cantidad de producción y se encuentre en funcionamiento las 24 horas del día o la repetibilidad de las medidas \cite{artificial2012aplicacion}.\\
 
-Según la norma $NTC \ 341-3$, se considera que el daño en una papa es "\textit{una lesión o alteración de magnitud variable que presentan los tubérculos}", se establecen $5$ tipos de daños, sin embargo, los tubérculos seleccionados para el proyecto pertenecen a los siguientes tipos de daño, definidos según la norma.\\
+Según la norma $NTC \ 341-3$, se considera que el daño en una papa es "\textit{una lesión o alteración de magnitud variable que presentan los tubérculos}", se establecen $5$ tipos de daños, sin embargo, los tubérculos seleccionados para el proyecto pertenecen a los siguientes tipos de daño, definidos según la norma. Las papas fueron clasificadas por los desarrolladores del proyecto de acuerdo a los parámetros de la norma.
 
 \begin{itemize}
-	\item Daños Mecánicos: Lesiones causadas por agentes físicos.
-	\item Daños y Defectos Fisiológicos: Lesiones o defectos que provienen de alteraciones no patogénicas de origen interno o externo.
-	\item Daños Causados Por Insectos: Se presentan en forma de túneles o galerías de diámetro y longitud variable causados por insectos y moluscos.
+	\item Daños Mecánicos: Lesiones causadas por agentes físicos, Figura \ref{fig:dano1}.
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.04]{Figs/daño1.JPG}
+		\caption{Muestra de Papa Clasificada en Daño Mecánico \\ Fuente: Elaboración Propia}
+		\label{fig:dano1}
+	\end{figure}
+		
+	\item Daños y Defectos Fisiológicos: Lesiones o defectos que provienen de alteraciones no patogénicas de origen interno o externo, Figura \ref{fig:dano2}.
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.04]{Figs/daño2.JPG}
+		\caption{Muestra de Papa Clasificada en Daño Fisiológico \\ Fuente: Elaboración Propia}
+		\label{fig:dano2}
+	\end{figure}
+
+	\item Daños Causados Por Insectos: Se presentan en forma de túneles o galerías de diámetro y longitud variable causados por insectos y moluscos, Figura \ref{fig:dano3}.
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.04]{Figs/daño3.JPG}
+		\caption{Muestra de Papa Clasificada en Daño Causado Por Insecto \\ Fuente: Elaboración Propia}
+		\label{fig:dano3}
+	\end{figure}
 \end{itemize}
+
+Se considera un tubérculo en buen estado aquel, que de acuerdo a la norma, no presenta ninguno de las daños descritos anteriormente, como el tubérculo que se presenta en la Figura \ref{fig:good}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.04]{Figs/good.JPG}
+	\caption{Muestra de Papa Clasificada en Buen Estado \\ Fuente: Elaboración Propia}
+	\label{fig:good}
+\end{figure}
 
 De igual forma, la norma define el diámetro como "\textit{la máxima distancia tomada en ángulos rectos sobre el eje más largo del tubérculo}", se establecen $4$ tamaños según el diámetro, sin embargo, los tubérculos seleccionados para el proyecto serán clasificados por los tamaños presentados en la Tabla \ref{tamano}, establecidos según la norma.\\
 
-
+\newpage
 \begin{table}[ht]
 	\centering
 	\begin{tabular}{|c|c|}
@@ -265,7 +310,6 @@ De igual forma, la norma define el diámetro como "\textit{la máxima distancia 
 
 Los tubérculos que serán analizados en el prototipo deben estar limpios. La norma define una papa limpia como "\textit{los tubérculos libres de tierra u otras impurezas adheridas}". Debido a que una de las características que indica el tipo de tubérculo es el color, en este caso, se usarán los tubérculos de la variedad \textit{R12} y \textit{Pastusa}, es por esto que se deben tener los tubérculos limpios. 
 
-\newpage
 \section{Preparación y Adquisición De Las Imágenes}
 
 Se seleccionó un total de $592$ tubérculos de papa, que manualmente fueron clasificados en tres categorías definidas. Las etiquetas de cada imagen se encuentran dentro del nombre de cada archivo, que corresponde al \textit{metadata} de cada foto tomada. Definido de la siguiente manera:
@@ -279,6 +323,7 @@ Se seleccionó un total de $592$ tubérculos de papa, que manualmente fueron cla
 
 Las fotos tomadas para la creación del \textit{dataset}, poseen un tamaño de $(3168, 4752)$ pixeles. Fueron tomadas con una cámara profesional de referencia \textit{Canon EOS 50D}, que tiene 15.1 mega pixeles de resolución y se puede ajustar la sensibilidad \textit{ISO} desde $100$ hasta $3200$. La cámara fue configurada con \textit{ISO-800} que corresponde al parámetro de sensibilidad del sensor de ruido de la cámara, una velocidad de obturación de $\frac{1}{640}$ segundos, que corresponde al dispositivo que controla el tiempo en el que la luz incide sobre el sensor de la cámara, y finalmente una apertura de diafragma de $F-7.1$ que corresponde a la apertura del lente que deja pasar la luz \cite{Camara}, tener en cuenta que a mayor apertura de diafragma, menor luz se deja pasar. Se construyó una caja con iluminación fija la cual se muestra en la Figura \ref{fig:chamber} usando bombillos de luz blanca de $6500$ Kelvin de temperatura de color, para que la iluminación en todas las fotos tomadas fuera uniforme según la norma española \textit{UNE-EN 12464-1} \cite{normaespanola}.
 
+\newpage
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.16]{Figs/Chamber.JPEG}
@@ -311,8 +356,9 @@ La cámara para la toma de las fotos fue fijada a un trípode ubicado a $30 \ cm
 \end{table}
 
 
-Una vez la información de cada imagen fue guardada en el archivo \textit{metadata.csv}, se agruparon las posibles combinaciones de las características de \textit{Tipo} y \textit{Daño}, para definir las \textit{clases} dentro de la red neuronal. Para realizar este proceso, se creó una condición dentro del \textit{Dataframe}, que contiene el \textit{metadata} para generar una columna adicional con la información de la Tabla \ref{table:Clases}.\\	
+Una vez la información de cada imagen fue guardada en el archivo \textit{metadata.csv}, se agruparon las posibles combinaciones de las características de \textit{Tipo} y \textit{Daño}, para definir las \textit{clases} dentro de la red neuronal. Para realizar este proceso, se creó una condición dentro del \textit{Dataframe}, que contiene el \textit{metadata} para generar una columna adicional con la información de la Tabla \ref{table:Clases}. De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neuronal, para el posterior proceso de clasificación por visión artificial. \\	
 
+\newpage
 \begin{table}[ht]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|}
@@ -332,21 +378,19 @@ Una vez la información de cada imagen fue guardada en el archivo \textit{metada
 	\label{table:Clases}
 \end{table}	
 
-De esta forma se definieron las $4 \ clases$ que serán entrenadas en la red neuronal, para el posterior proceso de clasificación por visión artificial. 
-
-
-\newpage
 \section{Distribución del Dataset}
 
 La librería \textit{Plotly}, que permite realizar gráficas en \textit{Python}, presenta la distribución en porcentaje de las imágenes pertenecientes a cada característica definida en el \textit{dataset} como se muestra en la Figura \ref{fig:distribuciontipo}.\\
 
+
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.5]{Figs/Distribucion.jpg}
+	\includegraphics[scale=0.42]{Figs/Distribucion.jpg}
 	\caption{Distribución del Dataset Según Sus Características Y Clases Definidas \\ Fuente: Elaboración Propia}
 	\label{fig:distribuciontipo}
 \end{figure}
 
+\newpage
 Se definieron los conjuntos de \textit{entrenamiento} y \textit{validación}, a partir del archivo \textit{metadata.csv} de la Tabla \ref{table:metadata}. Se utilizó $80\%$ para \textit{entrenamiento} y $20\%$ para \textit{validación}. Se crearon los archivos \textit{train.csv} y \textit{test.csv} que contienen el \textit{metadata} y la dirección de las imágenes separadas en el respectivo $80\%$ y $20\%$.\\
 
 \section{Optimización Bayesiana}
@@ -363,7 +407,6 @@ Dos de las estrategias más empleadas para probar diferentes combinaciones de hi
 \end{figure}
 
 A pesar de que las dos estrategias son válidas y se obtienen buenos resultados, sobretodo cuando se tiene criterio para acotar el rango de búsqueda, poseen una carencia similar: ninguna de las dos tiene en cuenta los resultados obtenidos hasta el momento, lo cual impide que se focalicen en la búsqueda de las regiones de mayor interés y evitando las regiones innecesarias.\\
-
 
 Otro método utilizado para la búsqueda de los hiperparámetros de un modelo es la optimización bayesiana, definido por \textit{Peter Frazier (2018)} \cite{frazier2018tutorial} como \textit{"crear un modelo probabilístico en el que el valor de la función objetivo es la métrica de validación del modelo, en este caso, la precisión}. Con este método, se logra que la búsqueda se vaya redirigiendo en cada iteración hacia las regiones de mayor interés. Esto con el fin de reducir el número de combinaciones de los hiperparámetros con los que el modelo es evaluado, seleccionando únicamente los mejores candidatos. Esto significa que, la ventaja frente a las estrategias descritas anteriormente, se maximiza cuando el espacio de búsqueda es muy amplio o la evaluación del modelo es muy lenta.\\
 
@@ -1343,45 +1386,6 @@ La Tabla \ref{tab:resnetoptclases_2} presenta la precisión del modelo por cada 
 	\label{tab:resnetoptclases_2}%
 \end{table}
 
-\newpage
-\section{Comparación De Precisión De Modelos Implementados}
-
-En la Tabla \ref{table:compacon} se muestran los resultados obtenidos en la implementación de los $4$ modelos de \textit{RNC}.
-
-\begin{table}[ht]
-	\centering
-	\resizebox{16cm}{!} {
-	\begin{tabular}{|ccccc|ccccc|}
-		\hline
-		\multicolumn{5}{|c|}{Hiperparámetros Optimizados}                                                                                   & \multicolumn{5}{c|}{Hiperparámetros No Optimizados}                                                                                \\ \hline
-		\multicolumn{5}{|c|}{Conjunto de Validación}                                                                                        & \multicolumn{5}{c|}{Conjunto de Validación}                                                                                        \\ \hline
-		\multicolumn{1}{|c|}{Modelo}    & \multicolumn{1}{c|}{AlexNet} & \multicolumn{1}{c|}{VGG19} & \multicolumn{1}{c|}{VGG11} & ResNet18 & \multicolumn{1}{c|}{Modelo}    & \multicolumn{1}{c|}{AlexNet} & \multicolumn{1}{c|}{VGG19} & \multicolumn{1}{c|}{VGG11} & ResNet18 \\ \hline
-		\multicolumn{1}{|c|}{Precisión[\%]} & \multicolumn{1}{c|}{$21,05$}   & \multicolumn{1}{c|}{$65,78$} & \multicolumn{1}{c|}{$39,47$} & $36,84$    & \multicolumn{1}{c|}{Precisión[\%]} & \multicolumn{1}{c|}{/}       & \multicolumn{1}{c|}{$36,84$} & \multicolumn{1}{c|}{/}     & $18,42$    \\ \hline
-		\multicolumn{5}{|c|}{Conjunto de Entrenamiento}                                                                                     & \multicolumn{5}{c|}{Conjunto de Entrenamiento}                                                                                     \\ \hline
-		\multicolumn{1}{|c|}{Modelo}    & \multicolumn{1}{c|}{AlexNet} & \multicolumn{1}{c|}{VGG19} & \multicolumn{1}{c|}{VGG11} & ResNet18 & \multicolumn{1}{c|}{Modelo}    & \multicolumn{1}{c|}{AlexNet} & \multicolumn{1}{c|}{VGG19} & \multicolumn{1}{c|}{VGG11} & ResNet18 \\ \hline
-		\multicolumn{1}{|c|}{Precisión[\%]} & \multicolumn{1}{c|}{$14,7$}    & \multicolumn{1}{c|}{$73,52$} & \multicolumn{1}{c|}{$40,35$} & $32,35$    & \multicolumn{1}{c|}{Precisión[\%]} & \multicolumn{1}{c|}{/}       & \multicolumn{1}{c|}{$26,47$} & \multicolumn{1}{c|}{/}     & $23,52$    \\ \hline
-	\end{tabular}
-	}
-	\caption{Precisión de los $4$ modelos implementados}
-	\label{table:compacon}
-\end{table}
-
-En la Tabla \ref{table:compacon}, se puede observar que el modelo con mejor precisión es el modelo \textit{VGG-19}, pero también se aprecia que es el modelo con mayores perdidas. Sin embargo, se puede apreciar que la precisión de los modelos documentada en la Tabla \ref{table:compacon}, es superior a la precisión documentada en la Tabla \ref{table:compasin}. Lo cual permite concluir que la implementación de la optimización bayesiana afecto de manera significativa a los modelos, para mejorar sus precisiones y reducir sus perdidas.
-
-
-\newpage
-
-La Figura \ref{fig:predvgg19} muestra una matriz con imágenes aleatorias del conjunto de \textit{entrenamiento} para verificar las predicciones que el modelo está realizando. En la parte superior de cada imágen de tubérculo de papa se observa las siglas \textit{R.C} que corresponde a la clase real a la que pertenece, y la sigla \textit{Pred} que indica la predicción que realizó el modelo
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.4]{Figs/506.png}
-	\caption{Predicciones En El Conjunto De \textit{Entrenamiento} \\ Fuente: Elaboración Propia}
-	\label{fig:predvgg19}
-\end{figure}
-
-De esta forma se puede verificar que la optimización de hiperparámetros mejora considerablemente la eficiencia de una red neuronal, permitiendo que se obtengan mejores resultados en la fase de validación del algoritmo.
-
 \newpage		
 \section{Clasificación Por Tamaño}
 
@@ -1411,7 +1415,7 @@ Con la imágen aislada de la mayoría de características que puedan interferir 
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.04]{Figs/contour.png}
+	\includegraphics[scale=0.035]{Figs/contour.png}
 	\caption{Perímetro Aproximado De Las Papas\\Fuente: Elaboración Propia}
 	\label{fig:contour}
 \end{figure}
@@ -1420,7 +1424,7 @@ En este punto, utilizando la función \textit{ArcLenght} de \textit{OpenCV}, se 
 
 \begin{table}[ht]
 	\centering
-	\resizebox{14cm}{!} {
+	\resizebox{13cm}{!} {
 	\begin{tabular}{cccccc}
 		\hline
 		\multicolumn{2}{|c|}{Muy Grande}                                                    & \multicolumn{2}{c|}{Grande}                                                        & \multicolumn{2}{c|}{Mediana}                                                       \\ \hline
@@ -1440,7 +1444,66 @@ En este punto, utilizando la función \textit{ArcLenght} de \textit{OpenCV}, se 
 	\label{table:perimetro}
 \end{table}
 
-De esta forma, se realiza la clasificación por tamaño en nuevas imágenes de papas, si el valor del perímetro se encuentra dentro de los límites inferior y superior calculados para cada tamaño, la imagen será clasificada de acuerdo a los rangos.
+De esta forma, se realiza la clasificación por tamaño en nuevas imágenes de papas, si el valor del perímetro se encuentra dentro de los límites inferior y superior calculados para cada tamaño, la imagen será clasificada de acuerdo a los rangos. Se obtuvo un $90\%$ de imágenes clasificadas correctamente en su tamaño en las imágenes del \textit{dataset}.
+
+\section{Comparación De Precisión De Modelos Implementados}
+
+En la Tabla \ref{table:compacon} se muestran los resultados obtenidos en la implementación de los $4$ modelos de \textit{RNC}.
+
+\begin{table}[ht]
+	\centering
+	\resizebox{16cm}{!} {
+		\begin{tabular}{|ccccc|ccccc|}
+			\hline
+			\multicolumn{5}{|c|}{Hiperparámetros Optimizados}                                                                                   & \multicolumn{5}{c|}{Hiperparámetros No Optimizados}                                                                                \\ \hline
+			\multicolumn{5}{|c|}{Conjunto de Validación}                                                                                        & \multicolumn{5}{c|}{Conjunto de Validación}                                                                                        \\ \hline
+			\multicolumn{1}{|c|}{Modelo}    & \multicolumn{1}{c|}{AlexNet} & \multicolumn{1}{c|}{VGG19} & \multicolumn{1}{c|}{VGG11} & ResNet18 & \multicolumn{1}{c|}{Modelo}    & \multicolumn{1}{c|}{AlexNet} & \multicolumn{1}{c|}{VGG19} & \multicolumn{1}{c|}{VGG11} & ResNet18 \\ \hline
+			\multicolumn{1}{|c|}{Precisión[\%]} & \multicolumn{1}{c|}{$21,05$}   & \multicolumn{1}{c|}{$65,78$} & \multicolumn{1}{c|}{$39,47$} & $36,84$    & \multicolumn{1}{c|}{Precisión[\%]} & \multicolumn{1}{c|}{/}       & \multicolumn{1}{c|}{$36,84$} & \multicolumn{1}{c|}{/}     & $18,42$    \\ \hline
+			\multicolumn{5}{|c|}{Conjunto de Entrenamiento}                                                                                     & \multicolumn{5}{c|}{Conjunto de Entrenamiento}                                                                                     \\ \hline
+			\multicolumn{1}{|c|}{Modelo}    & \multicolumn{1}{c|}{AlexNet} & \multicolumn{1}{c|}{VGG19} & \multicolumn{1}{c|}{VGG11} & ResNet18 & \multicolumn{1}{c|}{Modelo}    & \multicolumn{1}{c|}{AlexNet} & \multicolumn{1}{c|}{VGG19} & \multicolumn{1}{c|}{VGG11} & ResNet18 \\ \hline
+			\multicolumn{1}{|c|}{Precisión[\%]} & \multicolumn{1}{c|}{$14,70$}    & \multicolumn{1}{c|}{$73,52$} & \multicolumn{1}{c|}{$40,35$} & $32,35$    & \multicolumn{1}{c|}{Precisión[\%]} & \multicolumn{1}{c|}{/}       & \multicolumn{1}{c|}{$26,47$} & \multicolumn{1}{c|}{/}     & $23,52$    \\ \hline
+		\end{tabular}
+	}
+	\caption{Precisión de los $4$ modelos implementados}
+	\label{table:compacon}
+\end{table}
+
+Se observa que el modelo que obtuvo la mejor precisión fue con la arquitectura \textit{VGG19}, en donde se evidencia una mejora importante en los resultados al optimizar los hiperparámetros del modelo. La Figura \ref{fig:predvgg19} muestra una matriz con imágenes aleatorias del conjunto de \textit{entrenamiento}. En la parte superior de cada imágen se observa las siglas \textit{R.C} que corresponde a la clase real a la que pertenece, y la sigla \textit{Pred} que indica la predicción que realizó el modelo.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.42]{Figs/506.png}
+	\caption{Predicciones En El Conjunto De \textit{Entrenamiento} Del Modelo \textit{VGG19} \\ Fuente: Elaboración Propia}
+	\label{fig:predvgg19}
+\end{figure}
+
+De esta forma se puede verificar que la optimización de hiperparámetros mejora considerablemente la eficiencia de una red neuronal, permitiendo que se obtengan mejores resultados en la fase de validación del algoritmo. \textit{Noordam, J}, en su trabajo obtuvo los resultados de la Tabla \ref{tab:noordam} en la clasificación de defectos en $5$ variedades de papa utilizando las técnicas de segmentación de color en imágenes  \textit{LDA} y \textit{MLF-NN}.
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Cultivo     & LDA(\%) & MLF-NN(\%) \\ \hline
+		Bildstar    & 95,10   & 99,20      \\ \hline
+		Bintje      & 96,20   & 96,20      \\ \hline
+		Eigenheimer & 86,80   & 88,10      \\ \hline
+		Irene       & 89,30   & 91,60       \\ \hline
+		Sante       & 98,60    & 98,70       \\ \hline
+	\end{tabular}
+	\caption{Comparación entre \textit{MLF-NN} y \text{LDA} en $5$ variedades de papa \\ Fuente: Noordam, J. (2000)}
+	\label{tab:noordam}
+\end{table}
+
+En la Figura \ref{fig:tabPAUL}, se muestran los resultados del sistema de clasificación de tamaño implementado por \textit{Paul, H} usando lel \textit{algoritmo de rastreo de 8 vecinos}. La clasificación obtuvo resultados de $96\%$ a $98\%$ para las muestras estáticas y de $77\%$ a $88\%$ en muestras en movimiento.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.7]{Figs/tabPaul.png}
+	\caption{Clasificación Por Tamaño Para Papas Estáticas y En Movimiento  \\ Fuente: Paul, H (1996)}
+	\label{fig:tabPAUL}
+\end{figure}
+
+En los trabajos presentados por \textit{Paul, H} y \textit{Noordam, J} se observan resultados superiores (en términos de precisión de los algoritmos) a los obtenidos en el desarrollo de este proyecto, se evidencia que aplicando técnicas de segmentación de imágenes como \textit{LDA} y \textit{MLF-NN} previo a la implantación de la red neuronal ayuda a que el algoritmo generalice de mejor manera las imágenes, permitiendo que las predicciones tengan mayor precisión.\\
 
 
 \newpage
@@ -1703,13 +1766,13 @@ De las 50 papas utilizadas para la verificación, se obtuvo un resultado de $80\
 
 El tiempo de ejecución del algoritmo, desde el momento en el que toma la foto y la procesa, hasta que realiza la clasificación, varia entre los $2$ y $3$ segundos. El tiempo que demora la papa en llegar desde el comienzo de la banda transportadora, hasta la posición dentro de la estructura de análisis, es de $7$ segundos, por lo tanto, se puede asumir un tiempo promedio de $10$ segundos en analizar 1 tubérculo de papa. Este prototipo clasificaría $100$ tubérculos de papa cada $15$ minutos.	 	
 
-\chapter{Trabajo Futuro}
+\chapter{Conclusiones y Trabajo Futuro}
 
 Debido a que el desarrollo del proyecto es un prototipo, la máquina puede ser mejorada para realizar la clasificación mecánica de las diferentes categorías, de igual forma, se puede implementar un variador para que la banda sea más rápida que el movimiento actual, mejorando así la velocidad de clasificación.\\
 
 La red neuronal artificial que se obtuvo con una precisión superior al $83\%$, puede ser mejorada de tal manera que se puedan obtener precisiones superiores al $90\%$, para mejorar los resultados de las predicciones finales. Esto se puede lograr enriqueciendo el \textit{Dataset}, mejorando la distribución de los datos iniciales, de manera que sean proporcionales entre sí y realizando una optimización de hiperparámetros, teniendo en cuenta diferentes parámetros utilizados en este proyecto. Si se desea realizar una mejor optimización, el poder de computo necesario para realizarla debe ser muy superior, en las condiciones actuales, la optimización tomó un tiempo de $6$ horas por cada modelo en el que se aplicó.\\
 
-Los tiempos de ejecución del algoritmo implementado en el sistema embebido, se deben mejorar, para que el prototipo sea viable en la agricultura de precisión. Mejor capacidad de procesamiento en la tarjeta de desarrollo escogida y mejorar la sintaxis y consumo de memoria por parte del diseño del algoritmo hecho en \textit{Python}.
+Los tiempos de ejecución del algoritmo implementado en el sistema embebido, se deben mejorar, para que el prototipo sea viable en la agricultura de precisión. Además, se debe mejorar la capacidad de procesamiento en la tarjeta de desarrollo escogida y mejorar la sintaxis y consumo de memoria por parte del diseño del algoritmo hecho en \textit{Python}.
 
 
 
