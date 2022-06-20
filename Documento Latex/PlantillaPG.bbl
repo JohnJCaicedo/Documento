@@ -36,10 +36,8 @@ M.~L. Marote, ``Agricultura de precisi{\'o}n,'' {\em Ciencia y
 R.~Salas, ``Redes neuronales artificiales,'' {\em Universidad de Valpara{\i}so.
   Departamento de Computaci{\'o}n}, vol.~1, pp.~1--7, 2004.
 
-\bibitem{wu2019fastfcn}
-H.~Wu, J.~Zhang, K.~Huang, K.~Liang, and Y.~Yu, ``Fastfcn: Rethinking dilated
-  convolution in the backbone for semantic segmentation,'' {\em arXiv preprint
-  arXiv:1903.11816}, 2019.
+\bibitem{prakharr0y}
+prakharr0y, ``Dilated convolution,'' 2022.
 
 \bibitem{jabbar2015methods}
 H.~Jabbar and R.~Z. Khan, ``Methods to avoid over-fitting and under-fitting in
@@ -93,6 +91,11 @@ N.~Kulkarni, ``Color thresholding method for image segmentation of natural
 \bibitem{ref_15}
 I.~Garc{\'\i}a and V.~Caranqui, ``La visi{\'o}n artificial y los campos de
   aplicaci{\'o}n,'' {\em Tierra infinita}, vol.~1, no.~1, pp.~98--108, 2015.
+
+\bibitem{maria2016performance}
+J.~Maria~Navin and R.~Pankaja, ``Performance analysis of text classification
+  algorithms using confusion matrix,'' {\em International Journal of
+  Engineering and Technical Research (IJETR)}, vol.~6, no.~4, pp.~75--8, 2016.
 
 \bibitem{article3}
 J.~Porras, M.~De~la Cruz, and A.~Mor{\'a}n, ``Clasification system based on
@@ -195,10 +198,6 @@ V.~Artificial, ``Aplicaci{\'o}n pr{\'a}ctica de la visi{\'o}n artificial en el
 \bibitem{normaespanola}
 A.~E. de~Normalización~y Certificación, ``Iluminacion de los lugares de
   trabajo en interiores,'' 2003.
-
-\bibitem{cnnarchitecture}
-T.~Afridi, A.~Alam, M.~N. Khan, and J.~Khan, ``A multimodal memes
-  classification: A survey and open research issues,'' 09 2020.
 
 \bibitem{o2015introduction}
 K.~O'Shea and R.~Nash, ``An introduction to convolutional neural networks,''

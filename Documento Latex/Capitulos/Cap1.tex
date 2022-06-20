@@ -64,7 +64,11 @@ Las técnicas de visión artificial no se han implementado en la fase de almacen
 
 \section{Convolución Dilatada}
 
-Se trata de un método que busca ampliar la entrada insertando huecos entre sus elementos consecutivos. Siendo igual que una convolución normal, pero con la diferencia de que omite pixeles, con el fin de cubrir más área de la entrada, dando un campo de visión más amplio con el mismo coste computacional, por medio de un parámetro llamado factor de dilatación \textit{l}, indicando cuanto se expande la entrada \cite{wu2019fastfcn}. La Figura \ref{fig:cd} muestra un ejemplo de la implementación de la convolución dilatada.
+Este es una técnica que intenta expandir la entrada insertando espacios entre los huecos de sus elementos consecutivos. Como la convolución normal, pero con una diferencia, que ignora
+píxeles para cubrir más área de entrada, brindándole un campo de visión más amplio.
+Al mismo costo computacional, a través de un parámetro llamado coeficiente de expansión
+\textit{l}, que indica el ancho de la entrada
+ \cite{prakharr0y}. La Figura \ref{fig:cd} muestra un ejemplo de la implementación de la convolución dilatada.
 
 \begin{figure}[ht]
 	\centering
@@ -98,7 +102,7 @@ Los pixeles de la máscara se clasifican en el orden de sus niveles de gris, el 
 
 El pooling es conocido como una operación la cual permite analizar imágenes por regiones, el objetivo de esta operación es obtener la información más importante que se encuentra en las imágenes, esto se logra reduciendo la cantidad de datos que están presentes entre una capa y otra, una ventaja de implementar el max-pooling en las redes neuronales es que permite facilitar el procesamiento de las imágenes y el entrenamiento de la red sin perder información en el proceso.\\
 
-Un operador max-pooling, se puede usar para la reducción del muestreo sobre las bandas de salida convolucionales, haciendo una reducción de la variabilidad. Esto lo realiza a través de un valor máximo como se muestra en la Ecuación ~\ref{eq:maxp}, dentro de un grupo de activaciones A. La banda máxima agrupada m está compuesta por f filtros relacionados $p_{m}=[p_{1m},...,p_{fm}] \in A^f$.
+Un operador max-pooling, se puede usar para la reducción del muestreo sobre las bandas de salida convolucionales, haciendo una reducción de la variabilidad. Esto lo realiza a través de un valor máximo de un grupo de \textit{R} activaciones.La \textit{m}-ésima banda de agrupación máxima está comprendido de \textit{J} filtros vinculados, como se muestra en la Ecuación ~\ref{eq:maxp}, dentro de un grupo de activaciones A. La banda máxima agrupada m está compuesta por f filtros relacionados $p_{m}=[p_{1m},...,p_{fm}] \in R^f$.
 
 \begin{equation}
 	\label{eq:maxp}
@@ -164,10 +168,40 @@ Es lo contrario al \textit{over-fitting}, siendo este cuando el modelo creado es
 
 \section{Visión artificial} La visión artificial o visión por computador, intenta replicar la capacidad que tienen algunos seres vivos para visualizar una imagen, entenderla y actuar con base en lo observado. Existe un crecimiento en los diferentes tipos de aplicaciones industriales que requieren el uso de técnicas de visión artificial. El  continuo  desarrollo  de  nuevos  algoritmos  y  aplicaciones,  hacen  de  esta  disciplina  una tecnología en constante evolución, la cual ha experimentado un rápido avance en las últimas décadas, así lo demuestran las numerosas investigaciones y publicaciones existentes en la comunidad científica.  Esto podría deberse a la gran cantidad de contenido visual como imágenes y video que se genera en  la  actualidad,  así  como  la  capacidad  de  procesamiento  y  almacenamiento  que  tienen  los dispositivos electrónicos y la disponibilidad de herramientas, librerías y lenguajes de programación para dicho fin \cite{ref_15}.
 
+\section{Matriz de confusión}
 
+Una matriz de confusión en el ámbito del aprendizaje automático, se considera una herramienta utilizada para la visibilidad la eficacia de un algoritmo de aprendizaje supervisado. Toda columna de la matriz de confusión describe el número de predicciones de cada rango, por otra parte, las filas describen los casos de la categoría actual, en otras palabras, en la práctica nos concede observar cómo funciona el modelo de clasificación, junto con los errores y aciertos encuentra el modelo.\\
+La matriz como se muestra en la Tabla \ref{table:Matriz}, se compone de términos de corrección de medidas estadísticas, llamados verdaderos positivos (VP), verdaderos negativos (VN), falsos positivos (FP) y falsos negativos (FN).\cite{maria2016performance} \
 
+\begin{table}[]
+	\centering
+	\begin{tabular}{|l|l|l|l}
+		\cline{1-3}
+		& \begin{tabular}[c]{@{}l@{}}Predicción\\ No\end{tabular}                                                & \begin{tabular}[c]{@{}l@{}}Predicción\\ Si\end{tabular}                                            &  \\ \cline{1-3}
+		\begin{tabular}[c]{@{}l@{}}Real \\ No\end{tabular} & \begin{tabular}[c]{@{}l@{}}VN:\\ Predicción es negativo y \\ resultado real son positivos.\end{tabular} & \begin{tabular}[c]{@{}l@{}}FP:\\ Predicción es afirmativa\\ y la realidad es negativa.\end{tabular} &  \\ \cline{1-3}
+		\begin{tabular}[c]{@{}l@{}}Real\\ Si\end{tabular}  & \begin{tabular}[c]{@{}l@{}}FN:\\ Predicción es negativa\\ y la realidad es negativa.\end{tabular}       & \begin{tabular}[c]{@{}l@{}}VP:\\ Predicción y resultado real\\ son positivos.\end{tabular}          &  \\ \cline{1-3}
+	\end{tabular}
+    \caption{Matriz de confusión}
+    \label{table:Matriz}
+\end{table}
 
+\subsection{Accuracy}
 
+Este término alude a la cercanía entre la eficacia de una medición y el valor real. La forma de calcularse se muestra en la Ecuación \ref{eq:Exactitud}.
+
+\begin{equation}
+	Accuracy=\frac{VP+VN}{VP+VN+FP+FN}
+	\label{eq:Exactitud}
+\end{equation}
+
+\subsection{Losses}
+
+Este término por otro lado consiste en lo mal o bien que actúa un modelo luego de cada iterización de optimización, expresado en la Ecuación \ref{eq:perdida}.
+
+\begin{equation}
+	Losses=\frac{FP+FN}{VP+VN+FP+FN}
+	\label{eq:perdida}
+\end{equation}
 
 \chapter{Estado del arte}
 

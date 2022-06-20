@@ -21,14 +21,14 @@ Warning--entry type for "Referencia2" isn't style-file defined
 --line 571 of file Bib/biblio.bib
 Warning--entry type for "Pytorch" isn't style-file defined
 --line 607 of file Bib/biblio.bib
-Warning--entry type for "cnnarchitecture" isn't style-file defined
---line 633 of file Bib/biblio.bib
 Warning--entry type for "normaespanola" isn't style-file defined
---line 1049 of file Bib/biblio.bib
+--line 1031 of file Bib/biblio.bib
 Warning--entry type for "informepapa2019" isn't style-file defined
---line 1091 of file Bib/biblio.bib
+--line 1073 of file Bib/biblio.bib
 Warning--entry type for "recoleccionpapa" isn't style-file defined
---line 1109 of file Bib/biblio.bib
+--line 1091 of file Bib/biblio.bib
+Warning--entry type for "prakharr0y" isn't style-file defined
+--line 1215 of file Bib/biblio.bib
 Warning--empty journal in ref_13
 Warning--empty booktitle in inproceedings
 Warning--empty author in Shrivastava2017
@@ -38,43 +38,43 @@ Warning--empty school in ref_2
 Warning--empty journal in ref_4
 You've used 56 entries,
             1876 wiz_defined-function locations,
-            769 strings with 13521 characters,
-and the built_in function-call counts, 12468 in all, are:
-= -- 1165
-> -- 512
+            770 strings with 13395 characters,
+and the built_in function-call counts, 12519 in all, are:
+= -- 1184
+> -- 493
 < -- 0
-+ -- 197
-- -- 141
-* -- 838
-:= -- 1786
++ -- 191
+- -- 135
+* -- 833
+:= -- 1782
 add.period$ -- 53
 call.type$ -- 56
 change.case$ -- 56
 chr.to.int$ -- 0
 cite$ -- 63
-duplicate$ -- 635
-empty$ -- 1266
-format.name$ -- 141
-if$ -- 3048
+duplicate$ -- 641
+empty$ -- 1275
+format.name$ -- 135
+if$ -- 3070
 int.to.chr$ -- 0
 int.to.str$ -- 56
 missing$ -- 44
 newline$ -- 172
 num.names$ -- 50
-pop$ -- 223
+pop$ -- 220
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 422
+skip$ -- 433
 stack$ -- 0
-substring$ -- 667
-swap$ -- 220
+substring$ -- 688
+swap$ -- 226
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 7
-while$ -- 111
+while$ -- 114
 width$ -- 58
-write$ -- 480
+write$ -- 483
 (There were 17 warnings)
