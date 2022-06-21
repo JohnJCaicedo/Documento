@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.23)  21 JUN 2022 00:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.23)  21 JUN 2022 00:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2145,7 +2145,7 @@ Package rerunfilecheck Info: File `PlantillaPG.out' has not changed.
 Here is how much of TeX's memory you used:
  29897 strings out of 478582
  593954 string characters out of 2845760
- 1025763 words of memory out of 3000000
+ 1026763 words of memory out of 3000000
  47199 multiletter control sequences out of 15000+600000
  476991 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2165,7 +2165,7 @@ ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/PC/AppData/
 Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/PC/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/
 PC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on PlantillaPG.pdf (79 pages, 25013383 bytes).
+Output written on PlantillaPG.pdf (79 pages, 25013387 bytes).
 PDF statistics:
  1251 PDF objects out of 1440 (max. 8388607)
  325 named destinations out of 1000 (max. 500000)
