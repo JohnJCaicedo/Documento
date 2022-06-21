@@ -51,7 +51,7 @@ Las técnicas de visión artificial no se han implementado en la fase de almacen
 Como consecuencia, en los últimos años, el sector agricultor de Colombia ha implementado herramientas tecnológicas que le permitan a los agricultores mejorar la calidad de sus productos para poder competir, tanto en el mercado local, como en el global. Pensando en esto, las diferentes técnicas de visión artificial han tenido un auge en la agricultura de precisión, ayudando a clasificar productos basándose en sus diferentes características de calidad sin importar su clase, sin embargo, las técnicas de visión artificial no han sido aprovechadas para mejorar el sector papicultor colombiano. \\
 
 
-Debido a esto, la problemática que se plantea como estrategia para facilitar el proceso de selección de tubérculos de papa en el país es, ¿Con el uso del aprendizaje profundo, es posible obtener resultados de clasificación de tubérculos de papa de acuerdo a sus características de calidad de forma que facilite el proceso y dar un valor agregado mayor al producto?\\
+Debido a esto, la problemática que se plantea como estrategia para facilitar el proceso de selección de tubérculos de papa ¿Con el uso del aprendizaje profundo, es posible obtener resultados de clasificación de tubérculos de papa de acuerdo a sus características de calidad de forma que facilite el proceso y dar un valor agregado mayor al producto?\\
 
 
 \chapter{Marco Conceptual}
@@ -73,25 +73,15 @@ Las funciones mas comunes son las no lineales, ya que las redes neuronales se po
 
 \subsection{Función ReLU}
 
-Esta función de activación no lineal traduce en español ”Unidad de línea rectificada” , esta tiene el beneficio de que no activa todas las neuronas simultáneamente, haciendo que las neuronas se desactiven únicamente cuando la salida de la transformación lineal sea igual a cero\cite{sharma2017activation}, matemáticamente se expresa en la Ecuación ~\ref{eq:ReLU}.
-
-\begin{equation}
-	\label{eq:ReLU}
-	f(x)=max(0,x)
-\end{equation}
+Esta función de activación no lineal traduce en español ”Unidad de línea rectificada” , esta tiene el beneficio de que no activa todas las neuronas simultáneamente, haciendo que las neuronas se desactiven únicamente cuando la salida de la transformación lineal sea igual a cero\cite{sharma2017activation}.
 
 \subsection{Función Softmax}
 
-Es una función compuesta por varias funciones sigmoides, la cual puede tomar cualquier numero dentro del grupo de reales y regresa la salida dentro del rango de 0 a 1, la diferencia entre ambas es que las sigmoides se usan para la clasificación binaria, en cambio la softmax es usada para la clasificación multiclase \cite{sharma2017activation}. Matemáticamente se puede expresar como en la Ecuación  ~\ref{eq:softmax}.
-
-\begin{equation}
-	\label{eq:softmax}
-	\sigma \left ( z \right )_j=\frac{e^{z_j}}{\sum ^{K}_{k=1}e^{z_k}}  for j=1,...,K.
-\end{equation}
+Es una función compuesta por varias funciones sigmoides, la cual puede tomar cualquier numero dentro del grupo de reales y regresa la salida dentro del rango de 0 a 1, la diferencia entre ambas es que las sigmoides se usan para la clasificación binaria, en cambio la softmax es usada para la clasificación multiclase \cite{sharma2017activation}.
 
 \section{Convolución Dilatada}
 
-Se trata de un método que busca ampliar la entrada insertando huecos entre sus elementos consecutivos. Siendo igual que una convolución normal, pero con la diferencia de que omite pixeles, con el fin de cubrir más área de la entrada, dando un campo de visión más amplio con el mismo coste computacional, por medio de un parámetro llamado factor de dilatación \textit{l}, indicando cuanto se expande la entrada \cite{wu2019fastfcn}. La Figura \ref{fig:cd} muestra un ejemplo de la implementación de la convolución dilatada.
+Se trata de un procedimiento que busca ampliar la entrada insertando huecos entre sus elementos consecutivos. Siendo igual que una convolución normal, pero con la diferencia de que omite pixeles, con el fin de cubrir más área de la entrada, dando un campo de visión más amplio con el mismo coste computacional, por medio de un parámetro llamado factor de dilatación \textit{l}, indicando cuanto se expande la entrada \cite{prakharr0y}. La Figura \ref{fig:cd} muestra un ejemplo de la implementación de la convolución dilatada.
 
 \begin{figure}[ht]
 	\centering
@@ -686,7 +676,7 @@ Como se aprecia en la Figura \ref{fig:AlexNet}, el modelo de \textit{AlexNet} to
 
 \subsubsection{\MakeUppercase{Modelo preentrenado VGG19}}
 
-La arquitectura \textit{VGG} fue planteada por Simonyan y Zisserman \cite{simonyan2014very},y es definida por Diaz-Gaxiola (2019) como ''grupos lineales de bloques que se encuentran formados por una cantidad determinada de capas convolucionales, una función de activación no lineal y una capa de \textit{Max pooling}, seguidos de tres capas densas y finalmente una capa de activación \textit{softmax}''. Esta arquitectura cuenta con $5$ bloques los cuales están distribuidos como se muestra en la Figura \ref{fig:VGG19}.				
+La arquitectura Visual Geometric Group \textit{(VGG)} fue planteada por Simonyan y Zisserman \cite{simonyan2014very},y es definida por Diaz-Gaxiola (2019) como ''\textit{grupos lineales de bloques que se encuentran formados por una cantidad determinada de capas convolucionales, una función de activación no lineal y una capa de \textit{Max pooling}, seguidos de tres capas densas y finalmente una capa de activación \textit{softmax}}''. Esta arquitectura cuenta con $5$ bloques los cuales están distribuidos como se muestra en la Figura \ref{fig:VGG19}.				
 
 \begin{figure}[ht]
 	\centering
@@ -794,15 +784,15 @@ En la Tabla \ref{fig:ACU_VGG19_2} se presenta la precisión del modelo obtenida 
 	\centering
 	\begin{tabular}{|c|c|}
 		\hline
-		CLASE 1 & 89.20 \bigstrut\\
+		CLASE 1 & 89,20 \bigstrut\\
 		\hline
-		CLASE 2 & 25.60 \bigstrut\\
+		CLASE 2 & 25,60 \bigstrut\\
 		\hline
-		CLASE 3 & 0.00 \bigstrut\\
+		CLASE 3 & 0,00 \bigstrut\\
 		\hline
-		CLASE 4 & 3.10 \bigstrut\\
+		CLASE 4 & 3,10 \bigstrut\\
 		\hline
-		\multicolumn{2}{|c|}{Precisión Total: 26.47} \bigstrut\\
+		\multicolumn{2}{|c|}{Precisión Total: 26,47} \bigstrut\\
 		\hline
 	\end{tabular}%
 	\caption{Precisión por clase en conjunto de \textit{entrenamiento}}
@@ -840,9 +830,7 @@ La arquitectura \textit{ResNet} (Residual Net), fue propuesta por un equipo de M
 	\label{fig:Bloque}
 \end{figure}
 
-Como se aprecia en la Figura \ref{fig:Bloque}, el bloque residual se compone de una ruta residual, (izquierda), y una conexión atajo (derecha), que las une. La ruta residual $F(x)$, esta compuesta de dos capas de pesos sinápticos (pueden ser densas o convolucionales), que se intercalan por una función rectificadora. El resultado se suma con la información que atraviesa la conexión atajo \textit{X "identidad"}. Y por ultimo se aplica nuevamente la función rectificadora. La información puede atravesar con ello dos caminos diferentes que son: el de la función de identidad $X$ o el de la ruta residual \textit{F(x)} \cite{ref_5}.\\
-
-En la arquitectura \textit{ResNet18}, las $18$ capas de esta arquitectura representan las 18 capas con pesos, en donde se incluye la capa de convolución y la capa totalmente conectada, excluyendo la capa de agrupación.
+El bloque residual esta compuesto por dos rutas, una ruta residual (izquierda), y una conexión atajo (derecha), que las une. Se observa que la ruta residual $F(x)$, se compone por dos capas de pesos relativos, los cuales están intercalados por una función rectificadora. El resultado se suma con la información obtenida por la conexión atajo \textit{X "identidad"}. Y para finalizar se aplica nuevamente la función rectificadora. Así, las capas pueden aprender las diferencias entre lo que esta entrando y lo que esta saliendo del bloque. Esto con el fin de evitar el \textit{overfitting}, al añadir más capas \cite{18-2}.
 
 \begin{figure}[ht]
 	\centering
@@ -851,7 +839,7 @@ En la arquitectura \textit{ResNet18}, las $18$ capas de esta arquitectura repres
 	\label{fig:ArqRes18}
 \end{figure}
 
-Como se puede observar en la Figura \ref{fig:ArqRes18}, la primera capa de convolución implementa una máscara de \textit{7 x 77 x 7}, con un tamaño de paso de $2$ y un relleno de $3$. Luego, se aplican las capas con la función de activación \textit{ReLu} y \textit{Max pooling}. Estos constituyen la primera parte del modulo de convolución \textit{conv1}. Luego hay cuatro etapas, cada etapa tiene múltiples módulos, cada módulo se llama un bloque de construcción, por ende se evidencia que hay 8 bloques de construcción, como se presenta en la Figura \ref{fig:ArqRes18} \cite{ref_5}.\\				
+Como se puede observar en la Figura \ref{fig:ArqRes18}, la primera capa de convolución implementa una máscara de \textit{7 x 77 x 7}, con un tamaño de paso de $2$ y un relleno de $3$. Luego, se aplican las capas con la función de activación \textit{ReLu} y \textit{Max pooling}. Luego hay cuatro etapas, cada etapa tiene múltiples módulos, cada módulo se llama un bloque de construcción, por ende se evidencia que hay 8 bloques de construcción, como se presenta en la Figura \ref{fig:ArqRes18} \cite{ref_5}.\\		
 	
 La Figura \ref{fig:preci_RESNET18}, muestra la precisión obtenida en el entrenamiento del modelo \textit{ResNet18} durante $50$ épocas, sin haber aplicado la optimización bayesiana.
 
@@ -956,7 +944,7 @@ En la Tabla \ref*{clase_RESNET18_2} se presenta la precisión del modelo aplicad
 		\hline
 		CLASE 4 & 0,00 \bigstrut\\
 		\hline
-		\multicolumn{2}{|c|}{Precisión Total: 23.52} \bigstrut\\
+		\multicolumn{2}{|c|}{Precisión Total: 23,52} \bigstrut\\
 		\hline
 	\end{tabular}%
 	\caption{Precisión por clase en conjunto de \textit{entrenamiento}}
@@ -972,7 +960,7 @@ La Tabla \ref{paraopt} muestra los hiperparámetros escogidos para optimizar uti
 	\begin{tabular}{|c|c|c|ll}
 		\cline{1-3}
 		Parámetro & Limite inferior              & Limite Superior &  &  \\ \cline{1-3}
-		Taza de Aprendizaje        & $1*10^{-6}$ & 0.4             &  &  \\ \cline{1-3}
+		Taza de Aprendizaje        & $1*10^{-6}$ & 0,4             &  &  \\ \cline{1-3}
 		Momento   & 0                            & 1               &  &  \\ \cline{1-3}
 		Tamaño del Paso   & 20                           & 40              &  &  \\ \cline{1-3}
 	\end{tabular}
@@ -1068,13 +1056,13 @@ La Tabla \ref{tab:Alexoptclases_2} presenta la precisión del modelo por cada cl
 		\hline
 		CLASE 1 & 0,00 \bigstrut\\
 		\hline
-		CLASE 2 & 3.50 \bigstrut\\
+		CLASE 2 & 3,50 \bigstrut\\
 		\hline
 		CLASE 3 & 100,00 \bigstrut\\
 		\hline
 		CLASE 4 & 0,50 \bigstrut\\
 		\hline
-		\multicolumn{2}{|c|}{Precisión Total: 14.70} \bigstrut\\
+		\multicolumn{2}{|c|}{Precisión Total: 14,70} \bigstrut\\
 		\hline
 	\end{tabular}%
 	\caption{Clasificación por clase en conjunto de \textit{entrenamiento}
@@ -1086,7 +1074,7 @@ A pesar de que la precisión en el entrenamiento del modelo superó el $60\%$ co
 
 \subsubsection{\MakeUppercase{Modelo  VGG19 optimizado}}
 
-La Figura \ref{fig:preci_vgg19_OPT}, muestra que la precisión obtenida en el entrenamiento del modelo \textit{VGG19} es de alrededor del $75 \%$ en validación, el cual es un valor que se acerca mucho al valor del modelo en entrenamiento de aproximadamente el $80 \%$.
+La Figura \ref{fig:preci_vgg19_OPT}, presenta que la precisión obtenida en el entrenamiento del modelo \textit{VGG19} es de alrededor del $75 \%$ en validación, el cual es un valor que se acerca mucho al valor del modelo en entrenamiento de aproximadamente el $80 \%$.
 
 \begin{figure}[ht]
 	\centering
@@ -1178,15 +1166,15 @@ La Tabla \ref{tab:VGG19optclases_2} presenta la precisión del modelo por cada c
 	\centering
 	\begin{tabular}{|c|c|}
 		\hline
-		CLASE 1 & 72.10 \bigstrut\\
+		CLASE 1 & 72,10 \bigstrut\\
 		\hline
-		CLASE 2 & 76.70 \bigstrut\\
+		CLASE 2 & 76,70 \bigstrut\\
 		\hline
-		CLASE 3 & 98.80 \bigstrut\\
+		CLASE 3 & 98,80 \bigstrut\\
 		\hline
-		CLASE 4 & 59.60 \bigstrut\\
+		CLASE 4 & 59,60 \bigstrut\\
 		\hline
-		\multicolumn{2}{|c|}{Precisión Total: 73.52} \bigstrut\\
+		\multicolumn{2}{|c|}{Precisión Total: 73,52} \bigstrut\\
 		\hline
 	\end{tabular}%
 	\caption{Clasificación por clase en conjunto de \textit{entrenamiento}}
@@ -1287,9 +1275,9 @@ La Tabla \ref{tab:VGG11optclases_2} presenta la precisión del modelo por cada c
 		\hline
 		CLASE 1 & 62,20 \bigstrut\\
 		\hline
-		CLASE 2 & 2.30 \bigstrut\\
+		CLASE 2 & 2,30 \bigstrut\\
 		\hline
-		CLASE 3 & 97.60 \bigstrut\\
+		CLASE 3 & 97,60 \bigstrut\\
 		\hline
 		CLASE 4 & 2,60 \bigstrut\\
 		\hline
@@ -1545,7 +1533,7 @@ Para la implementación del prototipo se hizo uso de los materiales y equipos pr
 		\hline
 		Selladora de banda continua & FR-900 & 1 \\
 		\hline
-		Fuente de voltaje &  & 1 \\
+		Fuente de voltaje & WX-DC2416 & 1 \\
 		\hline
 		Modulo Led & Star-Bikers & 5 \\
 		\hline

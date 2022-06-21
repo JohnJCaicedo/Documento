@@ -44,10 +44,8 @@ R.~Salas, ``Redes neuronales artificiales,'' {\em Universidad de Valpara{\i}so.
 S.~Sharma, S.~Sharma, and A.~Athaiya, ``Activation functions in neural
   networks,'' {\em towards data science}, vol.~6, no.~12, pp.~310--316, 2017.
 
-\bibitem{wu2019fastfcn}
-H.~Wu, J.~Zhang, K.~Huang, K.~Liang, and Y.~Yu, ``Fastfcn: Rethinking dilated
-  convolution in the backbone for semantic segmentation,'' {\em arXiv preprint
-  arXiv:1903.11816}, 2019.
+\bibitem{prakharr0y}
+prakharr0y, ``Dilated convolution,'' 2022.
 
 \bibitem{jabbar2015methods}
 H.~Jabbar and R.~Z. Khan, ``Methods to avoid over-fitting and under-fitting in
@@ -70,9 +68,6 @@ Y.~Zhu and C.~Huang, ``An improved median filtering algorithm for image noise
 J.~C. Tello, ``La visi{\'o}n artificial y las operaciones morfol{\'o}gicas en
   im{\'a}genes binarias,'' {\em Una Perspectiva de la Inteligencia Artificial
   en su 50 Aniversario}, p.~570, 2006.
-
-\bibitem{prakharr0y}
-prakharr0y, ``Dilated convolution,'' 2022.
 
 \bibitem{islam2021position}
 M.~A. Islam, M.~Kowal, S.~Jia, K.~G. Derpanis, and N.~D. Bruce, ``Position,
@@ -288,6 +283,9 @@ K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image
 A.~Atienza~Arroyo {\em et~al.}, ``Detecci{\'o}n e identificaci{\'o}n
   autom{\'a}tica de actrices y actores mediante el uso de algoritmos de deep
   learning,'' 2019.
+
+\bibitem{18-2}
+ Master's thesis.
 
 \bibitem{ref_5}
 K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image

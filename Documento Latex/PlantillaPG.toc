@@ -15,17 +15,17 @@
 \contentsline {section}{\numberline {2.4}Función de activación}{8}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Función ReLU}{8}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Función Softmax}{8}{subsection.2.4.2}%
-\contentsline {section}{\numberline {2.5}Convolución Dilatada}{9}{section.2.5}%
+\contentsline {section}{\numberline {2.5}Convolución Dilatada}{8}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Overfitting}{9}{section.2.6}%
 \contentsline {section}{\numberline {2.7}Underfitting}{9}{section.2.7}%
-\contentsline {section}{\numberline {2.8}Data Augmentation}{10}{section.2.8}%
+\contentsline {section}{\numberline {2.8}Data Augmentation}{9}{section.2.8}%
 \contentsline {section}{\numberline {2.9}Dropout}{10}{section.2.9}%
 \contentsline {section}{\numberline {2.10}Filtro de mediana}{10}{section.2.10}%
 \contentsline {section}{\numberline {2.11}Imagen Binaria}{10}{section.2.11}%
 \contentsline {section}{\numberline {2.12}Max pooling}{11}{section.2.12}%
-\contentsline {section}{\numberline {2.13}Padding}{12}{section.2.13}%
+\contentsline {section}{\numberline {2.13}Padding}{11}{section.2.13}%
 \contentsline {section}{\numberline {2.14}Procesamiento de imágenes}{12}{section.2.14}%
-\contentsline {section}{\numberline {2.15}Stride}{13}{section.2.15}%
+\contentsline {section}{\numberline {2.15}Stride}{12}{section.2.15}%
 \contentsline {section}{\numberline {2.16}Aprendizaje por transferencia}{13}{section.2.16}%
 \contentsline {section}{\numberline {2.17}Umbralización De una Imagen Digital}{13}{section.2.17}%
 \contentsline {section}{\numberline {2.18}Matriz De Confusión}{13}{section.2.18}%

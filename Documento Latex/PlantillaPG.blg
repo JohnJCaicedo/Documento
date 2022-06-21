@@ -29,51 +29,64 @@ Warning--entry type for "recoleccionpapa" isn't style-file defined
 --line 1091 of file Bib/biblio.bib
 Warning--entry type for "prakharr0y" isn't style-file defined
 --line 1309 of file Bib/biblio.bib
+Repeated entry---line 1447 of file Bib/biblio.bib
+ : @webpage{prakharr0y
+ :                    ,     url = {https://www.geeksforgeeks.org/dilated-convolution/%7D,     author = {prakharr0y},     title = {Dilated Convolution},     year = {2022},     lastchecked = {02 Marzo 2022},     note = {} }
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1453 of file Bib/biblio.bib
+ : 
+ : title={Clasificaci{\'o}n de lesiones en la piel con un ensemble de redes neuronales residuales},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--empty journal in ref_13
 Warning--empty booktitle in inproceedings
 Warning--empty author in Shrivastava2017
 Warning--empty journal in article5
 Warning--empty journal in bottou2012stochastic
 Warning--empty journal in ref_4
+Warning--empty author in 18-2
+Warning--empty title in 18-2
+Warning--empty school in 18-2
+Warning--empty year in 18-2
 You've used 64 entries,
             1876 wiz_defined-function locations,
-            814 strings with 14873 characters,
-and the built_in function-call counts, 14954 in all, are:
-= -- 1424
-> -- 594
+            811 strings with 14673 characters,
+and the built_in function-call counts, 14860 in all, are:
+= -- 1417
+> -- 578
 < -- 0
-+ -- 228
-- -- 164
-* -- 1018
-:= -- 2123
++ -- 223
+- -- 159
+* -- 1015
+:= -- 2100
 add.period$ -- 61
 call.type$ -- 64
-change.case$ -- 64
+change.case$ -- 63
 chr.to.int$ -- 0
-cite$ -- 70
-duplicate$ -- 767
-empty$ -- 1503
-format.name$ -- 164
-if$ -- 3661
+cite$ -- 74
+duplicate$ -- 764
+empty$ -- 1497
+format.name$ -- 159
+if$ -- 3637
 int.to.chr$ -- 0
 int.to.str$ -- 64
-missing$ -- 53
+missing$ -- 52
 newline$ -- 196
-num.names$ -- 58
-pop$ -- 243
+num.names$ -- 57
+pop$ -- 245
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 514
+skip$ -- 515
 stack$ -- 0
 substring$ -- 864
-swap$ -- 279
+swap$ -- 278
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 6
-while$ -- 140
+warning$ -- 10
+while$ -- 139
 width$ -- 66
-write$ -- 565
-(There were 16 warnings)
+write$ -- 562
+(There were 2 error messages)
