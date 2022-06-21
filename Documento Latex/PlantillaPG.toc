@@ -66,7 +66,7 @@
 \contentsline {section}{\numberline {6.1}Materiales y Métodos}{62}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Funcionamiento}{65}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Funcionamiento Mecánico}{65}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Implementación en Sistema Embebido}{66}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}Implementación En La Tarjeta de Desarrollo}{67}{section.6.3}%
 \contentsline {chapter}{\numberline {7}Conclusiones y Trabajo Futuro}{69}{chapter.7}%
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{71}{Item.8}%
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliografía}{71}{Item.6}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

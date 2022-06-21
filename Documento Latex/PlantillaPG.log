@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.25)  20 JUN 2022 18:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.25)  20 JUN 2022 21:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2012,7 +2012,7 @@ LaTeX Info: Redefining \% on input line 1533.
 [61 <./Figs/tabPaul.png>]
 chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1566--1569
+Underfull \hbox (badness 10000) in paragraph at lines 1568--1569
 
  []
 
@@ -2021,108 +2021,106 @@ Underfull \hbox (badness 10000) in paragraph at lines 1570--1571
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 1572--1573
+
+ []
+
 <Figs/300.png, id=850, 286.82156pt x 344.03531pt>
 File: Figs/300.png Graphic file (type png)
 <use Figs/300.png>
-Package pdftex.def Info: Figs/300.png  used on input line 1576.
-(pdftex.def)             Requested size: 86.04712pt x 103.21138pt.
+Package pdftex.def Info: Figs/300.png  used on input line 1578.
+(pdftex.def)             Requested size: 114.72658pt x 137.61168pt.
 <Figs/301.png, id=851, 293.59688pt x 170.13562pt>
 File: Figs/301.png Graphic file (type png)
 <use Figs/301.png>
-Package pdftex.def Info: Figs/301.png  used on input line 1582.
-(pdftex.def)             Requested size: 146.79807pt x 85.0676pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+Package pdftex.def Info: Figs/301.png  used on input line 1584.
+(pdftex.def)             Requested size: 176.15947pt x 102.08215pt.
 <Figs/302.png, id=852, 273.27094pt x 358.33875pt>
 File: Figs/302.png Graphic file (type png)
 <use Figs/302.png>
-Package pdftex.def Info: Figs/302.png  used on input line 1595.
-(pdftex.def)             Requested size: 81.9819pt x 107.50244pt.
+Package pdftex.def Info: Figs/302.png  used on input line 1599.
+(pdftex.def)             Requested size: 109.30643pt x 143.33296pt.
 <Figs/303.png, id=853, 229.60782pt x 280.04625pt>
 File: Figs/303.png Graphic file (type png)
 <use Figs/303.png>
-Package pdftex.def Info: Figs/303.png  used on input line 1601.
-(pdftex.def)             Requested size: 68.88287pt x 84.01451pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+Package pdftex.def Info: Figs/303.png  used on input line 1605.
+(pdftex.def)             Requested size: 114.80362pt x 140.02277pt.
 [62
 
 ]
-LaTeX Info: Redefining \. on input line 1636.
-LaTeX Info: Redefining \% on input line 1636.
+LaTeX Info: Redefining \. on input line 1618.
+LaTeX Info: Redefining \% on input line 1618.
  [63 <./Figs/300.png> <./Figs/301.png> <./Figs/302.png> <./Figs/303.png>]
-<Figs/66.png, id=874, 612.03656pt x 514.17094pt>
+<Figs/66.png, id=875, 612.03656pt x 514.17094pt>
 File: Figs/66.png Graphic file (type png)
 <use Figs/66.png>
-Package pdftex.def Info: Figs/66.png  used on input line 1639.
+Package pdftex.def Info: Figs/66.png  used on input line 1648.
 (pdftex.def)             Requested size: 306.01753pt x 257.08484pt.
-LaTeX Info: Redefining \. on input line 1646.
-LaTeX Info: Redefining \% on input line 1646.
+LaTeX Info: Redefining \. on input line 1655.
+LaTeX Info: Redefining \% on input line 1655.
 
 [64 <./Figs/66.png>]
-<Figs/200.jpg, id=882, 542.025pt x 963.6pt>
+<Figs/200.jpg, id=883, 542.025pt x 963.6pt>
 File: Figs/200.jpg Graphic file (type jpg)
 <use Figs/200.jpg>
-Package pdftex.def Info: Figs/200.jpg  used on input line 1654.
+Package pdftex.def Info: Figs/200.jpg  used on input line 1663.
 (pdftex.def)             Requested size: 542.02367pt x 963.59766pt.
-<Figs/201.jpg, id=884, 963.6pt x 542.025pt>
+<Figs/201.jpg, id=885, 963.6pt x 542.025pt>
 File: Figs/201.jpg Graphic file (type jpg)
 <use Figs/201.jpg>
-Package pdftex.def Info: Figs/201.jpg  used on input line 1663.
-(pdftex.def)             Requested size: 240.89941pt x 135.5059pt.
-LaTeX Info: Redefining \. on input line 1670.
-LaTeX Info: Redefining \% on input line 1670.
+Package pdftex.def Info: Figs/201.jpg  used on input line 1672.
+(pdftex.def)             Requested size: 269.80615pt x 151.76596pt.
+LaTeX Info: Redefining \. on input line 1679.
+LaTeX Info: Redefining \% on input line 1679.
  [65 <./Figs/200.jpg> <./Figs/201.jpg>]
-<Figs/202.jpg, id=893, 542.025pt x 963.6pt>
+<Figs/202.jpg, id=894, 542.025pt x 963.6pt>
 File: Figs/202.jpg Graphic file (type jpg)
 <use Figs/202.jpg>
-Package pdftex.def Info: Figs/202.jpg  used on input line 1673.
+Package pdftex.def Info: Figs/202.jpg  used on input line 1682.
 (pdftex.def)             Requested size: 542.02367pt x 963.59766pt.
-<Figs/203.jpg, id=895, 1606.0pt x 903.375pt>
+<Figs/203.jpg, id=896, 1606.0pt x 903.375pt>
 File: Figs/203.jpg Graphic file (type jpg)
 <use Figs/203.jpg>
-Package pdftex.def Info: Figs/203.jpg  used on input line 1683.
-(pdftex.def)             Requested size: 240.8896pt x 135.5004pt.
+Package pdftex.def Info: Figs/203.jpg  used on input line 1692.
+(pdftex.def)             Requested size: 321.19432pt x 180.6718pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1691--1692
+Underfull \hbox (badness 10000) in paragraph at lines 1700--1701
 
  []
 
-LaTeX Info: Redefining \. on input line 1694.
-LaTeX Info: Redefining \% on input line 1694.
+LaTeX Info: Redefining \. on input line 1701.
+LaTeX Info: Redefining \% on input line 1701.
 [66 <./Figs/202.jpg> <./Figs/203.jpg>]
-<Figs/implementacion.jpg, id=902, 642.4pt x 481.8pt>
+<Figs/implementacion.jpg, id=904, 642.4pt x 481.8pt>
 File: Figs/implementacion.jpg Graphic file (type jpg)
 <use Figs/implementacion.jpg>
-Package pdftex.def Info: Figs/implementacion.jpg  used on input line 1697.
-(pdftex.def)             Requested size: 160.59961pt x 120.44969pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1725--1726
+Package pdftex.def Info: Figs/implementacion.jpg  used on input line 1706.
+(pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
+LaTeX Info: Redefining \. on input line 1713.
+LaTeX Info: Redefining \% on input line 1713.
+ [67 <./Figs/implementacion.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 1735--1736
 
  []
 
-LaTeX Info: Redefining \. on input line 1728.
-LaTeX Info: Redefining \% on input line 1728.
-[67 <./Figs/implementacion.jpg>]
-LaTeX Info: Redefining \. on input line 1729.
-LaTeX Info: Redefining \% on input line 1729.
- [68]
+LaTeX Info: Redefining \. on input line 1739.
+LaTeX Info: Redefining \% on input line 1739.
+[68]
 chapter 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1742--1743
+Underfull \hbox (badness 10000) in paragraph at lines 1751--1752
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1744--1745
+Underfull \hbox (badness 10000) in paragraph at lines 1753--1754
 
  []
 
-[69
+) [69
 
-])
+]
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
  [70] (PlantillaPG.bbl [71
@@ -2175,10 +2173,10 @@ Package rerunfilecheck Info: File `PlantillaPG.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29937 strings out of 478659
- 595792 string characters out of 2845920
- 1009662 words of memory out of 3000000
- 47153 multiletter control sequences out of 15000+600000
+ 29939 strings out of 478659
+ 595860 string characters out of 2845920
+ 1009876 words of memory out of 3000000
+ 47156 multiletter control sequences out of 15000+600000
  411162 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,15n,109p,10657b,853s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2199,9 +2197,9 @@ nts/cm/cmssbx10.pfb><C:/Users/Johnj/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmsy10.pfb><C:/Users/Johnj/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Johnj/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on PlantillaPG.pdf (79 pages, 25021878 bytes).
+Output written on PlantillaPG.pdf (79 pages, 25023236 bytes).
 PDF statistics:
- 1260 PDF objects out of 1440 (max. 8388607)
- 328 named destinations out of 1000 (max. 500000)
+ 1261 PDF objects out of 1440 (max. 8388607)
+ 327 named destinations out of 1000 (max. 500000)
  699 words of extra memory for PDF output out of 10000 (max. 10000000)
 

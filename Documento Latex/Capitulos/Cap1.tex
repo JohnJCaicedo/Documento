@@ -1538,6 +1538,7 @@ Para la implementación del prototipo se hizo uso de los materiales y equipos pr
 
 \begin{table}[ht]
 	\centering
+	\resizebox{10cm}{!} {
 	\begin{tabular}{|p{5cm}|p{3.5cm}|p{2.5cm}|}
 		\hline
 		NOMBRE & REFERENCIA & CANTIDAD \\ 
@@ -1559,46 +1560,49 @@ Para la implementación del prototipo se hizo uso de los materiales y equipos pr
 		Tarjeta de desarrollo & Jetson Nano V & 1 \\
 		\hline
 	\end{tabular}	
+	}
 	\caption{Materiales y Equipos}
 	\label{table:materiales}
 \end{table}	
 
-Se usa la estructura tomada de una maquina selladora de banda continua horizontal \textit{FR-900}, la cual es impulsada por un motor \textit{DC} a $220, \ V$ de referencia \textit{ZYT 90-01} con una velocidad de $2000 \ rpm$ y una potencia de $50 \ W$. La máquina se alimenta con $110 \ VAC$ a $60 \ HZ$ y su estructura es en acero inoxidable.
-\\
+Se usa la estructura tomada de una maquina selladora de banda continua horizontal \textit{FR-900}, la cual es impulsada por un motor \textit{DC} a $220, \ V$ de referencia \textit{ZYT 90-01} con una velocidad de $2000 \ rpm$ y una potencia de $50 \ W$. La máquina se alimenta con $110 \ VAC$ a $60 \ HZ$ y su estructura es en acero inoxidable.\\
+
 Esta máquina fue seleccionada, ya que se encuentra certificada para ser empleada en diferentes campos, entre ellos se encuentra la industria alimenticia. La máquina posee dimensiones de $850 \ x \ 320 \ x \ 550 \ (mm) $, lo cual hace que sea fácil de transportar, además de esto la cinta transportadora tiene la capacidad para transportar productos con un peso de hasta $3 \ Kg$, suficiente para cubrir los intereses del proyecto.\\
 
 La maquina fue adaptada para posicionar una estructura elaborada en acetato con medidas de, \textit{35 x 25(cm)} las laminas frontal y trasera (Figuras \ref{fig:frontal} y \ref{fig:trasera}), \textit{16 x 25(cm)} lamina superior (Figura \ref{fig:superior}), \textit{20 x 16(cm)} laminas laterales como se muestra en la Figura \ref{fig:lateral}.\\
 
-\begin{figure}[h!]
+\begin{figure}[ht]
 	\centering
 	\begin{subfigure}{0.47\linewidth}
 		\centering
-		\includegraphics[scale=0.3]{Figs/300.png}
+		\includegraphics[scale=0.4]{Figs/300.png}
 		\caption{Lamina Frontal}
 		\label{fig:frontal}
 	\end{subfigure}
 	\begin{subfigure}{0.47\linewidth}
 		\centering
-		\includegraphics[scale=0.5]{Figs/301.png}
+		\includegraphics[scale=0.6]{Figs/301.png}
 		\caption{Lamina superior}
 		\label{fig:superior}
 	\end{subfigure}
 	\caption{Estructura de Análisis Laminas Principales\\
 		Fuente: Elaboración Propia}
 	\label{fig:estructura}
-\end{figure} 
+\end{figure}
+ 
+\vspace{1cm}
 
-\begin{figure}[h!]
+\begin{figure}[ht]
 	\centering
 	\begin{subfigure}{0.47\linewidth}
 		\centering
-		\includegraphics[scale=0.3]{Figs/302.png}
+		\includegraphics[scale=0.4]{Figs/302.png}
 		\caption{Lamina lateral}
 		\label{fig:lateral}
 	\end{subfigure}
 	\begin{subfigure}{0.47\linewidth}
 		\centering
-		\includegraphics[scale=0.3]{Figs/303.png}
+		\includegraphics[scale=0.5]{Figs/303.png}
 		\caption{Lamina Trasera}
 		\label{fig:trasera}
 	\end{subfigure}
@@ -1607,11 +1611,14 @@ La maquina fue adaptada para posicionar una estructura elaborada en acetato con 
 	\label{fig:estructuras}
 \end{figure}   
  
-Las laminas fueron diseñadas con las medidas necesarias para posicionar algunos elementos, que permitieran realizar la clasificación de los tubérculos, como lo son bombillos, un sensor óptico y una cámara web. De igual forma se modificó el sistema eléctrico de la máquina, con el fin de anular las funciones de sellado, es por esto que en la Figura \ref{fig:Esquema} se presenta el esquema eléctrico realizado para realizar el arranque directo del motor \textit{DC}, accionado por la señal emitida desde un sensor foto eléctrico. La Tabla \ref{table:esquema}, presenta el listado de elementos implementados en el esquema eléctrico.
+\vspace{1cm}
+
+Las laminas fueron diseñadas con las medidas necesarias para posicionar los  bombillos, un sensor foto eléctrico y una cámara web. De igual forma se modificó el sistema eléctrico de la máquina, con el fin de anular las funciones de sellado, es por esto que en la Figura \ref{fig:Esquema} se presenta el esquema eléctrico diseñado, para realizar el arranque directo del motor \textit{DC}, accionado por la señal emitida desde el sensor. La Tabla \ref{table:esquema}, muestra el listado de componentes eléctricos necesarios.
  
+ \newpage
  \begin{table}[ht]
  	\centering
- 	
+ 	\resizebox{10cm}{!} { 	
  	\begin{tabular}{|p{2cm}|p{5cm}|p{3cm}|}
  		\hline
  		SÍMBOLO & NOMBRE & CANTIDAD \\ 
@@ -1629,15 +1636,17 @@ Las laminas fueron diseñadas con las medidas necesarias para posicionar algunos
  		K2 & Relé & 1 \\
  		\hline
  	\end{tabular}
- 	\caption{Elementos Esquema Eléctrico}
+	}
+ 	\caption{Componentes Eléctricos de La Máquina}
  	\label{table:esquema}
  \end{table}	
  
-\newpage
+El esquema eléctrico de la Figura \ref{fig:Esquema} fue hecho con el software \textit{FluidSim} que permite la simulación de elementos eléctricos para verificar el funcionamiento de la lógica cableada.
+
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.5]{Figs/66.png}
-	\caption{Esquema eléctrico}
+	\caption{Esquema Eléctrico Diseñado\\Fuente: Elaboración Propia}
 	\label{fig:Esquema}
 \end{figure}
 
@@ -1651,8 +1660,8 @@ En la Figura \ref{fig:indicador}, se presenta el tablero de control, donde se en
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[angle=270, scale=0.25]{Figs/200.jpg}
-	\caption{Indicador Luminoso}
+	\includegraphics[angle=270, scale=0.28]{Figs/200.jpg}
+	\caption{Panel De Control\\Fuente: Elaboración Propia}
 	\label{fig:indicador}
 \end{figure}
 
@@ -1660,8 +1669,8 @@ Se genera la conmutación del relé para la activación del motor, el cual se en
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.25]{Figs/201.jpg}
-	\caption{Caja Reductora De Transmisión A Engranajes Rectos}
+	\includegraphics[scale=0.28]{Figs/201.jpg}
+	\caption{Caja Reductora De Transmisión A Engranajes Rectos\\Fuente: Elaboración Propia}
 	\label{fig:caja}
 \end{figure}
 
@@ -1670,8 +1679,8 @@ En donde el último engranaje se encuentra conectado, y transmite la energía a 
 \newpage
 \begin{figure}[ht]
 	\centering
-	\includegraphics[angle=270, scale=0.21]{Figs/202.jpg}
-	\caption{Conexión Engranajes y Rodillo Tensor}
+	\includegraphics[angle=270, scale=0.3]{Figs/202.jpg}
+	\caption{Conexión Engranajes y Rodillo Tensor\\Fuente: Elaboración Propia}
 	\label{fig:eje}
 \end{figure}
 
@@ -1680,27 +1689,28 @@ Una vez se inicia el movimiento de la banda transportadora, este seguirá hasta 
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.15]{Figs/203.jpg}
-	\caption{Detección del sensor fotoeléctrico}
+	\includegraphics[scale=0.2]{Figs/203.jpg}
+	\caption{Posicionamiento Del Sensor Fotoeléctrico\\Fuente: Elaboración Propia}
 	\label{fig:sensor}
 \end{figure}
 
 
-\subsection{Implementación en Sistema Embebido}
+\section{Implementación En La Tarjeta de Desarrollo}
 
-Para el funcionamiento del algoritmo en tiempo real, en el prototipo construido, se utilizó una tarjeta de desarrollo Nvidia Jetson Nano $2 \ GB$, debido a que cuenta con una tarjeta gráfica y está diseñada para ejecutar modelos de redes neuronales. La implementación del algoritmo, debido a que la red fue entrenada con imágenes de tubérculos de papa estáticas, se realizó de igual forma.\\
+Para el funcionamiento del algoritmo en tiempo real, en el prototipo construido, se utilizó una tarjeta de desarrollo \textit{Nvidia Jetson Nano} de $2 \ GB$ de memoria \textit{RAM}, debido a que cuenta con una tarjeta gráfica y está diseñada para ejecutar modelos de redes neuronales \cite{cass2020nvidia}. La implementación del algoritmo en la tarjeta de desarrollo se realizó para que hiciera el análisis de las imágenes en estática debido a que la red fue entrenada con imágenes de tubérculos de papa estáticas. El modelo implementado en la tarjeta de desarrollo, que fue el que obtuvo la mejor precisión, fue el modelo \textit{VGG19} con hiperparámetros optimizados.\\
 
-El algoritmo captura una foto desde la webcam, realiza el procesamiento en la red neuronal y posteriormente, la clasificación por tamaño. Los resultados de cada imágen son mostrados por consola y la imágen capturada es guardada en formato $.jpg$, con la información de las predicciones, para verificar si la clasificación fue correcta. La imagen \ref{fig:implementacion}, muestra una de las papas pasando dentro de las estructura hecha para la clasificación.
+El algoritmo captura una foto desde la cámara, realiza el procesamiento en la red neuronal y posteriormente, la clasificación por tamaño. Los resultados de cada imágen son mostrados por consola y la imágen capturada es guardada en formato $.jpg$, con la información de las predicciones que realizó del modelo. Para verificar si la clasificación fue correcta, los tubérculos de papa fueron escogidos y clasificados de forma manual, luego fueron comparados con la predicción. La imagen \ref{fig:implementacion}, muestra una de las papas pasando dentro de las estructura hecha para la clasificación.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.25]{Figs/implementacion.jpg}
-	\caption{Tubérculo de Papa Dentro de La Estructura}
+	\includegraphics[scale=0.3]{Figs/implementacion.jpg}
+	\caption{Tubérculo de Papa Dentro de La Estructura\\Fuente: Elaboración Propia}
 	\label{fig:implementacion}
 \end{figure}
 
-Se realizó un experimento con 50 papas de las diferentes clases, para verificar la precisión del algoritmo. La Tabla \ref{table:res} muestra los resultados de algunas de las papas utilizadas.
+Se realizó un experimento con $50$ papas de las diferentes clases, para verificar la precisión del algoritmo. La Tabla \ref{table:res} muestra los resultados obtenidos con las muestras utilizadas.
 
+\newpage
 \begin{table}[ht]
 	\centering
 	\begin{tabular}{|cc|cc|}
@@ -1717,12 +1727,12 @@ Se realizó un experimento con 50 papas de las diferentes clases, para verificar
 		\multicolumn{1}{|c|}{Clase 3} & Mediana    & \multicolumn{1}{c|}{Clase 3} & Mediana    \\ \hline
 		\multicolumn{1}{|c|}{Clase 1} & Mediana    & \multicolumn{1}{c|}{Clase 1} & Mediana    \\ \hline
 	\end{tabular}
-	\caption{Resultados Papas Predichas}
+	\caption{Resultados De Predicciones Hechas}
 	\label{table:res}
 \end{table}
 
 
-De las 50 papas utilizadas para la verificación, se obtuvo un resultado de $80\%$ de clases con correcta predicción y $88\%$ de tamaños correctamente clasificados. Esto da una precisión total de $85\%$ para las papas que fueron correctamente clasificadas en ambas categorías.\\
+De las $50$ papas utilizadas para la verificación, se obtuvo un resultado de $80\%$ de clases con correcta predicción y $88\%$ de tamaños correctamente clasificados. Esto da una precisión total de $85\%$ para las papas que fueron correctamente clasificadas en ambas categorías.\\
 
 El tiempo de ejecución del algoritmo, desde el momento en el que toma la foto y la procesa, hasta que realiza la clasificación, varia entre los $2$ y $3$ segundos. El tiempo que demora la papa en llegar desde el comienzo de la banda transportadora, hasta la posición dentro de la estructura de análisis, es de $7$ segundos, por lo tanto, se puede asumir un tiempo promedio de $10$ segundos en analizar 1 tubérculo de papa. Este prototipo clasificaría $100$ tubérculos de papa cada $15$ minutos.	 	
 
@@ -1734,8 +1744,7 @@ El tiempo de ejecución del algoritmo, desde el momento en el que toma la foto y
 	\item La identificación de daños presentes en los tubérculos, se realiza gracias al conjunto de capas convolucionales y de max pooling que tiene la red neuronal, para identificar las secciones de la imagen que tienen daño. Sin embargo, el uso de técnicas de segmentación de color, previo a la implementación de la RNC, mejora el desempeño del modelo y facilita el aprendizaje de las características que presenta el tubérculo.
 	
 	\item La clasificación de tamaño realizada con enfoque en calcular los el perímetro del tubérculo, funciona de manera eficiente, siempre y cuando las condiciones de iluminación sean uniformes y los tubérculos no posean daños fisiológicos, ya que esto trae como consecuencia perdidas en la precisión del algoritmo. Esto puede ser corregido implementando técnicas como \textit{el algoritmo de rastreo de 8 vecinos}.
-	\item
-	\item
+
 \end{enumerate}
 
 

@@ -35,45 +35,45 @@ Warning--empty author in Shrivastava2017
 Warning--empty journal in article5
 Warning--empty journal in bottou2012stochastic
 Warning--empty journal in ref_4
-You've used 63 entries,
+You've used 64 entries,
             1876 wiz_defined-function locations,
-            807 strings with 14705 characters,
-and the built_in function-call counts, 14678 in all, are:
-= -- 1392
-> -- 590
+            814 strings with 14873 characters,
+and the built_in function-call counts, 14954 in all, are:
+= -- 1424
+> -- 594
 < -- 0
-+ -- 226
-- -- 163
-* -- 999
-:= -- 2086
-add.period$ -- 60
-call.type$ -- 63
-change.case$ -- 63
++ -- 228
+- -- 164
+* -- 1018
+:= -- 2123
+add.period$ -- 61
+call.type$ -- 64
+change.case$ -- 64
 chr.to.int$ -- 0
-cite$ -- 69
-duplicate$ -- 752
-empty$ -- 1476
-format.name$ -- 163
-if$ -- 3592
+cite$ -- 70
+duplicate$ -- 767
+empty$ -- 1503
+format.name$ -- 164
+if$ -- 3661
 int.to.chr$ -- 0
-int.to.str$ -- 63
-missing$ -- 52
-newline$ -- 193
-num.names$ -- 57
-pop$ -- 242
+int.to.str$ -- 64
+missing$ -- 53
+newline$ -- 196
+num.names$ -- 58
+pop$ -- 243
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 503
+skip$ -- 514
 stack$ -- 0
-substring$ -- 840
-swap$ -- 272
+substring$ -- 864
+swap$ -- 279
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 6
-while$ -- 136
-width$ -- 65
-write$ -- 554
+while$ -- 140
+width$ -- 66
+write$ -- 565
 (There were 16 warnings)

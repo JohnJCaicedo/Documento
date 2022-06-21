@@ -294,4 +294,9 @@ K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image
   recognition,'' in {\em Proceedings of the IEEE conference on computer vision
   and pattern recognition}, pp.~770--778, 2016.
 
+\bibitem{cass2020nvidia}
+S.~Cass, ``Nvidia makes it easy to embed ai: The jetson nano packs a lot of
+  machine-learning power into diy projects-[hands on],'' {\em IEEE Spectrum},
+  vol.~57, no.~7, pp.~14--16, 2020.
+
 \end{thebibliography}
