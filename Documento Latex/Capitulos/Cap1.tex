@@ -1694,7 +1694,6 @@ Una vez se inicia el movimiento de la banda transportadora, este seguirá hasta 
 	\label{fig:sensor}
 \end{figure}
 
-
 \section{Implementación En La Tarjeta de Desarrollo}
 
 Para el funcionamiento del algoritmo en tiempo real, en el prototipo construido, se utilizó una tarjeta de desarrollo \textit{Nvidia Jetson Nano} de $2 \ GB$ de memoria \textit{RAM}, debido a que cuenta con una tarjeta gráfica y está diseñada para ejecutar modelos de redes neuronales \cite{cass2020nvidia}. La implementación del algoritmo en la tarjeta de desarrollo se realizó para que hiciera el análisis de las imágenes en estática debido a que la red fue entrenada con imágenes de tubérculos de papa estáticas. El modelo implementado en la tarjeta de desarrollo, que fue el que obtuvo la mejor precisión, fue el modelo \textit{VGG19} con hiperparámetros optimizados.\\
@@ -1713,23 +1712,43 @@ Se realizó un experimento con $50$ papas de las diferentes clases, para verific
 \newpage
 \begin{table}[ht]
 	\centering
-	\begin{tabular}{|cc|cc|}
-		\hline
-		\multicolumn{2}{|c|}{Real}                 & \multicolumn{2}{c|}{Prediccion}           \\ \hline
-		\multicolumn{1}{|c|}{Clase}   & Tamaño     & \multicolumn{1}{c|}{Clase}   & Tamaño     \\ \hline
-		\multicolumn{1}{|c|}{Clase 1} & Grande     & \multicolumn{1}{c|}{Clase 1} & Mediano    \\ \hline
-		\multicolumn{1}{|c|}{Clase 1} & Muy Grande & \multicolumn{1}{c|}{Clase4}  & Muy Grande \\ \hline
-		\multicolumn{1}{|c|}{Clase 4} & Mediana    & \multicolumn{1}{c|}{Clase 4} & Mediana    \\ \hline
-		\multicolumn{1}{|c|}{Clase 3} & Grande     & \multicolumn{1}{c|}{Clase 3} & Grande     \\ \hline
-		\multicolumn{1}{|c|}{Clase 2} & Mediana    & \multicolumn{1}{c|}{Clase 2} & Mediana    \\ \hline
-		\multicolumn{1}{|c|}{Clase 1} & Mediana    & \multicolumn{1}{c|}{Clase 2} & Grande     \\ \hline
-		\multicolumn{1}{|c|}{Clase 4} & Grande     & \multicolumn{1}{c|}{Clase 3} & Grande     \\ \hline
-		\multicolumn{1}{|c|}{Clase 3} & Mediana    & \multicolumn{1}{c|}{Clase 3} & Mediana    \\ \hline
-		\multicolumn{1}{|c|}{Clase 1} & Mediana    & \multicolumn{1}{c|}{Clase 1} & Mediana    \\ \hline
+	\resizebox{15cm}{!} {
+	\begin{tabular}{|cc|cl|l|cc|cc|}
+		\cline{1-4} \cline{6-9}
+		\multicolumn{2}{|c|}{Real}                 & \multicolumn{2}{c|}{Predicción}           &  & \multicolumn{2}{c|}{Real}                 & \multicolumn{2}{c|}{Predicción}           \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase}   & Tamaño     & \multicolumn{1}{c|}{Clase}   & Tamaño     &  & \multicolumn{1}{c|}{Clase}   & Tamaño     & \multicolumn{1}{c|}{Clase}   & Tamaño     \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 1} & Grande     & \multicolumn{1}{c|}{Clase 1} & Muy Grande &  & \multicolumn{1}{c|}{Clase 1} & Muy Grande & \multicolumn{1}{c|}{Clase 2} & Muy Grande \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 1} & Muy Grande & \multicolumn{1}{c|}{Clase 4} & Muy Grande &  & \multicolumn{1}{c|}{Clase 1} & Mediana    & \multicolumn{1}{c|}{Clase 1} & Mediana    \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 4} & Mediana    & \multicolumn{1}{c|}{Clase 4} & Mediana    &  & \multicolumn{1}{c|}{Clase 3} & Grande     & \multicolumn{1}{c|}{Clase 3} & Grande     \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 3} & Grande     & \multicolumn{1}{c|}{Clase 3} & Grande     &  & \multicolumn{1}{c|}{Clase 4} & Muy Grande & \multicolumn{1}{c|}{Clase 4} & Muy Grande \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 2} & Mediana    & \multicolumn{1}{c|}{Clase 2} & Mediana    &  & \multicolumn{1}{c|}{Clase 2} & Mediana    & \multicolumn{1}{c|}{Clase 2} & Mediana    \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 1} & Mediana    & \multicolumn{1}{c|}{Clase 2} & Grande     &  & \multicolumn{1}{c|}{Clase 1} & Muy Grande & \multicolumn{1}{c|}{Clase 1} & Muy Grande \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 4} & Grande     & \multicolumn{1}{c|}{Clase 3} & Grande     &  & \multicolumn{1}{c|}{Clase 2} & Grande     & \multicolumn{1}{c|}{Clase 2} & Grande     \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 3} & Mediana    & \multicolumn{1}{c|}{Clase 3} & Mediana    &  & \multicolumn{1}{c|}{Clase 1} & Mediana    & \multicolumn{1}{c|}{Clase 1} & Mediana    \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 1} & Mediana    & \multicolumn{1}{c|}{Clase 1} & Grande     &  & \multicolumn{1}{c|}{Clase 4} & Grande     & \multicolumn{1}{c|}{Clase 3} & Mediana    \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 2} & Grande     & \multicolumn{1}{c|}{Clase 2} & Grande     &  & \multicolumn{1}{c|}{Clase 4} & Muy Grande & \multicolumn{1}{c|}{Clase 4} & Muy Grande \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 2} & Muy Grande & \multicolumn{1}{c|}{Clase 2} & Muy Grande &  & \multicolumn{1}{c|}{Clase 2} & Grande     & \multicolumn{1}{c|}{Clase 2} & Grande     \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 3} & Grande     & \multicolumn{1}{c|}{Clase 4} & Grande     &  & \multicolumn{1}{c|}{Clase 2} & Muy Grande & \multicolumn{1}{c|}{Clase 2} & Muy Grande \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 4} & Mediana    & \multicolumn{1}{c|}{Clase 4} & Mediana    &  & \multicolumn{1}{c|}{Clase 4} & Muy Grande & \multicolumn{1}{c|}{Clase 4} & Muy Grande \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 2} & Grande     & \multicolumn{1}{c|}{Clase 2} & Grande     &  & \multicolumn{1}{c|}{Clase 2} & Grande     & \multicolumn{1}{c|}{Clase 2} & Grande     \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 4} & Muy Grande & \multicolumn{1}{c|}{Clase 3} & Muy Grande &  & \multicolumn{1}{c|}{Clase 3} & Mediana    & \multicolumn{1}{c|}{Clase 3} & Mediana    \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 1} & Mediana    & \multicolumn{1}{c|}{Clase 1} & Mediana    &  & \multicolumn{1}{c|}{Clase 4} & Muy Grande & \multicolumn{1}{c|}{Clase 4} & Muy Grande \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 3} & Muy Grande & \multicolumn{1}{c|}{Clase 3} & Muy Grande &  & \multicolumn{1}{c|}{Clase 2} & Grande     & \multicolumn{1}{c|}{Clase 2} & Grande     \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 3} & Grande     & \multicolumn{1}{c|}{Clase 2} & Muy Grande &  & \multicolumn{1}{c|}{Clase 3} & Muy Grande & \multicolumn{1}{c|}{Clase 3} & Muy Grande \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 1} & Mediana    & \multicolumn{1}{c|}{Clase 1} & Mediana    &  & \multicolumn{1}{c|}{Clase 3} & Grande     & \multicolumn{1}{c|}{Clase 3} & Grande     \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 4} & Grande     & \multicolumn{1}{c|}{Clase 4} & Grande     &  & \multicolumn{1}{c|}{Clase 4} & Muy Grande & \multicolumn{1}{c|}{Clase 4} & Grande     \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 1} & Muy Grande & \multicolumn{1}{c|}{Clase 1} & Muy Grande &  & \multicolumn{1}{c|}{Clase 2} & Mediana    & \multicolumn{1}{c|}{Clase 1} & Mediana    \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 3} & Grande     & \multicolumn{1}{c|}{Clase 4} & Grande     &  & \multicolumn{1}{c|}{Clase 4} & Muy Grande & \multicolumn{1}{c|}{Clase 4} & Muy Grande \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 1} & Mediana    & \multicolumn{1}{c|}{Clase 1} & Mediana    &  & \multicolumn{1}{c|}{Clase 2} & Mediana    & \multicolumn{1}{c|}{Clase 2} & Mediana    \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 3} & Grande     & \multicolumn{1}{c|}{Clase 3} & Grande     &  & \multicolumn{1}{c|}{Clase 2} & Grande     & \multicolumn{1}{c|}{Clase 2} & Grande     \\ \cline{1-4} \cline{6-9} 
+		\multicolumn{1}{|c|}{Clase 4} & Muy Grande & \multicolumn{1}{c|}{Clase 4} & Muy Grande &  & \multicolumn{1}{c|}{Clase 1} & Mediana    & \multicolumn{1}{c|}{Clase 1} & Mediana    \\ \cline{1-4} \cline{6-9} 
 	\end{tabular}
+	}
 	\caption{Resultados De Predicciones Hechas}
 	\label{table:res}
 \end{table}
+
+
 
 
 De las $50$ papas utilizadas para la verificación, se obtuvo un resultado de $80\%$ de clases con correcta predicción y $88\%$ de tamaños correctamente clasificados. Esto da una precisión total de $85\%$ para las papas que fueron correctamente clasificadas en ambas categorías.\\

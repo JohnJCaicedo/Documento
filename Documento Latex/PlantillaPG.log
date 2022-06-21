@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.25)  20 JUN 2022 21:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.25)  20 JUN 2022 21:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2085,36 +2085,36 @@ File: Figs/203.jpg Graphic file (type jpg)
 Package pdftex.def Info: Figs/203.jpg  used on input line 1692.
 (pdftex.def)             Requested size: 321.19432pt x 180.6718pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1700--1701
+Underfull \hbox (badness 10000) in paragraph at lines 1699--1700
 
  []
 
-LaTeX Info: Redefining \. on input line 1701.
-LaTeX Info: Redefining \% on input line 1701.
+LaTeX Info: Redefining \. on input line 1700.
+LaTeX Info: Redefining \% on input line 1700.
 [66 <./Figs/202.jpg> <./Figs/203.jpg>]
 <Figs/implementacion.jpg, id=904, 642.4pt x 481.8pt>
 File: Figs/implementacion.jpg Graphic file (type jpg)
 <use Figs/implementacion.jpg>
-Package pdftex.def Info: Figs/implementacion.jpg  used on input line 1706.
+Package pdftex.def Info: Figs/implementacion.jpg  used on input line 1705.
 (pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
-LaTeX Info: Redefining \. on input line 1713.
-LaTeX Info: Redefining \% on input line 1713.
+LaTeX Info: Redefining \. on input line 1712.
+LaTeX Info: Redefining \% on input line 1712.
  [67 <./Figs/implementacion.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 1735--1736
+Underfull \hbox (badness 10000) in paragraph at lines 1754--1755
 
  []
 
-LaTeX Info: Redefining \. on input line 1739.
-LaTeX Info: Redefining \% on input line 1739.
+LaTeX Info: Redefining \. on input line 1758.
+LaTeX Info: Redefining \% on input line 1758.
 [68]
 chapter 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1751--1752
+Underfull \hbox (badness 10000) in paragraph at lines 1770--1771
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1753--1754
+Underfull \hbox (badness 10000) in paragraph at lines 1772--1773
 
  []
 
@@ -2175,7 +2175,7 @@ Package rerunfilecheck Info: File `PlantillaPG.out' has not changed.
 Here is how much of TeX's memory you used:
  29939 strings out of 478659
  595860 string characters out of 2845920
- 1009876 words of memory out of 3000000
+ 1032876 words of memory out of 3000000
  47156 multiletter control sequences out of 15000+600000
  411162 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2197,7 +2197,7 @@ nts/cm/cmssbx10.pfb><C:/Users/Johnj/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmsy10.pfb><C:/Users/Johnj/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Johnj/AppData/Local/Programs/MiK
 TeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on PlantillaPG.pdf (79 pages, 25023236 bytes).
+Output written on PlantillaPG.pdf (79 pages, 25025400 bytes).
 PDF statistics:
  1261 PDF objects out of 1440 (max. 8388607)
  327 named destinations out of 1000 (max. 500000)
